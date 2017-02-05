@@ -3,7 +3,7 @@ using Glass.Mapper.Configuration;
 using Glass.Mapper.IoC;
 using Glass.Mapper.Maps;
 using Glass.Mapper.Sc.IoC;
-using Helixbase.Foundation.Model;
+using Helixbase.Foundation.Model.Sitecore.Configuration;
 using IDependencyResolver = Glass.Mapper.Sc.IoC.IDependencyResolver;
 
 namespace Helixbase.Foundation.ORM.App_Start

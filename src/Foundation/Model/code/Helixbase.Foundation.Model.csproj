@@ -99,10 +99,6 @@
       <HintPath>..\..\..\..\packages\Sitecore.Logging.Client.8.2.161221\lib\NET452\Sitecore.Logging.Client.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Sitecore.Mvc, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\..\packages\Sitecore.Mvc.8.2.161221\lib\NET452\Sitecore.Mvc.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Sitecore.NVelocity, Version=7.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\..\..\packages\Sitecore.NVelocity.8.2.161221\lib\NET452\Sitecore.NVelocity.dll</HintPath>
       <Private>True</Private>
@@ -165,9 +161,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ISitecoreItem.cs" />
+    <Compile Include="Sitecore\ISitecoreItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SitecoreItemMap.cs" />
+    <Compile Include="Sitecore\Configuration\SitecoreItemMap.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
