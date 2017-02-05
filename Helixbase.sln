@@ -40,6 +40,16 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Project", "Project", "{A7FC0385-84B6-4FB4-92DD-7372A45444F7}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configuration", "Configuration", "{48A68BF7-0608-4AA9-9F36-809E2731150A}"
+	ProjectSection(SolutionItems) = preProject
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		gulp-config.js = gulp-config.js
+		gulpfile.js = gulpfile.js
+		NuGet.config = NuGet.config
+		package.json = package.json
+		README.md = README.md
+		src\Project\Helixbase\Helixbase.Project.Helixbase\App_Config\Include\Project\z.Helixbase.Settings.config = src\Project\Helixbase\Helixbase.Project.Helixbase\App_Config\Include\Project\z.Helixbase.Settings.config
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{27F11553-4B8F-4B6D-8B81-37DDE6046F31}"
 EndProject

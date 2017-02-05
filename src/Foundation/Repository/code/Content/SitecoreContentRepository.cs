@@ -1,5 +1,5 @@
 ﻿using Glass.Mapper.Sc;
-using Helixbase.Foundation.Model;
+using Helixbase.Foundation.Model.Sitecore;
 using System;
 
 namespace Helixbase.Foundation.Repository.Content

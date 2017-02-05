@@ -1,4 +1,4 @@
-﻿using Helixbase.Foundation.Model;
+﻿using Helixbase.Foundation.Model.Sitecore;
 
 namespace Helixbase.Foundation.Repository.Content
 {
