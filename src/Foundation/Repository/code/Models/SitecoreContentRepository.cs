@@ -2,7 +2,7 @@
 using Helixbase.Foundation.Model.Sitecore;
 using System;
 
-namespace Helixbase.Foundation.Repository.Content
+namespace Helixbase.Foundation.Repository.Models
 {
     public abstract class SitecoreContentRepository : IContentRepository
     {

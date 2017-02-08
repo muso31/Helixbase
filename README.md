@@ -1,5 +1,5 @@
-# Helix Base
-A helix based solution which can be used for greenfield projects.
+# Helix Base - *work in progress*
+A Sitecore Helix based solution which can be used for greenfield projects.
 
 Features include:
 

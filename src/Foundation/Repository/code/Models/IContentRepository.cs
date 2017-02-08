@@ -1,6 +1,6 @@
 ﻿using Helixbase.Foundation.Model.Sitecore;
 
-namespace Helixbase.Foundation.Repository.Content
+namespace Helixbase.Foundation.Repository.Models
 {
     public interface IContentRepository
     {

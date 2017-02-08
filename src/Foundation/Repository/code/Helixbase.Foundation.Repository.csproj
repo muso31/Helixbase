@@ -161,8 +161,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Content\IContentRepository.cs" />
-    <Compile Include="Content\SitecoreContentRepository.cs" />
+    <Compile Include="Models\IContentRepository.cs" />
+    <Compile Include="Models\SitecoreContentRepository.cs" />
     <Compile Include="DI\RegisterContainer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

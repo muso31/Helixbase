@@ -48,7 +48,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configuration", "Configurat
 		NuGet.config = NuGet.config
 		package.json = package.json
 		README.md = README.md
-		src\Project\Helixbase\Helixbase.Project.Helixbase\App_Config\Include\Project\z.Helixbase.Settings.config = src\Project\Helixbase\Helixbase.Project.Helixbase\App_Config\Include\Project\z.Helixbase.Settings.config
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{27F11553-4B8F-4B6D-8B81-37DDE6046F31}"

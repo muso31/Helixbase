@@ -1,4 +1,4 @@
-﻿using Helixbase.Foundation.Repository.Content;
+﻿using Helixbase.Foundation.Repository.Models;
 using Microsoft.Extensions.DependencyInjection;
 using Sitecore.DependencyInjection;
 
