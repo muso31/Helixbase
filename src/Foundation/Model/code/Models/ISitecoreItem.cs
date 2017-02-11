@@ -2,7 +2,7 @@
 using System;
 using System.Collections;
 
-namespace Helixbase.Foundation.Model.Sitecore
+namespace Helixbase.Foundation.Model.Models
 {
     public interface ISitecoreItem
     {

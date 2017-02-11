@@ -89,7 +89,7 @@
     </Reference>
     <Reference Include="Sitecore.Kernel, Version=10.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\..\..\packages\Sitecore.Kernel.8.2.161221\lib\NET452\Sitecore.Kernel.dll</HintPath>
-      <Private>False</Private>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Sitecore.Logging, Version=10.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\..\..\packages\Sitecore.Logging.8.2.161221\lib\NET452\Sitecore.Logging.dll</HintPath>
@@ -161,9 +161,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Sitecore\ISitecoreItem.cs" />
+    <Compile Include="Models\ISitecoreItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Sitecore\Configuration\SitecoreItemMap.cs" />
+    <Compile Include="Models\Configuration\SitecoreItemMap.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
