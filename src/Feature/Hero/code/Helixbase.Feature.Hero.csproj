@@ -89,7 +89,7 @@
     </Reference>
     <Reference Include="Sitecore.Kernel, Version=10.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\..\..\packages\Sitecore.Kernel.8.2.161221\lib\NET452\Sitecore.Kernel.dll</HintPath>
-      <Private>True</Private>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Sitecore.Logging, Version=10.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\..\..\packages\Sitecore.Logging.8.2.161221\lib\NET452\Sitecore.Logging.dll</HintPath>
@@ -101,7 +101,7 @@
     </Reference>
     <Reference Include="Sitecore.Mvc, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\..\..\packages\Sitecore.Mvc.8.2.161221\lib\NET452\Sitecore.Mvc.dll</HintPath>
-      <Private>True</Private>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Sitecore.NVelocity, Version=7.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\..\..\packages\Sitecore.NVelocity.8.2.161221\lib\NET452\Sitecore.NVelocity.dll</HintPath>
@@ -169,8 +169,7 @@
     <Compile Include="DI\RegisterContainer.cs" />
     <Compile Include="Models\IHero.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repository\HeroRepository.cs" />
-    <Compile Include="Repository\IHeroRepository.cs" />
+    <Compile Include="Routes\RegisterRoutes.cs" />
     <Compile Include="Service\HeroService.cs" />
     <Compile Include="Service\IHeroService.cs" />
   </ItemGroup>
@@ -180,7 +179,9 @@
   <ItemGroup>
     <Content Include="App_Config\Include\Feature\Feature.Hero.Serialization.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Views\Web.config" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Foundation\Model\code\Helixbase.Foundation.Model.csproj">
       <Project>{22686DC6-4E6C-4D98-84B7-C48042F5B8FC}</Project>
@@ -194,6 +195,10 @@
   <ItemGroup>
     <Content Include="Views\Hero.cshtml" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Config\Include\Feature\Feature.Hero.Routes.config" />
+  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

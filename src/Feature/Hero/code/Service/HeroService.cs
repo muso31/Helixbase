@@ -1,21 +1,20 @@
 ﻿using Helixbase.Feature.Hero.Models;
-using Helixbase.Feature.Hero.Repository;
-using System;
+using Helixbase.Foundation.Repository.Models;
 
 namespace Helixbase.Feature.Hero.Service
 {
     public class HeroService : IHeroService
     {
-        private IHeroRepository _heroRepository;
+        private IContentRepository _contentRepository;
 
-        public HeroService(IHeroRepository heroRepository)
+        public HeroService(IContentRepository contentRepository)
         {
-            _heroRepository = heroRepository;
+            _contentRepository = contentRepository;
         }
 
         public IHero GetHeroImages()
         {
-            throw new NotImplementedException();
+            return _contentRepository.GetContentItem<IHero>("guid");
         }
     }
 }

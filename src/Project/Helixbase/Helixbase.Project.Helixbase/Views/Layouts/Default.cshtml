@@ -1,13 +1,15 @@
 ﻿@using Sitecore.Mvc
+@using Sitecore.Mvc.Analytics.Extensions
 
 <!DOCTYPE html>
 <html>
 <head>
-    <title>
-        
-    </title>
+    @Html.Sitecore().Placeholder("head")
+    @Html.Sitecore().VisitorIdentification()
 </head>
 <body>
-    <div>@Html.Sitecore().Placeholder("main")</div>
+    <header>@Html.Sitecore().Placeholder("header")</header>
+    <main>@Html.Sitecore().Placeholder("main")</main>
+    <footer>@Html.Sitecore().Placeholder("footer")</footer>
 </body>
 </html>

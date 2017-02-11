@@ -56,7 +56,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helixbase.Project.Common", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Helixbase", "Helixbase", "{160DA988-084C-41E4-B714-00E127957ED0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helixbase.Project.Helixbase", "src\Project\Helixbase\Helixbase.Project.Helixbase\Helixbase.Project.Helixbase.csproj", "{8752F0B5-0365-4BA2-BF10-91D693511DA7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helixbase.Project.Helixbase", "src\Project\Helixbase\Helixbase.Project.Helixbase\Helixbase.Project.Helixbase.csproj", "{BE27848D-2FF5-42DF-9324-667D66D47E30}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -103,10 +103,10 @@ Global
 		{6F8C583B-E667-4DEB-A603-77932C7803B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6F8C583B-E667-4DEB-A603-77932C7803B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6F8C583B-E667-4DEB-A603-77932C7803B0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8752F0B5-0365-4BA2-BF10-91D693511DA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8752F0B5-0365-4BA2-BF10-91D693511DA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8752F0B5-0365-4BA2-BF10-91D693511DA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8752F0B5-0365-4BA2-BF10-91D693511DA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE27848D-2FF5-42DF-9324-667D66D47E30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE27848D-2FF5-42DF-9324-667D66D47E30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE27848D-2FF5-42DF-9324-667D66D47E30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE27848D-2FF5-42DF-9324-667D66D47E30}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -130,6 +130,6 @@ Global
 		{27F11553-4B8F-4B6D-8B81-37DDE6046F31} = {A7FC0385-84B6-4FB4-92DD-7372A45444F7}
 		{6F8C583B-E667-4DEB-A603-77932C7803B0} = {27F11553-4B8F-4B6D-8B81-37DDE6046F31}
 		{160DA988-084C-41E4-B714-00E127957ED0} = {A7FC0385-84B6-4FB4-92DD-7372A45444F7}
-		{8752F0B5-0365-4BA2-BF10-91D693511DA7} = {160DA988-084C-41E4-B714-00E127957ED0}
+		{BE27848D-2FF5-42DF-9324-667D66D47E30} = {160DA988-084C-41E4-B714-00E127957ED0}
 	EndGlobalSection
 EndGlobal
