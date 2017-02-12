@@ -195,7 +195,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Hero.cshtml" />
+    <Content Include="Views\Hero\Hero.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Config\Include\Feature\Feature.Hero.Routes.config" />

@@ -4,7 +4,7 @@ using System;
 
 namespace Helixbase.Foundation.Repository.Models
 {
-    public abstract class SitecoreContentRepository : IContentRepository
+    public class SitecoreContentRepository : IContentRepository
     {
         private readonly ISitecoreContext _sitecoreContext;
 
