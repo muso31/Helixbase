@@ -208,7 +208,9 @@
   <ItemGroup>
     <Content Include="App_Config\Include\Unicorn\Unicorn.AutoPublish.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Properties\PublishProfiles\Localhost.pubxml" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="App_Config\Include\Foundation\Foundation.Serialization.config" />
   </ItemGroup>

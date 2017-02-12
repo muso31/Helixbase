@@ -200,6 +200,7 @@
   <ItemGroup>
     <Content Include="Views\Layouts\Default.cshtml" />
     <Content Include="App_Config\Include\Project\z.Helixbase.Settings.config" />
+    <None Include="Properties\PublishProfiles\Localhost.pubxml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

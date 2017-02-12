@@ -179,6 +179,7 @@
     <Content Include="App_Config\Include\Glass.Mapper.Sc.Start.config" />
     <Content Include="App_Config\Include\Glass.Mapper.Sc.config" />
     <None Include="App_Config\Include\Glass.Mapper.Sc.CodeFirst.config.exclude" />
+    <None Include="Properties\PublishProfiles\Localhost.pubxml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Model\code\Helixbase.Foundation.Model.csproj">
