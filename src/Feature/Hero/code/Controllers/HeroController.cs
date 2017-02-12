@@ -16,7 +16,7 @@ namespace Helixbase.Feature.Hero.Controllers
         public ActionResult Hero()
         {
             var model = _heroService.GetHeroImages();
-            return View();
+            return View(model);
         }
     }
 }

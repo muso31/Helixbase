@@ -187,16 +187,6 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Foundation\Model\code\Helixbase.Foundation.Model.csproj">
-      <Project>{22686DC6-4E6C-4D98-84B7-C48042F5B8FC}</Project>
-      <Name>Helixbase.Foundation.Model</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\Foundation\Repository\code\Helixbase.Foundation.Repository.csproj">
-      <Project>{F8F55034-FA55-4D27-B115-0AB4EEB9A0A8}</Project>
-      <Name>Helixbase.Foundation.Repository</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Views\Hero\Hero.cshtml" />
   </ItemGroup>
   <ItemGroup>
@@ -205,13 +195,25 @@
   <ItemGroup>
     <Content Include="App_Config\Include\Feature\Feature.Hero.RegisterContainer.config" />
     <None Include="Properties\PublishProfiles\Localhost.pubxml" />
-    <None Include="Web.config" />
+    <None Include="Web.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Foundation\Model\code\Helixbase.Foundation.Model.csproj">
+      <Project>{22686DC6-4E6C-4D98-84B7-C48042F5B8FC}</Project>
+      <Name>Helixbase.Foundation.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Foundation\Repository\code\Helixbase.Foundation.Repository.csproj">
+      <Project>{F8F55034-FA55-4D27-B115-0AB4EEB9A0A8}</Project>
+      <Name>Helixbase.Foundation.Repository</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -1,3 +1,11 @@
-﻿@using Sitecore.Mvc
+﻿@using Helixbase.Feature.Hero.Models
 
-    <div>hi</div>
+@model IHero
+
+@if (Model != null)
+{
+    foreach (var heroImage in Model.HeroImages)
+    {
+        <div>@heroImage.Src.ToString()</div>
+    }
+}
