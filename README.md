@@ -13,7 +13,9 @@ Features include:
 <li>Pre configured generic item repository</li>
 </ul>
 ## Setup Instructions
-Install Sitecore Experience Platform 8.2 rev. 161221 (8.2 Update-2) - _Name your instance 'Helixbase'_
-Clone project to 'C:\Projects\Helix base' - _if you use another path update the 'z.Helixbase.Settings.config' file and the 'gulp-config.js'_
-Install node.js and run 'npm-install' in the project root
-Publish the solution and run a Unicorn sync
+<ol>
+<li>Install Sitecore Experience Platform 8.2 rev. 161221 (8.2 Update-2) - _Name your instance 'Helixbase'_</li>
+<li>Clone project to 'C:\Projects\Helix base' - _if you use another path update the 'z.Helixbase.Settings.config' file and the 'gulp-config.js'_</li>
+<li>Install node.js and run 'npm-install' in the project root<li>
+<li>Publish the solution and run a Unicorn sync</li>
+</ol>
