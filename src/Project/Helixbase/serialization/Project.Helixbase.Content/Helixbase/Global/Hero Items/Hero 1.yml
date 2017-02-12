@@ -1,0 +1,20 @@
+﻿---
+ID: "0a275e4a-98df-4cb3-8a7e-948f53010ae3"
+Parent: "6e5697fc-4f5e-45f0-9e6a-1c81aa64a00f"
+Template: "462bb765-f578-4d46-a47b-20d16a1bfd94"
+Path: /sitecore/content/Helixbase/Global/Hero Items/Hero 1
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20170212T173031Z
+    - ID: "6968b632-46df-4de2-a129-d9637cca094f"
+      Hint: Hero Images
+      Type: Treelist
+      Value: |
+        {979419F6-E331-4D64-8DC8-101D216BA5FB}
+        {9DD81E7F-CA90-4610-B1D5-92DC985B0611}

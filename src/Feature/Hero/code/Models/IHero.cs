@@ -1,9 +1,11 @@
-﻿using Helixbase.Foundation.Model.Models;
+﻿using Glass.Mapper.Sc.Fields;
+using Helixbase.Foundation.Model.Models;
+using System.Collections.Generic;
 
 namespace Helixbase.Feature.Hero.Models
 {
     public interface IHero : ISitecoreItem
     {
-        string ImageName { get; set; }
+        IEnumerable<Image> HeroImages { get; set; }
     }
 }

@@ -165,6 +165,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\Configuration\HeroMap.cs" />
     <Compile Include="Controllers\HeroController.cs" />
     <Compile Include="DI\RegisterContainer.cs" />
     <Compile Include="Models\IHero.cs" />
@@ -172,6 +173,7 @@
     <Compile Include="Routes\RegisterRoutes.cs" />
     <Compile Include="Service\HeroService.cs" />
     <Compile Include="Service\IHeroService.cs" />
+    <Compile Include="Templates.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

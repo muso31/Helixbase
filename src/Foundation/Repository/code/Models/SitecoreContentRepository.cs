@@ -16,5 +16,9 @@ namespace Helixbase.Foundation.Repository.Models
         {
             return _sitecoreContext.GetItem<T>(Guid.Parse(contentGuid));
         }
+        public T GetCurrentItem<T>() where T : class, ISitecoreItem
+        {
+            return _sitecoreContext.GetCurrentItem<T>();
+        }
     }
 }

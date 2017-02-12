@@ -14,7 +14,7 @@ namespace Helixbase.Feature.Hero.Service
 
         public IHero GetHeroImages()
         {
-            return _contentRepository.GetContentItem<IHero>("guid");
+            return _contentRepository.GetCurrentItem<IHero>();
         }
     }
 }
