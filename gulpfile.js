@@ -7,7 +7,7 @@ module.exports.config = gulpConfig;
 
 
 gulp.task("Publish-All-Projects", function () {
-    return gulp.src("./{Feature,Foundation,Project}/**/**/*.csproj")
+    return gulp.src("./src/{Feature,Foundation,Project}/**/**/*.csproj")
       .pipe(foreach(function (stream, file) {
           return stream
           .pipe(debug({ title: "Publishing " }))

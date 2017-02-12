@@ -1,0 +1,18 @@
+﻿---
+ID: "afe0207c-7d18-4e89-8082-3dc23997dc07"
+Parent: "6fe15b11-7273-4af6-baff-891e9bfeabca"
+Template: "93227c5d-4fef-474d-94c0-f252ec8e8219"
+Path: /sitecore/layout/Layouts/Project/Helixbase
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20170212T142744Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin

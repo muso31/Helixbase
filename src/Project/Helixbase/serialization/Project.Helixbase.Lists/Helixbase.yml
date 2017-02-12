@@ -1,0 +1,18 @@
+﻿---
+ID: "3089daf3-c652-403b-a2ec-c70102582803"
+Parent: "bc799b34-8423-48ac-a2fe-d128e6300659"
+Template: "c4d09683-5eb3-4d8e-bf9e-13cb41c197b5"
+Path: /sitecore/system/List Manager/All Lists/Helixbase
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20170212T145812Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin

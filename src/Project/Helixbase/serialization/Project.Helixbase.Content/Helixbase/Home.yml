@@ -1,0 +1,27 @@
+﻿---
+ID: "1d5c266a-112f-4ea2-a69e-e4865ace2200"
+Parent: "5ac6cf7a-26b8-47a1-a326-8cd790317be0"
+Template: "76036f5e-cbce-46d1-af0a-4143f9b557aa"
+Path: /sitecore/content/Helixbase/Home
+DB: master
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: network/16x16/home.png
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{A5BC37E7-ED96-4C1E-8590-A26E64DB55EA}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20170212T144905Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{190B1C84-F1BE-47ED-AA41-F42193D9C8FC}"
+    - ID: "75577384-3c97-45da-a847-81b00500e250"
+      Hint: Title
+      Value: Home

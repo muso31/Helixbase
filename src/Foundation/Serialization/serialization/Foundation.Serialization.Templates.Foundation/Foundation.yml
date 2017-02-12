@@ -1,0 +1,18 @@
+﻿---
+ID: "54df61bd-2cea-4372-b565-a3a076d939dc"
+Parent: "3c1715fe-6a13-4fcf-845f-de308ba9741d"
+Template: "0437fee2-44c9-46a6-abe9-28858d9fee8c"
+Path: /sitecore/templates/Foundation
+DB: master
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: applications/32x32/folder_gear.png
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20170212T152507Z
