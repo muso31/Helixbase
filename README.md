@@ -3,19 +3,17 @@ A Sitecore Helix based solution which can be used for greenfield projects.
 
 Features include:
 
-<ul>
-<li>Glass Mapper</li>
-<li>Unicorn</li>
-<li>Sitecore 8.2 Update-2 ready</li>
-<li>Target .net framework 4.5.2 for backwards compatibility</li>
-<li>Microsoft Dependency Injection</li>
-<li>A sample hero banner feature and sample site project for demonstration</li>
-<li>Pre configured generic item repository</li>
-</ul>
+
+* Glass Mapper
+* Unicorn
+* Sitecore 8.2 Update-2 ready
+* Target .net framework 4.5.2 for backwards compatibility
+* Microsoft Dependency Injection
+* A sample hero banner feature and sample site project for demonstration
+* Pre configured generic item repository
+
 ## Setup Instructions
-<ol>
-<li>Install Sitecore Experience Platform 8.2 rev. 161221 (8.2 Update-2) - _Name your instance 'Helixbase'_</li>
-<li>Clone project to 'C:\Projects\Helix base' - _if you use another path update the 'z.Helixbase.Settings.config' file and the 'gulp-config.js'_</li>
-<li>Install node.js and run 'npm-install' in the project root<li>
-<li>Publish the solution and run a Unicorn sync</li>
-</ol>
+1. Install Sitecore Experience Platform 8.2 rev. 161221 (8.2 Update-2) *Name your instance 'Helixbase'
+2. Clone project to 'C:\Projects\Helix base' *if you use another path update the 'z.Helixbase.Settings.config' file and the 'gulp-config.js'
+3. Install node.js and run 'npm-install' in the project root
+4. Publish the solution and run a Unicorn sync
