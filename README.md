@@ -1,4 +1,4 @@
-# Helix Base - _work in progress, completion date 17/02/2017_
+# Helix Base
 A Sitecore Helix based solution which can be used for greenfield projects.
 
 #### Features include:
