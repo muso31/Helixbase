@@ -13,8 +13,8 @@ gulp.task("Publish-All-Projects", function () {
           .pipe(debug({ title: "Publishing " }))
           .pipe(msbuild({
               targets: ["Build"],
-              gulpConfiguation: gulpConfig.buildConfiguration,
               properties: {
+                  Configuration: gulpConfig.buildConfiguration,
                   publishUrl: gulpConfig.webRoot,
                   DeployDefaultTarget: "WebPublish",
                   WebPublishMethod: "FileSystem",
