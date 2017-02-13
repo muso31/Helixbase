@@ -23,4 +23,4 @@ A Sitecore Helix based solution which can be used for greenfield projects.
 2. Clone project to 'C:\Projects\Helix base' **if you use another path update the 'z.Helixbase.Settings.config' file and the 'gulp-config.js'
 3. Install node.js and run 'npm-install' in the project root
 4. Publish each project or use the 'Publish-All-Projects' task in your task runner
-5. Run the Unicorn sync in your browser
+5. Run Unicorn and sync all configurations
