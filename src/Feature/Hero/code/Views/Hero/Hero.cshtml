@@ -4,8 +4,27 @@
 
 @if (Model != null)
 {
-    foreach (var heroImage in Model.HeroImages)
-    {
-        <div>@heroImage.Src.ToString()</div>
-    }
-}
+    <div id="heroCarousel" class="carousel slide" data-ride="carousel" style="max-width:768px;">
+        @if (Model.HeroImages != null)
+        {
+            // Links hard coded (2 limit) - sample Feature only
+            <ol class="carousel-indicators">
+                <li data-target="#heroCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#heroCarousel" data-slide-to="1"></li>
+            </ol>
+
+            <div class="carousel-inner" role="listbox">
+                @{
+                    int i = 1;
+                    foreach (var heroImage in Model.HeroImages)
+                    {
+                        <div class="item@(i == 1 ? " active" : "")">
+                            <img src="@heroImage.Src" />
+                        </div>
+                        i++;
+                    }
+                }
+            </div>
+         }
+    </div>
+ }

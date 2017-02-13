@@ -58,6 +58,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Helixbase", "Helixbase", "{
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helixbase.Project.Helixbase", "src\Project\Helixbase\Helixbase.Project.Helixbase\Helixbase.Project.Helixbase.csproj", "{BE27848D-2FF5-42DF-9324-667D66D47E30}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bootstrap", "Bootstrap", "{CB31D0CF-43E4-47F3-876D-AAD5BA121FC2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helixbase.Foundation.Bootstrap", "src\Foundation\Bootstrap\Helixbase.Foundation.Bootstrap\Helixbase.Foundation.Bootstrap.csproj", "{44403DB5-5AF0-4BB8-A227-E9A8416947A4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -107,6 +111,10 @@ Global
 		{BE27848D-2FF5-42DF-9324-667D66D47E30}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BE27848D-2FF5-42DF-9324-667D66D47E30}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BE27848D-2FF5-42DF-9324-667D66D47E30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44403DB5-5AF0-4BB8-A227-E9A8416947A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44403DB5-5AF0-4BB8-A227-E9A8416947A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44403DB5-5AF0-4BB8-A227-E9A8416947A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44403DB5-5AF0-4BB8-A227-E9A8416947A4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -131,5 +139,7 @@ Global
 		{6F8C583B-E667-4DEB-A603-77932C7803B0} = {27F11553-4B8F-4B6D-8B81-37DDE6046F31}
 		{160DA988-084C-41E4-B714-00E127957ED0} = {A7FC0385-84B6-4FB4-92DD-7372A45444F7}
 		{BE27848D-2FF5-42DF-9324-667D66D47E30} = {160DA988-084C-41E4-B714-00E127957ED0}
+		{CB31D0CF-43E4-47F3-876D-AAD5BA121FC2} = {C3F57797-2D54-4626-B842-51F30272E972}
+		{44403DB5-5AF0-4BB8-A227-E9A8416947A4} = {CB31D0CF-43E4-47F3-876D-AAD5BA121FC2}
 	EndGlobalSection
 EndGlobal

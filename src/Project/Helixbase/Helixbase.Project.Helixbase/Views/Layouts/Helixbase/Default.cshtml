@@ -8,11 +8,16 @@
 <head>
     <title>@Html.Sitecore().Field("title", new { DisableWebEdit = true })</title>
     @* @Html.Sitecore().VisitorIdentification() *@
+    <script type="text/javascript" src="~/Scripts/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="~/Scripts/bootstrap.js"></script>
+    <link rel="stylesheet" href="~/Content/bootstrap.css" />
 </head>
 <body>
-    <h1>@Html.Sitecore().Field("title")</h1>
-    <div>
+    <header>
+        <h1>@Html.Sitecore().Field("title")</h1>
+    </header>
+    <main>
         @Html.Sitecore().Placeholder("main")
-    </div>
+    </main>
 </body>
 </html>

@@ -1,5 +1,6 @@
 ﻿using Helixbase.Feature.Hero.Models;
 using Helixbase.Foundation.Repository.Models;
+using Sitecore.Mvc.Presentation;
 
 namespace Helixbase.Feature.Hero.Service
 {
@@ -14,7 +15,7 @@ namespace Helixbase.Feature.Hero.Service
 
         public IHero GetHeroImages()
         {
-            return _contentRepository.GetContentItem<IHero>("{0A275E4A-98DF-4CB3-8A7E-948F53010AE3}");
+            return _contentRepository.GetContentItem<IHero>(RenderingContext.Curre‌nt.Rendering.DataSou‌rce);
         }
     }
 }

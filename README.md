@@ -6,6 +6,7 @@ A Sitecore Helix based solution which can be used for greenfield projects.
 * Glass Mapper
 * Unicorn
 * Sitecore 8.2 Update-2 ready
+* Bootstrap
 * Target .net framework 4.5.2 for backwards compatibility
 * Microsoft Dependency Injection
 * A sample hero banner feature and sample site project for demonstration
@@ -15,7 +16,7 @@ A Sitecore Helix based solution which can be used for greenfield projects.
 
 * User and role Unicorn sync
 * Unicorn remote module
-* Generic repository for serach API
+* Generic repository for search API
 
 ## Setup Instructions
 1. Install Sitecore Experience Platform 8.2 rev. 161221 (8.2 Update-2) **Name your instance 'Helixbase'
