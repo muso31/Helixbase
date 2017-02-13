@@ -1,4 +1,4 @@
-# Helix Base
+# Helix Base - _work in progress, completion date 17/02/2017_
 A Sitecore Helix based solution which can be used for greenfield projects.
 
 #### Features include:
@@ -15,7 +15,7 @@ A Sitecore Helix based solution which can be used for greenfield projects.
 
 * User and role Unicorn sync
 * Unicorn remote module
-* Generic repository for serach API
+* Generic repository for search API
 
 ## Setup Instructions
 1. Install Sitecore Experience Platform 8.2 rev. 161221 (8.2 Update-2) **Name your instance 'Helixbase'
