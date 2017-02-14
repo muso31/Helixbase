@@ -21,11 +21,12 @@
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/muso31/Helix-Base.git"
+    "url": "git+https://github.com/muso31/Helixbase.git"
   },
   "author": "Neil Shack",
+  "license": "ISC",
   "bugs": {
-    "url": "https://github.com/muso31/Helix-Base/issues"
+    "url": "https://github.com/muso31/Helixbase/issues"
   },
-  "homepage": "https://github.com/muso31/Helix-Base#readme"
+  "homepage": "https://github.com/muso31/Helixbase#readme"
 }
