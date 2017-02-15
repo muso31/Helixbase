@@ -1,9 +1,9 @@
-# Helix Base - _due to be live week ending 19/02/17_
+# Helix Base
 A Sitecore Helix based solution which can be used for greenfield projects.
 
 #### Features include:
 
-* Glass Mapper
+* Glass Mapper (using fluent configuration)
 * Unicorn
 * Sitecore 8.2 Update-2 ready
 * Bootstrap

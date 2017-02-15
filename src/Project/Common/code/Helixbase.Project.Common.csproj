@@ -76,6 +76,9 @@
     <Content Include="App_Config\Include\Common.Serialization.config">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="App_Config\Include\Common..config">
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="Properties\PublishProfiles\Localhost.pubxml" />
   </ItemGroup>
   <PropertyGroup>
