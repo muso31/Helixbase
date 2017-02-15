@@ -3,6 +3,8 @@ using Glass.Mapper.Configuration;
 using Glass.Mapper.IoC;
 using Glass.Mapper.Maps;
 using Glass.Mapper.Sc.IoC;
+using System;
+using System.Linq;
 using IDependencyResolver = Glass.Mapper.Sc.IoC.IDependencyResolver;
 
 namespace Helixbase.Foundation.ORM.App_Start
@@ -48,6 +50,19 @@ namespace Helixbase.Foundation.ORM.App_Start
 		public static void AddMaps(IConfigFactory<IGlassMap> mapsConfigFactory)
         {
             // Add maps here
+            var assemblies = AppDomain.CurrentDomain.GetAssemblies().Where(x => x.FullName.IndexOf("Helixbase", StringComparison.OrdinalIgnoreCase) >= 0);
+
+            var glassmapType = typeof(IGlassMap);
+
+            foreach (var assembly in assemblies)
+            {
+                var mappings = assembly.GetTypes().Where(x => glassmapType.IsAssignableFrom(x));
+
+                foreach (var map in mappings)
+                {
+                    mapsConfigFactory.Add(() => Activator.CreateInstance(map) as IGlassMap);
+                }
+            }
         }
     }
 }
