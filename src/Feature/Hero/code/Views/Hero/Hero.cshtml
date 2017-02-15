@@ -4,13 +4,26 @@
 
 @if (Model != null)
 {
-    <div id="heroCarousel" class="carousel slide" data-ride="carousel" style="max-width:768px;">
+<!-- do not use inline css! Sample only -->
+<style>
+    .carousel-indicators li {
+    background-color: #999;
+    background-color: rgba(70,70,70,.25);
+}
+
+.carousel-indicators .active {
+  background-color: #444;
+}
+</style>
+
+    <div id="heroCarousel" class="carousel slide" data-ride="carousel" style="max-width:1920px;">
         @if (Model.HeroImages != null)
         {
-            // Links hard coded (2 limit) - sample Feature only
+            // Links hard coded (3 limit) - sample Feature only
             <ol class="carousel-indicators">
                 <li data-target="#heroCarousel" data-slide-to="0" class="active"></li>
                 <li data-target="#heroCarousel" data-slide-to="1"></li>
+                <li data-target="#heroCarousel" data-slide-to="2"></li>
             </ol>
 
             <div class="carousel-inner" role="listbox">
