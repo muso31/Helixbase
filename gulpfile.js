@@ -6,8 +6,6 @@ var runSequence = require("run-sequence");
 var gulpConfig = require("./gulp-config.js")();
 module.exports.config = gulpConfig;
 
-
-
 gulp.task("Publish-All-Projects", function () {
     return gulp.src("./src/{Feature,Foundation,Project}/**/code/*.csproj")
       .pipe(foreach(function (stream, file) {
@@ -33,7 +31,7 @@ gulp.task("Publish-All-Projects", function () {
       }));
 });
 
-
+// From Habitat - testing other publish scripts
 var publishProjects = function (location, dest) {
     dest = dest || gulpConfig.webRoot;
     var targets = ["Build"];
