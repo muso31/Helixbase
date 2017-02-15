@@ -8,7 +8,7 @@ A Sitecore Helix based solution which can be used for greenfield projects.
 * Sitecore 8.2 Update-2 ready
 * Bootstrap
 * Target .net framework 4.5.2 for backwards compatibility
-* Microsoft Dependency Injection
+* Sitecore Dependency Injection
 * A sample hero banner feature and sample site project for demonstration
 * Pre configured generic item repository
 
