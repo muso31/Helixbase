@@ -1,5 +1,5 @@
-<img src="https://nshackblog.files.wordpress.com/2017/02/helixbase1.png" height="154px" width="200px" ><br />
-A Sitecore Helix based solution which can be used for greenfield projects.
+<img src="https://nshackblog.files.wordpress.com/2017/02/helixbase1.png" height="154px" width="200px" /><br />
+A Sitecore Helix based solution which can be used for Greenfield projects.
 
 #### Features include:
 
@@ -19,11 +19,11 @@ A Sitecore Helix based solution which can be used for greenfield projects.
 * Generic repository for search API
 
 ## Setup Instructions
-1. Install Sitecore Experience Platform 8.2 rev. 161221 (8.2 Update-2) 
+1. Install <a href="https://dev.sitecore.net/Downloads/Sitecore_Experience_Platform/82/Sitecore_Experience_Platform_82_Update2.aspx" target="_blank">Sitecore Experience Platform 8.2 rev. 161221 (8.2 Update-2)</a>
 	1. _Name your instance 'Helixbase'_
 2. Clone project to 'C:\Projects\Helix base'
 	2. _If you use another path, update the 'z.Helixbase.Settings.config' file and the 'gulp-config.js'_
-3. Install node.js and run 'npm-install' in the project root
+3. Install <a href="https://nodejs.org/en/" target="_blank">Node.js</a> and run 'npm-install' in the project root
 4. Perform a Nuget restore
 5. Publish each project in VS (or view gulp tasks)
 6. Run Unicorn and sync all configurations
