@@ -28,7 +28,7 @@
                     int i = 0;
                     foreach (var heroImage in Model.HeroImages)
                     {
-                        <li data-target="#heroCarousel" data-slide-to="@i" @(i == 0 ? @"class=active" : "")></li>
+                        <li data-target="#heroCarousel" data-slide-to="@i" @Html.Raw(i == 0 ? "class=\"active\"" : "")></li>
                         i++;
                     }
                  }
