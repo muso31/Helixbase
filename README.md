@@ -1,4 +1,4 @@
-# Helix Base
+<img src="https://nshackblog.files.wordpress.com/2017/02/helixbase1.png" height="154px" width="200px" >
 A Sitecore Helix based solution which can be used for greenfield projects.
 
 #### Features include:
