@@ -14,27 +14,34 @@
         .carousel-indicators .active {
             background-color: #444;
         }
+
+        .carousel img {
+            min-width: 100%;
+        }
     </style>
 
-    <div id="heroCarousel" class="carousel slide" data-ride="carousel" style="max-width:1920px;">
+    <div id="heroCarousel" class="carousel slide" data-ride="carousel">
         @if (Model.HeroImages != null)
         {
-            // Links hard coded (3 limit) - sample Feature only
             <ol class="carousel-indicators">
-                <li data-target="#heroCarousel" data-slide-to="0" class="active"></li>
-                <li data-target="#heroCarousel" data-slide-to="1"></li>
-                <li data-target="#heroCarousel" data-slide-to="2"></li>
-            </ol>
-
-            <div class="carousel-inner" role="listbox">
-                @{
-                    int i = 1;
+                @{ 
+                    int i = 0;
                     foreach (var heroImage in Model.HeroImages)
                     {
-                        <div class="item@(i == 1 ? " active" : "")">
+                        <li data-target="#heroCarousel" data-slide-to="@i" @(i == 0 ? @"class=active" : "")></li>
+                        i++;
+                    }
+                 }
+            </ol>
+            <div class="carousel-inner" role="listbox">
+                @{
+                    int j = 1;
+                    foreach (var heroImage in Model.HeroImages)
+                    {
+                        <div class="item@(j == 1 ? " active" : "")">
                             <img src="@heroImage.Src" />
                         </div>
-                        i++;
+                        j++;
                     }
                 }
             </div>
