@@ -162,8 +162,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\ISitecoreItem.cs" />
+    <Compile Include="ORM\GlassMappings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Models\Configuration\SitecoreItemMap.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

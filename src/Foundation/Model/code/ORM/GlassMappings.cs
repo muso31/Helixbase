@@ -1,9 +1,10 @@
 ﻿using Glass.Mapper.Sc.Configuration;
 using Glass.Mapper.Sc.Maps;
+using Helixbase.Foundation.Model.Models;
 
-namespace Helixbase.Foundation.Model.Models.Configuration
+namespace Helixbase.Foundation.Model.ORM
 {
-    public class SitecoreItemMap : SitecoreGlassMap<ISitecoreItem>
+    public class GlassMappings : SitecoreGlassMap<ISitecoreItem>
     {
         public override void Configure()
         {

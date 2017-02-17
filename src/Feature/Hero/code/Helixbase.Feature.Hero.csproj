@@ -165,10 +165,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\Configuration\HeroMap.cs" />
     <Compile Include="Controllers\HeroController.cs" />
     <Compile Include="DI\RegisterContainer.cs" />
     <Compile Include="Models\IHero.cs" />
+    <Compile Include="ORM\GlassMappings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Routes\RegisterRoutes.cs" />
     <Compile Include="Service\HeroService.cs" />

@@ -1,8 +1,9 @@
 ﻿using Glass.Mapper.Sc.Maps;
+using Helixbase.Feature.Hero.Models;
 
-namespace Helixbase.Feature.Hero.Models.Configuration
+namespace Helixbase.Feature.Hero.ORM
 {
-    public class HeroMap : SitecoreGlassMap<IHero>
+    public class GlassMappings : SitecoreGlassMap<IHero>
     {
         public override void Configure()
         {
