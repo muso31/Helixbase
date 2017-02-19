@@ -1,5 +1,5 @@
 ﻿using Glass.Mapper.Sc.Fields;
-using Helixbase.Foundation.Model.Models;
+using Helixbase.Foundation.Content.Models;
 using System.Collections.Generic;
 
 namespace Helixbase.Feature.Hero.Models

@@ -11,8 +11,8 @@
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Helixbase.Foundation.Repository</RootNamespace>
-    <AssemblyName>Helixbase.Foundation.Repository</AssemblyName>
+    <RootNamespace>Helixbase.Foundation.Content</RootNamespace>
+    <AssemblyName>Helixbase.Foundation.Content</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -161,8 +161,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\IContentRepository.cs" />
-    <Compile Include="Models\SitecoreContentRepository.cs" />
+    <Compile Include="Models\ISitecoreItem.cs" />
+    <Compile Include="ORM\GlassMappings.cs" />
+    <Compile Include="Repositories\IContentRepository.cs" />
+    <Compile Include="Repositories\SitecoreContentRepository.cs" />
     <Compile Include="DI\RegisterContainer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -172,13 +174,13 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Model\code\Helixbase.Foundation.Model.csproj">
+    <ProjectReference Include="..\..\Search\code\Helixbase.Foundation.Search.csproj">
       <Project>{22686dc6-4e6c-4d98-84b7-c48042f5b8fc}</Project>
-      <Name>Helixbase.Foundation.Model</Name>
+      <Name>Helixbase.Foundation.Search</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Config\Include\Foundation\Foundation.Repository.RegisterContainer.config" />
+    <Content Include="App_Config\Include\Foundation\Foundation.Content.RegisterContainer.config" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\PublishProfiles\Localhost.pubxml" />

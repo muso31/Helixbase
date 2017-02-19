@@ -1,6 +1,6 @@
-﻿using Helixbase.Foundation.Model.Models;
+﻿using Helixbase.Foundation.Content.Models;
 
-namespace Helixbase.Foundation.Repository.Models
+namespace Helixbase.Foundation.Content.Repositories
 {
     public interface IContentRepository
     {

@@ -1,8 +1,8 @@
-﻿using Helixbase.Foundation.Repository.Models;
+﻿using Helixbase.Foundation.Content.Repositories;
 using Microsoft.Extensions.DependencyInjection;
 using Sitecore.DependencyInjection;
 
-namespace Helixbase.Foundation.Repository.DI
+namespace Helixbase.Foundation.Content.DI
 {
     public class RegisterContainer : IServicesConfigurator
     {

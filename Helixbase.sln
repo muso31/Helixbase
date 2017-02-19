@@ -15,17 +15,17 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helixbase.Foundation.ORM", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helixbase.Foundation.ORM.Tests", "src\Foundation\ORM\Tests\Helixbase.Foundation.ORM.Tests.csproj", "{0D501D66-8F98-4D3B-B600-2AFFA1FE9C35}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Repository", "Repository", "{F2FD5CAD-01CE-40D6-82B5-E243313A4CD3}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Content", "Content", "{F2FD5CAD-01CE-40D6-82B5-E243313A4CD3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helixbase.Foundation.Repository", "src\Foundation\Repository\code\Helixbase.Foundation.Repository.csproj", "{F8F55034-FA55-4D27-B115-0AB4EEB9A0A8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helixbase.Foundation.Content", "src\Foundation\Content\code\Helixbase.Foundation.Content.csproj", "{F8F55034-FA55-4D27-B115-0AB4EEB9A0A8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helixbase.Foundation.Repository.Tests", "src\Foundation\Repository\Tests\Helixbase.Foundation.Repository.Tests.csproj", "{4DE56B9B-7C72-4785-88CA-AB972C2BE47B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helixbase.Foundation.Content.Tests", "src\Foundation\Content\Tests\Helixbase.Foundation.Content.Tests.csproj", "{4DE56B9B-7C72-4785-88CA-AB972C2BE47B}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Model", "Model", "{1065468B-FB5C-4E5F-9050-CBC87D178BB6}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Search", "Search", "{1065468B-FB5C-4E5F-9050-CBC87D178BB6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helixbase.Foundation.Model", "src\Foundation\Model\code\Helixbase.Foundation.Model.csproj", "{22686DC6-4E6C-4D98-84B7-C48042F5B8FC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helixbase.Foundation.Search", "src\Foundation\Search\code\Helixbase.Foundation.Search.csproj", "{22686DC6-4E6C-4D98-84B7-C48042F5B8FC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helixbase.Foundation.Model.Tests", "src\Foundation\Model\Tests\Helixbase.Foundation.Model.Tests.csproj", "{199E7C65-7E29-4493-A132-42417600AFCE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helixbase.Foundation.Search.Tests", "src\Foundation\Search\Tests\Helixbase.Foundation.Search.Tests.csproj", "{199E7C65-7E29-4493-A132-42417600AFCE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Feature", "Feature", "{60DA3F20-DEED-4580-AE38-A296D76ADE79}"
 EndProject

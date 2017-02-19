@@ -1,9 +1,12 @@
 ﻿using Glass.Mapper.Sc;
-using Helixbase.Foundation.Model.Models;
+using Helixbase.Foundation.Content.Models;
 using System;
 
-namespace Helixbase.Foundation.Repository.Models
+namespace Helixbase.Foundation.Content.Repositories
 {
+    /// <summary>
+    /// Retrieve Sitecore items using Content API
+    /// </summary>
     public class SitecoreContentRepository : IContentRepository
     {
         private readonly ISitecoreContext _sitecoreContext;

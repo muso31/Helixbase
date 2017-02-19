@@ -7,8 +7,8 @@
     <ProjectGuid>{4DE56B9B-7C72-4785-88CA-AB972C2BE47B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Helixbase.Foundation.Repository.Tests</RootNamespace>
-    <AssemblyName>Helixbase.Foundation.Repository.Tests</AssemblyName>
+    <RootNamespace>Helixbase.Foundation.Content.Tests</RootNamespace>
+    <AssemblyName>Helixbase.Foundation.Content.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
