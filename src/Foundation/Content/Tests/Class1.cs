@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Helixbase.Foundation.Repository.Tests
+namespace Helixbase.Foundation.Content.Tests
 {
     public class Class1
     {
