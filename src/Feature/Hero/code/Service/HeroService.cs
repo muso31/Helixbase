@@ -26,7 +26,7 @@ namespace Helixbase.Feature.Hero.Service
             /* The above line is correct for this feature as we need an item from a datasource. However, if we are not returning
             the likes of a datasource item we should always get our items from an index. Once you have SOLR or Lucence setup, you
             should use something similar to the the line below to return an item from the generic search repository. */
-            // SEARCH REPO TO BE COMPLETED
+            // SEARCH REPO TO BE COMPLETED*************
             // First setup your predicate
             /* var predicate = PredicateBuilder.True<IHero>();
             predicate = predicate.And(item => item.TemplateId == new Guid(Templates.Hero.TemplateId)); */

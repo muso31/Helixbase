@@ -10,13 +10,13 @@ A Sitecore Helix based solution which can be used for Greenfield projects.
 * Target .net framework 4.5.2 for backwards compatibility
 * Sitecore Dependency Injection
 * A sample hero banner feature and sample site project for demonstration
-* Pre configured generic item repository
+* Pre configured generic content repository
+* Pre configured generic search repository - To be completed*
 
 #### Coming soon:
 
 * User and role Unicorn sync
 * Unicorn remote module
-* Generic repository for search API
 
 ## Setup Instructions
 1. Install <a href="https://dev.sitecore.net/Downloads/Sitecore_Experience_Platform/82/Sitecore_Experience_Platform_82_Update2.aspx" target="_blank">Sitecore Experience Platform 8.2 rev. 161221 (8.2 Update-2)</a>
@@ -27,3 +27,8 @@ A Sitecore Helix based solution which can be used for Greenfield projects.
 4. Perform a Nuget restore
 5. Publish each project in VS (or view gulp tasks)
 6. Run Unicorn and sync all configurations
+
+#### Using Helix Base:
+* Use the <a href="https://github.com/muso31/Helixbase/tree/master/src/Feature/Hero/code">Hero Feature</a> as an example
+	* View <a href="https://github.com/muso31/Helixbase/blob/master/src/Feature/Hero/code/Service/HeroService.cs">HeroService.cs</a> for examples of how to get an item from Sitecore using the content API and the search API.
+	* View <a href="https://github.com/muso31/Helixbase/blob/master/src/Feature/Hero/code/Routes/RegisterRoutes.cs">Register routes</a> for an example of how to register a route.
