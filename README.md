@@ -10,8 +10,7 @@ A Sitecore Helix based solution which can be used for Greenfield projects.
 * Target .net framework 4.5.2 for backwards compatibility
 * Sitecore Dependency Injection
 * A sample hero banner feature and sample site project for demonstration
-* Pre configured generic content repository
-* Pre configured generic search repository - To be completed*
+* Generic item repositories - includes content API and search API 
 
 #### Coming soon:
 
