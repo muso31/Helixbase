@@ -8,10 +8,10 @@ namespace Helixbase.Foundation.Content.ORM
     {
         public override void Configure()
         {
-            Map(x =>
+            Map(config =>
             {
-                x.AutoMap();
-                x.Info(y => y.BaseTemplateIds).InfoType(SitecoreInfoType.BaseTemplateIds);
+                config.AutoMap();
+                config.Info(f => f.BaseTemplateIds).InfoType(SitecoreInfoType.BaseTemplateIds);
             });
         }
     }

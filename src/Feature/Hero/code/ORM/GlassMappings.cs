@@ -7,11 +7,11 @@ namespace Helixbase.Feature.Hero.ORM
     {
         public override void Configure()
         {
-            Map(x =>
+            Map(config =>
             {
-                x.AutoMap();
-                x.TemplateId(Templates.Hero.TemplateId);
-                x.Field(f => f.HeroImages).FieldName("Hero Images");
+                config.AutoMap();
+                config.TemplateId(Templates.Hero.TemplateId);
+                config.Field(f => f.HeroImages).FieldName("Hero Images");
             });
         }
     }

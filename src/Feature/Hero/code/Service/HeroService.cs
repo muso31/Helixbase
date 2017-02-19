@@ -29,8 +29,8 @@ namespace Helixbase.Feature.Hero.Service
             should use something similar to the the line below to return an item from the generic search repository. */
             // SEARCH REPO TO BE COMPLETED*************
             // First setup your predicate
-            /* var predicate = PredicateBuilder.True<IHero>();
-            predicate = predicate.And(item => item.TemplateId == new Guid(Templates.Hero.TemplateId)); */
+            /* var predicate = PredicateBuilder.True<HeroSearchResultItem>();
+             predicate = predicate.And(item => item.TemplateId == Guid.Parse(Templates.Hero.TemplateId)); */
 
             // Get an item using the generic search repository (Sitecore Search API)
             // return _searchRepository.GetIndexItems("web", "sitecore_web_index", predicate).First();

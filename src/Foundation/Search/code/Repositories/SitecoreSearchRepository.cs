@@ -1,4 +1,5 @@
 ﻿using Glass.Mapper.Sc;
+using Helixbase.Foundation.Search.Models;
 using Sitecore.ContentSearch;
 using Sitecore.ContentSearch.Utilities;
 using System;
@@ -13,7 +14,7 @@ namespace Helixbase.Foundation.Search.Repositories
     /// </summary>
     public class SitecoreSearchRepository : ISearchRepository
     {
-        public IEnumerable<T> GetIndexItems<T>(string databaseName, string indexName, Expression<Func<T, bool>> predicate) where T : class
+        public IEnumerable<T> GetIndexItems<T>(string databaseName, string indexName, Expression<Func<T, bool>> predicate) where T : GlassSearchResultItem
         {
             var index = ContentSearchManager.GetIndex(indexName);
             var sitecoreService = new SitecoreService(databaseName);
