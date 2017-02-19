@@ -21,6 +21,7 @@ namespace Helixbase.Feature.Hero.Service
 
         public IHero GetHeroImages()
         {
+            // Get an item using the generic content repository (Sitecore Content API)
              return _contentRepository.GetContentItem<IHero>(RenderingContext.Curre‌nt.Rendering.DataSou‌rce);
 
             /* The above line is correct for this feature as we need an item from a datasource. However, if we are not returning
@@ -31,7 +32,7 @@ namespace Helixbase.Feature.Hero.Service
             /* var predicate = PredicateBuilder.True<IHero>();
             predicate = predicate.And(item => item.TemplateId == new Guid(Templates.Hero.TemplateId)); */
 
-            // Then get your items from the index
+            // Get an item using the generic search repository (Sitecore Search API)
             // return _searchRepository.GetIndexItems("web", "sitecore_web_index", predicate).First();
         }
     }
