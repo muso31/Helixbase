@@ -172,7 +172,6 @@
   <ItemGroup>
     <Compile Include="Controllers\HeroController.cs" />
     <Compile Include="DI\RegisterContainer.cs" />
-    <Compile Include="Models\HeroSearchResultItem.cs" />
     <Compile Include="Models\IHero.cs" />
     <Compile Include="ORM\GlassMappings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

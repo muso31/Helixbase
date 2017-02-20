@@ -1,6 +1,5 @@
-﻿using Glass.Mapper.Sc;
-using Helixbase.Foundation.Search.Models;
-using Sitecore.ContentSearch;
+﻿using Sitecore.ContentSearch;
+using Sitecore.ContentSearch.SearchTypes;
 using Sitecore.ContentSearch.Utilities;
 using System;
 using System.Collections.Generic;
@@ -14,22 +13,20 @@ namespace Helixbase.Foundation.Search.Repositories
     /// </summary>
     public class SitecoreSearchRepository : ISearchRepository
     {
-        public IEnumerable<T> GetIndexItems<T>(string databaseName, string indexName, Expression<Func<T, bool>> predicate) where T : GlassSearchResultItem
+        public IEnumerable<T> GetIndexItems<T>(string indexName, Expression<Func<T, bool>> predicate, Expression<Func<T, object>> orderBy = null, int? amount = null) where T : SearchResultItem
         {
             var index = ContentSearchManager.GetIndex(indexName);
-            var sitecoreService = new SitecoreService(databaseName);
-            var indexItems = new List<T>();
 
             using (var context = index.CreateSearchContext())
             {
                 var results = context.GetQueryable<T>()
                     .Where(predicate);
-                // SEARCH REPOSITORY TO BE COMPLETED
-                //foreach (var result in results)
-                //{
-                //    sitecoreService.Map(result);
-                //    indexItems.Add(result);
-                //}
+
+                if (orderBy != null)
+                    results = results.OrderBy(orderBy);
+
+                if (amount != 0)
+                    results = results.Take(amount.Value);
 
                 return results;
             }

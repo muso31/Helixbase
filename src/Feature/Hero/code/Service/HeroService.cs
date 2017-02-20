@@ -2,9 +2,11 @@
 using Helixbase.Foundation.Content.Repositories;
 using Helixbase.Foundation.Search.Repositories;
 using Sitecore.ContentSearch.Linq.Utilities;
+using Sitecore.ContentSearch.SearchTypes;
 using Sitecore.Mvc.Presentation;
 using System;
 using System.Linq;
+using System.Linq.Expressions;
 
 namespace Helixbase.Feature.Hero.Service
 {
@@ -27,18 +29,19 @@ namespace Helixbase.Feature.Hero.Service
             return _contentRepository.GetContentItem<IHero>(RenderingContext.Curre‌nt.Rendering.DataSou‌rce);
         }
         /// <summary>
-        /// Get an item using the generic search repository
-        /// This method is not required/in use. It is here as an example of how to use the search repository
-        /// which gets items from the search index (you must setup SOLR or Lucene first)
+        /// **** This method is not required/in use. It is here as an example of how to use the search repository ****
+        /// Get an item from the index using the generic search repository (you must setup SOLR or Lucene first)
         /// </summary>
         /// <returns>The first item based on the Hero template</returns>
-        public HeroSearchResultItem GetHeroImagesSearch()
+        public SearchResultItem GetHeroImagesSearch()
         {
             // First setup your predicate
-            var predicate = PredicateBuilder.True<HeroSearchResultItem>();
+            var predicate = PredicateBuilder.True<SearchResultItem>();
             predicate = predicate.And(item => item.TemplateId == new Sitecore.Data.ID(Templates.Hero.TemplateId));
-            // Todo: setup take/orderby parameters on search
-            return _searchRepository.GetIndexItems("web", "sitecore_web_index", predicate).First();
+            // Order by
+            Expression<Func<SearchResultItem, object>> orderBy = item => item.Name;
+
+            return _searchRepository.GetIndexItems("sitecore_web_index", predicate, orderBy).First();
         }
     }
 }
