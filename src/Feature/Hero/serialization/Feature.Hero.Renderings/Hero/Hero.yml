@@ -16,6 +16,9 @@ SharedFields:
   Hint: VaryByData
   Type: Checkbox
   Value: 1
+- ID: "94069f66-609c-48b0-8281-521c30fb269d"
+  Hint: Open Properties after Add
+  Value: 1
 - ID: "b5b27af1-25ef-405c-87ce-369b3a004016"
   Hint: Datasource Location
   Value: /sitecore/content/Helixbase/Global/Hero Items

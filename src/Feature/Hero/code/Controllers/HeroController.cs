@@ -4,7 +4,7 @@ using System.Web.Mvc;
 
 namespace Helixbase.Feature.Hero.Controllers
 {
-    public class HeroController  : SitecoreController
+    public class HeroController : SitecoreController
     {
         private IHeroService _heroService;
 

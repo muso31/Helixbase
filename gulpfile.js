@@ -65,7 +65,7 @@ var publishProjects = function (location, dest) {
 gulp.task("Build-Solution", function () {
     var targets = ["Build"];
 
-    return gulp.src("./Helixbase.sln")
+    return gulp.src("./" + gulpConfig.solutionName + ".sln")
         .pipe(msbuild({
             targets: targets,
             configuration: gulpConfig.buildConfiguration,
