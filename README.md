@@ -10,15 +10,17 @@ A Sitecore Helix based solution which can be used for Greenfield projects.
 * Target .net framework 4.5.2 for backwards compatibility
 * Sitecore Dependency Injection
 * A sample hero banner feature and sample site project for demonstration
-* Generic item repositories - includes content API and search API 
+* Generic item repositories - includes content API and search API
 
 #### Coming soon:
 
 * User and role Unicorn sync
+* PowerShell extension to add new sites
+* Multisite datasource
 
 ## Setup Instructions
 1. Install <a href="https://dev.sitecore.net/Downloads/Sitecore_Experience_Platform/82/Sitecore_Experience_Platform_82_Update2.aspx" target="_blank">Sitecore Experience Platform 8.2 rev. 161221 (8.2 Update-2)</a>
-	1. _Name your instance 'Helixbase'_
+	1. _Name your instance 'demo.helixbase'_
 2. Clone project to 'C:\Projects\Helix base'
 	2. _If you use another path, update the 'z.Helixbase.Settings.config' file and the 'gulp-config.js'_
 3. Install <a href="https://nodejs.org/en/" target="_blank">Node.js</a> and run 'npm-install' in the project root
