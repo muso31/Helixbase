@@ -1,5 +1,5 @@
 ﻿@using Sitecore.Mvc
-@* @using Sitecore.Mvc.Analytics.Extensions *@
+@using Sitecore.Mvc.Analytics.Extensions
 @{
     Layout = null;
 }
@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>@Html.Sitecore().Field("title", new { DisableWebEdit = true })</title>
-    @* @Html.Sitecore().VisitorIdentification() *@
+    @Html.Sitecore().VisitorIdentification()
     <!-- Bootstrap -->
     <link href="~/Content/bootstrap.css" rel="stylesheet">
 
