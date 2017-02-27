@@ -4,7 +4,7 @@ A Sitecore Helix based solution which can be used for Greenfield projects.
 #### Features include:
 
 * Glass Mapper (using fluent configuration)
-* Unicorn
+* Unicorn - including user and role sync
 * Sitecore 8.2 Update-2 ready
 * Bootstrap
 * Target .net framework 4.5.2 for backwards compatibility
@@ -14,7 +14,6 @@ A Sitecore Helix based solution which can be used for Greenfield projects.
 
 #### Coming soon:
 
-* User and role Unicorn sync
 * PowerShell extension to add new sites
 * Multisite datasource
 
