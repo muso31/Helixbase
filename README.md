@@ -14,8 +14,10 @@ A Sitecore Helix based solution which can be used for Greenfield projects.
 
 #### Coming soon:
 
-* PowerShell extension to add new sites
 * Multisite datasource
+* 301 redirects
+* Version trimming rules engine
+* Non admin file unlock
 
 ## Setup Instructions
 1. Install <a href="https://dev.sitecore.net/Downloads/Sitecore_Experience_Platform/82/Sitecore_Experience_Platform_82_Update2.aspx" target="_blank">Sitecore Experience Platform 8.2 rev. 161221 (8.2 Update-2)</a>
