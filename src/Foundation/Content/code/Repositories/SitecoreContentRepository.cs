@@ -15,11 +15,11 @@ namespace Helixbase.Foundation.Content.Repositories
         {
             _sitecoreContext = sitecoreContext;
         }
-        public T GetContentItem<T>(string contentGuid) where T : class, ISitecoreItem
+        public T GetContentItem<T>(string contentItem) where T : class
         {
-            return _sitecoreContext.GetItem<T>(Guid.Parse(contentGuid));
+            return _sitecoreContext.GetItem<T>(contentItem);
         }
-        public T GetCurrentItem<T>() where T : class, ISitecoreItem
+        public T GetCurrentItem<T>() where T : class
         {
             return _sitecoreContext.GetCurrentItem<T>();
         }

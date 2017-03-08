@@ -1,0 +1,14 @@
+﻿---
+ID: "79708364-2b47-4fb6-a62f-d1bf0a72758a"
+Parent: "a764f8d7-e505-4c60-acee-7f4416095d5f"
+Template: "06c2205b-cecb-4622-9680-e61e5df1cb05"
+Path: /sitecore/content/Helixbase/Global/Redirect Items
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20170306T203529Z

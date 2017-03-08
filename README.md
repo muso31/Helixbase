@@ -1,5 +1,5 @@
 <img src="https://nshackblog.files.wordpress.com/2017/02/helixbase1.png" height="154px" width="200px" /><br />
-A Sitecore Helix based solution which can be used for Greenfield projects.
+A Sitecore Helix based solution which can be used for Greenfield projects. Tackles some common problems when working with the platform.
 
 #### Features include:
 
@@ -11,11 +11,11 @@ A Sitecore Helix based solution which can be used for Greenfield projects.
 * Sitecore Dependency Injection
 * A sample hero banner feature and sample site project for demonstration
 * Generic item repositories - includes content API and search API
+* 301 Redirects
 
 #### Coming soon:
 
 * Multisite datasource
-* 301 redirects
 * Version trimming rules engine
 * Non admin file unlock
 
@@ -34,3 +34,5 @@ Refer to the <a href="https://github.com/muso31/Helixbase/tree/master/src/Featur
 
 * View <a href="https://github.com/muso31/Helixbase/blob/master/src/Feature/Hero/code/Service/HeroService.cs">HeroService.cs</a> for examples of how to get an item from Sitecore using the content API and the search API.
 * View <a href="https://github.com/muso31/Helixbase/blob/master/src/Feature/Hero/code/Routes/RegisterRoutes.cs">Register routes</a> for an example of how to register a route.
+
+To add a 301 redirect simply add a redirect item to the _Redirect Items_ folder found in your site _Global_ folder.

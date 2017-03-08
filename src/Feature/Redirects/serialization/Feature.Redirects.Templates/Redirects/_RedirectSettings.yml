@@ -1,13 +1,10 @@
 ﻿---
-ID: "98a3d034-92e4-4ecb-9632-119cabd08e15"
-Parent: "e9bb794a-b514-4ff5-8386-008fda7f7f66"
+ID: "022b5a17-18a6-4266-a226-c2c8845bcd81"
+Parent: "b6fe0494-ef83-46c1-82e7-70538fcf12d6"
 Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
-Path: /sitecore/templates/Project/Helixbase/Content Types/Site Root
+Path: /sitecore/templates/Feature/Redirects/_RedirectSettings
 DB: master
 SharedFields:
-- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
-  Hint: __Icon
-  Value: Applications/32x32/window_earth.png
 - ID: "12c33f3f-86c5-43a5-aeb4-5598cec45116"
   Hint: __Base template
   Type: tree list
@@ -19,4 +16,4 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20170212T144341Z
+      Value: 20170307T121857Z
