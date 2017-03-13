@@ -23,5 +23,9 @@ namespace Helixbase.Foundation.Content.Repositories
         {
             return _sitecoreContext.GetCurrentItem<T>();
         }
+        public T GetHomeItem<T>() where T : class
+        {
+            return _sitecoreContext.GetHomeItem<T>();
+        }
     }
 }
