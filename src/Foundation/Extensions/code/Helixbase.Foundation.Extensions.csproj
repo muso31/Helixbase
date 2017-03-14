@@ -164,7 +164,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Commands\ContentEditor\Edit.cs" />
+    <Compile Include="Commands\Item\CheckIn.cs" />
     <Compile Include="DI\RegisterContainer.cs" />
+    <Compile Include="Pipelines\GetContentEditorWarnings\IsLocked.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -179,7 +182,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Config\Include\Foundation\Foundation.Extensions.Serialization.config">
+    <Content Include="App_Config\Include\Foundation\Foundation.Extensions.ItemUnlocking.config">
       <SubType>Designer</SubType>
     </Content>
     <None Include="Properties\PublishProfiles\Localhost.pubxml" />
@@ -191,6 +194,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
