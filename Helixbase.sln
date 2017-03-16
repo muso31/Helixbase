@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.4
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Foundation", "Foundation", "{C3F57797-2D54-4626-B842-51F30272E972}"
 EndProject
@@ -65,6 +65,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helixbase.Feature.Redirects", "src\Feature\Redirects\code\Helixbase.Feature.Redirects.csproj", "{70010557-C866-4D76-A031-C78411C7DBF4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helixbase.Feature.Redirects.Tests", "src\Feature\Redirects\Tests\Helixbase.Feature.Redirects.Tests.csproj", "{0C6AB419-5408-49DF-B7AD-6B334F706CCD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Extensions", "Extensions", "{509150CA-7BD0-4567-A0F4-55C6009B884C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
