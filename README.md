@@ -9,7 +9,7 @@ A Sitecore Helix based solution which can be used for Greenfield projects. Tackl
 * Bootstrap
 * Target .net framework 4.5.2 for backwards compatibility
 * Sitecore Dependency Injection - with auto controller registration
-A sample hero banner feature and sample site project for demonstration
+* A sample hero banner feature and sample site project for demonstration
 * Generic item repositories - includes content API and search API
 * 301 Redirects
 
