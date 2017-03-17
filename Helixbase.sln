@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.4
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Foundation", "Foundation", "{C3F57797-2D54-4626-B842-51F30272E972}"
 EndProject
@@ -66,6 +66,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helixbase.Feature.Redirects
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helixbase.Feature.Redirects.Tests", "src\Feature\Redirects\Tests\Helixbase.Feature.Redirects.Tests.csproj", "{0C6AB419-5408-49DF-B7AD-6B334F706CCD}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DI", "DI", "{0ACE73B5-5F04-4603-BC37-63706BEF40AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helixbase.Foundation.DI", "src\Foundation\DI\code\Helixbase.Foundation.DI.csproj", "{0D3A6F11-B5FF-4D8C-8A74-19501D2E80D4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -124,6 +128,10 @@ Global
 		{0C6AB419-5408-49DF-B7AD-6B334F706CCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0C6AB419-5408-49DF-B7AD-6B334F706CCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0C6AB419-5408-49DF-B7AD-6B334F706CCD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D3A6F11-B5FF-4D8C-8A74-19501D2E80D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D3A6F11-B5FF-4D8C-8A74-19501D2E80D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D3A6F11-B5FF-4D8C-8A74-19501D2E80D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D3A6F11-B5FF-4D8C-8A74-19501D2E80D4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -152,5 +160,7 @@ Global
 		{592F0AD6-D42F-497C-A67F-E0A021685505} = {60DA3F20-DEED-4580-AE38-A296D76ADE79}
 		{70010557-C866-4D76-A031-C78411C7DBF4} = {592F0AD6-D42F-497C-A67F-E0A021685505}
 		{0C6AB419-5408-49DF-B7AD-6B334F706CCD} = {592F0AD6-D42F-497C-A67F-E0A021685505}
+		{0ACE73B5-5F04-4603-BC37-63706BEF40AB} = {C3F57797-2D54-4626-B842-51F30272E972}
+		{0D3A6F11-B5FF-4D8C-8A74-19501D2E80D4} = {0ACE73B5-5F04-4603-BC37-63706BEF40AB}
 	EndGlobalSection
 EndGlobal

@@ -9,7 +9,6 @@ namespace Helixbase.Feature.Hero.DI
     {
         public void Configure(IServiceCollection serviceCollection)
         {
-            serviceCollection.AddTransient<HeroController>();
             serviceCollection.AddTransient<IHeroService, HeroService>();
         }
     }
