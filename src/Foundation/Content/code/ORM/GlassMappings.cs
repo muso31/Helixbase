@@ -15,15 +15,4 @@ namespace Helixbase.Foundation.Content.ORM
             });
         }
     }
-    public class SitecoreRootItemMap : SitecoreGlassMap<ISiteRoot>
-    {
-        public override void Configure()
-        {
-            Map(config =>
-            {
-                config.AutoMap();
-                config.TemplateId(Templates.SiteRoot.TemplateId);
-            });
-        }
-    }
 }
