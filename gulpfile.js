@@ -6,32 +6,15 @@ var runSequence = require("run-sequence");
 var gulpConfig = require("./gulp-config.js")();
 module.exports.config = gulpConfig;
 
-gulp.task("Publish-All-Projects", function () {
-    return gulp.src("./src/{Feature,Foundation,Project}/**/code/*.csproj")
-      .pipe(foreach(function (stream, file) {
-          return stream
-          .pipe(debug({ title: "Publishing "}))
-          .pipe(msbuild({
-              targets: ["Build"],
-              errorOnFail: true,
-              //stdout: true,
-              maxcpucount: 0,
-              properties: {
-                  Configuration: gulpConfig.buildConfiguration,
-                  publishUrl: gulpConfig.webRoot,
-                  DeployDefaultTarget: "WebPublish",
-                  WebPublishMethod: "FileSystem",
-                  DeployOnBuild: "true",
-                  DeleteExistingFiles: "false",
-                  _FindDependencies: "false"
-              }
-          }));
-      }).on('error', function (err) {
-          console.log(err);
-      }));
+// From Habitat
+gulp.task("Publish-All-Projects", function (callback) {
+    return runSequence(
+        "Build-Solution",
+        "Publish-Foundation-Projects",
+        "Publish-Feature-Projects",
+        "Publish-Project-Projects", callback);
 });
 
-// From Habitat - testing other publish scripts
 var publishProjects = function (location, dest) {
     dest = dest || gulpConfig.webRoot;
     var targets = ["Build"];
@@ -49,7 +32,7 @@ var publishProjects = function (location, dest) {
                 stdout: true,
                 errorOnFail: true,
                 maxcpucount: 0,
-                toolsVersion: 14.0,
+                toolsVersion: gulpConfig.MSBuildToolsVersion,
                 properties: {
                     DeployOnBuild: "true",
                     DeployDefaultTarget: "WebPublish",
@@ -74,7 +57,7 @@ gulp.task("Build-Solution", function () {
             stdout: true,
             errorOnFail: true,
             maxcpucount: 0,
-            toolsVersion: 14.0
+            toolsVersion: gulpConfig.MSBuildToolsVersion
         }));
 });
 

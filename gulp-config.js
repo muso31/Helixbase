@@ -3,7 +3,8 @@ module.exports = function () {
         webRoot: "c:\\inetpub\\wwwroot\\demo.helixbase\\Website",
         devRoot: "c:\\projects\\Helix base",
         solutionName: "Helixbase",
-        buildConfiguration: "Debug"
+        buildConfiguration: "Debug",
+        MSBuildToolsVersion: 15.0
     }
     return config;
 }

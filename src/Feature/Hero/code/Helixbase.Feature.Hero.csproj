@@ -105,8 +105,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Sitecore.Mvc, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\..\packages\Sitecore.Mvc.8.2.161221\lib\NET452\Sitecore.Mvc.dll</HintPath>
-      <Private>True</Private>
+      <HintPath>..\..\..\..\packages\Sitecore.Mvc.NoReferences.8.2.161221\lib\NET452\Sitecore.Mvc.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.NVelocity, Version=7.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\..\..\packages\Sitecore.NVelocity.8.2.161221\lib\NET452\Sitecore.NVelocity.dll</HintPath>
@@ -232,7 +231,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>4632</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>

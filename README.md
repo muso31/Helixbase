@@ -26,7 +26,7 @@ A Sitecore Helix based solution which can be used for Greenfield projects. Tackl
 	2. _If you use another path, update the 'z.Helixbase.Settings.config' file and the 'gulp-config.js'_
 3. Install <a href="https://nodejs.org/en/" target="_blank">Node.js</a> and run 'npm-install' in the project root
 4. Perform a Nuget restore
-5. Publish each project in VS (or view gulp tasks)
+5. Publish each project in VS, or view gulp tasks - you may need to update the 'MSBuildToolsVersion' in the gulp-config.js
 6. Run Unicorn and sync all configurations
 
 #### Using Helix Base:

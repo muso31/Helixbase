@@ -1,6 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Sitecore.DependencyInjection;
-using System;
 
 namespace Helixbase.Foundation.DI
 {
