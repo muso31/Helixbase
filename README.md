@@ -37,4 +37,4 @@ Refer to the <a href="https://github.com/muso31/Helixbase/tree/master/src/Featur
 
 To add a 301 redirect simply add a redirect item to the _Redirect Items_ folder found in your site _Global_ folder.
 
-To adjust the amount of versions stored changed the rule on the _/sitecore/system/Settings/Rules/Item Saved/Rules/Delete Old Versions_ item. You can also change the rule to recycle or archive. 
+To adjust the amount of versions stored changed the rule on the _/sitecore/system/Settings/Rules/Item Saved/Rules/Delete Old Versions_ item. You can also change the rule to recycle or archive old versions. 
