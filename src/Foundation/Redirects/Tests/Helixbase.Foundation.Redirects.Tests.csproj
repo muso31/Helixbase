@@ -6,8 +6,8 @@
     <ProjectGuid>{0C6AB419-5408-49DF-B7AD-6B334F706CCD}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Helixbase.Feature.Redirects.Tests</RootNamespace>
-    <AssemblyName>Helixbase.Feature.Redirects.Tests</AssemblyName>
+    <RootNamespace>Helixbase.Foundation.Redirects.Tests</RootNamespace>
+    <AssemblyName>Helixbase.Foundation.Redirects.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -67,9 +67,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\code\Helixbase.Feature.Redirects.csproj">
+    <ProjectReference Include="..\code\Helixbase.Foundation.Redirects.csproj">
       <Project>{70010557-C866-4D76-A031-C78411C7DBF4}</Project>
-      <Name>Helixbase.Feature.Redirects</Name>
+      <Name>Helixbase.Foundation.Redirects</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

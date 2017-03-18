@@ -1,7 +1,7 @@
 ﻿using Helixbase.Foundation.Content.Models;
 using System.Collections.Generic;
 
-namespace Helixbase.Feature.Redirects.Models
+namespace Helixbase.Foundation.Redirects.Models
 {
     public interface IRedirectFolder : ISitecoreItem
     {

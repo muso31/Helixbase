@@ -1,4 +1,4 @@
-﻿using Helixbase.Feature.Redirects.Models;
+﻿using Helixbase.Foundation.Redirects.Models;
 using Helixbase.Foundation.Content.Repositories;
 using Sitecore.Data.Items;
 using Sitecore.Links;
@@ -6,7 +6,7 @@ using Sitecore.Pipelines.HttpRequest;
 using System;
 using System.Web;
 
-namespace Helixbase.Feature.Redirects.Pipelines
+namespace Helixbase.Foundation.Redirects.Pipelines
 {
     public class RedirectResolver : HttpRequestProcessor
     {

@@ -1,7 +1,7 @@
 ﻿using Glass.Mapper.Sc.Maps;
-using Helixbase.Feature.Redirects.Models;
+using Helixbase.Foundation.Redirects.Models;
 
-namespace Helixbase.Feature.Redirects.ORM
+namespace Helixbase.Foundation.Redirects.ORM
 {
     public class RedirectFolderMap : SitecoreGlassMap<IRedirectFolder>
     {

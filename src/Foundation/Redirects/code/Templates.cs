@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Helixbase.Feature.Redirects
+namespace Helixbase.Foundation.Redirects
 {
     public class Templates
     {
