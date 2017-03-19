@@ -28,6 +28,7 @@ namespace Helixbase.Foundation.Redirects.Pipelines
         private void Perform301Redirect()
         {
             var redirectSettings = _contentRepository.GetContentItem<IRedirectSettings>(Sitecore.Context.Site.RootPath);
+
             var path = HttpContext.Current.Request.Url.LocalPath;
 
             if (redirectSettings.RedirectFolder == null)
