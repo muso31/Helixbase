@@ -210,6 +210,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Foundation\Models\code\Helixbase.Foundation.Models.csproj">
+      <Project>{3227661F-A60D-486F-A904-14BAF0EB991E}</Project>
+      <Name>Helixbase.Foundation.Models</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\Foundation\Search\code\Helixbase.Foundation.Search.csproj">
       <Project>{22686DC6-4E6C-4D98-84B7-C48042F5B8FC}</Project>
       <Name>Helixbase.Foundation.Search</Name>

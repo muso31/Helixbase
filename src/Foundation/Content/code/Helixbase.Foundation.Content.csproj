@@ -161,7 +161,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\ISitecoreItem.cs" />
     <Compile Include="ORM\GlassMappings.cs" />
     <Compile Include="Repositories\IContentRepository.cs" />
     <Compile Include="Repositories\SitecoreContentRepository.cs" />
@@ -174,6 +173,10 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Models\code\Helixbase.Foundation.Models.csproj">
+      <Project>{3227661F-A60D-486F-A904-14BAF0EB991E}</Project>
+      <Name>Helixbase.Foundation.Models</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Search\code\Helixbase.Foundation.Search.csproj">
       <Project>{22686dc6-4e6c-4d98-84b7-c48042f5b8fc}</Project>
       <Name>Helixbase.Foundation.Search</Name>

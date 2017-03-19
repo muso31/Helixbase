@@ -1,4 +1,4 @@
-﻿using Helixbase.Foundation.Content.Models;
+﻿using Helixbase.Foundation.Models.BaseItem;
 
 namespace Helixbase.Foundation.Redirects.Models
 {

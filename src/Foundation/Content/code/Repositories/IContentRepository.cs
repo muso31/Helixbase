@@ -1,7 +1,4 @@
-﻿using Helixbase.Foundation.Content.Models;
-using System;
-
-namespace Helixbase.Foundation.Content.Repositories
+﻿namespace Helixbase.Foundation.Content.Repositories
 {
     public interface IContentRepository
     {

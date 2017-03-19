@@ -1,6 +1,4 @@
 ﻿using Glass.Mapper.Sc;
-using Helixbase.Foundation.Content.Models;
-using System;
 
 namespace Helixbase.Foundation.Content.Repositories
 {

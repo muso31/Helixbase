@@ -1,6 +1,6 @@
 ﻿using Glass.Mapper.Sc.Configuration;
 using Glass.Mapper.Sc.Maps;
-using Helixbase.Foundation.Content.Models;
+using Helixbase.Foundation.Models.BaseItem;
 
 namespace Helixbase.Foundation.Content.ORM
 {
