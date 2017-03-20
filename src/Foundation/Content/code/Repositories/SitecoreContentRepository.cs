@@ -13,25 +13,25 @@ namespace Helixbase.Foundation.Content.Repositories
         {
             _sitecoreContext = sitecoreContext;
         }
-        public T GetContentItem<T>(string contentItem) where T : class
+        public T GetContentItem<T>(string contentItem, bool isLazy = false, bool inferType = false) where T : class
         {
-            return _sitecoreContext.GetItem<T>(contentItem);
+            return _sitecoreContext.GetItem<T>(contentItem, isLazy, inferType);
         }
-        public T GetCurrentItem<T>() where T : class
+        public T GetCurrentItem<T>(bool isLazy = false, bool inferType = false) where T : class
         {
-            return _sitecoreContext.GetCurrentItem<T>();
+            return _sitecoreContext.GetCurrentItem<T>(isLazy, inferType);
         }
-        public T GetHomeItem<T>() where T : class
+        public T GetHomeItem<T>(bool isLazy = false, bool inferType = false) where T : class
         {
-            return _sitecoreContext.GetHomeItem<T>();
+            return _sitecoreContext.GetHomeItem<T>(isLazy, inferType);
         }
-        public T GetRootItem<T>() where T : class
+        public T GetRootItem<T>(bool isLazy = false, bool inferType = false) where T : class
         {
-            return _sitecoreContext.GetRootItem<T>();
+            return _sitecoreContext.GetRootItem<T>(isLazy, inferType);
         }
-        public T QuerySingleRelative<T>(string query) where T : class
+        public T QuerySingleRelative<T>(string query, bool isLazy = false, bool inferType = false) where T : class
         {
-            return _sitecoreContext.QuerySingleRelative<T>(query);
+            return _sitecoreContext.QuerySingleRelative<T>(query, isLazy, inferType);
         }
     }
 }

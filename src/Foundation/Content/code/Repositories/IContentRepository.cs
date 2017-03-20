@@ -2,10 +2,10 @@
 {
     public interface IContentRepository
     {
-        T GetContentItem<T>(string contentGuid) where T : class;
-        T GetCurrentItem<T>() where T : class;
-        T GetHomeItem<T>() where T : class;
-        T GetRootItem<T>() where T : class;
-        T QuerySingleRelative<T>(string query) where T : class;
+        T GetContentItem<T>(string contentItem, bool isLazy = false, bool inferType = false) where T : class;
+        T GetCurrentItem<T>(bool isLazy = false, bool inferType = false) where T : class;
+        T GetHomeItem<T>(bool isLazy = false, bool inferType = false) where T : class;
+        T GetRootItem<T>(bool isLazy = false, bool inferType = false) where T : class;
+        T QuerySingleRelative<T>(string query, bool isLazy = false, bool inferType = false) where T : class;
     }
 }
