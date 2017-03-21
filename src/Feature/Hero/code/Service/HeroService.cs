@@ -26,6 +26,7 @@ namespace Helixbase.Feature.Hero.Service
         /// <returns>The Hero datasource item from the Content API</returns>
         public IHero GetHeroImages()
         {
+            // TODO: Wrap Sitecore API call
             return _contentRepository.GetContentItem<IHero>(RenderingContext.Curre‌nt.Rendering.DataSou‌rce);
         }
         /// <summary>
