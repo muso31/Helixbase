@@ -27,7 +27,8 @@ namespace Helixbase.Foundation.Redirects.Pipelines
 
         private void Perform301Redirect()
         {
-            var redirectSettings = _contentRepository.GetRootItem<IRedirectSettings>(false, true);
+            // TODO: Use GetRootItem (not working, bug in Glass?) and remove Sitecore API call. 
+            var redirectSettings = _contentRepository.GetContentItem<IRedirectSettings>(Sitecore.Context.Site.RootPath);
 
             var path = HttpContext.Current.Request.Url.LocalPath;
 
@@ -36,18 +37,23 @@ namespace Helixbase.Foundation.Redirects.Pipelines
 
             foreach (var redirect in redirectSettings.RedirectFolder.Children)
             {
-                if (redirect is I301Redirect)
+                // TODO - make Infer Types work with Helix
+                //    if (redirect is I301Redirect)
+                //    {
+                //        var redirect301Item = redirect as I301Redirect;
+                //        if (redirect301Item.RequestedURL?.ToLower() == path.ToLower())
+                //        {
+                //            var targetItem = _contentRepository.GetContentItem<Item>(redirect301Item.RedirectItem.Id.ToString());
+                //            HttpContext.Current.Response.RedirectPermanent(LinkManager.GetItemUrl(targetItem), true);
+                //        }
+                //    }
+                if (string.IsNullOrEmpty(redirect.RequestedURL))
+                    throw new NullReferenceException("Could not find a URL value on the redirect item");
+
+                if (redirect.RequestedURL.ToLower() == path.ToLower())
                 {
-                    var redirect301Item = redirect as I301Redirect;
-
-                    if (string.IsNullOrEmpty(redirect301Item.RequestedURL))
-                        throw new NullReferenceException("Could not find a URL value on the redirect item");
-
-                    if (redirect301Item.RequestedURL.ToLower() == path.ToLower())
-                    {
-                        var targetItem = _contentRepository.GetContentItem<Item>(redirect301Item.RedirectItem.Id.ToString());
-                        HttpContext.Current.Response.RedirectPermanent(LinkManager.GetItemUrl(targetItem), true);
-                    }
+                    var targetItem = _contentRepository.GetContentItem<Item>(redirect.RedirectItem.Id.ToString());
+                    HttpContext.Current.Response.RedirectPermanent(LinkManager.GetItemUrl(targetItem), true);
                 }
             }
         }

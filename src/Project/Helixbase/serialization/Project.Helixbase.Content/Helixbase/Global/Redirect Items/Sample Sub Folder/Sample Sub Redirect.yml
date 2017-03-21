@@ -1,0 +1,20 @@
+﻿---
+ID: "7179e469-7700-478a-807f-762c227808c1"
+Parent: "fc356bcd-0c7c-4df0-9db5-6ed3d2e5af4c"
+Template: "e85bb7d7-85d1-403e-a178-d0988966583f"
+Path: /sitecore/content/Helixbase/Global/Redirect Items/Sample Sub Folder/Sample Sub Redirect
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20170321T205755Z
+    - ID: "8f536075-8222-4a90-bb51-a36797b24129"
+      Hint: RedirectItem
+      Value: "{1D5C266A-112F-4EA2-A69E-E4865ACE2200}"
+    - ID: "cfaf69f2-4a0e-42e8-a90e-2a8d3ee59a2d"
+      Hint: RequestedURL
+      Value: /sample_subredirect
