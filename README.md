@@ -23,7 +23,7 @@ A Sitecore Helix based solution which can be used for Greenfield projects. Tackl
 1. Install <a href="https://dev.sitecore.net/Downloads/Sitecore_Experience_Platform/82/Sitecore_Experience_Platform_82_Update2.aspx" target="_blank">Sitecore Experience Platform 8.2 rev. 161221 (8.2 Update-2)</a>
 	1. _Name your instance 'demo.helixbase'_
 2. Clone project to 'C:\Projects\Helix base'
-	2. _If you use another path, update the 'z.Helixbase.Settings.config' file and the 'gulp-config.js'_
+	1. _If you use another path, update the 'z.Helixbase.Settings.config' file and the 'gulp-config.js'_
 3. Install <a href="https://nodejs.org/en/" target="_blank">Node.js</a> and run 'npm-install' in the project root
 4. Perform a Nuget restore
 5. Publish each project in VS, or view gulp tasks - you may need to update the 'MSBuildToolsVersion' in the gulp-config.js

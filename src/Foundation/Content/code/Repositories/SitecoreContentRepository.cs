@@ -13,6 +13,7 @@ namespace Helixbase.Foundation.Content.Repositories
         {
             _sitecoreContext = sitecoreContext;
         }
+
         /// <summary>
         /// Gets an item using path or guid.
         /// </summary>
