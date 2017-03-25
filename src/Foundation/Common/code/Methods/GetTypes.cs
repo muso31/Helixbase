@@ -6,7 +6,7 @@ using System.Reflection;
 
 namespace Helixbase.Foundation.Common.Methods
 {
-    public class GetTypes
+    public static class GetTypes
     {
         public static Type[] GetTypesImplementing<T>(params Assembly[] assemblies)
         {
