@@ -9,9 +9,6 @@ Languages:
   Versions:
   - Version: 1
     Fields:
-    - ID: "0972b444-fd16-4ecd-95d3-6c37dc53f7e9"
-      Hint: ItemVersions
-      Value: 10
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20170212T144519Z
