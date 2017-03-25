@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using Helixbase.Foundation.DI.Extensions;
+using Microsoft.Extensions.DependencyInjection;
 using Sitecore.DependencyInjection;
 
 namespace Helixbase.Foundation.DI

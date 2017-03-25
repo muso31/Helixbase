@@ -3,8 +3,8 @@ using Glass.Mapper.Configuration;
 using Glass.Mapper.IoC;
 using Glass.Mapper.Maps;
 using Glass.Mapper.Sc.IoC;
+using Helixbase.Foundation.Common.Methods;
 using System;
-using System.Linq;
 using IDependencyResolver = Glass.Mapper.Sc.IoC.IDependencyResolver;
 
 namespace Helixbase.Foundation.ORM.App_Start
@@ -53,19 +53,16 @@ namespace Helixbase.Foundation.ORM.App_Start
         public static void AddMaps(IConfigFactory<IGlassMap> mapsConfigFactory)
         {
             // Add maps here
-            var assemblies = AppDomain.CurrentDomain.GetAssemblies().Where(x => x.FullName.IndexOf("Helixbase", StringComparison.OrdinalIgnoreCase) >= 0);
+            var assemblies = GetAssemblies.GetByFilter("Helixbase.Foundation.*", "Helixbase.Feature.*");
 
-            var glassmapType = typeof(IGlassMap);
+            var mappings = GetTypes.GetTypesImplementing<IGlassMap>(assemblies);
 
-            foreach (var assembly in assemblies)
+            foreach (var map in mappings)
             {
-                var mappings = assembly.GetTypes().Where(x => glassmapType.IsAssignableFrom(x));
-
-                foreach (var map in mappings)
-                {
-                    mapsConfigFactory.Add(() => Activator.CreateInstance(map) as IGlassMap);
-                }
+                //serviceCollection.AddTransient(controller);
+                mapsConfigFactory.Add(() => Activator.CreateInstance(map) as IGlassMap);
             }
+
         }
     }
 }

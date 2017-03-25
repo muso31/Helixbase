@@ -19,15 +19,17 @@ namespace Helixbase.Foundation.Redirects.Pipelines
 
         public override void Process(HttpRequestArgs args)
         {
-            if (args.Context.Request.Url.OriginalString.ToLower().Contains("/sitecore"))
+            if (args.Context.Request.Url.OriginalString.ToLower().Contains("/sitecore") || args.Context.Request.Url.AbsolutePath.Equals("/"))
                 return;
+            // only perform redirect if no Sitecore item exists
             if (Sitecore.Context.Item == null)
                 Perform301Redirect();
         }
 
         private void Perform301Redirect()
         {
-            // TODO: Use GetRootItem and remove Sitecore API call. 
+            // TODO: Use GetRootItem and remove Sitecore API call. Fix GetRootItem errors
+            //var redirectSettings = _contentRepository.GetRootItem<IRedirectSettings>();
             var redirectSettings = _contentRepository.GetContentItem<IRedirectSettings>(Sitecore.Context.Site.RootPath);
 
             var path = HttpContext.Current.Request.Url.LocalPath;
