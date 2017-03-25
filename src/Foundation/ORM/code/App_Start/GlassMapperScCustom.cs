@@ -54,7 +54,6 @@ namespace Helixbase.Foundation.ORM.App_Start
         {
             // Add maps here
             var assemblies = GetAssemblies.GetByFilter("Helixbase.Foundation.*", "Helixbase.Feature.*");
-
             var mappings = GetTypes.GetTypesImplementing<IGlassMap>(assemblies);
 
             foreach (var map in mappings)
