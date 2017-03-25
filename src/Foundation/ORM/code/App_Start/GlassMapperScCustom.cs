@@ -58,7 +58,8 @@ namespace Helixbase.Foundation.ORM.App_Start
 
             foreach (var map in mappings)
             {
-                //serviceCollection.AddTransient(controller);
+                // Can add mappings to DI:
+                // serviceCollection.AddTransient(map);
                 mapsConfigFactory.Add(() => Activator.CreateInstance(map) as IGlassMap);
             }
 
