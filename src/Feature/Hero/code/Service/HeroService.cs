@@ -1,5 +1,4 @@
-﻿using Glass.Mapper.Sc.Web;
-using Helixbase.Feature.Hero.Models;
+﻿using Helixbase.Feature.Hero.Models;
 using Helixbase.Foundation.Content.Repositories;
 using Helixbase.Foundation.Search.Repositories;
 using Sitecore.ContentSearch.Linq.Utilities;
@@ -14,13 +13,11 @@ namespace Helixbase.Feature.Hero.Service
     {
         private IContentRepository _contentRepository;
         private ISearchRepository _searchRepository;
-        private IRenderingContext _renderingContext;
 
-        public HeroService(IContentRepository contentRepository, ISearchRepository searchRepository, IRenderingContext renderingContext)
+        public HeroService(IContentRepository contentRepository, ISearchRepository searchRepository)
         {
             _contentRepository = contentRepository;
             _searchRepository = searchRepository;
-            _renderingContext = renderingContext;
         }
         /// <summary>
         /// Get an item using the generic content repository
@@ -29,7 +26,7 @@ namespace Helixbase.Feature.Hero.Service
         public IHero GetHeroImages()
         {
             // TODO: Wrap Sitecore API call
-            return _contentRepository.GetContentItem<IHero>(_renderingContext.GetDataSource());
+            return _contentRepository.GetContentItem<IHero>(_contentRepository.GetDataSource());
         }
         /// <summary>
         /// **** This method is not required/in use. It is here as an example of how to use the search repository ****

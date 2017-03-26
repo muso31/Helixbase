@@ -1,4 +1,5 @@
 ﻿using Glass.Mapper.Sc;
+using Glass.Mapper.Sc.Web;
 
 namespace Helixbase.Foundation.Content.Repositories
 {
@@ -8,10 +9,12 @@ namespace Helixbase.Foundation.Content.Repositories
     public class SitecoreContentRepository : IContentRepository
     {
         private readonly ISitecoreContext _sitecoreContext;
+        private readonly IRenderingContext _renderingContext;
 
-        public SitecoreContentRepository(ISitecoreContext sitecoreContext)
+        public SitecoreContentRepository(ISitecoreContext sitecoreContext, IRenderingContext renderingContext)
         {
             _sitecoreContext = sitecoreContext;
+            _renderingContext = renderingContext;
         }
 
         /// <summary>
@@ -70,6 +73,21 @@ namespace Helixbase.Foundation.Content.Repositories
         public T QuerySingleRelative<T>(string query, bool isLazy = false, bool inferType = false) where T : class
         {
             return _sitecoreContext.QuerySingleRelative<T>(query, isLazy, inferType);
+        }
+
+        public bool HasDataSource()
+        {
+            return _renderingContext.HasDataSource;
+        }
+
+        public string GetDataSource()
+        {
+            return _renderingContext.GetDataSource();
+        }
+
+        public string GetRenderingParameters()
+        {
+            return _renderingContext.GetRenderingParameters();
         }
     }
 }
