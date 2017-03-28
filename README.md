@@ -12,7 +12,7 @@ A Sitecore Helix based solution which can be used for Greenfield projects. Tackl
 * A sample hero banner feature and sample site project for demonstration
 * Generic item repositories - includes content API and search API
 * 301 Redirects
-* Version trimming rules engine - Items limited to 10 versions
+* Version trimming rules engine - Items limited to 10 versions by default
 
 #### Coming soon:
 
