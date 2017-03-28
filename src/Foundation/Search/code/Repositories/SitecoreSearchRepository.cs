@@ -30,7 +30,7 @@ namespace Helixbase.Foundation.Search.Repositories
                 if (orderBy != null)
                     results = results.OrderBy(orderBy);
 
-                if (amount != 0)
+                if (amount != null)
                     results = results.Take(amount.Value);
 
                 return results;
