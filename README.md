@@ -16,8 +16,8 @@ A Sitecore Helix based solution which can be used for Greenfield projects. Tackl
 
 #### Coming soon:
 
-* Multisite datasource
 * Non admin file unlock
+* Time based personalization
 
 ## Setup Instructions
 1. Install <a href="https://dev.sitecore.net/Downloads/Sitecore_Experience_Platform/82/Sitecore_Experience_Platform_82_Update2.aspx" target="_blank">Sitecore Experience Platform 8.2 rev. 161221 (8.2 Update-2)</a>
