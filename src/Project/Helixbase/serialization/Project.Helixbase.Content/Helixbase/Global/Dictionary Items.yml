@@ -1,0 +1,14 @@
+﻿---
+ID: "8ac9d0c5-f969-4cfd-b0b3-4554638069a7"
+Parent: "a764f8d7-e505-4c60-acee-7f4416095d5f"
+Template: "7aa0e340-c796-4c03-b84f-e04162058b86"
+Path: /sitecore/content/Helixbase/Global/Dictionary Items
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20170401T183009Z
