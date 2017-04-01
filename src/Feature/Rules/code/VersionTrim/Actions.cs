@@ -2,7 +2,7 @@
 using Assert = Sitecore.Diagnostics.Assert;
 using SC = Sitecore;
 
-namespace Helixbase.Foundation.Rules.VersionTrim
+namespace Helixbase.Feature.Rules.VersionTrim
 {
     public abstract class MinVersionsAction<T> :
     SC.Rules.Actions.RuleAction<T> where T : SC.Rules.RuleContext

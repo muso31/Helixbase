@@ -16,6 +16,3 @@ Languages:
       Hint: __Created by
       Value: |
         sitecore\Admin
-    - ID: "a835d66c-308f-4be6-9afe-fac0e70f9ce4"
-      Hint: RedirectFolder
-      Value: "{79708364-2B47-4FB6-A62F-D1BF0A72758A}"

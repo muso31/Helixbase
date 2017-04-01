@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Helixbase.Foundation.Rules.Tests
+namespace Helixbase.Feature.Rules.Tests
 {
     [TestClass]
     public class UnitTest1

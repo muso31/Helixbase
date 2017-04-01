@@ -7,7 +7,7 @@ DB: master
 SharedFields:
 - ID: "ff55d5a7-6d4b-4cd1-83e0-bac268073f66"
   Hint: Type
-  Value: Helixbase.Foundation.Rules.VersionTrim.ArchiveOldVersions, Helixbase.Foundation.Rules
+  Value: Helixbase.Feature.Rules.VersionTrim.ArchiveOldVersions, Helixbase.Feature.Rules
 Languages:
 - Language: en
   Versions:

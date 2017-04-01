@@ -1,13 +1,13 @@
 ﻿---
-ID: "5d09acb6-8df9-452e-8465-8e48b0499ed8"
+ID: "a41b12bd-fcaf-442e-8baf-486c470cd061"
 Parent: "9d053eb2-9f12-41e9-ab23-fa6fff1f778e"
 Template: "f90052a5-b4e6-4e6d-9812-1e1b88a6fcea"
-Path: /sitecore/system/Settings/Rules/Definitions/Elements/Item Version Trim/Delete Old Versions
+Path: /sitecore/system/Settings/Rules/Definitions/Elements/Item Version Trim/Recycle Old Versions
 DB: master
 SharedFields:
 - ID: "ff55d5a7-6d4b-4cd1-83e0-bac268073f66"
   Hint: Type
-  Value: Helixbase.Foundation.Rules.VersionTrim.DeleteOldVersions, Helixbase.Foundation.Rules
+  Value: Helixbase.Feature.Rules.VersionTrim.RecycleOldVersions, Helixbase.Feature.Rules
 Languages:
 - Language: en
   Versions:
@@ -15,11 +15,11 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20170318T154000Z
+      Value: 20170318T153903Z
     - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
       Hint: __Created by
       Value: |
         sitecore\Admin
     - ID: "eeb36a3b-40d9-4af5-862a-de257b84dca3"
       Hint: Text
-      Value: "delete versions beyond [MinVersions,positiveinteger,,number] older than [MinUpdatedDays,positiveinteger,,number] days"
+      Value: "recycle versions beyond [MinVersions,positiveinteger,,number] older than [MinUpdatedDays,positiveinteger,,number] days"
