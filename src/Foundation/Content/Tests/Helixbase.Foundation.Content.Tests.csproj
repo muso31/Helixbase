@@ -35,15 +35,16 @@
       <HintPath>..\..\..\..\packages\Castle.Core.3.3.3\lib\net45\Castle.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Glass.Mapper, Version=4.3.4.196, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\..\packages\Glass.Mapper.Sc.Core.4.3.4.196\lib\net45\Glass.Mapper.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Glass.Mapper, Version=4.3.4.197, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\Glass.Mapper.Sc.Core.4.3.4.197\lib\net45\Glass.Mapper.dll</HintPath>
     </Reference>
-    <Reference Include="Glass.Mapper.Sc">
-      <HintPath>..\..\..\..\packages\Glass.Mapper.Sc.Core.4.3.4.196\lib\100\Glass.Mapper.Sc.dll</HintPath>
+    <Reference Include="Glass.Mapper.Sc, Version=4.3.4.197, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\packages\Glass.Mapper.Sc.Core.4.3.4.197\lib\100\Glass.Mapper.Sc.dll</HintPath>
     </Reference>
-    <Reference Include="Glass.Mapper.Sc.Mvc">
-      <HintPath>..\..\..\..\packages\Glass.Mapper.Sc.Core.4.3.4.196\lib\Mvc52\Glass.Mapper.Sc.Mvc.dll</HintPath>
+    <Reference Include="Glass.Mapper.Sc.Mvc, Version=4.3.4.197, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\packages\Glass.Mapper.Sc.Core.4.3.4.197\lib\Mvc52\Glass.Mapper.Sc.Mvc.dll</HintPath>
     </Reference>
     <Reference Include="HtmlAgilityPack, Version=1.4.6.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
       <HintPath>..\..\..\..\packages\HtmlAgilityPack.1.4.6\lib\Net45\HtmlAgilityPack.dll</HintPath>
