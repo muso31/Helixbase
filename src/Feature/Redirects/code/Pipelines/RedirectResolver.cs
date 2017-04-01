@@ -37,7 +37,7 @@ namespace Helixbase.Feature.Redirects.Pipelines
 
             foreach (var redirect in redirectFolder.Children)
             {
-                // TODO - make Infer Types work with Helix
+                // TODO - sort infer types
                 //    if (redirect is I301Redirect)
                 //    {
                 //        var redirect301Item = redirect as I301Redirect;
