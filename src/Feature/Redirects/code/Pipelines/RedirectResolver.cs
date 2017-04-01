@@ -21,7 +21,7 @@ namespace Helixbase.Feature.Redirects.Pipelines
         {
             if (args.Context.Request.Url.OriginalString.ToLower().Contains("/sitecore") || args.Context.Request.Url.AbsolutePath.Equals("/"))
                 return;
-            // only perform redirect if no Sitecore item exists
+            // We don't want to redirect an item that exists in Sitecore
             if (Sitecore.Context.Item == null)
                 Perform301Redirect();
         }
