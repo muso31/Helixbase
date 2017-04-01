@@ -29,16 +29,4 @@ namespace Helixbase.Feature.Redirects.ORM
             });
         }
     }
-
-    public class RedirectSettingsMap : SitecoreGlassMap<IRedirectSettings>
-    {
-        public override void Configure()
-        {
-            Map(config =>
-            {
-                config.AutoMap();
-                config.TemplateId(Templates.RedirectSettings.TemplateId);
-            });
-        }
-    }
 }

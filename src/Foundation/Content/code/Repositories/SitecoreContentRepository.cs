@@ -62,6 +62,18 @@ namespace Helixbase.Foundation.Content.Repositories
         {
             return _sitecoreContext.GetRootItem<T>(isLazy, inferType);
         }
+        /// <summary>
+        /// Query for single item.
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="query">The query.</param>
+        /// <param name="isLazy">if set to <c>true</c> [is lazy].</param>
+        /// <param name="inferType">if set to <c>true</c> [infer type].</param>
+        /// <returns></returns>
+        public T QuerySingle<T>(string query, bool isLazy = false, bool inferType = false) where T : class
+        {
+            return _sitecoreContext.QuerySingle<T>(query, isLazy, inferType);
+        }
 
         /// <summary>
         /// Query relative to the current item.

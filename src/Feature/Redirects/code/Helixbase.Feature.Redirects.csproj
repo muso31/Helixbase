@@ -102,7 +102,6 @@
   <ItemGroup>
     <Compile Include="Models\I301Redirect.cs" />
     <Compile Include="Models\IRedirectFolder.cs" />
-    <Compile Include="Models\IRedirectSettings.cs" />
     <Compile Include="ORM\GlassMappings.cs" />
     <Compile Include="Pipelines\RedirectResolver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

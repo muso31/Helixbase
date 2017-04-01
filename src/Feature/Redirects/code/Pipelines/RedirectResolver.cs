@@ -1,5 +1,5 @@
-﻿using Helixbase.Foundation.Content.Repositories;
-using Helixbase.Feature.Redirects.Models;
+﻿using Helixbase.Feature.Redirects.Models;
+using Helixbase.Foundation.Content.Repositories;
 using Sitecore.Data.Items;
 using Sitecore.Links;
 using Sitecore.Pipelines.HttpRequest;
@@ -28,16 +28,14 @@ namespace Helixbase.Feature.Redirects.Pipelines
 
         private void Perform301Redirect()
         {
-            // TODO: Use GetRootItem and remove Sitecore API call. Fix GetRootItem errors
-            //var redirectSettings = _contentRepository.GetRootItem<IRedirectSettings>();
-            var redirectSettings = _contentRepository.GetContentItem<IRedirectSettings>(Sitecore.Context.Site.RootPath);
+            var redirectFolder = _contentRepository.QuerySingle<IRedirectFolder>($"fast:{Sitecore.Context.Site.RootPath}/*[@@templateid='{Helixbase.Foundation.Content.Templates.GlobalFolder.TemplateId.ToString("B").ToUpper()}']/*[@@templateid='{Templates.RedirectFolder.TemplateId.ToString("B").ToUpper()}']");
 
             var path = HttpContext.Current.Request.Url.LocalPath;
 
-            if (redirectSettings.RedirectFolder == null)
-                throw new NullReferenceException("No redirect folder found on Site Root item");
+            if (redirectFolder == null)
+                throw new NullReferenceException("Redirect folder not found");
 
-            foreach (var redirect in redirectSettings.RedirectFolder.Children)
+            foreach (var redirect in redirectFolder.Children)
             {
                 // TODO - make Infer Types work with Helix
                 //    if (redirect is I301Redirect)

@@ -16,9 +16,5 @@ namespace Helixbase.Feature.Redirects
         {
             public static Guid TemplateId = new Guid("{E85BB7D7-85D1-403E-A178-D0988966583F}");
         }
-        public struct RedirectSettings
-        {
-            public static Guid TemplateId = new Guid("{022B5A17-18A6-4266-A226-C2C8845BCD81}");
-        }
     }
 }
