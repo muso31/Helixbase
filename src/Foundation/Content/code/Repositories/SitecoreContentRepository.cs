@@ -101,5 +101,7 @@ namespace Helixbase.Foundation.Content.Repositories
         {
             return _renderingContext.GetRenderingParameters();
         }
+
+        public bool IsExperienceEditor => Sitecore.Context.PageMode.IsExperienceEditor;
     }
 }

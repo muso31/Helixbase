@@ -170,17 +170,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DI\RegisterContainer.cs" />
+    <Compile Include="ComputedFields\AllTemplatesIndexField.cs" />
     <Compile Include="Indexes.cs" />
+    <Compile Include="Models\BaseSearchResultItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repositories\ISearchRepository.cs" />
-    <Compile Include="Repositories\SitecoreSearchRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Config\Include\Foundation\Foundation.Search.RegisterContainer.config" />
+    <Content Include="App_Config\Include\Foundation\Foundation.Search.RegisterFields.config" />
     <None Include="Properties\PublishProfiles\Localhost.pubxml" />
     <None Include="Web.config" />
     <None Include="Web.Debug.config">

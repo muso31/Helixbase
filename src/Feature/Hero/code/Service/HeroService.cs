@@ -1,23 +1,20 @@
 ﻿using Helixbase.Feature.Hero.Models;
 using Helixbase.Foundation.Content.Repositories;
-using Helixbase.Foundation.Search.Repositories;
+using Helixbase.Foundation.Search;
+using Helixbase.Foundation.Search.Models;
+using Sitecore.ContentSearch;
 using Sitecore.ContentSearch.Linq.Utilities;
-using Sitecore.ContentSearch.SearchTypes;
-using System;
 using System.Linq;
-using System.Linq.Expressions;
 
 namespace Helixbase.Feature.Hero.Service
 {
     public class HeroService : IHeroService
     {
         private IContentRepository _contentRepository;
-        private ISearchRepository _searchRepository;
 
-        public HeroService(IContentRepository contentRepository, ISearchRepository searchRepository)
+        public HeroService(IContentRepository contentRepository)
         {
             _contentRepository = contentRepository;
-            _searchRepository = searchRepository;
         }
         /// <summary>
         /// Get an item using the generic content repository
@@ -28,19 +25,25 @@ namespace Helixbase.Feature.Hero.Service
             return _contentRepository.GetContentItem<IHero>(_contentRepository.GetDataSource());
         }
         /// <summary>
-        /// **** This method is not required/in use. It is here as an example of how to use the search repository ****
-        /// Get an item from the index using the generic search repository (you must setup SOLR or Lucene first)
+        /// **** This method is not required/in use. It is here as an example of how to use the computed search field ****
+        /// Get an item from the index (you must setup SOLR or Lucene first)
         /// </summary>
         /// <returns>The first item based on the Hero template</returns>
-        public SearchResultItem GetHeroImagesSearch()
+        public BaseSearchResultItem GetHeroImagesSearch()
         {
             // First setup your predicate
-            var predicate = PredicateBuilder.True<SearchResultItem>();
-            predicate = predicate.And(item => item.TemplateId == new Sitecore.Data.ID(Templates.Hero.TemplateId));
-            // Order by
-            Expression<Func<SearchResultItem, object>> orderBy = item => item.Name;
+            var predicate = PredicateBuilder.True<BaseSearchResultItem>();
+            predicate = predicate.And(item => item.Templates.Contains(Templates.Hero.TemplateId));
+            predicate = predicate.And(item => !item.Name.Equals("__Standard Values"));
 
-            return _searchRepository.GetIndexItems("sitecore_web_index", predicate, orderBy).First();
+            var index = ContentSearchManager.GetIndex(Indexes.Web);
+
+            using (var context = index.CreateSearchContext())
+            {
+                var result = context.GetQueryable<BaseSearchResultItem>().Where(predicate).First();
+
+                return result;
+            }
         }
     }
 }

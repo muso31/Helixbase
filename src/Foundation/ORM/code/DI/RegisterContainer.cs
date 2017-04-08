@@ -12,6 +12,7 @@ namespace Helixbase.Foundation.ORM.DI
         {
             serviceCollection.AddTransient<ISitecoreContext>(provider => new SitecoreContext());
             serviceCollection.AddTransient<IRenderingContext, RenderingContextMvcWrapper>();
+            serviceCollection.AddTransient<IGlassHtml, GlassHtml>();
         }
     }
 }

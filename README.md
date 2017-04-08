@@ -10,9 +10,10 @@ A Sitecore Helix based solution which can be used for Greenfield projects. Tackl
 * Target .net framework 4.5.2 for backwards compatibility
 * Sitecore Dependency Injection - with auto controller registration
 * A sample hero banner feature and sample site project for demonstration
-* Generic item repositories - includes content API and search API
+* Generic item repository
 * 301 Redirects
 * Version trimming rules engine - Items limited to 10 versions by default
+* Search Templates computed index field - find all items from an index by any templates they implement
 
 #### Coming soon:
 

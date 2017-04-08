@@ -11,5 +11,6 @@
         bool HasDataSource();
         string GetDataSource();
         string GetRenderingParameters();
+        bool IsExperienceEditor { get; }
     }
 }
