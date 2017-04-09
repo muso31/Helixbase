@@ -12,5 +12,6 @@
         string GetDataSource();
         string GetRenderingParameters();
         bool IsExperienceEditor { get; }
+        string GetSiteRoot();
     }
 }

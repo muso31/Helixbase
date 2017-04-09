@@ -103,5 +103,10 @@ namespace Helixbase.Foundation.Content.Repositories
         }
 
         public bool IsExperienceEditor => Sitecore.Context.PageMode.IsExperienceEditor;
+
+        public string GetSiteRoot()
+        {
+            return Sitecore.Context.Site.RootPath;
+        }
     }
 }
