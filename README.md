@@ -5,7 +5,7 @@ A Sitecore Helix based solution which can be used for Greenfield projects. Tackl
 
 * Glass Mapper - with fluent configuration and automated mapping registration
 * Unicorn - including user and role sync
-* Sitecore 8.2 Update-2 ready
+* Sitecore 8.2 Update-3 ready
 * Bootstrap
 * Target .net framework 4.5.2 for backwards compatibility
 * Sitecore Dependency Injection - with auto controller registration
@@ -21,7 +21,7 @@ A Sitecore Helix based solution which can be used for Greenfield projects. Tackl
 * Time based personalization
 
 ## Setup Instructions
-1. Install <a href="https://dev.sitecore.net/Downloads/Sitecore_Experience_Platform/82/Sitecore_Experience_Platform_82_Update2.aspx" target="_blank">Sitecore Experience Platform 8.2 rev. 161221 (8.2 Update-2)</a>
+1. Install <a href="https://dev.sitecore.net/Downloads/Sitecore_Experience_Platform/82/Sitecore_Experience_Platform_82_Update3.aspx" target="_blank">Sitecore Experience Platform 8.2 rev. 170407 (8.2 Update-3)</a>
 	1. _Name your instance 'demo.helixbase'_
 2. Clone project to 'C:\Projects\Helix base'
 	1. _If you use another path, update the 'z.Helixbase.DevSettings.config' file and the 'gulp-config.js'_
