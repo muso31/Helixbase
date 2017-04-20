@@ -155,7 +155,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="packages.config" />
+    <None Include="packages.config" />
     <Content Include="App_Config\Include\Foundation\Foundation.ORM.RegisterContainer.config">
       <SubType>Designer</SubType>
     </Content>

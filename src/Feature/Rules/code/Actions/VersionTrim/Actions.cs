@@ -1,9 +1,9 @@
-﻿namespace Helixbase.Feature.Rules.Actions.VersionTrim
-{
-    using System;
-    using Assert = Sitecore.Diagnostics.Assert;
-    using SC = Sitecore;
+﻿using System;
+using Assert = Sitecore.Diagnostics.Assert;
+using SC = Sitecore;
 
+namespace Helixbase.Feature.Rules.Actions.VersionTrim
+{
     public abstract class MinVersionsAction<T> :
     SC.Rules.Actions.RuleAction<T> where T : SC.Rules.RuleContext
     {

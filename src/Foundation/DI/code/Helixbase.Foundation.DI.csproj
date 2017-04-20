@@ -78,9 +78,9 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="packages.config">
+    <None Include="packages.config">
       <SubType>Designer</SubType>
-    </Content>
+    </None>
     <Content Include="App_Config\Include\Foundation\Foundation.DI.RegisterControllers.config" />
     <None Include="Properties\PublishProfiles\Localhost.pubxml">
       <SubType>Designer</SubType>
