@@ -14,10 +14,10 @@ A Sitecore Helix based solution which can be used for Greenfield projects. Tackl
 * 301 Redirects
 * Version trimming rules engine - Items limited to 10 versions by default
 * Search Templates computed index field - find all items from an index by any templates they implement
+* Non admin Item Unlock 
 
 #### Coming soon:
 
-* Non admin file unlock
 * Time based personalization
 
 ## Setup Instructions
@@ -39,3 +39,5 @@ Refer to the <a href="https://github.com/muso31/Helixbase/tree/master/src/Featur
 To add a 301 redirect simply add a redirect item to the _Redirect Items_ folder found in your site _Global_ folder.
 
 To change the item version limit edit the rule on the _/sitecore/system/Settings/Rules/Item Saved/Rules/Delete Old Versions_ item. You can also change the rule to recycle or archive old versions. 
+
+In the security editor you can assign non admin Item Unlock permissions
