@@ -14,11 +14,7 @@ A Sitecore Helix based solution which can be used for Greenfield projects. Tackl
 * 301 Redirects
 * Version trimming rules engine - Items limited to 10 versions by default
 * Search Templates computed index field - find all items from an index by any templates they implement
-* Non admin Item Unlock 
-
-#### Coming soon:
-
-* Time based personalization
+* Non admin Item Unlock
 
 ## Setup Instructions
 1. Install <a href="https://dev.sitecore.net/Downloads/Sitecore_Experience_Platform/82/Sitecore_Experience_Platform_82_Update3.aspx" target="_blank">Sitecore Experience Platform 8.2 rev. 170407 (8.2 Update-3)</a>

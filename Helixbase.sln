@@ -72,9 +72,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helixbase.Foundation.DI", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helixbase.Foundation.DI.Tests", "src\Foundation\DI\Tests\Helixbase.Foundation.DI.Tests.csproj", "{199E7C65-7E29-4493-A132-42417600AFCF}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Rules", "Rules", "{4F330EE3-EB9A-4B58-8682-E0815921771F}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "VersionTrim", "VersionTrim", "{4F330EE3-EB9A-4B58-8682-E0815921771F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helixbase.Feature.Rules", "src\Feature\Rules\code\Helixbase.Feature.Rules.csproj", "{ED756657-14BA-4313-A51B-A2960BD6F5DA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helixbase.Feature.VersionTrim", "src\Feature\VersionTrim\code\Helixbase.Feature.VersionTrim.csproj", "{ED756657-14BA-4313-A51B-A2960BD6F5DA}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Models", "Models", "{8D64BF12-9F0D-4487-AE09-D11E95AFBE9D}"
 EndProject
@@ -86,9 +86,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helixbase.Foundation.Common
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helixbase.Foundation.Common.Tests", "src\Foundation\Common\Tests\Helixbase.Foundation.Common.Tests.csproj", "{63737BDD-745F-48EC-8AD0-D2A81417EA4C}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Security", "Security", "{26ABEF08-8005-4EEB-B6A0-8BDC87249A4B}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ItemUnlock", "ItemUnlock", "{26ABEF08-8005-4EEB-B6A0-8BDC87249A4B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helixbase.Feature.Security", "src\Feature\Security\code\Helixbase.Feature.Security.csproj", "{58761838-C403-4C4A-843E-6AAE24A63904}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helixbase.Feature.ItemUnlock", "src\Feature\ItemUnlock\code\Helixbase.Feature.ItemUnlock.csproj", "{58761838-C403-4C4A-843E-6AAE24A63904}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
