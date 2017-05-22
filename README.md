@@ -37,3 +37,5 @@ To add a 301 redirect simply add a redirect item to the _Redirect Items_ folder 
 To change the item version limit edit the rule on the _/sitecore/system/Settings/Rules/Item Saved/Rules/Delete Old Versions_ item. You can also change the rule to recycle or archive old versions. 
 
 In the security editor you can assign non admin Item Unlock permissions
+
+If you do not require a feature you can simply delete it - one of the benefits of the Helix principles!

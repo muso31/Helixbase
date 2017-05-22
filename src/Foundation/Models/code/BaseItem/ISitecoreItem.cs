@@ -13,6 +13,5 @@ namespace Helixbase.Foundation.Models.BaseItem
         string TemplateName { get; set; } 
         Guid TemplateId { get; set; } 
         string Name { get; set; }
-        string Url { get; set; }
     }
 }
