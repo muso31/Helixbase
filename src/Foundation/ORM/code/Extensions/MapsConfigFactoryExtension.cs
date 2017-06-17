@@ -2,7 +2,6 @@
 using Glass.Mapper.Maps;
 using Helixbase.Foundation.Common.Methods;
 using System;
-using System.Linq;
 using System.Reflection;
 
 namespace Helixbase.Foundation.ORM.Extensions

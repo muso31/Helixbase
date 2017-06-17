@@ -6,7 +6,7 @@ namespace Helixbase.Feature.Hero.Controllers
 {
     public class HeroController : SitecoreController
     {
-        private IHeroService _heroService;
+        private readonly IHeroService _heroService;
 
         public HeroController(IHeroService heroService)
         {

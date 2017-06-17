@@ -10,8 +10,8 @@ namespace Helixbase.Foundation.Models.BaseItem
         Language Language { get; set; }
         int Version { get; set; }
         IEnumerable BaseTemplateIds { get; set; }
-        string TemplateName { get; set; } 
-        Guid TemplateId { get; set; } 
+        string TemplateName { get; set; }
+        Guid TemplateId { get; set; }
         string Name { get; set; }
     }
 }
