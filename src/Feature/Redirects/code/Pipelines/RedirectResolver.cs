@@ -51,10 +51,10 @@ namespace Helixbase.Feature.Redirects.Pipelines
                 //            HttpContext.Current.Response.RedirectPermanent(LinkManager.GetItemUrl(targetItem), true);
                 //        }
                 //    }
-                if (string.IsNullOrEmpty(redirect.RequestedURL))
+                if (string.IsNullOrEmpty(redirect.RequestedUrl))
                     throw new NullReferenceException("Could not find a URL value on the redirect item");
 
-                if (redirect.RequestedURL.ToLower() == path.ToLower())
+                if (redirect.RequestedUrl.ToLower() == path.ToLower())
                 {
                     var targetItem = _contentRepository.GetContentItem<Item>(redirect.RedirectItem.Id.ToString());
                     HttpContext.Current.Response.RedirectPermanent(LinkManager.GetItemUrl(targetItem), true);
