@@ -179,7 +179,7 @@
     <Content Include="App_Config\Include\Unicorn\Unicorn.Roles.DataProvider.config" />
     <Content Include="App_Config\Include\Unicorn\Unicorn.Roles.config" />
     <Content Include="App_Config\Include\Unicorn\Unicorn.Configs.Default.Roles.config.example" />
-    <Content Include="App_Config\Include\Foundation\Foundation.Serialization.FeatureBase.config" />
+    <Content Include="App_Config\Include\Foundation\Foundation.Serialization.Base.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
