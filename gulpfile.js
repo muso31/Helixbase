@@ -7,26 +7,12 @@ var gulpConfig = require("./gulp-config.js")();
 var clean = require('gulp-clean');
 module.exports.config = gulpConfig;
 
-// From Habitat
 gulp.task("Publish-All-Projects", function (callback) {
     return runSequence(
-        "Clean-all-configs/binaries",
         "Build-Solution",
         "Publish-Foundation-Projects",
         "Publish-Feature-Projects",
         "Publish-Project-Projects", callback);
-});
-
-gulp.task('Clean-all-configs/binaries', function () {
-    const filesToDelete = [
-        gulpConfig.webRoot + '/bin/Helixbase.*',
-        gulpConfig.webRoot + '/App_Config/Include/Feature',
-        gulpConfig.webRoot + '/App_Config/Include/Foundation',
-        gulpConfig.webRoot + '/App_Config/Include/Project'
-    ];
-    console.log("Removing Helix configs/binaries");
-    return gulp.src(filesToDelete, { read: false })
-        .pipe(clean({ force: true }));
 });
 
 var cleanProjectFiles = function (layerName) {
