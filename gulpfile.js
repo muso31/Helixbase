@@ -85,3 +85,14 @@ gulp.task("Publish-Project-Projects", function () {
     cleanProjectFiles("Project"),
         publishProjects("./src/Project");
 });
+
+//// Note: intended to be called after publishing
+//gulp.task("Clean-Transform-Configs", function (layerName) {
+//    const filesToDelete = [
+//        gulpConfig.webRoot + '/App_Config/Include/' + layerName + '/CD',
+//        gulpConfig.webRoot + '/App_Config/Include/' + layerName + '/CM'
+//    ];
+//    console.log("Removing transform configs");
+//    return gulp.src(filesToDelete, { read: false })
+//        .pipe(clean({ force: true }));
+//});
