@@ -11,6 +11,7 @@ namespace Helixbase.Feature.Hero.ORM
             {
                 config.AutoMap();
                 config.TemplateId(Templates.Hero.TemplateId);
+                config.Self(f => f.ScItemBaseComp);
                 config.Field(f => f.HeroImages).FieldName("Hero Images");
             });
         }
