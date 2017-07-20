@@ -11,10 +11,11 @@ A Sitecore Helix based solution which can be used for Greenfield projects. Tackl
 * Sitecore Dependency Injection - with auto controller registration
 * A sample hero banner feature and sample site project for demonstration
 * Generic item repository
-* 301 Redirects
+* 301 redirects
 * Version trimming rules engine - Items limited to 10 versions by default
 * Search Templates computed index field - find all items from an index by any templates they implement
 * Non admin Item Unlock
+* Composite reuse principle
 
 ## Setup Instructions
 1. Install <a href="https://dev.sitecore.net/Downloads/Sitecore_Experience_Platform/82/Sitecore_Experience_Platform_82_Update3.aspx" target="_blank">Sitecore Experience Platform 8.2 rev. 170407 (8.2 Update-3)</a>
@@ -22,7 +23,7 @@ A Sitecore Helix based solution which can be used for Greenfield projects. Tackl
 2. Clone project to 'C:\Projects\Helix base'
 	1. _If you use another path, update the 'z.Helixbase.DevSettings.config' file and the 'gulp-config.js'_
 3. Install <a href="https://nodejs.org/en/" target="_blank">Node.js</a> and run 'npm-install' in the project root
-4. Perform a Nuget restore
+4. Perform a NuGet restore
 5. Publish each project in VS, or view gulp tasks - you may need to update the 'MSBuildToolsVersion' in the gulp-config.js
 6. Run Unicorn and sync all configurations
 
@@ -36,6 +37,6 @@ To add a 301 redirect simply add a redirect item to the _Redirect Items_ folder 
 
 To change the item version limit edit the rule on the _/sitecore/system/Settings/Rules/Item Saved/Rules/Delete Old Versions_ item. You can also change the rule to recycle or archive old versions. 
 
-In the security editor you can assign non admin Item Unlock permissions
+In the security editor you can assign non admin Item Unlock permissions.
 
-If you do not require a feature you can simply delete it - one of the benefits of the Helix principles!
+If you do not require a feature you can easily delete it.
