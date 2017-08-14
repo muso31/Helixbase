@@ -16,6 +16,7 @@ A Sitecore Helix based solution which can be used for Greenfield projects. Tackl
 * Search Templates computed index field - find all items from an index by any templates they implement
 * Non admin Item Unlock
 * Composite reuse principle
+* Gulp publish with webroot clean
 
 ## Setup Instructions
 1. Install <a href="https://dev.sitecore.net/Downloads/Sitecore_Experience_Platform/82/Sitecore_Experience_Platform_82_Update3.aspx" target="_blank">Sitecore Experience Platform 8.2 rev. 170407 (8.2 Update-3)</a>
