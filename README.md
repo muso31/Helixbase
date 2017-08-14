@@ -19,7 +19,7 @@ A Sitecore Helix based solution which can be used for Greenfield projects. Tackl
 * Gulp publish with webroot clean
 
 ## Setup Instructions
-1. Install <a href="https://dev.sitecore.net/Downloads/Sitecore_Experience_Platform/82/Sitecore_Experience_Platform_82_Update3.aspx" target="_blank">Sitecore Experience Platform 8.2 rev. 170407 (8.2 Update-3)</a>
+1. Install <a href="https://dev.sitecore.net/en/Downloads/Sitecore_Experience_Platform/82/Sitecore_Experience_Platform_82_Update5.aspx" target="_blank">Sitecore Experience Platform 8.2 rev. 170728 (8.2 Update-5) </a>
 	1. _Name your instance 'demo.helixbase'_
 2. Clone project to 'C:\Projects\Helix base'
 	1. _If you use another path, update the 'z.Helixbase.DevSettings.config' file and the 'gulp-config.js'_
