@@ -1,5 +1,6 @@
 ﻿using FluentAssertions;
 using Helixbase.Feature.Hero.Factories;
+using Helixbase.Feature.Hero.Models;
 using Helixbase.Feature.Hero.ViewModels;
 using Helixbase.Foundation.Content.Repositories;
 using NSubstitute;
@@ -26,9 +27,9 @@ namespace Helixbase.Feature.Hero.Tests.Factories
             var fixture = new Fixture();
             var mockViewModel = fixture.Create<HeroViewModel>();
 
-            //_heroFactory.CreateHeroViewModel().Returns(mockViewModel);
-
             var result = _heroFactory.CreateHeroViewModel();
+
+            //_heroFactory.CreateHeroViewModel().Returns(mockViewModel);
 
             result.Should().NotBeNull();
             result.Should().BeOfType<HeroViewModel>();

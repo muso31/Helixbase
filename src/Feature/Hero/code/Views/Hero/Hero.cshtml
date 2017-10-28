@@ -2,7 +2,7 @@
 
 @if (Model != null)
 {
-    /* do not use inline css! Sample only */
+    /* do not use inline css! This is only a POC */
     <style>
         .carousel-indicators li {
             background-color: #999;
@@ -13,32 +13,43 @@
 
         .carousel img { min-width: 100%; }
     </style>
-
-    <div id="heroCarousel" class="carousel slide" data-ride="carousel">
-        @if (Model.HeroImages != null)
+    if (Model.IsExperienceEditor)
+    {
+        foreach (var heroImage in Model.HeroImages)
         {
-            <ol class="carousel-indicators">
-                @{
-                    var i = 0;
-                    foreach (var heroImage in Model.HeroImages)
-                    {
-                        <li data-target="#heroCarousel" data-slide-to="@i" @Html.Raw(i == 0 ? "class=\"active\"" : "")></li>
-                        i++;
-                    }
-                }
-            </ol>
-            <div class="carousel-inner" role="listbox">
-                @{
-                    var j = 1;
-                    foreach (var heroImage in Model.HeroImages)
-                    {
-                        <div class="item@(j == 1 ? " active" : "")">
-                            <img src="@heroImage.Src"/>
-                        </div>
-                        j++;
-                    }
-                }
+            <div>
+                <img src="@heroImage.Src" />
             </div>
         }
-    </div>
+    }
+    else
+    {
+        <div id="heroCarousel" class="carousel slide" data-ride="carousel">
+            @if (Model.HeroImages != null)
+            {
+                <ol class="carousel-indicators">
+                    @{
+                        var i = 0;
+                        foreach (var heroImage in Model.HeroImages)
+                        {
+                            <li data-target="#heroCarousel" data-slide-to="@i" @Html.Raw(i == 0 ? "class=\"active\"" : "")></li>
+                            i++;
+                        }
+                    }
+                </ol>
+                <div class="carousel-inner" role="listbox">
+                    @{
+                        var j = 1;
+                        foreach (var heroImage in Model.HeroImages)
+                        {
+                            <div class="item@(j == 1 ? " active" : "")">
+                                <img src="@heroImage.Src"/>
+                            </div>
+                            j++;
+                        }
+                    }
+                </div>
+            }
+        </div>
+    }
 }
