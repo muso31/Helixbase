@@ -19,6 +19,10 @@ SharedFields:
 - ID: "94069f66-609c-48b0-8281-521c30fb269d"
   Hint: Open Properties after Add
   Value: 1
+- ID: "a2f5d9df-8cba-4a1d-99eb-51acb94cb057"
+  Hint: Page Editor Buttons
+  Type: Treelist
+  Value: "{DF5494BD-EF6C-41AD-8D42-365705700A99}"
 - ID: "b5b27af1-25ef-405c-87ce-369b3a004016"
   Hint: Datasource Location
   Value: "query:./ancestor-or-self::*[@@templateid='{98A3D034-92E4-4ECB-9632-119CABD08E15}']//*[@@templateid='{AC1D1F97-DE23-4E57-8A8E-AD83EC538513}']"

@@ -1,18 +1,19 @@
-﻿using Helixbase.Feature.Hero.Models;
+﻿using System.Linq;
+using Helixbase.Feature.Hero.Models;
+using Helixbase.Feature.Hero.ViewModels;
 using Helixbase.Foundation.Content.Repositories;
 using Helixbase.Foundation.Search;
 using Helixbase.Foundation.Search.Models;
 using Sitecore.ContentSearch;
 using Sitecore.ContentSearch.Linq.Utilities;
-using System.Linq;
 
-namespace Helixbase.Feature.Hero.Service
+namespace Helixbase.Feature.Hero.Factories
 {
-    public class HeroService : IHeroService
+    public class HeroFactory : IHeroFactory
     {
-        private IContentRepository _contentRepository;
+        private readonly IContentRepository _contentRepository;
 
-        public HeroService(IContentRepository contentRepository)
+        public HeroFactory(IContentRepository contentRepository)
         {
             _contentRepository = contentRepository;
         }
@@ -20,9 +21,19 @@ namespace Helixbase.Feature.Hero.Service
         /// Get an item using the generic content repository
         /// </summary>
         /// <returns>The Hero datasource item from the Content API</returns>
-        public IHero GetHeroImages()
+        public HeroViewModel CreateHeroViewModel()
         {
-            return _contentRepository.GetContentItem<IHero>(_contentRepository.GetDataSource());
+            var dataSource = _contentRepository.GetDataSource();
+            var heroItems = _contentRepository.GetContentItem<IHero>(dataSource);
+
+            var viewModel = new HeroViewModel()
+            {
+                HeroImages = heroItems.HeroImages,
+                Id = heroItems.ScItemBaseComp.Id,
+                IsExperienceEditor = _contentRepository.IsExperienceEditor
+            };
+
+            return viewModel;
         }
         /// <summary>
         /// **** This method is not required/in use. It is here as an example of how to use the computed search field ****

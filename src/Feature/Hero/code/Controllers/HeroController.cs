@@ -1,21 +1,21 @@
-﻿using Helixbase.Feature.Hero.Service;
-using Sitecore.Mvc.Controllers;
+﻿using Sitecore.Mvc.Controllers;
 using System.Web.Mvc;
+using Helixbase.Feature.Hero.Factories;
 
 namespace Helixbase.Feature.Hero.Controllers
 {
     public class HeroController : SitecoreController
     {
-        private readonly IHeroService _heroService;
+        private readonly IHeroFactory _heroFactory;
 
-        public HeroController(IHeroService heroService)
+        public HeroController(IHeroFactory heroFactory)
         {
-            _heroService = heroService;
+            _heroFactory = heroFactory;
         }
 
         public ActionResult Hero()
         {
-            var model = _heroService.GetHeroImages();
+            var model = _heroFactory.CreateHeroViewModel();
             return View(model);
         }
     }

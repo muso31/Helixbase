@@ -1,6 +1,4 @@
-﻿@using Helixbase.Feature.Hero.Models
-
-@model IHero
+﻿@model Helixbase.Feature.Hero.ViewModels.HeroViewModel
 
 @if (Model != null)
 {
@@ -8,43 +6,39 @@
     <style>
         .carousel-indicators li {
             background-color: #999;
-            background-color: rgba(70,70,70,.25);
+            background-color: rgba(70, 70, 70, .25);
         }
 
-        .carousel-indicators .active {
-            background-color: #444;
-        }
+        .carousel-indicators .active { background-color: #444; }
 
-        .carousel img {
-            min-width: 100%;
-        }
+        .carousel img { min-width: 100%; }
     </style>
 
     <div id="heroCarousel" class="carousel slide" data-ride="carousel">
         @if (Model.HeroImages != null)
         {
             <ol class="carousel-indicators">
-                @{ 
-                    int i = 0;
+                @{
+                    var i = 0;
                     foreach (var heroImage in Model.HeroImages)
                     {
                         <li data-target="#heroCarousel" data-slide-to="@i" @Html.Raw(i == 0 ? "class=\"active\"" : "")></li>
                         i++;
                     }
-                 }
+                }
             </ol>
             <div class="carousel-inner" role="listbox">
                 @{
-                    int j = 1;
+                    var j = 1;
                     foreach (var heroImage in Model.HeroImages)
                     {
                         <div class="item@(j == 1 ? " active" : "")">
-                            <img src="@heroImage.Src" />
+                            <img src="@heroImage.Src"/>
                         </div>
                         j++;
                     }
                 }
             </div>
-         }
+        }
     </div>
 }

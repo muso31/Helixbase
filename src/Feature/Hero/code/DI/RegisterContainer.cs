@@ -1,5 +1,4 @@
-﻿using Helixbase.Feature.Hero.Controllers;
-using Helixbase.Feature.Hero.Service;
+﻿using Helixbase.Feature.Hero.Factories;
 using Microsoft.Extensions.DependencyInjection;
 using Sitecore.DependencyInjection;
 
@@ -9,7 +8,7 @@ namespace Helixbase.Feature.Hero.DI
     {
         public void Configure(IServiceCollection serviceCollection)
         {
-            serviceCollection.AddTransient<IHeroService, HeroService>();
+            serviceCollection.AddTransient<IHeroFactory, HeroFactory>();
         }
     }
 }
