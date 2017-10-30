@@ -82,9 +82,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helixbase.Foundation.Models
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{3B0CF2FF-3D0D-415C-8453-9C4F8A9BA4B7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helixbase.Foundation.Tools", "src\Foundation\Common\code\Helixbase.Foundation.Tools.csproj", "{0C1E2FEC-AC54-4CF0-905A-890D3BF711D5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helixbase.Foundation.Tools", "src\Foundation\Tools\code\Helixbase.Foundation.Tools.csproj", "{0C1E2FEC-AC54-4CF0-905A-890D3BF711D5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helixbase.Foundation.Tools.Tests", "src\Foundation\Common\Tests\Helixbase.Foundation.Tools.Tests.csproj", "{63737BDD-745F-48EC-8AD0-D2A81417EA4C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helixbase.Foundation.Tools.Tests", "src\Foundation\Tools\Tests\Helixbase.Foundation.Tools.Tests.csproj", "{63737BDD-745F-48EC-8AD0-D2A81417EA4C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ItemUnlock", "ItemUnlock", "{26ABEF08-8005-4EEB-B6A0-8BDC87249A4B}"
 EndProject
