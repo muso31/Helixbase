@@ -1,8 +1,8 @@
 ﻿using Glass.Mapper.IoC;
 using Glass.Mapper.Maps;
-using Helixbase.Foundation.Common.Methods;
 using System;
 using System.Reflection;
+using Helixbase.Foundation.Tools.Reflection;
 
 namespace Helixbase.Foundation.ORM.Extensions
 {

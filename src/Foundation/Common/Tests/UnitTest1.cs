@@ -1,7 +1,6 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Helixbase.Foundation.Common.Tests
+namespace Helixbase.Foundation.Tools.Tests
 {
     [TestClass]
     public class UnitTest1

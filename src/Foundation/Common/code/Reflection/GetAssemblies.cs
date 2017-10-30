@@ -4,7 +4,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text.RegularExpressions;
 
-namespace Helixbase.Foundation.Common.Methods
+namespace Helixbase.Foundation.Tools.Reflection
 {
     public static class GetAssemblies
     {

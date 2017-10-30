@@ -1,9 +1,9 @@
-﻿using Helixbase.Foundation.Common.Methods;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
 using Sitecore.Mvc.Controllers;
 using System;
 using System.Linq;
 using System.Reflection;
+using Helixbase.Foundation.Tools.Reflection;
 
 namespace Helixbase.Foundation.DI.Extensions
 {

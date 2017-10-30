@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26228.4
+VisualStudioVersion = 15.0.26730.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Foundation", "Foundation", "{C3F57797-2D54-4626-B842-51F30272E972}"
 EndProject
@@ -80,15 +80,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Models", "Models", "{8D64BF
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helixbase.Foundation.Models", "src\Foundation\Models\code\Helixbase.Foundation.Models.csproj", "{3227661F-A60D-486F-A904-14BAF0EB991E}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{3B0CF2FF-3D0D-415C-8453-9C4F8A9BA4B7}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{3B0CF2FF-3D0D-415C-8453-9C4F8A9BA4B7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helixbase.Foundation.Common", "src\Foundation\Common\code\Helixbase.Foundation.Common.csproj", "{0C1E2FEC-AC54-4CF0-905A-890D3BF711D5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helixbase.Foundation.Tools", "src\Foundation\Common\code\Helixbase.Foundation.Tools.csproj", "{0C1E2FEC-AC54-4CF0-905A-890D3BF711D5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helixbase.Foundation.Common.Tests", "src\Foundation\Common\Tests\Helixbase.Foundation.Common.Tests.csproj", "{63737BDD-745F-48EC-8AD0-D2A81417EA4C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helixbase.Foundation.Tools.Tests", "src\Foundation\Common\Tests\Helixbase.Foundation.Tools.Tests.csproj", "{63737BDD-745F-48EC-8AD0-D2A81417EA4C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ItemUnlock", "ItemUnlock", "{26ABEF08-8005-4EEB-B6A0-8BDC87249A4B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helixbase.Feature.ItemUnlock", "src\Feature\ItemUnlock\code\Helixbase.Feature.ItemUnlock.csproj", "{58761838-C403-4C4A-843E-6AAE24A63904}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SitecorePatch", "SitecorePatch", "{72B474FC-03D1-4705-B98E-8A498E9C2FAA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helixbase.Feature.SitecorePatch", "src\Feature\SitecorePatch\code\Helixbase.Feature.SitecorePatch.csproj", "{84CA4784-C560-4CE7-BE09-8187DA0B4359}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -176,6 +180,10 @@ Global
 		{58761838-C403-4C4A-843E-6AAE24A63904}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{58761838-C403-4C4A-843E-6AAE24A63904}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{58761838-C403-4C4A-843E-6AAE24A63904}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84CA4784-C560-4CE7-BE09-8187DA0B4359}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84CA4784-C560-4CE7-BE09-8187DA0B4359}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84CA4784-C560-4CE7-BE09-8187DA0B4359}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84CA4784-C560-4CE7-BE09-8187DA0B4359}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -216,5 +224,10 @@ Global
 		{63737BDD-745F-48EC-8AD0-D2A81417EA4C} = {3B0CF2FF-3D0D-415C-8453-9C4F8A9BA4B7}
 		{26ABEF08-8005-4EEB-B6A0-8BDC87249A4B} = {60DA3F20-DEED-4580-AE38-A296D76ADE79}
 		{58761838-C403-4C4A-843E-6AAE24A63904} = {26ABEF08-8005-4EEB-B6A0-8BDC87249A4B}
+		{72B474FC-03D1-4705-B98E-8A498E9C2FAA} = {60DA3F20-DEED-4580-AE38-A296D76ADE79}
+		{84CA4784-C560-4CE7-BE09-8187DA0B4359} = {72B474FC-03D1-4705-B98E-8A498E9C2FAA}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {845F548C-FD53-4C61-AB7F-953C2225A13B}
 	EndGlobalSection
 EndGlobal

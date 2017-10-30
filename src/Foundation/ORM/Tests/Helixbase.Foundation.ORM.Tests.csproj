@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Helixbase.Foundation.ORM.Tests</RootNamespace>
     <AssemblyName>Helixbase.Foundation.ORM.Tests</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>
@@ -33,7 +33,6 @@
   <ItemGroup>
     <Reference Include="Castle.Core, Version=3.3.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
       <HintPath>..\..\..\..\packages\Castle.Core.3.3.3\lib\net45\Castle.Core.dll</HintPath>
-      <Private>True</Private>
     </Reference>
     <Reference Include="Glass.Mapper, Version=4.4.0.199, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\..\..\packages\Glass.Mapper.Sc.Core.4.4.0.199\lib\net45\Glass.Mapper.dll</HintPath>
@@ -73,6 +72,7 @@
       <HintPath>..\..\..\..\packages\Sitecore.Mvc.NoReferences.8.2.170728\lib\NET452\Sitecore.Mvc.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\..\..\..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>

@@ -4,9 +4,9 @@ using System.Collections.Generic;
 
 namespace Helixbase.Feature.Hero.Models
 {
-    public interface IHero
+    public interface IHero : ISitecoreItem
     {
-        ISitecoreItem ScItemBaseComp { get; set; }
+        string HeroTitle { get; set; }
         IEnumerable<Image> HeroImages { get; set; }
     }
 }

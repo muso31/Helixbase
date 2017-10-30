@@ -1,6 +1,7 @@
 ﻿using FluentAssertions;
+using Glass.Mapper.Sc;
 using Helixbase.Feature.Hero.Factories;
-using Helixbase.Feature.Hero.Models;
+using Helixbase.Feature.Hero.Services;
 using Helixbase.Feature.Hero.ViewModels;
 using Helixbase.Foundation.Content.Repositories;
 using NSubstitute;
@@ -12,13 +13,18 @@ namespace Helixbase.Feature.Hero.Tests.Factories
     public class HeroFactoryTests
     {
         private IContentRepository _contentRepository;
+        private IGlassHtml _glassHtml;
+        private IHeroService _heroService;
         private HeroFactory _heroFactory;
 
         [SetUp]
         public void Setup()
         {
             _contentRepository = Substitute.For<IContentRepository>();
-            _heroFactory = new HeroFactory(_contentRepository);
+            _glassHtml = Substitute.For<IGlassHtml>();
+            _heroService = Substitute.For<IHeroService>();
+
+            _heroFactory = new HeroFactory(_contentRepository, _glassHtml, _heroService);
         }
 
         [Test]

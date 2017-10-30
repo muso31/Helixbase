@@ -7,16 +7,15 @@ A Sitecore Helix based solution which can be used for Greenfield projects. Tackl
 * Unicorn - including user and role sync
 * Sitecore 8.2 Update-5 ready
 * Bootstrap
-* Target .net framework 4.5.2 for backwards compatibility
-* Sitecore Dependency Injection - with auto controller registration
+* Native dependency injection with auto controller registration
 * A sample hero banner feature and sample site project for demonstration
 * Generic item repository
 * 301 redirects
 * Version trimming rules engine - Items limited to 10 versions by default
 * Search Templates computed index field - find all items from an index by any templates they implement
 * Non admin Item Unlock
-* Composite reuse principle
 * Gulp publish with webroot clean
+* <a href="https://jammykam.wordpress.com/2017/09/20/show-title-when-blank/">_Show Title When Blank_</a> patch, the forgotten Sitecore feature!
 
 ## Setup Instructions
 1. Install <a href="https://dev.sitecore.net/en/Downloads/Sitecore_Experience_Platform/82/Sitecore_Experience_Platform_82_Update5.aspx" target="_blank">Sitecore Experience Platform 8.2 rev. 170728 (8.2 Update-5) </a>

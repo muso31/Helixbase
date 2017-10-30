@@ -4,7 +4,7 @@ using System.Globalization;
 using System.Linq;
 using System.Reflection;
 
-namespace Helixbase.Foundation.Common.Methods
+namespace Helixbase.Foundation.Tools.Reflection
 {
     public static class GetTypes
     {
