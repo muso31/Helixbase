@@ -12,17 +12,13 @@ namespace Helixbase.Feature.Hero.Factories
         private readonly IGlassHtml _glassHtml;
         private readonly IHeroService _heroService;
 
-
         public HeroFactory(IContentRepository contentRepository, IGlassHtml glassHtml, IHeroService heroService)
         {
             _contentRepository = contentRepository;
             _glassHtml = glassHtml;
             _heroService = heroService;
         }
-        /// <summary>
-        /// Get an item using the generic content repository
-        /// </summary>
-        /// <returns>The Hero datasource item from the Content API</returns>
+
         public HeroViewModel CreateHeroViewModel()
         {
             var heroItemDataSource = _heroService.GetHeroItems();
