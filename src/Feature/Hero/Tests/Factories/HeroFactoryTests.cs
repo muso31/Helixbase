@@ -10,6 +10,7 @@ using Ploeh.AutoFixture;
 
 namespace Helixbase.Feature.Hero.Tests.Factories
 {
+    [TestFixture]
     public class HeroFactoryTests
     {
         private IContentRepository _contentRepository;
