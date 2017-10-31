@@ -5,7 +5,7 @@ A Sitecore Helix based solution which can be used for Greenfield projects. Tackl
 
 * Glass Mapper - with fluent configuration and automated mapping registration
 * Unicorn - including user and role sync
-* Sitecore 8.2 Update-5 ready
+* Sitecore 9.0 ready
 * Bootstrap
 * Native dependency injection with auto controller registration
 * A sample hero banner feature and sample site project for demonstration
