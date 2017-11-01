@@ -1,6 +1,6 @@
 module.exports = function () {
     var config = {
-        webRoot: "c:\\inetpub\\wwwroot\\demo.helixbase\\Website",
+        webRoot: "c:\\inetpub\\wwwroot\\demo.helixbase",
         devRoot: "c:\\projects\\Helix base",
         solutionName: "Helixbase",
         buildConfiguration: "Debug",
