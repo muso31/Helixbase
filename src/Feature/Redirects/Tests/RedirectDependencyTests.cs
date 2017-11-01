@@ -11,7 +11,9 @@ namespace Helixbase.Feature.Redirects.Tests
         [Test]
         public void RedirectFeature_FollowsStableDependency()
         {
-            var projectAssemblyReferences = GetAssemblies.GetByFilter("Helixbase.Project.*").Any();
+            var projectAssemblyReferences = GetAssemblies
+                .GetByFilter("Helixbase.Project.*", "Helixbase.Feature.*")
+                .Any(x => !x.FullName.Contains("Helixbase.Feature.Redirects"));
 
             projectAssemblyReferences.Should().BeFalse();
         }

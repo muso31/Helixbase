@@ -11,7 +11,9 @@ namespace Helixbase.Feature.Hero.Tests.Dependencies
         [Test]
         public void HeroFeature_FollowsStableDependency()
         {
-            var projectAssemblyReferences = GetAssemblies.GetByFilter("Helixbase.Project.*").Any();
+            var projectAssemblyReferences = GetAssemblies
+                .GetByFilter("Helixbase.Project.*", "Helixbase.Feature.*")
+                .Any(x => !x.FullName.Contains("Helixbase.Feature.Hero"));
 
             projectAssemblyReferences.Should().BeFalse();
 
