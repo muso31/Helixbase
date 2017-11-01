@@ -3,19 +3,17 @@ using FluentAssertions;
 using Helixbase.Foundation.Tools.Reflection;
 using NUnit.Framework;
 
-namespace Helixbase.Feature.Hero.Tests.Dependencies
+namespace Helixbase.Feature.Redirects.Tests
 {
     [TestFixture]
-    public class HeroDependencyTests
+    public class RedirectDependencyTests
     {
         [Test]
-        public void HeroFeature_FollowsStableDependency()
+        public void RedirectFeature_FollowsStableDependency()
         {
             var projectAssemblyReferences = GetAssemblies.GetByFilter("Helixbase.Project.*").Any();
 
             projectAssemblyReferences.Should().BeFalse();
-
-            //Could also use: assembly.Should().NotReference(otherAssembly);
         }
     }
 }
