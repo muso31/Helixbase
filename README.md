@@ -1,5 +1,6 @@
 <img src="https://nshackblog.files.wordpress.com/2017/02/helixbase1.png" height="154px" width="200px" /><br />
 A Sitecore Helix based solution which can be used for Greenfield projects. Tackles some common problems when working with the platform.
+
 [<img src="https://nshack31.visualstudio.com/_apis/public/build/definitions/8aa245ff-435a-46cb-97a0-3d6850ff680f/1/badge"/>](https://nshack31.visualstudio.com/Helix%20Base/_build/index?definitionId=1)
 
 #### Features include:
