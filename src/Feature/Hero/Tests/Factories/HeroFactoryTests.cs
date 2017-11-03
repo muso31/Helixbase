@@ -6,7 +6,6 @@ using Helixbase.Feature.Hero.ViewModels;
 using Helixbase.Foundation.Content.Repositories;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NSubstitute;
-using Ploeh.AutoFixture;
 
 namespace Helixbase.Feature.Hero.Tests.Factories
 {
@@ -31,7 +30,6 @@ namespace Helixbase.Feature.Hero.Tests.Factories
         [TestMethod]
         public void GetHeroImages_ReturnsHeroViewModel()
         {
-            var fixture = new Fixture();
             var result = _heroFactory.CreateHeroViewModel();
 
             result.Should().NotBeNull();
