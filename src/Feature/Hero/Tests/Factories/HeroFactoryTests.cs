@@ -4,13 +4,13 @@ using Helixbase.Feature.Hero.Factories;
 using Helixbase.Feature.Hero.Services;
 using Helixbase.Feature.Hero.ViewModels;
 using Helixbase.Foundation.Content.Repositories;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NSubstitute;
-using NUnit.Framework;
 using Ploeh.AutoFixture;
 
 namespace Helixbase.Feature.Hero.Tests.Factories
 {
-    [TestFixture]
+    [TestClass]
     public class HeroFactoryTests
     {
         private IContentRepository _contentRepository;
@@ -18,7 +18,7 @@ namespace Helixbase.Feature.Hero.Tests.Factories
         private IHeroService _heroService;
         private HeroFactory _heroFactory;
 
-        [SetUp]
+        [TestInitialize]
         public void Setup()
         {
             _contentRepository = Substitute.For<IContentRepository>();
@@ -28,19 +28,14 @@ namespace Helixbase.Feature.Hero.Tests.Factories
             _heroFactory = new HeroFactory(_contentRepository, _glassHtml, _heroService);
         }
 
-        [Test]
+        [TestMethod]
         public void GetHeroImages_ReturnsHeroViewModel()
         {
             var fixture = new Fixture();
-            var mockViewModel = fixture.Create<HeroViewModel>();
-
             var result = _heroFactory.CreateHeroViewModel();
-
-            //_heroFactory.CreateHeroViewModel().Returns(mockViewModel);
 
             result.Should().NotBeNull();
             result.Should().BeOfType<HeroViewModel>();
-            //result.Should().Be(mockViewModel);
         }
     }
 }
