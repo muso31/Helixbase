@@ -10,7 +10,7 @@ namespace Helixbase.Feature.Hero.ORM
             Map(config =>
             {
                 config.AutoMap();
-                config.TemplateId(Templates.Hero.TemplateId);
+                config.TemplateId(Constants.Hero.TemplateId);
                 config.Field(f => f.HeroTitle).FieldName("Hero Title");
                 config.Field(f => f.HeroImages).FieldName("Hero Images");
             });

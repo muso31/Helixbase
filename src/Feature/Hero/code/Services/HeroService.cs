@@ -35,7 +35,7 @@ namespace Helixbase.Feature.Hero.Services
         {
             // First setup your predicate
             var predicate = PredicateBuilder.True<BaseSearchResultItem>();
-            predicate = predicate.And(item => item.Templates.Contains(Templates.Hero.TemplateId));
+            predicate = predicate.And(item => item.Templates.Contains(Constants.Hero.TemplateId));
             predicate = predicate.And(item => !item.Name.Equals("__Standard Values"));
 
             var index = ContentSearchManager.GetIndex(Indexes.Web);

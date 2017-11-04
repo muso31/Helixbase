@@ -3,25 +3,29 @@ using Glass.Mapper.Sc;
 using Helixbase.Feature.Hero.Services;
 using Helixbase.Feature.Hero.ViewModels;
 using Helixbase.Foundation.Content.Repositories;
+using Helixbase.Foundation.Models.Mediators;
 
-namespace Helixbase.Feature.Hero.Factories
+namespace Helixbase.Feature.Hero.Mediator
 {
-    public class HeroFactory : IHeroFactory
+    public class HeroMediator : MediatorBase, IHeroMediator
     {
         private readonly IContentRepository _contentRepository;
         private readonly IGlassHtml _glassHtml;
         private readonly IHeroService _heroService;
 
-        public HeroFactory(IContentRepository contentRepository, IGlassHtml glassHtml, IHeroService heroService)
+        public HeroMediator(IContentRepository contentRepository, IGlassHtml glassHtml, IHeroService heroService)
         {
             _contentRepository = contentRepository;
             _glassHtml = glassHtml;
             _heroService = heroService;
         }
 
-        public HeroViewModel CreateHeroViewModel()
+        public MediatorResponse<HeroViewModel> CreateHeroViewModel()
         {
             var heroItemDataSource = _heroService.GetHeroItems();
+
+            if (heroItemDataSource == null)
+                return GetMediatorResponse<HeroViewModel>(MediatorCodes.HeroResponse.DataSourceError);
 
             var viewModel = new HeroViewModel()
             {
@@ -30,7 +34,7 @@ namespace Helixbase.Feature.Hero.Factories
                 IsExperienceEditor = _contentRepository.IsExperienceEditor
             };
 
-            return viewModel;
+            return GetMediatorResponse(MediatorCodes.HeroResponse.Ok, viewModel);
         }
     }
 }

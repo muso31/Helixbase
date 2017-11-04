@@ -160,11 +160,11 @@
     <Compile Include="ORM\GlassMappings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Routes\RegisterRoutes.cs" />
-    <Compile Include="Factories\HeroFactory.cs" />
-    <Compile Include="Factories\IHeroFactory.cs" />
+    <Compile Include="Mediator\HeroMediator.cs" />
+    <Compile Include="Mediator\IHeroMediator.cs" />
     <Compile Include="Services\HeroService.cs" />
     <Compile Include="Services\IHeroService.cs" />
-    <Compile Include="Templates.cs" />
+    <Compile Include="Constants.cs" />
     <Compile Include="ViewModels\HeroViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -189,6 +189,7 @@
   <ItemGroup>
     <Content Include="App_Config\Include\Feature\Feature.Hero.RegisterContainer.config" />
     <None Include="Properties\PublishProfiles\Localhost.pubxml" />
+    <Content Include="Views\Hero\Error.cshtml" />
     <None Include="Web.config">
       <SubType>Designer</SubType>
     </None>

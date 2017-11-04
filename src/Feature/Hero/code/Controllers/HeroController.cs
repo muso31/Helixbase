@@ -1,22 +1,32 @@
 ﻿using Sitecore.Mvc.Controllers;
 using System.Web.Mvc;
-using Helixbase.Feature.Hero.Factories;
+using Helixbase.Feature.Hero.Mediator;
+using Helixbase.Foundation.Models.Exceptions;
 
 namespace Helixbase.Feature.Hero.Controllers
 {
     public class HeroController : SitecoreController
     {
-        private readonly IHeroFactory _heroFactory;
+        private readonly IHeroMediator _heroMediator;
 
-        public HeroController(IHeroFactory heroFactory)
+        public HeroController(IHeroMediator heroMediator)
         {
-            _heroFactory = heroFactory;
+            _heroMediator = heroMediator;
         }
 
         public ActionResult Hero()
         {
-            var model = _heroFactory.CreateHeroViewModel();
-            return View(model);
+            var mediatorResponse = _heroMediator.CreateHeroViewModel();
+
+            switch (mediatorResponse.Code)
+            {
+                case MediatorCodes.HeroResponse.DataSourceError:
+                    return View("~/views/Hero/Error.cshtml");
+                case MediatorCodes.HeroResponse.Ok:
+                    return View(mediatorResponse.ViewModel);
+                default:
+                    throw new InvalidMediatorResponseCodeException(mediatorResponse.Code);
+            }
         }
     }
 }
