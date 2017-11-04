@@ -27,10 +27,11 @@ namespace Helixbase.Feature.Hero.Mediator
             if (heroItemDataSource == null)
                 return GetMediatorResponse<HeroViewModel>(MediatorCodes.HeroResponse.DataSourceError);
 
-            var viewModel = new HeroViewModel()
+            var viewModel = new HeroViewModel
             {
                 HeroImages = heroItemDataSource.HeroImages,
-                HeroTitle = new HtmlString(_glassHtml.Editable(heroItemDataSource, i => i.HeroTitle, new { EnclosingTag = "h2" })),
+                HeroTitle = new HtmlString(_glassHtml.Editable(heroItemDataSource, i => i.HeroTitle,
+                    new {EnclosingTag = "h2"})),
                 IsExperienceEditor = _contentRepository.IsExperienceEditor
             };
 
