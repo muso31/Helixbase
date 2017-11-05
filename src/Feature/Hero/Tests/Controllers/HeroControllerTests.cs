@@ -4,12 +4,12 @@ using FluentAssertions;
 using Helixbase.Feature.Hero.Controllers;
 using Helixbase.Feature.Hero.Mediator;
 using Helixbase.Feature.Hero.ViewModels;
-using Helixbase.Foundation.Models.Exceptions;
+using Helixbase.Foundation.Core.Exceptions;
 using Helixbase.Foundation.Models.Mediators;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NSubstitute;
 using Ploeh.AutoFixture;
-using ErrorMessages = Helixbase.Foundation.Models.Exceptions.Constants;
+using ErrorMessages = Helixbase.Foundation.Core.Exceptions.Constants;
 
 namespace Helixbase.Feature.Hero.Tests.Controllers
 {

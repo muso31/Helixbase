@@ -80,19 +80,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Models", "Models", "{8D64BF
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helixbase.Foundation.Models", "src\Foundation\Models\code\Helixbase.Foundation.Models.csproj", "{3227661F-A60D-486F-A904-14BAF0EB991E}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{3B0CF2FF-3D0D-415C-8453-9C4F8A9BA4B7}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{3B0CF2FF-3D0D-415C-8453-9C4F8A9BA4B7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helixbase.Foundation.Tools", "src\Foundation\Tools\code\Helixbase.Foundation.Tools.csproj", "{0C1E2FEC-AC54-4CF0-905A-890D3BF711D5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helixbase.Foundation.Core", "src\Foundation\Core\code\Helixbase.Foundation.Core.csproj", "{0C1E2FEC-AC54-4CF0-905A-890D3BF711D5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helixbase.Foundation.Tools.Tests", "src\Foundation\Tools\Tests\Helixbase.Foundation.Tools.Tests.csproj", "{63737BDD-745F-48EC-8AD0-D2A81417EA4C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helixbase.Foundation.Core.Tests", "src\Foundation\Core\Tests\Helixbase.Foundation.Core.Tests.csproj", "{63737BDD-745F-48EC-8AD0-D2A81417EA4C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ItemUnlock", "ItemUnlock", "{26ABEF08-8005-4EEB-B6A0-8BDC87249A4B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helixbase.Feature.ItemUnlock", "src\Feature\ItemUnlock\code\Helixbase.Feature.ItemUnlock.csproj", "{58761838-C403-4C4A-843E-6AAE24A63904}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SitecorePatch", "SitecorePatch", "{72B474FC-03D1-4705-B98E-8A498E9C2FAA}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ShowTitles", "ShowTitles", "{72B474FC-03D1-4705-B98E-8A498E9C2FAA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helixbase.Feature.SitecorePatch", "src\Feature\SitecorePatch\code\Helixbase.Feature.SitecorePatch.csproj", "{84CA4784-C560-4CE7-BE09-8187DA0B4359}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helixbase.Feature.ShowTitles", "src\Feature\ShowTitles\code\Helixbase.Feature.ShowTitles.csproj", "{84CA4784-C560-4CE7-BE09-8187DA0B4359}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

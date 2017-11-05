@@ -2,7 +2,7 @@
 using Glass.Mapper.Sc;
 using Helixbase.Feature.Hero.Services;
 using Helixbase.Feature.Hero.ViewModels;
-using Helixbase.Foundation.Content.Services;
+using Helixbase.Foundation.Core.Services;
 using Helixbase.Foundation.Models.Mediators;
 
 namespace Helixbase.Feature.Hero.Mediator

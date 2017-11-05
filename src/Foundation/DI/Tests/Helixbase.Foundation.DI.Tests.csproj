@@ -135,9 +135,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Tools\code\Helixbase.Foundation.Tools.csproj">
+    <ProjectReference Include="..\..\Core\code\Helixbase.Foundation.Core.csproj">
       <Project>{0C1E2FEC-AC54-4CF0-905A-890D3BF711D5}</Project>
-      <Name>Helixbase.Foundation.Tools</Name>
+      <Name>Helixbase.Foundation.Core</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />

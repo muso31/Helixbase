@@ -2,7 +2,7 @@
 using Glass.Mapper.Maps;
 using System;
 using System.Reflection;
-using Helixbase.Foundation.Tools.Reflection;
+using Helixbase.Foundation.Core.Methods;
 
 namespace Helixbase.Foundation.ORM.Extensions
 {

@@ -1,5 +1,4 @@
 ﻿using Helixbase.Foundation.Content.Repositories;
-using Helixbase.Foundation.Content.Services;
 using Microsoft.Extensions.DependencyInjection;
 using Sitecore.DependencyInjection;
 
@@ -12,7 +11,6 @@ namespace Helixbase.Foundation.Content.DI
             serviceCollection.AddTransient<IContentRepository, ContentRepository>();
             serviceCollection.AddTransient<IRenderingRepository, RenderingRepository>();
             serviceCollection.AddTransient<ICmsInfoRepository, CmsInfoRepository>();
-            serviceCollection.AddTransient<IMediatorService, MediatorService>();
         }
     }
 }
