@@ -2,7 +2,7 @@
 using System.Web.Mvc;
 using FluentAssertions;
 using Helixbase.Feature.Hero.Controllers;
-using Helixbase.Feature.Hero.Mediator;
+using Helixbase.Feature.Hero.Mediators;
 using Helixbase.Feature.Hero.ViewModels;
 using Helixbase.Foundation.Core.Exceptions;
 using Helixbase.Foundation.Models.Mediators;

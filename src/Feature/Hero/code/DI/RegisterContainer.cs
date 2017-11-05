@@ -1,4 +1,4 @@
-﻿using Helixbase.Feature.Hero.Mediator;
+﻿using Helixbase.Feature.Hero.Mediators;
 using Helixbase.Feature.Hero.Services;
 using Microsoft.Extensions.DependencyInjection;
 using Sitecore.DependencyInjection;

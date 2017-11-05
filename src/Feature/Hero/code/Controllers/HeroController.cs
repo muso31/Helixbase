@@ -1,6 +1,6 @@
 ﻿using Sitecore.Mvc.Controllers;
 using System.Web.Mvc;
-using Helixbase.Feature.Hero.Mediator;
+using Helixbase.Feature.Hero.Mediators;
 using Helixbase.Foundation.Core.Exceptions;
 
 namespace Helixbase.Feature.Hero.Controllers
