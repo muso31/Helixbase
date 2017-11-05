@@ -1,11 +1,11 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using Helixbase.Foundation.Models.Mediators;
 
-namespace Helixbase.Foundation.Models.Mediators
+namespace Helixbase.Foundation.Content.Services
 {
-    //TODO: Refactor this it does not belong in models - also consider DI
-    public abstract class MediatorBase
+    public class MediatorService : IMediatorService
     {
-        protected static MediatorResponse<T> GetMediatorResponse<T>(string code, T viewModel = default(T),
+        public MediatorResponse<T> GetMediatorResponse<T>(string code, T viewModel = default(T),
             ValidationResult validationResult = null, object parameters = null, string message = null)
         {
             var response = new MediatorResponse<T>

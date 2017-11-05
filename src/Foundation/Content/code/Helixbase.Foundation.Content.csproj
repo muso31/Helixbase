@@ -153,6 +153,8 @@
     <Compile Include="DI\RegisterContainer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\CmsInfoRepository.cs" />
+    <Compile Include="Services\IMediatorService.cs" />
+    <Compile Include="Services\MediatorService.cs" />
     <Compile Include="Templates.cs" />
   </ItemGroup>
   <ItemGroup>

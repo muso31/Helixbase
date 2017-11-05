@@ -2,19 +2,22 @@
 using Glass.Mapper.Sc;
 using Helixbase.Feature.Hero.Services;
 using Helixbase.Feature.Hero.ViewModels;
+using Helixbase.Foundation.Content.Services;
 using Helixbase.Foundation.Models.Mediators;
 
 namespace Helixbase.Feature.Hero.Mediator
 {
-    public class HeroMediator : MediatorBase, IHeroMediator
+    public class HeroMediator : IHeroMediator
     {
         private readonly IGlassHtml _glassHtml;
         private readonly IHeroService _heroService;
+        private readonly IMediatorService _mediatorService;
 
-        public HeroMediator(IGlassHtml glassHtml, IHeroService heroService)
+        public HeroMediator(IGlassHtml glassHtml, IHeroService heroService, IMediatorService mediatorService)
         {
             _glassHtml = glassHtml;
             _heroService = heroService;
+            _mediatorService = mediatorService;
         }
 
         public MediatorResponse<HeroViewModel> CreateHeroViewModel()
@@ -22,7 +25,7 @@ namespace Helixbase.Feature.Hero.Mediator
             var heroItemDataSource = _heroService.GetHeroItems();
 
             if (heroItemDataSource == null)
-                return GetMediatorResponse<HeroViewModel>(MediatorCodes.HeroResponse.DataSourceError);
+                return _mediatorService.GetMediatorResponse<HeroViewModel>(MediatorCodes.HeroResponse.DataSourceError);
 
             var viewModel = new HeroViewModel
             {
@@ -32,7 +35,7 @@ namespace Helixbase.Feature.Hero.Mediator
                 IsExperienceEditor = _heroService.IsExperienceEditor
             };
 
-            return GetMediatorResponse(MediatorCodes.HeroResponse.Ok, viewModel);
+            return _mediatorService.GetMediatorResponse(MediatorCodes.HeroResponse.Ok, viewModel);
         }
     }
 }

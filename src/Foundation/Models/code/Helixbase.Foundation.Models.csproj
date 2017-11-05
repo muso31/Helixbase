@@ -85,7 +85,6 @@
     <Compile Include="BaseItem\ISitecoreItem.cs" />
     <Compile Include="Exceptions\Constants.cs" />
     <Compile Include="Exceptions\InvalidMediatorResponseCodeException.cs" />
-    <Compile Include="Mediators\MediatorBase.cs" />
     <Compile Include="Mediators\MediatorResponse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
