@@ -10,10 +10,15 @@ namespace Helixbase.Feature.Hero.Services
 {
     public class HeroService : IHeroService
     {
+        private readonly IRenderingRepository _renderingRepository;
         private readonly IContentRepository _contentRepository;
-        public HeroService(IContentRepository contentRepository)
+        private readonly ICmsInfoRepository _siteRepository;
+
+        public HeroService(IRenderingRepository renderingRepository, IContentRepository contentRepository, ICmsInfoRepository siteRepository)
         {
+            _renderingRepository = renderingRepository;
             _contentRepository = contentRepository;
+            _siteRepository = siteRepository;
         }
 
         /// <summary>
@@ -22,7 +27,7 @@ namespace Helixbase.Feature.Hero.Services
         /// <returns>The Hero datasource item from the Content API</returns>
         public IHero GetHeroItems()
         {
-            var dataSource = _contentRepository.GetDataSource();
+            var dataSource = _renderingRepository.GetDataSource();
             return _contentRepository.GetContentItem<IHero>(dataSource);
         }
 
@@ -47,5 +52,7 @@ namespace Helixbase.Feature.Hero.Services
                 return result;
             }
         }
+
+        public bool IsExperienceEditor => _siteRepository.IsExperienceEditor;
     }
 }

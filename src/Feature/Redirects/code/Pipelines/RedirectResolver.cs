@@ -12,10 +12,12 @@ namespace Helixbase.Feature.Redirects.Pipelines
     public class RedirectResolver : HttpRequestProcessor
     {
         private IContentRepository _contentRepository;
+        private ICmsInfoRepository _siteRepository;
 
-        public RedirectResolver(IContentRepository contentRepository)
+        public RedirectResolver(IContentRepository contentRepository, ICmsInfoRepository siteRepository)
         {
             _contentRepository = contentRepository;
+            _siteRepository = siteRepository;
         }
 
         public override void Process(HttpRequestArgs args)
@@ -31,7 +33,7 @@ namespace Helixbase.Feature.Redirects.Pipelines
         {
             // TODO - fix glass errors in pipeline
             //var redirectFolder = _contentRepository.QuerySingle<IRedirectFolder>($"fast:{Sitecore.Context.Site.RootPath}/*[@@templateid='{Helixbase.Foundation.Content.Templates.GlobalFolder.TemplateId.ToString("B").ToUpper()}']/*[@@templateid='{Templates.RedirectFolder.TemplateId.ToString("B").ToUpper()}']", false, true);
-            var redirectFolderItem = Sitecore.Context.Database.SelectSingleItem($"fast:{_contentRepository.GetSiteRoot()}/*[@@templateid='{Helixbase.Foundation.Content.Templates.GlobalFolder.TemplateId.ToString("B").ToUpper()}']/*[@@templateid='{Templates.RedirectFolder.TemplateId.ToString("B").ToUpper()}']");
+            var redirectFolderItem = Sitecore.Context.Database.SelectSingleItem($"fast:{_siteRepository.GetSiteRoot()}/*[@@templateid='{Helixbase.Foundation.Content.Templates.GlobalFolder.TemplateId.ToString("B").ToUpper()}']/*[@@templateid='{Templates.RedirectFolder.TemplateId.ToString("B").ToUpper()}']");
             var redirectFolder = redirectFolderItem.GlassCast<IRedirectFolder>();
 
             var path = HttpContext.Current.Request.Url.LocalPath;

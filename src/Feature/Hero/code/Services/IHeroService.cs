@@ -7,5 +7,6 @@ namespace Helixbase.Feature.Hero.Services
     {
         IHero GetHeroItems();
         BaseSearchResultItem GetHeroImagesSearch();
+        bool IsExperienceEditor { get; }
     }
 }

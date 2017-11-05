@@ -145,10 +145,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ORM\GlassMappings.cs" />
+    <Compile Include="Repositories\ICmsInfoRepository.cs" />
+    <Compile Include="Repositories\RenderingRepository.cs" />
+    <Compile Include="Repositories\IRenderingRepository.cs" />
     <Compile Include="Repositories\IContentRepository.cs" />
-    <Compile Include="Repositories\SitecoreContentRepository.cs" />
+    <Compile Include="Repositories\ContentRepository.cs" />
     <Compile Include="DI\RegisterContainer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\CmsInfoRepository.cs" />
     <Compile Include="Templates.cs" />
   </ItemGroup>
   <ItemGroup>

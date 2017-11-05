@@ -8,7 +8,9 @@ namespace Helixbase.Foundation.Content.DI
     {
         public void Configure(IServiceCollection serviceCollection)
         {
-            serviceCollection.AddTransient<IContentRepository, SitecoreContentRepository>();
+            serviceCollection.AddTransient<IContentRepository, ContentRepository>();
+            serviceCollection.AddTransient<IRenderingRepository, RenderingRepository>();
+            serviceCollection.AddTransient<ICmsInfoRepository, CmsInfoRepository>();
         }
     }
 }

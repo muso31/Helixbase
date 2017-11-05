@@ -3,7 +3,6 @@ using Glass.Mapper.Sc;
 using Helixbase.Feature.Hero.Mediator;
 using Helixbase.Feature.Hero.Services;
 using Helixbase.Feature.Hero.ViewModels;
-using Helixbase.Foundation.Content.Repositories;
 using Helixbase.Foundation.Models.Mediators;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NSubstitute;
@@ -14,7 +13,6 @@ namespace Helixbase.Feature.Hero.Tests.Mediators
     [TestClass]
     public class HeroMediatorTests
     {
-        private IContentRepository _contentRepository;
         private IGlassHtml _glassHtml;
         private IHeroService _heroService;
         private HeroMediator _heroFactory;
@@ -22,11 +20,10 @@ namespace Helixbase.Feature.Hero.Tests.Mediators
         [TestInitialize]
         public void Setup()
         {
-            _contentRepository = Substitute.For<IContentRepository>();
             _glassHtml = Substitute.For<IGlassHtml>();
             _heroService = Substitute.For<IHeroService>();
 
-            _heroFactory = new HeroMediator(_contentRepository, _glassHtml, _heroService);
+            _heroFactory = new HeroMediator(_glassHtml, _heroService);
         }
 
         [TestMethod]
