@@ -10,11 +10,12 @@ namespace Helixbase.Feature.Hero.Services
 {
     public class HeroService : IHeroService
     {
-        private readonly IRenderingRepository _renderingRepository;
         private readonly IContentRepository _contentRepository;
+        private readonly IRenderingRepository _renderingRepository;
         private readonly ICmsInfoRepository _siteRepository;
 
-        public HeroService(IRenderingRepository renderingRepository, IContentRepository contentRepository, ICmsInfoRepository siteRepository)
+        public HeroService(IRenderingRepository renderingRepository, IContentRepository contentRepository,
+            ICmsInfoRepository siteRepository)
         {
             _renderingRepository = renderingRepository;
             _contentRepository = contentRepository;
@@ -22,7 +23,7 @@ namespace Helixbase.Feature.Hero.Services
         }
 
         /// <summary>
-        /// Get an item using the generic content repository
+        ///     Get an item using the generic content repository
         /// </summary>
         /// <returns>The Hero datasource item from the Content API</returns>
         public IHero GetHeroItems()
@@ -32,8 +33,8 @@ namespace Helixbase.Feature.Hero.Services
         }
 
         /// <summary>
-        /// **** This method is not required/in use. It is here as an example of how to use the computed search field ****
-        /// Get an item from the index (you must setup SOLR or Lucene first)
+        ///     **** This method is not required/in use. It is here as an example of how to use the computed search field ****
+        ///     Get an item from the index (you must setup SOLR or Lucene first)
         /// </summary>
         /// <returns>The first item based on the Hero template</returns>
         public BaseSearchResultItem GetHeroImagesSearch()
