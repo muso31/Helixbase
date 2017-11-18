@@ -11,10 +11,9 @@ namespace Helixbase.Feature.Redirects.ORM
             {
                 config.AutoMap();
                 config.TemplateId(Templates.RedirectFolder.TemplateId);
-                config.Self(f => f.ScItemBaseComp);
                 config.Query(y => y.Children)
                     .Query($".//*[@@templateid='{Templates.RedirectContentItem.TemplateId.ToString("B").ToUpper()}']")
-                    .IsRelative();
+                    .IsRelative().InferType();
             });
         }
     }
@@ -27,7 +26,6 @@ namespace Helixbase.Feature.Redirects.ORM
             {
                 config.AutoMap();
                 config.TemplateId(Templates.RedirectDataItem.TemplateId);
-                config.Self(f => f.ScItemBaseComp);
             });
         }
     }

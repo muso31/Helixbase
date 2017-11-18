@@ -16,5 +16,10 @@ namespace Helixbase.Feature.Redirects
         {
             public static Guid TemplateId = new Guid("{E85BB7D7-85D1-403E-A178-D0988966583F}");
         }
+        public struct ErrorMessages
+        {
+            public const string NoUrlOnItem = "Could not find a URL value on the redirect item";
+            public const string NoRedirectFolder = "Redirect folder not found";
+        }
     }
 }

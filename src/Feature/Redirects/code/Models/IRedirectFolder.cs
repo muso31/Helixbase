@@ -3,9 +3,8 @@ using System.Collections.Generic;
 
 namespace Helixbase.Feature.Redirects.Models
 {
-    public interface IRedirectFolder
+    public interface IRedirectFolder : ISitecoreItem
     {
-        ISitecoreItem ScItemBaseComp { get; set; }
         IEnumerable<I301Redirect> Children { get; set; }
     }
 }
