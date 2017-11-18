@@ -33,8 +33,8 @@ namespace Helixbase.Feature.Redirects.Pipelines
 
         private void Perform301Redirect()
         {
-            // TODO - fix glass errors in pipeline
-            //var redirectFolder = _contentRepository.QuerySingle<IRedirectFolder>($"fast:{Sitecore.Context.Site.RootPath}/*[@@templateid='{Helixbase.Foundation.Content.Templates.GlobalFolder.TemplateId.ToString("B").ToUpper()}']/*[@@templateid='{Templates.RedirectFolder.TemplateId.ToString("B").ToUpper()}']", false, true);
+            // TODO - fix Glass errors when attempting to use below in a pipeline
+             //var redirectFolder = _contentRepository.QuerySingle<IRedirectFolder>($"fast:{_siteRepository.GetSiteRoot()}/*[@@templateid='{Foundation.Content.Templates.GlobalFolder.TemplateId.ToString("B").ToUpper()}']/*[@@templateid='{Templates.RedirectFolder.TemplateId.ToString("B").ToUpper()}']", false, true);
             var redirectFolderItem = Context.Database.SelectSingleItem(
                 $"fast:{_siteRepository.GetSiteRoot()}/*[@@templateid='{Foundation.Content.Templates.GlobalFolder.TemplateId.ToString("B").ToUpper()}']/*[@@templateid='{Templates.RedirectFolder.TemplateId.ToString("B").ToUpper()}']");
             var redirectFolder = redirectFolderItem.GlassCast<IRedirectFolder>();
@@ -49,17 +49,7 @@ namespace Helixbase.Feature.Redirects.Pipelines
                 if (string.IsNullOrEmpty(redirect.RequestedUrl))
                     throw new NullReferenceException(Templates.ErrorMessages.NoUrlOnItem);
 
-                // TODO - sort infer types
-                //    if (redirect is I301Redirect)
-                //    {
-                //        var redirect301Item = redirect as I301Redirect;
-                //        if (redirect301Item.RequestedURL?.ToLower() == path.ToLower())
-                //        {
-                //            var targetItem = _contentRepository.GetContentItem<Item>(redirect301Item.RedirectItem.Id.ToString());
-                //            HttpContext.Current.Response.RedirectPermanent(LinkManager.GetItemUrl(targetItem), true);
-                //        }
-                //    }
-
+                if (!(redirect is I301Redirect)) continue;
 
                 if (string.Equals(redirect.RequestedUrl, path, StringComparison.CurrentCultureIgnoreCase))
                 {
