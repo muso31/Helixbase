@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Web;
-using Glass.Mapper.Sc;
 using Helixbase.Feature.Redirects.Models;
 using Helixbase.Foundation.Content.Repositories;
 using Sitecore;
@@ -33,11 +32,9 @@ namespace Helixbase.Feature.Redirects.Pipelines
 
         private void Perform301Redirect()
         {
-            // TODO - fix Glass errors when attempting to use below in a pipeline
-             //var redirectFolder = _contentRepository.QuerySingle<IRedirectFolder>($"fast:{_siteRepository.GetSiteRoot()}/*[@@templateid='{Foundation.Content.Templates.GlobalFolder.TemplateId.ToString("B").ToUpper()}']/*[@@templateid='{Templates.RedirectFolder.TemplateId.ToString("B").ToUpper()}']", false, true);
-            var redirectFolderItem = Context.Database.SelectSingleItem(
-                $"fast:{_siteRepository.GetSiteRoot()}/*[@@templateid='{Foundation.Content.Templates.GlobalFolder.TemplateId.ToString("B").ToUpper()}']/*[@@templateid='{Templates.RedirectFolder.TemplateId.ToString("B").ToUpper()}']");
-            var redirectFolder = redirectFolderItem.GlassCast<IRedirectFolder>();
+            var redirectFolder = _contentRepository.QuerySingle<IRedirectFolder>(
+                $"fast:{_siteRepository.GetSiteRoot()}/*[@@templateid='{Foundation.Content.Templates.GlobalFolder.TemplateId.ToString("B").ToUpper()}']/*[@@templateid='{Templates.RedirectFolder.TemplateId.ToString("B").ToUpper()}']",
+                false, true);
 
             var path = HttpContext.Current.Request.Url.LocalPath;
 
