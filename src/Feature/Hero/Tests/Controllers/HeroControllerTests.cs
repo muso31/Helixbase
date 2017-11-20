@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics.CodeAnalysis;
 using System.Web.Mvc;
 using FluentAssertions;
 using Helixbase.Feature.Hero.Controllers;
@@ -14,6 +15,7 @@ using ErrorMessages = Helixbase.Foundation.Core.Exceptions.Constants;
 namespace Helixbase.Feature.Hero.Tests.Controllers
 {
     [TestClass]
+    [SuppressMessage("ReSharper", "PossibleNullReferenceException")]
     public class HeroControllerTests
     {
         private HeroController _controller;
