@@ -25,9 +25,8 @@ A Sitecore Helix based solution which can be used for Greenfield projects. Tackl
 2. Clone project to 'C:\Projects\Helix base'
 	1. _If you use another path, update the '<a href="https://github.com/muso31/Helixbase/blob/master/src/Project/Helixbase/code/App_Config/Include/Project/z.Helixbase.DevSettings.config#L3">z.Helixbase.DevSettings.config</a>' file and the '<a href="https://github.com/muso31/Helixbase/blob/master/gulp-config.js#L4">gulp-config.js</a>'_
 3. Install <a href="https://nodejs.org/en/" target="_blank">Node.js</a> and run 'npm-install' in the project root
-4. Perform a NuGet restore
-5. Publish each project in VS, or view gulp tasks - you may need to update the 'MSBuildToolsVersion' in the <a href="https://github.com/muso31/Helixbase/blob/master/gulp-config.js#L7">gulp-config.js</a>
-6. Run Unicorn and sync all configurations
+4. Publish each project in VS, or view gulp tasks - you may need to update the 'MSBuildToolsVersion' in the <a href="https://github.com/muso31/Helixbase/blob/master/gulp-config.js#L7">gulp-config.js</a>
+5. Run Unicorn and sync all configurations
 
 #### Using Helix Base:
 Refer to the <a href="https://github.com/muso31/Helixbase/tree/master/src/Feature/Hero/code">Hero Feature</a> as an example.

@@ -3,7 +3,6 @@ using Glass.Mapper.Configuration;
 using Glass.Mapper.IoC;
 using Glass.Mapper.Maps;
 using Glass.Mapper.Sc.IoC;
-using Helixbase.Foundation.ORM.Extensions;
 using IDependencyResolver = Glass.Mapper.Sc.IoC.IDependencyResolver;
 
 namespace Helixbase.Foundation.ORM.App_Start
@@ -15,6 +14,8 @@ namespace Helixbase.Foundation.ORM.App_Start
 
 			var dependencyResolver = new DependencyResolver(config);
 			// add any changes to the standard resolver here
+
+			dependencyResolver.Finalise();
 			return dependencyResolver;
 		}
 
@@ -48,9 +49,8 @@ namespace Helixbase.Foundation.ORM.App_Start
 		}
 		public static void AddMaps(IConfigFactory<IGlassMap> mapsConfigFactory)
         {
-            // Add maps here
+			// Add maps here
             // mapsConfigFactory.Add(() => new SeoMap());
-            mapsConfigFactory.AddFluentMaps("Helixbase.Foundation.*", "Helixbase.Feature.*");
         }
     }
 }

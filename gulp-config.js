@@ -4,7 +4,7 @@ module.exports = function () {
         devRoot: "c:\\projects\\Helix base",
         solutionName: "Helixbase",
         buildConfiguration: "Debug",
-        MSBuildToolsVersion: 15.0
+        MSBuildToolsVersion: 'auto'
     }
     return config;
 }

@@ -94,6 +94,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ShowTitles", "ShowTitles", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helixbase.Feature.ShowTitles", "src\Feature\ShowTitles\code\Helixbase.Feature.ShowTitles.csproj", "{84CA4784-C560-4CE7-BE09-8187DA0B4359}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Fun", "Fun", "{01E7BD43-FB1A-4ECE-9BF9-5B33896F94CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helixbase.Feature.Fun", "src\Feature\Fun\code\Helixbase.Feature.Fun.csproj", "{E6A38F16-8055-4B11-A542-A1D0F971EC3F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -188,6 +192,10 @@ Global
 		{84CA4784-C560-4CE7-BE09-8187DA0B4359}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{84CA4784-C560-4CE7-BE09-8187DA0B4359}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{84CA4784-C560-4CE7-BE09-8187DA0B4359}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6A38F16-8055-4B11-A542-A1D0F971EC3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6A38F16-8055-4B11-A542-A1D0F971EC3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6A38F16-8055-4B11-A542-A1D0F971EC3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6A38F16-8055-4B11-A542-A1D0F971EC3F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -230,6 +238,8 @@ Global
 		{58761838-C403-4C4A-843E-6AAE24A63904} = {26ABEF08-8005-4EEB-B6A0-8BDC87249A4B}
 		{72B474FC-03D1-4705-B98E-8A498E9C2FAA} = {60DA3F20-DEED-4580-AE38-A296D76ADE79}
 		{84CA4784-C560-4CE7-BE09-8187DA0B4359} = {72B474FC-03D1-4705-B98E-8A498E9C2FAA}
+		{01E7BD43-FB1A-4ECE-9BF9-5B33896F94CC} = {60DA3F20-DEED-4580-AE38-A296D76ADE79}
+		{E6A38F16-8055-4B11-A542-A1D0F971EC3F} = {01E7BD43-FB1A-4ECE-9BF9-5B33896F94CC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {845F548C-FD53-4C61-AB7F-953C2225A13B}
