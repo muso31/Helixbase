@@ -51,7 +51,7 @@ namespace Helixbase.Foundation.ORM.App_Start
             }
              * CODE FIRST END
              */
-		    dependencyResolver.Finalise();
+		    //dependencyResolver.Finalise();
         }
 		public static void AddMaps(IConfigFactory<IGlassMap> mapsConfigFactory)
         {

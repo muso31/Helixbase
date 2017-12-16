@@ -57,6 +57,7 @@ namespace Helixbase.Foundation.ORM.App_Start
                 GlassMapperScCustom.AddMaps(dependencyResolver.ConfigurationMapFactory);
             }
 
+            dependencyResolver.Finalise();
             IConfigurationMap configurationMap = new ConfigurationMap(dependencyResolver);
             SitecoreFluentConfigurationLoader configurationLoader = configurationMap.GetConfigurationLoader<SitecoreFluentConfigurationLoader>();
             context.Load(configurationLoader);
