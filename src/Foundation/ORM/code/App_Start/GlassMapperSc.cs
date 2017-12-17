@@ -37,10 +37,10 @@ namespace Helixbase.Foundation.ORM.App_Start
 				GlassMapperScCustom.GlassLoaders()        				
 				);
 
-		    GlassMapperScCustom.PostLoad(resolver);
+			GlassMapperScCustom.PostLoad(resolver);
 
-
-            //EditFrameBuilder.EditFrameItemPrefix = "Glass-";
+			
+			//EditFrameBuilder.EditFrameItemPrefix = "Glass-";
 
         }
 
@@ -57,7 +57,6 @@ namespace Helixbase.Foundation.ORM.App_Start
                 GlassMapperScCustom.AddMaps(dependencyResolver.ConfigurationMapFactory);
             }
 
-            dependencyResolver.Finalise();
             IConfigurationMap configurationMap = new ConfigurationMap(dependencyResolver);
             SitecoreFluentConfigurationLoader configurationLoader = configurationMap.GetConfigurationLoader<SitecoreFluentConfigurationLoader>();
             context.Load(configurationLoader);

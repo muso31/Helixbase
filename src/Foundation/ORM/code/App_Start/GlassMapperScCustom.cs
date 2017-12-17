@@ -1,11 +1,9 @@
 #region GlassMapperScCustom generated code
-
-using System.Web.Mvc;
 using Glass.Mapper.Configuration;
 using Glass.Mapper.IoC;
 using Glass.Mapper.Maps;
+using Glass.Mapper.Sc.IoC;
 using Helixbase.Foundation.ORM.Extensions;
-using DependencyResolver = Glass.Mapper.Sc.IoC.DependencyResolver;
 using IDependencyResolver = Glass.Mapper.Sc.IoC.IDependencyResolver;
 
 namespace Helixbase.Foundation.ORM.App_Start
@@ -18,8 +16,8 @@ namespace Helixbase.Foundation.ORM.App_Start
 			var dependencyResolver = new DependencyResolver(config);
 			// add any changes to the standard resolver here
 
-
-			//dependencyResolver.Finalise();
+			 dependencyResolver.Finalise();
+			
 			return dependencyResolver;
 		}
 
@@ -33,10 +31,9 @@ namespace Helixbase.Foundation.ORM.App_Start
 
 			return new IConfigurationLoader[]{};
 		}
-		public static void PostLoad(IDependencyResolver dependencyResolver)
-        {
-            //Remove the comments to activate CodeFist
-            /* CODE FIRST START
+		public static void PostLoad(IDependencyResolver dependencyResolver){
+			//Remove the comments to activate CodeFist
+			/* CODE FIRST START
             var dbs = Sitecore.Configuration.Factory.GetDatabases();
             foreach (var db in dbs)
             {
@@ -51,8 +48,8 @@ namespace Helixbase.Foundation.ORM.App_Start
             }
              * CODE FIRST END
              */
-		    //dependencyResolver.Finalise();
-        }
+
+		}
 		public static void AddMaps(IConfigFactory<IGlassMap> mapsConfigFactory)
         {
             // Add maps here

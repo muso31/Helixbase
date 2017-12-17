@@ -49,11 +49,11 @@
       <HintPath>..\..\..\..\packages\Castle.Core.3.3.3\lib\net45\Castle.Core.dll</HintPath>
     </Reference>
     <Reference Include="Glass.Mapper, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\..\packages\Glass.Mapper.Sc.Core.4.5.0.3\lib\net45\Glass.Mapper.dll</HintPath>
+      <HintPath>..\..\..\..\packages\Glass.Mapper.Sc.Core.4.5.1.339-beta\lib\net45\Glass.Mapper.dll</HintPath>
     </Reference>
     <Reference Include="Glass.Mapper.Sc, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\packages\Glass.Mapper.Sc.Core.4.5.0.3\lib\111\Glass.Mapper.Sc.dll</HintPath>
+      <HintPath>..\..\..\..\packages\Glass.Mapper.Sc.Core.4.5.1.339-beta\lib\111\Glass.Mapper.Sc.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\..\..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.5\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
