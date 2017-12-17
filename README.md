@@ -18,6 +18,7 @@ A Sitecore Helix based solution which can be used for Greenfield projects. Tackl
 * Non admin Item Unlock
 * Gulp publish with webroot clean
 * <a href="https://jammykam.wordpress.com/2017/09/20/show-title-when-blank/">_Show Title When Blank_</a> patch, the forgotten Sitecore feature!
+* A module just for fun - currently adds logos to the Unicorn console
 
 ## Setup Instructions
 1. Install <a href="https://dev.sitecore.net/Downloads/Sitecore_Experience_Platform/90/Sitecore_Experience_Platform_90_Initial_Release.aspx" target="_blank">Sitecore Experience Platform 9.0 rev. 171002 (9.0 Initial Release)</a>

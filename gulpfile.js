@@ -90,12 +90,6 @@ gulp.task("Publish-Project-Projects", function () {
         publishProjects("./src/Project");
 });
 
-gulp.task("Clean-Transform-Configs", function () {
-    cleanProjectFiles("Foundation"),
-        cleanProjectFiles("Feature"),
-              cleanProjectFiles("Project");
-});
-
 //// Note: intended to be called after publishing
 //gulp.task("Clean-Transform-Configs", function (layerName) {
 //    const filesToDelete = [
