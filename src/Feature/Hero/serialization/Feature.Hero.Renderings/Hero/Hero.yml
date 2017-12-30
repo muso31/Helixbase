@@ -26,6 +26,10 @@ SharedFields:
 - ID: "b5b27af1-25ef-405c-87ce-369b3a004016"
   Hint: Datasource Location
   Value: "query:./ancestor-or-self::*[@@templateid='{98A3D034-92E4-4ECB-9632-119CABD08E15}']//*[@@templateid='{AC1D1F97-DE23-4E57-8A8E-AD83EC538513}']"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{F93A8AB1-654D-4A6F-B38B-780CDA6DE2F7}" />
 - ID: "ded9e431-3604-4921-a4b3-a6ec7636a5b6"
   Hint: Controller Action
   Value: Hero
