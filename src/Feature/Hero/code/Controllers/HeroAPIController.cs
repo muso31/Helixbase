@@ -1,5 +1,4 @@
-﻿using System;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using Sitecore.Mvc.Controllers;
 
 namespace Helixbase.Feature.Hero.Controllers
@@ -10,9 +9,9 @@ namespace Helixbase.Feature.Hero.Controllers
         /// Not used, here to demonstrate routes found in RegisterRoutes.cs
         /// </summary>
         /// <returns></returns>
-        public ActionResult TestAction()
+        public ActionResult TestAction(string someParam)
         {
-            throw new NotImplementedException("this is a test");
+            return Content($"This is a test {someParam}");
         }
     }
 }
