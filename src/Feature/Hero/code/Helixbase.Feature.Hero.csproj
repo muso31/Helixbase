@@ -154,6 +154,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\HeroAPIController.cs" />
     <Compile Include="Controllers\HeroController.cs" />
     <Compile Include="DI\RegisterContainer.cs" />
     <Compile Include="Models\IHero.cs" />
