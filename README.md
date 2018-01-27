@@ -7,7 +7,7 @@ A Sitecore Helix based solution which can be used for Greenfield projects. Tackl
 
 * Glass Mapper - with fluent configuration and automated mapping registration
 * Unicorn - including user and role sync
-* Sitecore 9.0 ready
+* Sitecore 9.0.1 ready
 * Bootstrap
 * Native dependency injection with auto controller registration
 * A sample hero banner feature and sample site project for demonstration
@@ -21,7 +21,7 @@ A Sitecore Helix based solution which can be used for Greenfield projects. Tackl
 * A module just for fun - currently adds logos to the Unicorn console
 
 ## Setup Instructions
-1. Install <a href="https://dev.sitecore.net/Downloads/Sitecore_Experience_Platform/90/Sitecore_Experience_Platform_90_Initial_Release.aspx" target="_blank">Sitecore Experience Platform 9.0 rev. 171002 (9.0 Initial Release)</a>
+1. Install <a href="https://dev.sitecore.net/Downloads/Sitecore_Experience_Platform/90/Sitecore_Experience_Platform_90_Update1.aspx" target="_blank">Sitecore Experience Platform 9.0 rev. 171219 (9.0 Update-1)</a>
 	1. _Name your instance 'demo.helixbase'_
 2. Clone project to 'C:\Projects\Helix base'
 	1. _If you use another path, update the '<a href="https://github.com/muso31/Helixbase/blob/master/src/Project/Helixbase/code/App_Config/Include/Project/z.Helixbase.DevSettings.config#L3">z.Helixbase.DevSettings.config</a>' file and the '<a href="https://github.com/muso31/Helixbase/blob/master/gulp-config.js#L4">gulp-config.js</a>'_
