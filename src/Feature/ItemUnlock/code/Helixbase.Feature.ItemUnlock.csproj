@@ -85,6 +85,7 @@
   <ItemGroup>
     <Compile Include="Commands\ContentEditor\Edit.cs" />
     <Compile Include="Commands\Item\CheckIn.cs" />
+    <Compile Include="Events\RemovedUserEventHandler.cs" />
     <Compile Include="Pipelines\GetContentEditorWarnings\IsLocked.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

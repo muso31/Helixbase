@@ -16,6 +16,7 @@ A Sitecore Helix based solution which can be used for Greenfield projects. Tackl
 * Version trimming rules engine - Items limited to 10 versions by default
 * Search Templates computed index field - find all items from an index by any templates they implement
 * Non admin Item Unlock
+* Auto unlocks items when a user is deleted
 * Gulp publish with webroot clean
 * <a href="https://jammykam.wordpress.com/2017/09/20/show-title-when-blank/">_Show Title When Blank_</a> patch, the forgotten Sitecore feature!
 * A module just for fun - currently adds logos to the Unicorn console
