@@ -15,6 +15,7 @@ namespace Helixbase.Foundation.Search.ComputedFields
         public object ComputeFieldValue(IIndexable indexable)
         {
             var indexItem = indexable as SitecoreIndexableItem;
+
             if (indexItem == null) return null;
 
             var item = indexItem.Item;
@@ -27,15 +28,14 @@ namespace Helixbase.Foundation.Search.ComputedFields
 
         private void GetAllTemplates(TemplateItem baseTemplate, IList<string> templates)
         {
-            if (baseTemplate.ID != Sitecore.TemplateIDs.StandardTemplate)
-            {
-                string id = IdHelper.NormalizeGuid(baseTemplate.ID);
-                templates.Add(id);
+            if (baseTemplate.ID == Sitecore.TemplateIDs.StandardTemplate) return;
 
-                foreach (TemplateItem item in baseTemplate.BaseTemplates)
-                {
-                    GetAllTemplates(item, templates);
-                }
+            var id = IdHelper.NormalizeGuid(baseTemplate.ID);
+            templates.Add(id);
+
+            foreach (var item in baseTemplate.BaseTemplates)
+            {
+                GetAllTemplates(item, templates);
             }
         }
     }
