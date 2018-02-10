@@ -1,32 +1,35 @@
-﻿using Glass.Mapper.Sc.Web;
+﻿using Glass.Mapper.Sc;
+using Glass.Mapper.Sc.Web.Mvc;
+using Sitecore.Data.Items;
 
 namespace Helixbase.Foundation.Content.Repositories
 {
     /// <summary>
-    /// Retrieve Rendering items using Glass
+    ///     Retrieve Rendering item data using Glass
     /// </summary>
     public class RenderingRepository : IRenderingRepository
     {
-        private readonly IRenderingContext _renderingContext;
+        private readonly IMvcContext _mvcContext;
 
-        public RenderingRepository(IRenderingContext renderingContext)
+        public T GetDataSource<T>(GetByItemOptions options) where T : class
         {
-            _renderingContext = renderingContext;
+            return _mvcContext.GetDataSource<T>(options);
         }
 
-        public bool HasDataSource()
+        public T GetPageContextItem<T>(GetByItemOptions options) where T : class
         {
-            return _renderingContext.HasDataSource;
+            return _mvcContext.GetPageContextItem<T>(options);
         }
 
-        public string GetDataSource()
+        public T GetRenderingItem<T>(GetByItemOptions options) where T : class
         {
-            return _renderingContext.GetDataSource();
+            return _mvcContext.GetRenderingItem<T>(options);
         }
 
-        public string GetRenderingParameters()
-        {
-            return _renderingContext.GetRenderingParameters();
-        }
+        public bool HasDataSource => _mvcContext.HasDataSource;
+
+        public Item GetDataSourceItem => _mvcContext.DataSourceItem;
+
+        public string GetRenderingParameters => _mvcContext.RenderingParameters;
     }
 }

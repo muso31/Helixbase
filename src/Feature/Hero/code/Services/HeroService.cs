@@ -1,4 +1,6 @@
 ﻿using System.Linq;
+using Glass.Mapper.Sc;
+using Glass.Mapper.Sc.Configuration;
 using Helixbase.Feature.Hero.Models;
 using Helixbase.Foundation.Content.Repositories;
 using Helixbase.Foundation.Search;
@@ -10,15 +12,13 @@ namespace Helixbase.Feature.Hero.Services
 {
     public class HeroService : IHeroService
     {
-        private readonly IContentRepository _contentRepository;
         private readonly IRenderingRepository _renderingRepository;
         private readonly ICmsInfoRepository _siteRepository;
 
-        public HeroService(IRenderingRepository renderingRepository, IContentRepository contentRepository,
+        public HeroService(IRenderingRepository renderingRepository,
             ICmsInfoRepository siteRepository)
         {
             _renderingRepository = renderingRepository;
-            _contentRepository = contentRepository;
             _siteRepository = siteRepository;
         }
 
@@ -28,8 +28,12 @@ namespace Helixbase.Feature.Hero.Services
         /// <returns>The Hero datasource item from the Content API</returns>
         public IHero GetHeroItems()
         {
-            var dataSource = _renderingRepository.GetDataSource();
-            return _contentRepository.GetContentItem<IHero>(dataSource);
+            var options = new GetByItemOptions
+            {
+                EnforceTemplate = SitecoreEnforceTemplate.TemplateAndBase
+            };
+
+            return _renderingRepository.GetDataSource<IHero>(options);
         }
 
         /// <summary>
