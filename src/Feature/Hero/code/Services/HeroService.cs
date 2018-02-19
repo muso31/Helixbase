@@ -1,7 +1,6 @@
 ﻿using System.Linq;
 using Helixbase.Feature.Hero.Models;
 using Helixbase.Foundation.Content.Repositories;
-using Helixbase.Foundation.Search;
 using Helixbase.Foundation.Search.Models;
 using Sitecore.ContentSearch;
 using Sitecore.ContentSearch.Linq.Utilities;
@@ -44,7 +43,8 @@ namespace Helixbase.Feature.Hero.Services
             predicate = predicate.And(item => item.Templates.Contains(Constants.Hero.TemplateId));
             predicate = predicate.And(item => !item.Name.Equals("__Standard Values"));
 
-            var index = ContentSearchManager.GetIndex(Indexes.Web);
+            // Use your own index name here - do not use magic strings, example only
+            var index = ContentSearchManager.GetIndex($"Helixbase_{_siteRepository.GetDatabaseContext()}_index");
 
             using (var context = index.CreateSearchContext())
             {

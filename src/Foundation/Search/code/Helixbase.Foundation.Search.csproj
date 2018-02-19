@@ -159,7 +159,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ComputedFields\AllTemplatesIndexField.cs" />
-    <Compile Include="Indexes.cs" />
     <Compile Include="Models\BaseSearchResultItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

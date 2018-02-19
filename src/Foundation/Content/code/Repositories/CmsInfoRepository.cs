@@ -13,9 +13,8 @@ namespace Helixbase.Foundation.Content.Repositories
         ///     Similar to ContentRepository GetRootItem method
         /// </summary>
         /// <returns></returns>
-        public string GetSiteRoot()
-        {
-            return Context.Site.RootPath;
-        }
+        public string GetSiteRoot() => Context.Site.RootPath;
+
+        public string GetDatabaseContext() => Context.Database.Name;
     }
 }

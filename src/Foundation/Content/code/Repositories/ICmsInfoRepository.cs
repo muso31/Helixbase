@@ -4,5 +4,6 @@
     {
         bool IsExperienceEditor { get; }
         string GetSiteRoot();
+        string GetDatabaseContext();
     }
 }
