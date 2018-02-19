@@ -11,7 +11,7 @@ A Sitecore Helix based solution which can be used for Greenfield projects. Tackl
 * Bootstrap v4
 * Native dependency injection with auto controller registration
 * A sample hero banner feature and sample site project for demonstration
-* Generic item repository
+* Generic content repositories (by Rendering, Item Context, or Glass Content)
 * 301 redirects
 * Version trimming rules engine - Items limited to 10 versions by default
 * Search Templates computed index field - find all items from an index by any templates they implement

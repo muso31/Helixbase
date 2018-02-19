@@ -5,7 +5,7 @@ using Sitecore.Data.Items;
 namespace Helixbase.Foundation.Content.Repositories
 {
     /// <summary>
-    ///     Retrive Cms information, wrapper for Sitecore Api calls
+    ///     Retrieve CMS information, wrapper for Sitecore API calls
     /// </summary>
     public class ContextRepository : IContextRepository
     {
