@@ -12,12 +12,12 @@ namespace Helixbase.Feature.Redirects.Pipelines
     public class RedirectResolver : HttpRequestProcessor
     {
         private readonly IContentRepository _contentRepository;
-        private readonly ICmsInfoRepository _siteRepository;
+        private readonly IContextRepository _contextRepository;
 
-        public RedirectResolver(IContentRepository contentRepository, ICmsInfoRepository siteRepository)
+        public RedirectResolver(IContentRepository contentRepository, IContextRepository contextRepository)
         {
             _contentRepository = contentRepository;
-            _siteRepository = siteRepository;
+            _contextRepository = contextRepository;
         }
 
         public override void Process(HttpRequestArgs args)
@@ -33,7 +33,7 @@ namespace Helixbase.Feature.Redirects.Pipelines
         private void Perform301Redirect()
         {
             var redirectFolder = _contentRepository.QuerySingle<IRedirectFolder>(
-                $"fast:{_siteRepository.GetSiteRoot()}/*[@@templateid='{Foundation.Content.Templates.GlobalFolder.TemplateId.ToString("B").ToUpper()}']/*[@@templateid='{Templates.RedirectFolder.TemplateId.ToString("B").ToUpper()}']",
+                $"fast:{_contextRepository.GetContextSiteRoot()}/*[@@templateid='{Foundation.Content.Templates.GlobalFolder.TemplateId.ToString("B").ToUpper()}']/*[@@templateid='{Templates.RedirectFolder.TemplateId.ToString("B").ToUpper()}']",
                 false, true);
 
             var path = HttpContext.Current.Request.Url.LocalPath;

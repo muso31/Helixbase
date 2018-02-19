@@ -1,9 +1,13 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using Helixbase.Feature.Hero.Models;
 using Helixbase.Foundation.Content.Repositories;
 using Helixbase.Foundation.Search.Models;
 using Sitecore.ContentSearch;
 using Sitecore.ContentSearch.Linq.Utilities;
+using Sitecore.Pipelines;
+using Sitecore.ContentSearch.Pipelines.GetContextIndex;
+using Sitecore.Data.Items;
 
 namespace Helixbase.Feature.Hero.Services
 {
@@ -11,14 +15,14 @@ namespace Helixbase.Feature.Hero.Services
     {
         private readonly IContentRepository _contentRepository;
         private readonly IRenderingRepository _renderingRepository;
-        private readonly ICmsInfoRepository _siteRepository;
+        private readonly IContextRepository _contextRepository;
 
         public HeroService(IRenderingRepository renderingRepository, IContentRepository contentRepository,
-            ICmsInfoRepository siteRepository)
+            IContextRepository contextRepository)
         {
             _renderingRepository = renderingRepository;
             _contentRepository = contentRepository;
-            _siteRepository = siteRepository;
+            _contextRepository = contextRepository;
         }
 
         /// <summary>
@@ -43,10 +47,12 @@ namespace Helixbase.Feature.Hero.Services
             predicate = predicate.And(item => item.Templates.Contains(Constants.Hero.TemplateId));
             predicate = predicate.And(item => !item.Name.Equals("__Standard Values"));
 
-            // Use your own index name here - do not use magic strings, example only
-            var index = ContentSearchManager.GetIndex($"Helixbase_{_siteRepository.GetDatabaseContext()}_index");
+            // Could set the index manually using below (do not use magic strings, sample only)
+            // var index = ContentSearchManager.GetIndex($"Helixbase_{_contextRepository.GetDatabaseContext()}_index");
+            // Or automate retrieval of the context index
+            var contextIndex = _contextRepository.GetSearchIndexContext(_contentRepository.GetCurrentItem<Item>());
 
-            using (var context = index.CreateSearchContext())
+            using (var context = contextIndex.CreateSearchContext())
             {
                 var result = context.GetQueryable<BaseSearchResultItem>().Where(predicate).First();
 
@@ -54,6 +60,6 @@ namespace Helixbase.Feature.Hero.Services
             }
         }
 
-        public bool IsExperienceEditor => _siteRepository.IsExperienceEditor;
+        public bool IsExperienceEditor => _contextRepository.IsExperienceEditor;
     }
 }

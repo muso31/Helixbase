@@ -10,7 +10,7 @@ namespace Helixbase.Foundation.Content.DI
         {
             serviceCollection.AddTransient<IContentRepository, ContentRepository>();
             serviceCollection.AddTransient<IRenderingRepository, RenderingRepository>();
-            serviceCollection.AddTransient<ICmsInfoRepository, CmsInfoRepository>();
+            serviceCollection.AddTransient<IContextRepository, ContextRepository>();
         }
     }
 }
