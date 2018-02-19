@@ -1,12 +1,8 @@
-﻿using System;
-using System.Linq;
+﻿using System.Linq;
 using Helixbase.Feature.Hero.Models;
 using Helixbase.Foundation.Content.Repositories;
 using Helixbase.Foundation.Search.Models;
-using Sitecore.ContentSearch;
 using Sitecore.ContentSearch.Linq.Utilities;
-using Sitecore.Pipelines;
-using Sitecore.ContentSearch.Pipelines.GetContextIndex;
 using Sitecore.Data.Items;
 
 namespace Helixbase.Feature.Hero.Services
@@ -14,8 +10,8 @@ namespace Helixbase.Feature.Hero.Services
     public class HeroService : IHeroService
     {
         private readonly IContentRepository _contentRepository;
-        private readonly IRenderingRepository _renderingRepository;
         private readonly IContextRepository _contextRepository;
+        private readonly IRenderingRepository _renderingRepository;
 
         public HeroService(IRenderingRepository renderingRepository, IContentRepository contentRepository,
             IContextRepository contextRepository)
