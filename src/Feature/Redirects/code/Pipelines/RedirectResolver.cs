@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Web;
+using Glass.Mapper.Sc;
+using Glass.Mapper.Sc.Configuration;
 using Helixbase.Feature.Redirects.Models;
 using Helixbase.Foundation.Content.Repositories;
 using Sitecore;
@@ -13,11 +15,13 @@ namespace Helixbase.Feature.Redirects.Pipelines
     {
         private readonly IContentRepository _contentRepository;
         private readonly ICmsInfoRepository _siteRepository;
+        private readonly ISitecoreService _sitecoreService;
 
-        public RedirectResolver(IContentRepository contentRepository, ICmsInfoRepository siteRepository)
+        public RedirectResolver(IContentRepository contentRepository, ICmsInfoRepository siteRepository, ISitecoreService sitecoreService)
         {
             _contentRepository = contentRepository;
             _siteRepository = siteRepository;
+            _sitecoreService = sitecoreService;
         }
 
         public override void Process(HttpRequestArgs args)
@@ -32,6 +36,12 @@ namespace Helixbase.Feature.Redirects.Pipelines
 
         private void Perform301Redirect()
         {
+            var builder = new GetByItemOptions
+            {
+                EnforceTemplate = SitecoreEnforceTemplate.TemplateAndBase
+            };
+
+            var redirectFolder = _sitecoreService.GetItem<IRedirectFolder>(builder);
             var redirectFolder = _contentRepository.QuerySingle<IRedirectFolder>(
                 $"fast:{_siteRepository.GetSiteRoot()}/*[@@templateid='{Foundation.Content.Templates.GlobalFolder.TemplateId.ToString("B").ToUpper()}']/*[@@templateid='{Templates.RedirectFolder.TemplateId.ToString("B").ToUpper()}']",
                 false, true);
@@ -48,9 +58,15 @@ namespace Helixbase.Feature.Redirects.Pipelines
 
                 if (!(redirect is I301Redirect)) continue;
 
+                var options = new GetItemOptions()
+                {
+                    ConstructorParameters = null,
+                    TemplateId = 
+                }
+
                 if (string.Equals(redirect.RequestedUrl, path, StringComparison.CurrentCultureIgnoreCase))
                 {
-                    var targetItem = _contentRepository.GetContentItem<Item>(redirect.RedirectItem.Id.ToString());
+                    var targetItem = _sitecoreService.GetItem<Item>( redirect.RedirectItem.Id.ToString());
                     HttpContext.Current.Response.RedirectPermanent(LinkManager.GetItemUrl(targetItem), true);
                 }
             }

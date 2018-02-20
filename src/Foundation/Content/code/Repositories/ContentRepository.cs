@@ -16,11 +16,6 @@ namespace Helixbase.Foundation.Content.Repositories
             _requestContext = requestContext;
         }
 
-        public T GetContentItem<T>(GetByItemOptions options) where T : class
-        {
-            return _requestContext.SitecoreService.GetItem<T>(options);
-        }
-
         public T GetCurrentItem<T>(GetByItemOptions options) where T : class
         {
             return _requestContext.GetContextItem<T>(options);
