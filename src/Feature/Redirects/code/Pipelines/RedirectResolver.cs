@@ -1,13 +1,15 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Web;
+using Glass.Mapper;
 using Glass.Mapper.Sc;
 using Glass.Mapper.Sc.Configuration;
 using Helixbase.Feature.Redirects.Models;
 using Helixbase.Foundation.Content.Repositories;
-using Sitecore;
 using Sitecore.Data.Items;
 using Sitecore.Links;
 using Sitecore.Pipelines.HttpRequest;
+using Context = Sitecore.Context;
 
 namespace Helixbase.Feature.Redirects.Pipelines
 {
@@ -36,12 +38,14 @@ namespace Helixbase.Feature.Redirects.Pipelines
 
         private void Perform301Redirect()
         {
-            var builder = new GetByItemOptions
+            var builder = new GetsOptions
             {
-                EnforceTemplate = SitecoreEnforceTemplate.TemplateAndBase
-            };
+                EnforceTemplate = SitecoreEnforceTemplate.TemplateAndBase,
+                ConstructorParameters = new List<ConstructorParameter>() {  }})
 
-            var redirectFolder = _sitecoreService.GetItem<IRedirectFolder>(builder);
+            }
+
+            var redirectFolder = _sitecoreService.GetItems<IRedirectFolder>(x => x.);
             var redirectFolder = _contentRepository.QuerySingle<IRedirectFolder>(
                 $"fast:{_siteRepository.GetSiteRoot()}/*[@@templateid='{Foundation.Content.Templates.GlobalFolder.TemplateId.ToString("B").ToUpper()}']/*[@@templateid='{Templates.RedirectFolder.TemplateId.ToString("B").ToUpper()}']",
                 false, true);
