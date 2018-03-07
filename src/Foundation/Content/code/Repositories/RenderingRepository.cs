@@ -3,7 +3,7 @@
 namespace Helixbase.Foundation.Content.Repositories
 {
     /// <summary>
-    /// Retrieve Rendering items using Glass
+    ///     Retrieve Rendering data using Glass
     /// </summary>
     public class RenderingRepository : IRenderingRepository
     {

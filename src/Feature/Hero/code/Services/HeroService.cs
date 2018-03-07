@@ -33,7 +33,7 @@ namespace Helixbase.Feature.Hero.Services
 
         /// <summary>
         ///     **** This method is not required/in use. It is here as an example of how to use the computed search field ****
-        ///     Get an item from the index (you must setup SOLR or Lucene first)
+        ///     Get an item from the index
         /// </summary>
         /// <returns>The first item based on the Hero template</returns>
         public BaseSearchResultItem GetHeroImagesSearch()
@@ -43,9 +43,9 @@ namespace Helixbase.Feature.Hero.Services
             predicate = predicate.And(item => item.Templates.Contains(Constants.Hero.TemplateId));
             predicate = predicate.And(item => !item.Name.Equals("__Standard Values"));
 
-            // Could set the index manually using below (do not use magic strings, sample only)
+            // We could set the index manually using the line below (do not use magic strings, sample only)
             // var index = ContentSearchManager.GetIndex($"Helixbase_{_contextRepository.GetDatabaseContext()}_index");
-            // Or automate retrieval of the context index
+            // OR we could automate retrieval of the context index:
             var contextIndex = _contextRepository.GetSearchIndexContext(_contentRepository.GetCurrentItem<Item>());
 
             using (var context = contextIndex.CreateSearchContext())
