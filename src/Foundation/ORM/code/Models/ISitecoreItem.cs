@@ -1,8 +1,8 @@
-﻿using Sitecore.Globalization;
-using System;
+﻿using System;
 using System.Collections;
+using Sitecore.Globalization;
 
-namespace Helixbase.Foundation.Models.BaseItem
+namespace Helixbase.Foundation.ORM.Models
 {
     public interface ISitecoreItem
     {

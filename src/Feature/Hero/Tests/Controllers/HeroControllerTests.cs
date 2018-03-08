@@ -6,7 +6,7 @@ using Helixbase.Feature.Hero.Controllers;
 using Helixbase.Feature.Hero.Mediators;
 using Helixbase.Feature.Hero.ViewModels;
 using Helixbase.Foundation.Core.Exceptions;
-using Helixbase.Foundation.Models.Mediators;
+using Helixbase.Foundation.Core.Models;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NSubstitute;
 using Ploeh.AutoFixture;

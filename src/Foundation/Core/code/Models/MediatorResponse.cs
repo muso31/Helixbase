@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Helixbase.Foundation.Models.Mediators
+namespace Helixbase.Foundation.Core.Models
 {
     public class MediatorResponse
     {

@@ -1,6 +1,7 @@
 ﻿using System.Linq;
 using Helixbase.Feature.Hero.Models;
 using Helixbase.Foundation.Content.Repositories;
+using Helixbase.Foundation.Logging.Repositories;
 using Helixbase.Foundation.Search.Models;
 using Sitecore.ContentSearch.Linq.Utilities;
 using Sitecore.Data.Items;
@@ -11,14 +12,16 @@ namespace Helixbase.Feature.Hero.Services
     {
         private readonly IContentRepository _contentRepository;
         private readonly IContextRepository _contextRepository;
+        private readonly ILogRepository _logRepository;
         private readonly IRenderingRepository _renderingRepository;
 
-        public HeroService(IRenderingRepository renderingRepository, IContentRepository contentRepository,
-            IContextRepository contextRepository)
+        public HeroService(IContentRepository contentRepository, IContextRepository contextRepository,
+            ILogRepository logRepository, IRenderingRepository renderingRepository)
         {
-            _renderingRepository = renderingRepository;
             _contentRepository = contentRepository;
             _contextRepository = contextRepository;
+            _logRepository = logRepository;
+            _renderingRepository = renderingRepository;
         }
 
         /// <summary>
@@ -28,6 +31,11 @@ namespace Helixbase.Feature.Hero.Services
         public IHero GetHeroItems()
         {
             var dataSource = _renderingRepository.GetDataSource();
+
+            // Basic example of using the wrapped logger
+            if (string.IsNullOrEmpty(dataSource))
+                _logRepository.Warn(Logging.Error.DataSourceError);
+
             return _contentRepository.GetContentItem<IHero>(dataSource);
         }
 
