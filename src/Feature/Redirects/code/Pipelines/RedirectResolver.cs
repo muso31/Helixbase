@@ -22,6 +22,7 @@ namespace Helixbase.Feature.Redirects.Pipelines
 
         public override void Process(HttpRequestArgs args)
         {
+            // TODO: Update this logic as a domain such as https://sitecore.something will not work with redirects
             if (args.Context.Request.Url.OriginalString.ToLower().Contains("/sitecore") ||
                 args.Context.Request.Url.AbsolutePath.Equals("/"))
                 return;
