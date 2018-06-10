@@ -152,6 +152,7 @@
     <Compile Include="App_Start\GlassMapperScCustom.cs" />
     <Compile Include="DI\RegisterContainer.cs" />
     <Compile Include="Extensions\MapsConfigFactoryExtension.cs" />
+    <Compile Include="GlassMappings.cs" />
     <Compile Include="Models\ISitecoreItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -147,7 +147,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ORM\GlassMappings.cs" />
     <Compile Include="Repositories\IContextRepository.cs" />
     <Compile Include="Repositories\RenderingRepository.cs" />
     <Compile Include="Repositories\IRenderingRepository.cs" />
@@ -156,7 +155,6 @@
     <Compile Include="DI\RegisterContainer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\ContextRepository.cs" />
-    <Compile Include="Templates.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config">

@@ -4,6 +4,10 @@ namespace Helixbase.Feature.Redirects
 {
     public class Templates
     {
+        public struct GlobalFolder
+        {
+            public static Guid TemplateId = new Guid("{B2076F9F-E735-4F31-91CF-597524B76A1E}");
+        }
         public struct RedirectFolder
         {
             public static Guid TemplateId = new Guid("{06C2205B-CECB-4622-9680-E61E5DF1CB05}");

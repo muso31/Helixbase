@@ -2,7 +2,7 @@
 using Glass.Mapper.Sc.Maps;
 using Helixbase.Foundation.ORM.Models;
 
-namespace Helixbase.Foundation.Content.ORM
+namespace Helixbase.Foundation.ORM
 {
     public class SitecoreItemMap : SitecoreGlassMap<ISitecoreItem>
     {
