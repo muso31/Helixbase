@@ -37,11 +37,13 @@ namespace Helixbase.Feature.Hero.Services
                 EnforceTemplate = SitecoreEnforceTemplate.TemplateAndBase
             };
 
+            var dataSource = _renderingRepository.GetDataSource<IHero>(options);
+
             // Basic example of using the wrapped logger
-            if (string.IsNullOrEmpty(dataSource))
+            if (dataSource == null)
                 _logRepository.Warn(Logging.Error.DataSourceError);
 
-            return _renderingRepository.GetDataSource<IHero>(options);
+            return dataSource;
         }
 
         /// <summary>

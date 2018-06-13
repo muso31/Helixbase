@@ -1,27 +1,26 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Web;
-using Glass.Mapper;
 using Glass.Mapper.Sc;
 using Glass.Mapper.Sc.Configuration;
 using Helixbase.Feature.Redirects.Models;
 using Helixbase.Foundation.Content.Repositories;
+using Sitecore;
 using Sitecore.Data.Items;
 using Sitecore.Links;
 using Sitecore.Pipelines.HttpRequest;
-using Context = Sitecore.Context;
 
 namespace Helixbase.Feature.Redirects.Pipelines
 {
     public class RedirectResolver : HttpRequestProcessor
     {
-        private readonly IContentRepository _contentRepository;
         private readonly IContextRepository _contextRepository;
+        private readonly ISitecoreService _sitecoreService;
 
-        public RedirectResolver(IContentRepository contentRepository, IContextRepository contextRepository)
+        public RedirectResolver(IContextRepository contextRepository,
+            ISitecoreService sitecoreService)
         {
-            _contentRepository = contentRepository;
             _contextRepository = contextRepository;
+            _sitecoreService = sitecoreService;
         }
 
         public override void Process(HttpRequestArgs args)
@@ -39,15 +38,12 @@ namespace Helixbase.Feature.Redirects.Pipelines
         {
             var builder = new GetsOptions
             {
-                EnforceTemplate = SitecoreEnforceTemplate.TemplateAndBase,
-                ConstructorParameters = new List<ConstructorParameter>() {  }})
+                EnforceTemplate = SitecoreEnforceTemplate.TemplateAndBase
+            };
 
-            }
-
-            var redirectFolder = _sitecoreService.GetItems<IRedirectFolder>(x => x.);
-            var redirectFolder = _contentRepository.QuerySingle<IRedirectFolder>(
+            var redirectFolder = _sitecoreService.GetByQuery<IRedirectFolder>(
                 $"fast:{_contextRepository.GetContextSiteRoot()}/*[@@templateid='{Templates.GlobalFolder.TemplateId.ToString("B").ToUpper()}']/*[@@templateid='{Templates.RedirectFolder.TemplateId.ToString("B").ToUpper()}']",
-                false, true);
+                x => x.CacheEnabled());
 
             var path = HttpContext.Current.Request.Url.LocalPath;
 
@@ -61,15 +57,14 @@ namespace Helixbase.Feature.Redirects.Pipelines
 
                 if (!(redirect is I301Redirect)) continue;
 
-                var options = new GetItemOptions()
+                var options = new GetItemOptions
                 {
-                    ConstructorParameters = null,
-                    TemplateId = 
-                }
+                    TemplateId = redirect.RedirectItem.Id
+                };
 
                 if (string.Equals(redirect.RequestedUrl, path, StringComparison.CurrentCultureIgnoreCase))
                 {
-                    var targetItem = _sitecoreService.GetItem<Item>( redirect.RedirectItem.Id.ToString());
+                    var targetItem = _sitecoreService.GetItem<Item>(options);
                     HttpContext.Current.Response.RedirectPermanent(LinkManager.GetItemUrl(targetItem), true);
                 }
             }
