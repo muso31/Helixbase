@@ -16,18 +16,17 @@ namespace Helixbase.Feature.Redirects.Pipelines
     public class RedirectResolver : HttpRequestProcessor
     {
         private readonly IContentRepository _contentRepository;
-        private readonly ICmsInfoRepository _siteRepository;
-        private readonly ISitecoreService _sitecoreService;
+        private readonly IContextRepository _contextRepository;
 
-        public RedirectResolver(IContentRepository contentRepository, ICmsInfoRepository siteRepository, ISitecoreService sitecoreService)
+        public RedirectResolver(IContentRepository contentRepository, IContextRepository contextRepository)
         {
             _contentRepository = contentRepository;
-            _siteRepository = siteRepository;
-            _sitecoreService = sitecoreService;
+            _contextRepository = contextRepository;
         }
 
         public override void Process(HttpRequestArgs args)
         {
+            // TODO: Update this logic as a domain such as https://sitecore.something will not work with redirects
             if (args.Context.Request.Url.OriginalString.ToLower().Contains("/sitecore") ||
                 args.Context.Request.Url.AbsolutePath.Equals("/"))
                 return;
@@ -47,7 +46,7 @@ namespace Helixbase.Feature.Redirects.Pipelines
 
             var redirectFolder = _sitecoreService.GetItems<IRedirectFolder>(x => x.);
             var redirectFolder = _contentRepository.QuerySingle<IRedirectFolder>(
-                $"fast:{_siteRepository.GetSiteRoot()}/*[@@templateid='{Foundation.Content.Templates.GlobalFolder.TemplateId.ToString("B").ToUpper()}']/*[@@templateid='{Templates.RedirectFolder.TemplateId.ToString("B").ToUpper()}']",
+                $"fast:{_contextRepository.GetContextSiteRoot()}/*[@@templateid='{Templates.GlobalFolder.TemplateId.ToString("B").ToUpper()}']/*[@@templateid='{Templates.RedirectFolder.TemplateId.ToString("B").ToUpper()}']",
                 false, true);
 
             var path = HttpContext.Current.Request.Url.LocalPath;

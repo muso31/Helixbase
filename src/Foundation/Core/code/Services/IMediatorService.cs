@@ -1,5 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using Helixbase.Foundation.Models.Mediators;
+using Helixbase.Foundation.Core.Models;
 
 namespace Helixbase.Foundation.Core.Services
 {

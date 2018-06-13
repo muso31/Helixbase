@@ -4,6 +4,9 @@ using SC = Sitecore;
 
 namespace Helixbase.Feature.ItemUnlock.Commands.ContentEditor
 {
+    /// <summary>
+    ///     https://community.sitecore.net/technical_blogs/b/sitecorejohn_blog/posts/allow-users-to-unlock-items-locked-to-others-in-the-sitecore-asp-net-cms
+    /// </summary>
     public class Edit : SC.Shell.Framework.Commands.ContentEditor.Edit
     {
         public override SC.Shell.Framework.Commands.CommandState QueryState(SC.Shell.Framework.Commands.CommandContext context)

@@ -168,10 +168,6 @@
       <Project>{F8F55034-FA55-4D27-B115-0AB4EEB9A0A8}</Project>
       <Name>Helixbase.Foundation.Content</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\Foundation\Models\code\Helixbase.Foundation.Models.csproj">
-      <Project>{3227661f-a60d-486f-a904-14baf0eb991e}</Project>
-      <Name>Helixbase.Foundation.Models</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\..\Foundation\Core\code\Helixbase.Foundation.Core.csproj">
       <Project>{0C1E2FEC-AC54-4CF0-905A-890D3BF711D5}</Project>
       <Name>Helixbase.Foundation.Core</Name>

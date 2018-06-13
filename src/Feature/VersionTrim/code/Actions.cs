@@ -4,6 +4,10 @@ using SC = Sitecore;
 
 namespace Helixbase.Feature.VersionTrim
 {
+    /// <summary>
+    ///     https://community.sitecore.net/technical_blogs/b/sitecorejohn_blog/posts/rules-engine-actions-to-remove-old-versions-in-the-sitecore-asp-net-cms
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     public abstract class MinVersionsAction<T> :
     SC.Rules.Actions.RuleAction<T> where T : SC.Rules.RuleContext
     {

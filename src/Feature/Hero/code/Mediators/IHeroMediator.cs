@@ -1,5 +1,5 @@
 ﻿using Helixbase.Feature.Hero.ViewModels;
-using Helixbase.Foundation.Models.Mediators;
+using Helixbase.Foundation.Core.Models;
 
 namespace Helixbase.Feature.Hero.Mediators
 {

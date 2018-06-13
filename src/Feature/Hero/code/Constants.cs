@@ -10,6 +10,14 @@ namespace Helixbase.Feature.Hero
         }
     }
 
+    public class Logging
+    {
+        public struct Error
+        {
+            public const string DataSourceError = "The Hero datasource was empty";
+        }
+    }
+
     public class MediatorCodes
     {
         public struct HeroResponse

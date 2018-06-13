@@ -5,6 +5,9 @@ using SC = Sitecore;
 
 namespace Helixbase.Feature.ItemUnlock.Pipelines.GetContentEditorWarnings
 {
+    /// <summary>
+    ///     https://community.sitecore.net/technical_blogs/b/sitecorejohn_blog/posts/allow-users-to-unlock-items-locked-to-others-in-the-sitecore-asp-net-cms
+    /// </summary>
     public class IsLocked
     {
         public void Process(SC.Pipelines.GetContentEditorWarnings.GetContentEditorWarningsArgs args)

@@ -197,9 +197,13 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Foundation\Models\code\Helixbase.Foundation.Models.csproj">
-      <Project>{3227661F-A60D-486F-A904-14BAF0EB991E}</Project>
-      <Name>Helixbase.Foundation.Models</Name>
+    <ProjectReference Include="..\..\..\Foundation\Logging\code\Helixbase.Foundation.Logging.csproj">
+      <Project>{9B72C426-123C-4782-BEF8-0D52E5F2A396}</Project>
+      <Name>Helixbase.Foundation.Logging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Foundation\ORM\code\Helixbase.Foundation.ORM.csproj">
+      <Project>{5E91A7D9-8E93-44FD-857F-F9CE145B6022}</Project>
+      <Name>Helixbase.Foundation.ORM</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Foundation\Search\code\Helixbase.Foundation.Search.csproj">
       <Project>{22686DC6-4E6C-4D98-84B7-C48042F5B8FC}</Project>

@@ -2,21 +2,12 @@ var gulp = require("gulp");
 var msbuild = require("gulp-msbuild");
 var debug = require("gulp-debug");
 var foreach = require("gulp-foreach");
-var runSequence = require("run-sequence");
 var gulpConfig = require("./gulp-config.js")();
 var clean = require('gulp-clean');
 var nugetRestore = require('gulp-nuget-restore');
 module.exports.config = gulpConfig;
 
-gulp.task("Publish-All-Projects", function (callback) {
-    return runSequence(
-        "Build-Solution",
-        "Publish-Foundation-Projects",
-        "Publish-Feature-Projects",
-        "Publish-Project-Projects", callback);
-});
-
-var cleanProjectFiles = function (layerName) {
+function cleanProjectFiles(layerName) {
     const filesToDelete = [
         gulpConfig.webRoot + '/bin/Helixbase.' + layerName + '.*',
         gulpConfig.webRoot + '/App_Config/Include/' + layerName
@@ -26,13 +17,13 @@ var cleanProjectFiles = function (layerName) {
         .pipe(clean({ force: true }));
 };
 
-var publishProjects = function (location, dest) {
+function publishProjects(location, dest) {
     dest = dest || gulpConfig.webRoot;
     var targets = ["Build"];
 
     console.log("publish to " + dest + " folder");
     return gulp.src([location + "/**/code/*.csproj"])
-        .pipe(foreach(function (stream, file) {
+        .pipe(foreach(function (stream) {
             return stream
                 .pipe(debug({ title: "Building project:" }))
                 .pipe(msbuild({
@@ -75,28 +66,23 @@ gulp.task("Build-Solution", function () {
         }));
 });
 
-gulp.task("Publish-Foundation-Projects", function () {
-    cleanProjectFiles("Foundation"),
+gulp.task("Publish-Foundation-Layer", function () {
+    return cleanProjectFiles("Foundation"),
         publishProjects("./src/Foundation");
 });
 
-gulp.task("Publish-Feature-Projects", function () {
-    cleanProjectFiles("Feature"),
+gulp.task("Publish-Feature-Layer", function () {
+    return cleanProjectFiles("Feature"),
         publishProjects("./src/Feature");
 });
 
-gulp.task("Publish-Project-Projects", function () {
-    cleanProjectFiles("Project"),
+gulp.task("Publish-Project-Layer", function () {
+    return cleanProjectFiles("Project"),
         publishProjects("./src/Project");
 });
 
-//// Note: intended to be called after publishing
-//gulp.task("Clean-Transform-Configs", function (layerName) {
-//    const filesToDelete = [
-//        gulpConfig.webRoot + '/App_Config/Include/' + layerName + '/CD',
-//        gulpConfig.webRoot + '/App_Config/Include/' + layerName + '/CM'
-//    ];
-//    console.log("Removing transform configs");
-//    return gulp.src(filesToDelete, { read: false })
-//        .pipe(clean({ force: true }));
-//});
+
+gulp.task("Publish-All-Projects", gulp.series("Build-Solution",
+    "Publish-Foundation-Layer",
+    "Publish-Feature-Layer",
+    "Publish-Project-Layer"));

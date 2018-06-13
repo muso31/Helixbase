@@ -3,6 +3,9 @@ using SC = Sitecore;
 
 namespace Helixbase.Feature.ItemUnlock.Commands.Item
 {
+    /// <summary>
+    ///     https://community.sitecore.net/technical_blogs/b/sitecorejohn_blog/posts/allow-users-to-unlock-items-locked-to-others-in-the-sitecore-asp-net-cms
+    /// </summary>
     public class CheckIn : SC.Shell.Framework.Commands.CheckIn
     {
         public static bool HasUnlockAccess(SC.Data.Items.Item item, SC.Security.Accounts.User user = null)

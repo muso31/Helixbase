@@ -1,5 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using Helixbase.Foundation.Models.Mediators;
+using Helixbase.Foundation.Core.Models;
 
 namespace Helixbase.Foundation.Core.Services
 {
@@ -8,7 +8,7 @@ namespace Helixbase.Foundation.Core.Services
         public MediatorResponse<T> GetMediatorResponse<T>(string code, T viewModel = default(T),
             ValidationResult validationResult = null, object parameters = null, string message = null)
         {
-            var response = new MediatorResponse<T>
+            var response = new Models.MediatorResponse<T>
             {
                 Code = code,
                 ViewModel = viewModel,

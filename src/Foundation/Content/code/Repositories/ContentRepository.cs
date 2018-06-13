@@ -5,7 +5,7 @@ using Sitecore.Data.Items;
 namespace Helixbase.Foundation.Content.Repositories
 {
     /// <summary>
-    /// Retrieve Sitecore items using Glass
+    ///     Retrieve Sitecore items using Glass
     /// </summary>
     public class ContentRepository : IContentRepository
     {
