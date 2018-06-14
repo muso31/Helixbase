@@ -1,6 +1,4 @@
 ﻿using System.Linq;
-using Glass.Mapper.Sc;
-using Glass.Mapper.Sc.Configuration;
 using Helixbase.Feature.Hero.Models;
 using Helixbase.Foundation.Content.Repositories;
 using Helixbase.Foundation.Logging.Repositories;
@@ -32,12 +30,7 @@ namespace Helixbase.Feature.Hero.Services
         /// <returns>The Hero datasource item from the Content API</returns>
         public IHero GetHeroItems()
         {
-            var options = new GetByItemOptions
-            {
-                EnforceTemplate = SitecoreEnforceTemplate.TemplateAndBase
-            };
-
-            var dataSource = _renderingRepository.GetDataSource<IHero>(options);
+            var dataSource = _renderingRepository.GetDataSourceItem<IHero>();
 
             // Basic example of using the wrapped logger
             if (dataSource == null)

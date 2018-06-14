@@ -11,25 +11,45 @@ namespace Helixbase.Foundation.Content.Repositories
     {
         private readonly IMvcContext _mvcContext;
 
-        public T GetDataSource<T>(GetByItemOptions options) where T : class
+        public T GetDataSourceItem<T>(GetKnownOptions options) where T : class
         {
-            return _mvcContext.GetDataSource<T>(options);
+            return _mvcContext.GetDataSourceItem<T>(options);
         }
 
-        public T GetPageContextItem<T>(GetByItemOptions options) where T : class
+        public T GetDataSourceItem<T>() where T : class
+        {
+            return _mvcContext.GetDataSourceItem<T>();
+        }
+
+        public T GetPageContextItem<T>(GetKnownOptions options) where T : class
         {
             return _mvcContext.GetPageContextItem<T>(options);
         }
 
-        public T GetRenderingItem<T>(GetByItemOptions options) where T : class
+        public T GetPageContextItem<T>() where T : class
+        {
+            return _mvcContext.GetPageContextItem<T>();
+        }
+
+        public T GetRenderingItem<T>(GetKnownOptions options) where T : class
         {
             return _mvcContext.GetRenderingItem<T>(options);
         }
 
+        public T GetRenderingItem<T>() where T : class
+        {
+            return _mvcContext.GetRenderingItem<T>();
+        }
+
+        public T GetRenderingParameters<T>() where T : class
+        {
+            return _mvcContext.GetRenderingParameters<T>();
+        }
+
         public bool HasDataSource => _mvcContext.HasDataSource;
 
-        public Item GetDataSourceItem => _mvcContext.DataSourceItem;
+        public Item DataSourceItem => _mvcContext.DataSourceItem;
 
-        public string GetRenderingParameters => _mvcContext.RenderingParameters;
+        public string RenderingParameters => _mvcContext.RenderingParameters;
     }
 }

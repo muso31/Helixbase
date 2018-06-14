@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Web;
 using Glass.Mapper.Sc;
-using Glass.Mapper.Sc.Configuration;
 using Helixbase.Feature.Redirects.Models;
 using Helixbase.Foundation.Content.Repositories;
 using Sitecore;
@@ -16,11 +15,9 @@ namespace Helixbase.Feature.Redirects.Pipelines
         private readonly IContextRepository _contextRepository;
         private readonly ISitecoreService _sitecoreService;
 
-        public RedirectResolver(IContextRepository contextRepository,
-            ISitecoreService sitecoreService)
+        public RedirectResolver(IContextRepository contextRepository)
         {
             _contextRepository = contextRepository;
-            _sitecoreService = sitecoreService;
         }
 
         public override void Process(HttpRequestArgs args)
@@ -36,14 +33,9 @@ namespace Helixbase.Feature.Redirects.Pipelines
 
         private void Perform301Redirect()
         {
-            var builder = new GetsOptions
-            {
-                EnforceTemplate = SitecoreEnforceTemplate.TemplateAndBase
-            };
-
-            var redirectFolder = _sitecoreService.GetByQuery<IRedirectFolder>(
-                $"fast:{_contextRepository.GetContextSiteRoot()}/*[@@templateid='{Templates.GlobalFolder.TemplateId.ToString("B").ToUpper()}']/*[@@templateid='{Templates.RedirectFolder.TemplateId.ToString("B").ToUpper()}']",
-                x => x.CacheEnabled());
+            var redirectFolder = _sitecoreService.GetItem<IRedirectFolder>(
+                new Query($"fast:{_contextRepository.GetContextSiteRoot()}/*[@@templateid='{Templates.GlobalFolder.TemplateId.ToString("B").ToUpper()}']/*[@@templateid='{Templates.RedirectFolder.TemplateId.ToString("B").ToUpper()}']")
+                , x => x.LazyEnable());
 
             var path = HttpContext.Current.Request.Url.LocalPath;
 
@@ -57,14 +49,9 @@ namespace Helixbase.Feature.Redirects.Pipelines
 
                 if (!(redirect is I301Redirect)) continue;
 
-                var options = new GetItemOptions
-                {
-                    TemplateId = redirect.RedirectItem.Id
-                };
-
                 if (string.Equals(redirect.RequestedUrl, path, StringComparison.CurrentCultureIgnoreCase))
                 {
-                    var targetItem = _sitecoreService.GetItem<Item>(options);
+                    var targetItem = _sitecoreService.GetItem<Item>(redirect.RedirectItem.Id);
                     HttpContext.Current.Response.RedirectPermanent(LinkManager.GetItemUrl(targetItem), true);
                 }
             }
