@@ -61,6 +61,9 @@ namespace Helixbase.Feature.Hero.Services
                 var result = context.GetQueryable<BaseSearchResultItem>().Where(predicate).First();
 
                 return result;
+
+                // OR we could have populated a Glass model using:
+                // injectedSitecoreService.Populate(result);
             }
         }
 

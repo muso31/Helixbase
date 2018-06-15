@@ -40,6 +40,9 @@ namespace Helixbase.Feature.Redirects.Pipelines
                 Query = $"fast:{_contextRepository.GetContextSiteRoot()}/*[@@templateid='{Templates.GlobalFolder.TemplateId.ToString("B").ToUpper()}']/*[@@templateid='{Templates.RedirectFolder.TemplateId.ToString("B").ToUpper()}']"
             });
 
+            // Could also use a builder:
+            // var builder = new GetItemByQueryBuilder().Query($"fast:{_contextRepository.GetContextSiteRoot()}/*[@@templateid='{Templates.GlobalFolder.TemplateId.ToString("B").ToUpper()}']/*[@@templateid='{Templates.RedirectFolder.TemplateId.ToString("B").ToUpper()}']");
+
             var path = HttpContext.Current.Request.Url.LocalPath;
 
             if (redirectFolder == null)

@@ -11,9 +11,9 @@ namespace Helixbase.Foundation.ORM.DI
         public void Configure(IServiceCollection serviceCollection)
         {
             serviceCollection.AddTransient<ISitecoreService>(provider => new SitecoreService(Sitecore.Context.Database));
-            serviceCollection.AddTransient<IRequestContext, RequestContext>();
-            serviceCollection.AddTransient<IMvcContext, MvcContext>();
-            serviceCollection.AddTransient<IGlassHtml, GlassHtml>();
+            serviceCollection.AddScoped<IRequestContext, RequestContext>();
+            serviceCollection.AddScoped<IMvcContext, MvcContext>();
+            serviceCollection.AddScoped<IGlassHtml, GlassHtml>();
         }
     }
 }
