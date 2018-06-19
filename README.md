@@ -5,7 +5,7 @@ A Sitecore Helix based solution which can be used for Greenfield projects. Tackl
 
 #### Features include:
 
-* Glass Mapper - with fluent configuration and automated mapping registration
+* Glass Mapper v5 - with fluent configuration and automated mapping registration
 * Unicorn - including user and role sync
 * Sitecore 9.0.1 ready
 * Bootstrap v4

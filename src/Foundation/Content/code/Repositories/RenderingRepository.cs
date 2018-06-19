@@ -11,6 +11,11 @@ namespace Helixbase.Foundation.Content.Repositories
     {
         private readonly IMvcContext _mvcContext;
 
+        public RenderingRepository(IMvcContext mvcContext)
+        {
+            _mvcContext = mvcContext;
+        }
+
         public T GetDataSourceItem<T>(GetKnownOptions options) where T : class
         {
             return _mvcContext.GetDataSourceItem<T>(options);
