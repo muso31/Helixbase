@@ -13,7 +13,7 @@ function cleanProjectFiles(layerName) {
         gulpConfig.webRoot + '/App_Config/Include/' + layerName
     ];
     console.log("Removing " + layerName + " configs/binaries");
-    return gulp.src(filesToDelete, { read: false })
+    return gulp.src(filesToDelete, { read: false, allowEmpty: true })
         .pipe(clean({ force: true }));
 };
 
