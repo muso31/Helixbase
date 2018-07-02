@@ -1,4 +1,6 @@
 ﻿using Glass.Mapper.Sc;
+using Glass.Mapper.Sc.Web;
+using Sitecore.Data.Items;
 
 namespace Helixbase.Foundation.Content.Repositories
 {
@@ -7,41 +9,58 @@ namespace Helixbase.Foundation.Content.Repositories
     /// </summary>
     public class ContentRepository : IContentRepository
     {
-        private readonly ISitecoreContext _sitecoreContext;
+        private readonly IRequestContext _requestContext;
 
-        public ContentRepository(ISitecoreContext sitecoreContext)
+        public ContentRepository(IRequestContext requestContext)
         {
-            _sitecoreContext = sitecoreContext;
+            _requestContext = requestContext;
         }
 
-        public T GetContentItem<T>(string contentItem, bool isLazy = false, bool inferType = false) where T : class
+        public T GetItem<T>(GetItemOptions options) where T : class
         {
-            return _sitecoreContext.GetItem<T>(contentItem, isLazy, inferType);
+           return _requestContext.SitecoreService.GetItem<T>(options);
         }
 
-        public T GetCurrentItem<T>(bool isLazy = false, bool inferType = false) where T : class
+        public object GetItem(GetItemOptions options)
         {
-            return _sitecoreContext.GetCurrentItem<T>(isLazy, inferType);
+            return _requestContext.SitecoreService.GetItem(options);
         }
 
-        public T GetHomeItem<T>(bool isLazy = false, bool inferType = false) where T : class
+        public T GetCurrentItem<T>() where T : class
         {
-            return _sitecoreContext.GetHomeItem<T>(isLazy, inferType);
+            return _requestContext.GetContextItem<T>();
         }
 
-        public T GetRootItem<T>(bool isLazy = false, bool inferType = false) where T : class
+        public object GetCurrentItem(GetKnownOptions options)
         {
-            return _sitecoreContext.GetRootItem<T>(isLazy, inferType);
+            return _requestContext.GetContextItem(options);
         }
 
-        public T QuerySingle<T>(string query, bool isLazy = false, bool inferType = false) where T : class
+        public T GetCurrentItem<T>(GetKnownOptions options) where T : class
         {
-            return _sitecoreContext.QuerySingle<T>(query, isLazy, inferType);
+            return _requestContext.GetContextItem<T>(options);
         }
 
-        public T QuerySingleRelative<T>(string query, bool isLazy = false, bool inferType = false) where T : class
+        public T GetHomeItem<T>() where T : class
         {
-            return _sitecoreContext.QuerySingleRelative<T>(query, isLazy, inferType);
+            return _requestContext.GetHomeItem<T>();
         }
+
+        public T GetHomeItem<T>(GetKnownOptions options) where T : class
+        {
+            return _requestContext.GetHomeItem<T>(options);
+        }
+
+        public T GetRootItem<T>() where T : class
+        {
+            return _requestContext.GetRootItem<T>();
+        }
+
+        public T GetRootItem<T>(GetKnownOptions options) where T : class
+        {
+            return _requestContext.GetRootItem<T>(options);
+        }
+
+        public Item ContextItem => _requestContext.ContextItem;
     }
 }

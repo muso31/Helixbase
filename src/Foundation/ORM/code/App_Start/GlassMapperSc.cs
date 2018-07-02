@@ -37,9 +37,8 @@ namespace Helixbase.Foundation.ORM.App_Start
 				GlassMapperScCustom.GlassLoaders()        				
 				);
 
-			GlassMapperScCustom.PostLoad(resolver);
+			GlassMapperScCustom.PostLoad();
 
-			
 			//EditFrameBuilder.EditFrameItemPrefix = "Glass-";
 
         }

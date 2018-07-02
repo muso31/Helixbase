@@ -30,13 +30,13 @@ namespace Helixbase.Feature.Hero.Services
         /// <returns>The Hero datasource item from the Content API</returns>
         public IHero GetHeroItems()
         {
-            var dataSource = _renderingRepository.GetDataSource();
+            var dataSource = _renderingRepository.GetDataSourceItem<IHero>();
 
             // Basic example of using the wrapped logger
-            if (string.IsNullOrEmpty(dataSource))
+            if (dataSource == null)
                 _logRepository.Warn(Logging.Error.DataSourceError);
 
-            return _contentRepository.GetContentItem<IHero>(dataSource);
+            return dataSource;
         }
 
         /// <summary>
@@ -61,6 +61,9 @@ namespace Helixbase.Feature.Hero.Services
                 var result = context.GetQueryable<BaseSearchResultItem>().Where(predicate).First();
 
                 return result;
+
+                // OR we could have populated a Glass model using:
+                // injectedSitecoreService.Populate(result);
             }
         }
 

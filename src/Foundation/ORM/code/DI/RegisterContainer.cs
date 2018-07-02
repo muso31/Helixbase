@@ -10,9 +10,10 @@ namespace Helixbase.Foundation.ORM.DI
     {
         public void Configure(IServiceCollection serviceCollection)
         {
-            serviceCollection.AddTransient<ISitecoreContext>(provider => new SitecoreContext());
-            serviceCollection.AddTransient<IRenderingContext, RenderingContextMvcWrapper>();
-            serviceCollection.AddTransient<IGlassHtml, GlassHtml>();
+            serviceCollection.AddTransient<ISitecoreService>(provider => new SitecoreService(Sitecore.Context.Database));
+            serviceCollection.AddScoped<IRequestContext, RequestContext>();
+            serviceCollection.AddScoped<IMvcContext, MvcContext>();
+            serviceCollection.AddScoped<IGlassHtml, GlassHtml>();
         }
     }
 }
