@@ -37,7 +37,7 @@ namespace Helixbase.Feature.Redirects.Pipelines
         {
             var redirectFolder = _contentRepository.GetItem<IRedirectFolder>(new GetItemByQueryOptions
             {
-                Query = $"fast:{_contextRepository.GetContextSiteRoot()}/*[@@templateid='{Templates.GlobalFolder.TemplateId.ToString("B").ToUpper()}']/*[@@templateid='{Templates.RedirectFolder.TemplateId.ToString("B").ToUpper()}']"
+                Query = new Query($"fast:{_contextRepository.GetContextSiteRoot()}/*[@@templateid='{Templates.GlobalFolder.TemplateId.ToString("B").ToUpper()}']/*[@@templateid='{Templates.RedirectFolder.TemplateId.ToString("B").ToUpper()}']")
             });
 
             // Could also use a builder:
