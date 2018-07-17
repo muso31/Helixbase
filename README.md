@@ -25,9 +25,9 @@ A Sitecore Helix based solution which can be used for Greenfield projects. Tackl
 1. Install <a href="https://dev.sitecore.net/Downloads/Sitecore_Experience_Platform/90/Sitecore_Experience_Platform_90_Update2.aspx" target="_blank">Sitecore Experience Platform 9.0 rev. 180604 (9.0 Update-2)</a>
 	1. _Name your instance 'demo.helixbase'_
 2. Clone project to 'C:\Projects\Helix base'
-	1. _If you use another path, update the '<a href="https://github.com/muso31/Helixbase/blob/master/src/Project/Helixbase/code/App_Config/Include/Project/z.Helixbase.DevSettings.config#L3">z.Helixbase.DevSettings.config</a>' file and the '<a href="https://github.com/muso31/Helixbase/blob/master/gulp-config.js#L4">gulp-config.js</a>'_
+	1. _If you use another path, update the '<a href="https://github.com/muso31/Helixbase/blob/master/gulp-config.js#L4">gulp-config.js</a>'_
 3. Install <a href="https://nodejs.org/en/" target="_blank">Node.js</a> and run 'npm-install' in the project root
-4. Publish each project in VS, or view gulp tasks
+4. Publish each project in VS, or use <a href="https://github.com/muso31/Helixbase/blob/master/gulpfile.js#L85">gulp tasks</a>
 5. Run Unicorn and sync all configurations
 
 #### Using Helix Base:
