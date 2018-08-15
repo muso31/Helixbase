@@ -4,7 +4,7 @@ using Helixbase.Foundation.ORM.Models;
 
 namespace Helixbase.Foundation.ORM
 {
-    public class SitecoreItemMap : SitecoreGlassMap<ISitecoreItem>
+    public class GlassMappings : SitecoreGlassMap<ISitecoreItem>
     {
         public override void Configure()
         {

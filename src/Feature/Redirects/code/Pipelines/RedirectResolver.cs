@@ -4,7 +4,6 @@ using Glass.Mapper.Sc;
 using Helixbase.Feature.Redirects.Models;
 using Helixbase.Foundation.Content.Repositories;
 using Sitecore;
-using Sitecore.Data;
 using Sitecore.Data.Items;
 using Sitecore.Links;
 using Sitecore.Pipelines.HttpRequest;
@@ -37,11 +36,11 @@ namespace Helixbase.Feature.Redirects.Pipelines
         {
             var redirectFolder = _contentRepository.GetItem<IRedirectFolder>(new GetItemByQueryOptions
             {
-                Query = new Query($"fast:{_contextRepository.GetContextSiteRoot()}/*[@@templateid='{Templates.GlobalFolder.TemplateId.ToString("B").ToUpper()}']/*[@@templateid='{Templates.RedirectFolder.TemplateId.ToString("B").ToUpper()}']")
+                Query = new Query($"{_contextRepository.GetContextSiteRoot()}/*[@@templateid='{Templates.GlobalFolder.TemplateId.ToString("B").ToUpper()}']/*[@@templateid='{Templates.RedirectFolder.TemplateId.ToString("B").ToUpper()}']")
             });
 
             // Could also use a builder:
-            // var builder = new GetItemByQueryBuilder().Query($"fast:{_contextRepository.GetContextSiteRoot()}/*[@@templateid='{Templates.GlobalFolder.TemplateId.ToString("B").ToUpper()}']/*[@@templateid='{Templates.RedirectFolder.TemplateId.ToString("B").ToUpper()}']");
+            // var builder = new GetItemByQueryBuilder().Query($"{_contextRepository.GetContextSiteRoot()}/*[@@templateid='{Templates.GlobalFolder.TemplateId.ToString("B").ToUpper()}']/*[@@templateid='{Templates.RedirectFolder.TemplateId.ToString("B").ToUpper()}']");
 
             var path = HttpContext.Current.Request.Url.LocalPath;
 
@@ -57,10 +56,7 @@ namespace Helixbase.Feature.Redirects.Pipelines
 
                 if (string.Equals(redirect.RequestedUrl, path, StringComparison.CurrentCultureIgnoreCase))
                 {
-                    var targetItem = _contentRepository.GetItem<Item>(new GetItemByIdOptions
-                    {
-                        TemplateId = new ID(redirect.RedirectItem.Id)
-                    });
+                    var targetItem = _contentRepository.GetItem<Item>(new GetItemByIdOptions(redirect.RedirectItem.Id));
 
                     HttpContext.Current.Response.RedirectPermanent(LinkManager.GetItemUrl(targetItem), true);
                 }
