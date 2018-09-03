@@ -1,4 +1,5 @@
-﻿using Glass.Mapper.Sc;
+﻿using System.Collections.Generic;
+using Glass.Mapper.Sc;
 using Glass.Mapper.Sc.Web;
 using Sitecore.Data.Items;
 
@@ -24,6 +25,16 @@ namespace Helixbase.Foundation.Content.Repositories
         public object GetItem(GetItemOptions options)
         {
             return _requestContext.SitecoreService.GetItem(options);
+        }
+
+        public IEnumerable<T> GetItems<T>(GetItemsOptions options) where T : class
+        {
+            return _requestContext.SitecoreService.GetItems<T>(options);
+        }
+
+        public object GetItems(GetItemsOptions options)
+        {
+            return _requestContext.SitecoreService.GetItems(options);
         }
 
         public T GetCurrentItem<T>() where T : class
