@@ -71,7 +71,12 @@ namespace Helixbase.Foundation.Content.Repositories
         {
             return _requestContext.GetRootItem<T>(options);
         }
-        
+
+        public T CreateItem<T>(object parentItem, T item) where T : class
+        {
+            return _requestContext.SitecoreService.CreateItem(parentItem, item);
+        }
+
         public T CreateItem<T>(CreateByModelOptions options) where T : class
         {
             return _requestContext.SitecoreService.CreateItem<T>(options);
@@ -91,7 +96,12 @@ namespace Helixbase.Foundation.Content.Repositories
         {
             _requestContext.SitecoreService.SaveItem(options);
         }
-        
+
+        public void MoveItem<T, TP>(T item, TP newParent) where T : class where TP : class
+        {
+            _requestContext.SitecoreService.MoveItem(item, newParent);
+        }
+
         public void MoveItem(MoveByModelOptions options)
         {
             _requestContext.SitecoreService.MoveItem(options);
