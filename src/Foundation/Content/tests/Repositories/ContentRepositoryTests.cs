@@ -26,7 +26,7 @@ namespace Helixbase.Foundation.Content.Tests.Repositories
         [TestMethod]
         public void CreateItemAction_GivenModel_ReturnsCreatedItem()
         {
-            ITestItem parentItem = new TestItem()
+            ITestItem parentItem = new TestItem
             {
                 Title = "TestTitle",
                 Name = "Parent"
@@ -35,13 +35,13 @@ namespace Helixbase.Foundation.Content.Tests.Repositories
             const string newItemName = "NewTestItem";
             const string newItemTitle = "NewItemTitle";
 
-            var newItem = new TestItem()
+            var newItem = new TestItem
             {
                 Title = newItemTitle,
                 Name = newItemName
             };
 
-            var createOptions = new CreateByModelOptions()
+            var createOptions = new CreateByModelOptions
             {
                 Parent = parentItem,
                 Model = newItem
@@ -67,7 +67,7 @@ namespace Helixbase.Foundation.Content.Tests.Repositories
         [TestMethod]
         public void CreateItemAction_GivenItemName_ReturnsCreatedItem()
         {
-            ITestItem parentItem = new TestItem()
+            ITestItem parentItem = new TestItem
             {
                 Title = "TestTitle",
                 Name = "Parent"
@@ -75,7 +75,7 @@ namespace Helixbase.Foundation.Content.Tests.Repositories
 
             const string newItemName = "NewTestItem";
 
-            var createOptions = new CreateByNameOptions()
+            var createOptions = new CreateByNameOptions
             {
                 Parent = parentItem,
                 Name = newItemName
