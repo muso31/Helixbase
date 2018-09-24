@@ -19,6 +19,10 @@ function Rename-Files
     )
 
     $pattern = "*$OldValue*"
+
+    $folderItems = Get-ChildItem -Directory -Path "$StartPath" -Recurse -Filter $pattern -Force | Where-Object { $_.FullName -notmatch "\\(obj|bin)\\?" } | Sort-Object { $_.FullName.Length } -Descending
+    $folderItems | Rename-Item -NewName { $_.Name -replace $OldValue, $NewValue } -Force
+
     $fileItems = Get-ChildItem -File -Path "$StartPath" -Filter $pattern -Recurse -Force | Where-Object { $_.FullName -notmatch "\\(obj|bin)\\?" } 
     $fileItems | Rename-Item -NewName { $_.Name -replace $OldValue, $NewValue } -Force
 }
