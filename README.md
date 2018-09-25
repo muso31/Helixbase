@@ -43,3 +43,6 @@ To change the item version limit edit the rule on the _/sitecore/system/Settings
 In the security editor you can assign non admin Item Unlock permissions.
 
 If you do not require a feature you can easily delete it.
+
+### Renaming Solution / Projects
+To rename the Visual Studio Solution, Helix Module Projects and Project references from 'Helixbase' to a new project name, run 'setup.ps1 -ProjectName [NewProjectName]'. 
