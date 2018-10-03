@@ -48,7 +48,7 @@ try {
     $startPath = $PSScriptRoot
 
     # Set Variables 
-    $fileExtensionsToUpdateContentRegex = "(.sln|.config|.csproj|.cs|.cshtml|.feature|.js|.nuspec|.role|.sitecore|.targets)$"
+    $fileExtensionsToUpdateContentRegex = "(.sln|.config|.csproj|.cs|.cshtml|.feature|.js|.nuspec|.role|.sitecore|.yml|.targets)$"
     $oldNamespacePrefix = $originalName
     $newNamespacePrefix = $ProjectName
 
