@@ -2,9 +2,9 @@
 
 namespace Helixbase.Feature.Redirects.Models
 {
-    public interface I301Redirect : ISitecoreItem
+    public interface I301Redirect : IGlassBase
     {
         string RequestedUrl { get; set; }
-        ISitecoreItem RedirectItem { get; set; }
+        IGlassBase RedirectItem { get; set; }
     }
 }

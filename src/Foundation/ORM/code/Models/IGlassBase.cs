@@ -4,7 +4,7 @@ using Sitecore.Globalization;
 
 namespace Helixbase.Foundation.ORM.Models
 {
-    public interface ISitecoreItem
+    public interface IGlassBase
     {
         Guid Id { get; set; }
         Language Language { get; set; }
