@@ -45,4 +45,4 @@ In the security editor you can assign non admin Item Unlock permissions.
 If you do not require a feature you can easily delete it.
 
 ### Renaming Solution / Projects
-To rename the Visual Studio Solution, Helix Module Projects and Project references from 'Helixbase' to a new project name, run '<a href="https://github.com/muso31/Helixbase/blob/master/setup.ps1">setup.ps1</a> -ProjectName [NewProjectName]'. 
+To rename the Visual Studio Solution, Helix Module Projects and Project references from 'Helixbase' to a new project name, run '<a href="https://github.com/muso31/Helixbase/blob/master/tools/rename.ps1">rename.ps1</a> -ProjectName [NewProjectName]'. 
