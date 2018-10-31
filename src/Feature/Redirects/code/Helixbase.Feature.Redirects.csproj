@@ -100,6 +100,7 @@
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\IRedirectGlassBase.cs" />
     <Compile Include="Models\I301Redirect.cs" />
     <Compile Include="Models\IRedirectFolder.cs" />
     <Compile Include="ORM\GlassMappings.cs" />

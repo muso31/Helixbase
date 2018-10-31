@@ -1,10 +1,9 @@
 ﻿using System.Collections.Generic;
 using Glass.Mapper.Sc.Fields;
-using Helixbase.Foundation.ORM.Models;
 
 namespace Helixbase.Feature.Hero.Models
 {
-    public interface IHero : IGlassBase
+    public interface IHero : IHeroGlassBase
     {
         string HeroTitle { get; set; }
         IEnumerable<Image> HeroImages { get; set; }

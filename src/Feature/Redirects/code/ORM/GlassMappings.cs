@@ -30,4 +30,15 @@ namespace Helixbase.Feature.Redirects.ORM
             });
         }
     }
+
+    public class GlassBaseMappings : SitecoreGlassMap<IRedirectGlassBase>
+    {
+        public override void Configure()
+        {
+            Map(config =>
+            {
+                config.AutoMap();
+            });
+        }
+    }
 }

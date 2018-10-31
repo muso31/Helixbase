@@ -16,4 +16,15 @@ namespace Helixbase.Feature.Hero.ORM
             });
         }
     }
+
+    public class GlassBaseMappings : SitecoreGlassMap<IHeroGlassBase>
+    {
+        public override void Configure()
+        {
+            Map(config =>
+            {
+                config.AutoMap();
+            });
+        }
+    }
 }

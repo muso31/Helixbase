@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Helixbase.Feature.Redirects.Models
 {
-    public interface IRedirectFolder : IGlassBase
+    public interface IRedirectFolder : IRedirectGlassBase
     {
         IEnumerable<I301Redirect> Children { get; set; }
     }
