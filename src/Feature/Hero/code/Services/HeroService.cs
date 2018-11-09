@@ -10,15 +10,13 @@ namespace Helixbase.Feature.Hero.Services
 {
     public class HeroService : IHeroService
     {
-        private readonly IContentRepository _contentRepository;
         private readonly IContextRepository _contextRepository;
         private readonly ILogRepository _logRepository;
         private readonly IRenderingRepository _renderingRepository;
 
-        public HeroService(IContentRepository contentRepository, IContextRepository contextRepository,
+        public HeroService(IContextRepository contextRepository,
             ILogRepository logRepository, IRenderingRepository renderingRepository)
         {
-            _contentRepository = contentRepository;
             _contextRepository = contextRepository;
             _logRepository = logRepository;
             _renderingRepository = renderingRepository;
@@ -54,7 +52,7 @@ namespace Helixbase.Feature.Hero.Services
             // We could set the index manually using the line below (do not use magic strings, sample only)
             // var index = ContentSearchManager.GetIndex($"Helixbase_{_contextRepository.GetDatabaseContext()}_index");
             // OR we could automate retrieval of the context index:
-            var contextIndex = _contextRepository.GetSearchIndexContext(_contentRepository.GetCurrentItem<Item>());
+            var contextIndex = _contextRepository.GetSearchIndexContext(_contextRepository.GetCurrentItem<Item>());
 
             using (var context = contextIndex.CreateSearchContext())
             {
