@@ -26,7 +26,7 @@ namespace Helixbase.Feature.Redirects.ORM
             Map(config =>
             {
                 config.AutoMap();
-                config.TemplateId(Templates.RedirectDataItem.TemplateId);
+                config.TemplateId(Templates.RedirectContentItem.TemplateId);
             });
         }
     }

@@ -6,7 +6,7 @@ namespace Helixbase.Feature.Hero
     {
         public struct Hero
         {
-            public static Guid TemplateId = new Guid("{F3FB3269-FF76-4CA7-8393-6CAF69942E52}");
+            public static Guid TemplateId = new Guid("{462BB765-F578-4D46-A47B-20D16A1BFD94}");
         }
     }
 

@@ -6,7 +6,7 @@ namespace Helixbase.Foundation.ORM.Mappings
     public class RegisterMappings : AddMapsPipeline  {
         public void Process(AddMapsPipelineArgs args)
         {
-            args.MapsConfigFactory.AddFluentMaps("Helixbase.Feature.Hero");
+            args.MapsConfigFactory.AddFluentMaps("Helixbase.Foundation.ORM");
         }
     }
 }
