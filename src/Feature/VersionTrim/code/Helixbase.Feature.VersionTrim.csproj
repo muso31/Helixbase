@@ -58,7 +58,6 @@
     <Content Include="App_Config\Include\Feature\Feature.VersionTrim.Serialization.config">
       <SubType>Designer</SubType>
     </Content>
-    <None Include="Properties\PublishProfiles\Localhost.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

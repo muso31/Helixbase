@@ -116,7 +116,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Properties\PublishProfiles\Localhost.pubxml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

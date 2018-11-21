@@ -17,7 +17,8 @@ A Sitecore Helix based solution which can be used for Greenfield projects. Tackl
 * Search Templates computed index field - find all items from an index by any templates they implement
 * Non admin Item Unlock
 * Auto unlocks items when a user is deleted
-* Gulp publish with webroot clean
+* Integration with [helix-publishing-pipeline](https://github.com/richardszalay/helix-publishing-pipeline)
+* Fast ([see?](https://github.com/richardszalay/Helixbase-HPP#benchmarks)) publish-on-build (when building inside Visual Studio)
 * <a href="https://jammykam.wordpress.com/2017/09/20/show-title-when-blank/">_Show Title When Blank_</a> patch, the forgotten Sitecore feature!
 * A module just for fun - currently adds logos to the Unicorn console
 
@@ -27,10 +28,10 @@ A Sitecore Helix based solution which can be used for Greenfield projects. Tackl
 1. Install <a href="https://dev.sitecore.net/Downloads/Sitecore_Experience_Platform/91/Sitecore_Experience_Platform_91_Initial_Release.aspx" target="_blank">Sitecore Experience Platform 9.1 Initial Release</a>
 	1. _Name your instance 'demo.helixbase'_
 2. Clone project to 'C:\Projects\Helix base'
-	1. _If you use another path, update the '<a href="https://github.com/muso31/Helixbase/blob/master/gulp-config.js#L4">gulp-config.js</a>' and '<a href="https://github.com/muso31/Helixbase/blob/master/src/Project/Common/code/App_Config/Include/Project/z.Common.DevSettings.config#L3">z.Common.DevSettings.config</a>'_
-3. Install <a href="https://nodejs.org/en/" target="_blank">Node.js</a> and run 'npm-install' in the project root
-4. Publish each project in VS, or use <a href="https://github.com/muso31/Helixbase/blob/master/gulpfile.js#L85">gulp tasks</a>
-5. Run Unicorn and sync all configurations
+	1. _If you use another path, update the '<a href="https://github.com/muso31/Helixbase/blob/master/src/Project/Common/code/App_Config/Include/Project/z.Common.DevSettings.config#L3">z.Common.DevSettings.config</a>'_
+3. Update the 'publishUrl' property in '<a href="https://github.com/muso31/Helixbase/blob/master/src/Website/code/Properties/PublishProfiles/Local.pubxml#L12">Local.pubxml</a>' to the target IIS folder
+4. Build the project from inside Visual Studio
+4. Run Unicorn and sync all configurations
 
 #### Using Helix Base:
 Refer to the <a href="https://github.com/muso31/Helixbase/tree/master/src/Feature/Hero/code">Hero Feature</a> as an example.
@@ -54,3 +55,18 @@ Legacy versions of Helix Base which are no longer updated or maintained can be f
 
 <a href="https://github.com/muso31/Helixbase/tree/feature/9.0.2">Helix Base 9.0.2</a> (updated until 21/12/2018)
 
+## Build
+
+Helix Base uses [helix-publishing-pipeline](https://github.com/richardszalay/helix-publishing-pipeline) and pre-configures a number of features.
+
+* Content files from all modules are included in the publish
+* Sitecore assemblies are excluded from publish, reducing the package filesize
+
+Local publishing:
+
+* Fast publish-on-build of the Local publish profile. This only adds a few seconds and won't recycle your app pool unless you change code. It even runs your debug Web.config transform!
+* Old assemblies (Helixbase.*.dll) are automatically removed
+
+DI/Package publishing:
+
+* Unicorn files are automatically included into App_Data\unicorn. The only variables that needs to be set is `$(sourceFolder)`

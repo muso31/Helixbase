@@ -124,7 +124,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Config\Include\Feature\Feature.Hero.RegisterContainer.config" />
-    <None Include="Properties\PublishProfiles\Localhost.pubxml" />
     <Content Include="Views\Hero\Error.cshtml" />
     <None Include="Web.config">
       <SubType>Designer</SubType>
