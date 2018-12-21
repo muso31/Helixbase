@@ -42,10 +42,10 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Castle.Core" Version="4.2.1" />
-    <PackageReference Include="Glass.Mapper.Sc.90" Version="5.2.13" />
-    <PackageReference Include="Glass.Mapper.Sc.90.Core" Version="5.2.13" />
-    <PackageReference Include="Glass.Mapper.Sc.90.Mvc" Version="5.2.13" />
-    <PackageReference Include="Glass.Mapper.Sc.90.WebForms" Version="5.2.13" />
+    <PackageReference Include="Glass.Mapper.Sc.91" Version="5.3.15" />
+    <PackageReference Include="Glass.Mapper.Sc.91.Core" Version="5.3.15" />
+    <PackageReference Include="Glass.Mapper.Sc.91.Mvc" Version="5.3.15" />
+    <PackageReference Include="Glass.Mapper.Sc.91.WebForms" Version="5.3.15" />
     <PackageReference Include="HtmlAgilityPack" Version="1.4.9.5" />
     <PackageReference Include="Lucene.Net" Version="3.0.3" />
     <PackageReference Include="Microsoft.AspNet.Mvc" Version="5.2.4" />

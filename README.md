@@ -7,7 +7,7 @@ A Sitecore Helix based solution which can be used for Greenfield projects. Tackl
 
 * Glass Mapper v5 - with fluent configuration and automated mapping registration
 * Unicorn - including user and role sync
-* Sitecore 9.0.2 ready
+* Sitecore 9.1 ready
 * Bootstrap v4
 * Native dependency injection with auto controller registration
 * A sample hero banner feature and sample site project for demonstration
@@ -22,7 +22,9 @@ A Sitecore Helix based solution which can be used for Greenfield projects. Tackl
 * A module just for fun - currently adds logos to the Unicorn console
 
 ## Setup Instructions
-1. Install <a href="https://dev.sitecore.net/Downloads/Sitecore_Experience_Platform/90/Sitecore_Experience_Platform_90_Update2.aspx" target="_blank">Sitecore Experience Platform 9.0 rev. 180604 (9.0 Update-2)</a>
+*Please Install Visual Studio 2017 Version 15.7 or higher as this project uses PackageReference
+
+1. Install <a href="https://dev.sitecore.net/Downloads/Sitecore_Experience_Platform/91/Sitecore_Experience_Platform_91_Initial_Release.aspx" target="_blank">Sitecore Experience Platform 9.1 Initial Release</a>
 	1. _Name your instance 'demo.helixbase'_
 2. Clone project to 'C:\Projects\Helix base'
 	1. _If you use another path, update the '<a href="https://github.com/muso31/Helixbase/blob/master/gulp-config.js#L4">gulp-config.js</a>'_
@@ -46,3 +48,9 @@ If you do not require a feature you can easily delete it.
 
 ### Renaming Solution / Projects
 To rename the Visual Studio Solution, Helix Module Projects and Project references from 'Helixbase' to a new project name, run '<a href="https://github.com/muso31/Helixbase/blob/master/tools/rename.ps1">rename.ps1</a> -ProjectName [NewProjectName]'. 
+
+### Legacy Versions
+Legacy versions of Helix Base which are no longer updated or maintained can be found below:
+
+<a href="https://github.com/muso31/Helixbase/tree/feature/9.0.2">Helix Base 9.0.2</a> (updated until 21/12/2018)
+
