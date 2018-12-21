@@ -4,7 +4,7 @@ var debug = require("gulp-debug");
 var foreach = require("gulp-foreach");
 var gulpConfig = require("./gulp-config.js")();
 var clean = require('gulp-clean');
-var nugetRestore = require('gulp-nuget-restore');
+//var nugetRestore = require('gulp-nuget-restore');
 module.exports.config = gulpConfig;
 
 function cleanProjectFiles(layerName) {
@@ -52,7 +52,7 @@ gulp.task("Build-Solution", function () {
 
     return gulp.src("./" + gulpConfig.solutionName + ".sln")
         .pipe(debug({ title: "NuGet restore:" }))
-        .pipe(nugetRestore())
+        //.pipe(nugetRestore())
         .pipe(debug({ title: "Building solution:" }))
         .pipe(msbuild({
             targets: targets,
