@@ -47,7 +47,7 @@
     <PackageReference Include="Glass.Mapper.Sc.91.Core" Version="5.3.15" />
     <PackageReference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform" Version="1.0.5" />
     <PackageReference Include="Microsoft.Net.Compilers" Version="2.1.0" />
-    <PackageReference Include="Sitecore.Kernel">
+    <PackageReference Include="Sitecore.Kernel" Version="[12.0.0]">
       <Version>12.0.0</Version>
     </PackageReference>
   </ItemGroup>
