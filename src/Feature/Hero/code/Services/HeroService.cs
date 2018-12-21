@@ -23,7 +23,7 @@ namespace Helixbase.Feature.Hero.Services
         }
 
         /// <summary>
-        ///     Get an item using the generic content repository
+        ///     Get an item using the rendering repository
         /// </summary>
         /// <returns>The Hero datasource item from the Content API</returns>
         public IHero GetHeroItems()
