@@ -56,7 +56,7 @@
     <Reference Include="System.Web" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App_Config\Include\Feature\Feature.ItemUnlock.config" />
+    <Content Include="App_Config\Include\Feature\Feature.ItemUnlock.config" />
     <None Include="Properties\PublishProfiles\Localhost.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
