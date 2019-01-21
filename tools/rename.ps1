@@ -59,7 +59,7 @@ try {
     Write-Host "Solution and Project references renamed from $originalName to $ProjectName" -ForegroundColor Green
 
 } catch {
-    Write-Host "Modifying the Soluion and Projects failed" -ForegroundColor Red
+    Write-Host "Modifying the Solution and Projects failed" -ForegroundColor Red
     Write-Host $($_.Exception.Message) -ForegroundColor Red
     Break
 }
