@@ -55,10 +55,10 @@
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="2.1.1" />
     <PackageReference Include="Microsoft.Web.Infrastructure" Version="1.0.0.0" />
     <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
-    <PackageReference Include="Rainbow" Version="2.0.2" />
-    <PackageReference Include="Rainbow.Core" Version="2.0.2" />
-    <PackageReference Include="Rainbow.Storage.Sc" Version="2.0.2" />
-    <PackageReference Include="Rainbow.Storage.Yaml" Version="2.0.2" />
+    <PackageReference Include="Rainbow" Version="2.0.5" />
+    <PackageReference Include="Rainbow.Core" Version="2.0.5" />
+    <PackageReference Include="Rainbow.Storage.Sc" Version="2.0.5" />
+    <PackageReference Include="Rainbow.Storage.Yaml" Version="2.0.5" />
     <PackageReference Include="RazorGenerator.Mvc" Version="2.4.9" />
     <PackageReference Include="SharpZipLib" Version="0.86.0" />
     <PackageReference Include="System.Collections" Version="4.0.11" />
@@ -73,12 +73,12 @@
     <PackageReference Include="System.Runtime.Extensions" Version="4.1.0" />
     <PackageReference Include="System.Threading" Version="4.0.11" />
     <PackageReference Include="System.Threading.Tasks" Version="4.0.11" />
-    <PackageReference Include="Unicorn" Version="4.0.4" />
-    <PackageReference Include="Unicorn.Core" Version="4.0.4" />
-    <PackageReference Include="Unicorn.Roles" Version="4.0.4" />
-    <PackageReference Include="Unicorn.Roles.Core" Version="4.0.4" />
-    <PackageReference Include="Unicorn.Users" Version="4.0.4" />
-    <PackageReference Include="Unicorn.Users.Core" Version="4.0.4" />
+    <PackageReference Include="Unicorn" Version="4.0.7" />
+    <PackageReference Include="Unicorn.Core" Version="4.0.7" />
+    <PackageReference Include="Unicorn.Roles" Version="4.0.7" />
+    <PackageReference Include="Unicorn.Roles.Core" Version="4.0.7" />
+    <PackageReference Include="Unicorn.Users" Version="4.0.7" />
+    <PackageReference Include="Unicorn.Users.Core" Version="4.0.7" />
     <PackageReference Include="WebActivatorEx" Version="2.0.3" />
   </ItemGroup>
   <ItemGroup>
@@ -130,6 +130,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Config\Include\Foundation\Foundation.Serialization.Rainbow.config" />
+    <None Include="App_Config\Include\Unicorn\Unicorn.UI.IdentityServer.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Properties\PublishProfiles\Localhost.pubxml" />
     <None Include="Web.config" />
     <None Include="Web.Debug.config">
