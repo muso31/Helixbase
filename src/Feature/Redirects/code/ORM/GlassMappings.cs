@@ -13,8 +13,7 @@ namespace Helixbase.Feature.Redirects.ORM
                 config.TemplateId(Templates.RedirectFolder.TemplateId);
                 config.Query(y => y.Children)
                     .Query($".//*[@@templateid='{Templates.RedirectContentItem.TemplateId.ToString("B").ToUpper()}']")
-                    .IsRelative().InferType();
-                config.EnforceTemplateAndBase();
+                    .IsRelative(); //A query is required as we need all descendants, not just children
             });
         }
     }
