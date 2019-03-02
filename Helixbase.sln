@@ -35,8 +35,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configuration", "Configurat
 	ProjectSection(SolutionItems) = preProject
 		.gitattributes = .gitattributes
 		.gitignore = .gitignore
-		gulp-config.js = gulp-config.js
-		gulpfile.js = gulpfile.js
 		NuGet.config = NuGet.config
 		package.json = package.json
 		README.md = README.md
@@ -87,6 +85,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helixbase.Foundation.Logging", "src\Foundation\Logging\code\Helixbase.Foundation.Logging.csproj", "{9B72C426-123C-4782-BEF8-0D52E5F2A396}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helixbase.Foundation.Content.Tests", "src\Foundation\Content\tests\Helixbase.Foundation.Content.Tests.csproj", "{709812AB-BB8E-41FA-97C2-9B7D4181B6DA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Website", "Website", "{0CDDE7FA-204E-4BA1-9478-6EBD43385213}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helixbase.Website", "src\Website\code\Helixbase.Website.csproj", "{2BECC48F-FAD8-4475-974D-E9C233EF1CDB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -166,6 +168,10 @@ Global
 		{709812AB-BB8E-41FA-97C2-9B7D4181B6DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{709812AB-BB8E-41FA-97C2-9B7D4181B6DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{709812AB-BB8E-41FA-97C2-9B7D4181B6DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BECC48F-FAD8-4475-974D-E9C233EF1CDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BECC48F-FAD8-4475-974D-E9C233EF1CDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BECC48F-FAD8-4475-974D-E9C233EF1CDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BECC48F-FAD8-4475-974D-E9C233EF1CDB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -205,6 +211,7 @@ Global
 		{0E67BAB2-5BB6-415A-B719-79B72194584C} = {C3F57797-2D54-4626-B842-51F30272E972}
 		{9B72C426-123C-4782-BEF8-0D52E5F2A396} = {0E67BAB2-5BB6-415A-B719-79B72194584C}
 		{709812AB-BB8E-41FA-97C2-9B7D4181B6DA} = {F2FD5CAD-01CE-40D6-82B5-E243313A4CD3}
+		{2BECC48F-FAD8-4475-974D-E9C233EF1CDB} = {0CDDE7FA-204E-4BA1-9478-6EBD43385213}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {845F548C-FD53-4C61-AB7F-953C2225A13B}

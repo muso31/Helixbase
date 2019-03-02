@@ -23,9 +23,11 @@ namespace Helixbase.Feature.Redirects.Pipelines
 
         public override void Process(HttpRequestArgs args)
         {
+            var httpContext = HttpContext.Current;
+
             // TODO: Update this logic as a domain such as https://sitecore.something will not work with redirects
-            if (args.Context.Request.Url.OriginalString.ToLower().Contains("/sitecore") ||
-                args.Context.Request.Url.AbsolutePath.Equals("/"))
+            if (httpContext.Request.Url.OriginalString.ToLower().Contains("/sitecore") ||
+                httpContext.Request.Url.AbsolutePath.Equals("/"))
                 return;
             // We don't want to redirect an item that exists in Sitecore
             if (Context.Item == null)

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <ItemGroup>
+    <!-- 
+    Exclude Sitecore assemblies from publish to reduce data transfer and file size. 
+    https://github.com/richardszalay/helix-publishing-pipeline#excluding-sitecore-assemblies
+    -->
+    <SitecoreAssemblyListsToExclude Include="AssemblyLists\*.csv" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <!-- 
+    Set to false if you don't want it to publish after each build
+    https://github.com/richardszalay/helix-publishing-pipeline#publishing-on-build
+    -->
+    <EnableAutoPublish>true</EnableAutoPublish>
+    
+    <AutoPublish Condition="'$(AutoPublish)' == '' and '$(EnableAutoPublish)' == 'true' and '$(Configuration)' == 'Debug' and '$(BuildingInsideVisualStudio)' == 'true' and '$(PublishProfile)' != ''">true</AutoPublish>
+
+    <AutoPublishDependsOn Condition="'$(AutoPublish)' == 'true'">
+      $(AutoPublishDependsOn);
+      WebPublish
+    </AutoPublishDependsOn>
+  </PropertyGroup>
+
+  <Target Name="AutoPublish" AfterTargets="Build" DependsOnTargets="$(AutoPublishDependsOn)">
+  </Target>
+ 
+</Project>

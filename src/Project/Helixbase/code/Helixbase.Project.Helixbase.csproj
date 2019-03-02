@@ -93,7 +93,6 @@
     <Content Include="App_Config\Include\Project\Helixbase.config">
       <SubType>Designer</SubType>
     </Content>
-    <None Include="Properties\PublishProfiles\Localhost.pubxml" />
     <None Include="Web.config">
       <SubType>Designer</SubType>
     </None>

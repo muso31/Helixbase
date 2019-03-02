@@ -73,9 +73,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Config\Include\Foundation\Foundation.DI.RegisterControllers.config" />
-    <None Include="Properties\PublishProfiles\Localhost.pubxml">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
