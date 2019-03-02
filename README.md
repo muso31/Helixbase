@@ -62,7 +62,7 @@ Local publishing:
 * Fast publish-on-build of the Local publish profile. This only adds a few seconds and won't recycle your app pool unless you change code. It even runs your debug Web.config transform!
 * Old assemblies (Helixbase.*.dll) are automatically removed
 
-DI/Package publishing:
+CI/CD publishing:
 
 * Unicorn files are automatically included into App_Data\unicorn. The only variables that needs to be set is `$(sourceFolder)` in [z.Common.DevSettings.config](https://github.com/muso31/Helixbase/blob/master/src/Project/Common/code/App_Config/Include/Project/z.Common.DevSettings.config#L3)
 
