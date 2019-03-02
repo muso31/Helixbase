@@ -19,25 +19,25 @@ A Sitecore Helix based solution which can be used for Greenfield projects. Tackl
 * Auto unlocks items when a user is deleted
 * Integration with [helix-publishing-pipeline](https://github.com/richardszalay/helix-publishing-pipeline)
 * Fast ([see?](https://github.com/richardszalay/Helixbase-HPP#benchmarks)) publish-on-build (when building inside Visual Studio)
-* <a href="https://jammykam.wordpress.com/2017/09/20/show-title-when-blank/">_Show Title When Blank_</a> patch, the forgotten Sitecore feature!
+* [_Show Title When Blank_](https://jammykam.wordpress.com/2017/09/20/show-title-when-blank/) patch, the forgotten Sitecore feature!
 * A module just for fun - currently adds logos to the Unicorn console
 
 ## Setup Instructions
 *Please Install Visual Studio 2017 Version 15.7 or higher as this project uses PackageReference
 
-1. Install <a href="https://dev.sitecore.net/Downloads/Sitecore_Experience_Platform/91/Sitecore_Experience_Platform_91_Initial_Release.aspx" target="_blank">Sitecore Experience Platform 9.1 Initial Release</a>
+1. Install [Sitecore Experience Platform 9.1 Initial Release](https://dev.sitecore.net/Downloads/Sitecore_Experience_Platform/91/Sitecore_Experience_Platform_91_Initial_Release.aspx)
 	1. _Name your instance 'demo.helixbase'_
 2. Clone project to 'C:\Projects\Helix base'
-	1. _If you use another path, update the '<a href="https://github.com/muso31/Helixbase/blob/master/src/Project/Common/code/App_Config/Include/Project/z.Common.DevSettings.config#L3">z.Common.DevSettings.config</a>'_
-3. Update the 'publishUrl' property in '<a href="https://github.com/muso31/Helixbase/blob/master/src/Website/code/Properties/PublishProfiles/Local.pubxml#L12">Local.pubxml</a>' to the target IIS folder
+	1. _If you use another path, update the [z.Common.DevSettings.config](https://github.com/muso31/Helixbase/blob/master/src/Project/Common/code/App_Config/Include/Project/z.Common.DevSettings.config#L3)_
+3. Update the 'publishUrl' property in [Local.pubxml](https://github.com/muso31/Helixbase/blob/master/src/Website/code/Properties/PublishProfiles/Local.pubxml#L12) to the target IIS folder
 4. Build the project from inside Visual Studio
-4. Run Unicorn and sync all configurations
+5. Run Unicorn and sync all configurations
 
 #### Using Helix Base:
-Refer to the <a href="https://github.com/muso31/Helixbase/tree/master/src/Feature/Hero/code">Hero Feature</a> as an example.
+Refer to the [Hero Feature](https://github.com/muso31/Helixbase/tree/master/src/Feature/Hero/code) as an example.
 
-* View <a href="https://github.com/muso31/Helixbase/blob/master/src/Feature/Hero/code/Services/HeroService.cs">HeroService.cs</a> for examples of retrieving Sitecore items using the content API and the search API.
-* View <a href="https://github.com/muso31/Helixbase/blob/master/src/Feature/Hero/code/Routes/RegisterRoutes.cs">Register routes</a> for an example of how to register a route.
+* View [HeroService.cs](https://github.com/muso31/Helixbase/blob/master/src/Feature/Hero/code/Services/HeroService.cs) for examples of retrieving Sitecore items using the content API and the search API.
+* View [Register routes](https://github.com/muso31/Helixbase/blob/master/src/Feature/Hero/code/Routes/RegisterRoutes.cs) for an example of how to register a route.
 
 To add a 301 redirect simply add a redirect item to the _Redirect Items_ folder found in your site _Global_ folder.
 
@@ -48,12 +48,7 @@ In the security editor you can assign non admin Item Unlock permissions.
 If you do not require a feature you can easily delete it.
 
 ### Renaming Solution / Projects
-To rename the Visual Studio Solution, Helix Module Projects and Project references from 'Helixbase' to a new project name, run '<a href="https://github.com/muso31/Helixbase/blob/master/tools/rename.ps1">rename.ps1</a> -ProjectName [NewProjectName]'. 
-
-### Legacy Versions
-Legacy versions of Helix Base which are no longer updated or maintained can be found below:
-
-<a href="https://github.com/muso31/Helixbase/tree/feature/9.0.2">Helix Base 9.0.2</a> (updated until 21/12/2018)
+To rename the Visual Studio Solution, Helix Module Projects and Project references from 'Helixbase' to a new project name, run [rename.ps1](https://github.com/muso31/Helixbase/blob/master/tools/rename.ps1) -ProjectName [NewProjectName]'. 
 
 ## Build
 
@@ -69,4 +64,9 @@ Local publishing:
 
 DI/Package publishing:
 
-* Unicorn files are automatically included into App_Data\unicorn. The only variables that needs to be set is `$(sourceFolder)`
+* Unicorn files are automatically included into App_Data\unicorn. The only variables that needs to be set is `$(sourceFolder)` in [z.Common.DevSettings.config](https://github.com/muso31/Helixbase/blob/master/src/Project/Common/code/App_Config/Include/Project/z.Common.DevSettings.config#L3)
+
+### Legacy Versions
+Legacy versions of Helix Base which are no longer updated or maintained can be found below:
+
+[Helix Base 9.0.2](https://github.com/muso31/Helixbase/tree/feature/9.0.2) (updated until 21/12/2018)
