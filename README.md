@@ -27,11 +27,10 @@ A Sitecore Helix based solution which can be used for Greenfield projects. Tackl
 
 1. Install [Sitecore Experience Platform 9.1 Initial Release](https://dev.sitecore.net/Downloads/Sitecore_Experience_Platform/91/Sitecore_Experience_Platform_91_Initial_Release.aspx)
 	1. _Name your instance 'demo.helixbase'_
-2. Clone project to 'C:\Projects\Helix base'
+2. Clone project to 'C:\Projects\Helixbase'
 	1. _If you use another path, update the [z.Common.DevSettings.config](https://github.com/muso31/Helixbase/blob/master/src/Project/Common/code/App_Config/Include/Project/z.Common.DevSettings.config#L3)_
-3. Update the 'publishUrl' property in [Local.pubxml](https://github.com/muso31/Helixbase/blob/master/src/Website/code/Properties/PublishProfiles/Local.pubxml#L12) to the target IIS folder
-4. Build the project from inside Visual Studio
-5. Run Unicorn and sync all configurations
+3. Build the project from inside Visual Studio
+4. Run Unicorn and sync all configurations
 
 #### Using Helix Base:
 Refer to the [Hero Feature](https://github.com/muso31/Helixbase/tree/master/src/Feature/Hero/code) as an example.
