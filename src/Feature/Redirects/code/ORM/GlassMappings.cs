@@ -13,8 +13,7 @@ namespace Helixbase.Feature.Redirects.ORM
                 config.TemplateId(Templates.RedirectFolder.TemplateId);
                 config.Query(y => y.Children)
                     .Query($".//*[@@templateid='{Templates.RedirectContentItem.TemplateId.ToString("B").ToUpper()}']")
-                    .IsRelative().InferType();
-                config.EnforceTemplateAndBase();
+                    .IsRelative(); //A query is required as we need all descendants, not just children
             });
         }
     }
@@ -26,7 +25,18 @@ namespace Helixbase.Feature.Redirects.ORM
             Map(config =>
             {
                 config.AutoMap();
-                config.TemplateId(Templates.RedirectDataItem.TemplateId);
+                config.TemplateId(Templates.RedirectContentItem.TemplateId);
+            });
+        }
+    }
+
+    public class GlassBaseMappings : SitecoreGlassMap<IRedirectGlassBase>
+    {
+        public override void Configure()
+        {
+            Map(config =>
+            {
+                config.AutoMap();
             });
         }
     }

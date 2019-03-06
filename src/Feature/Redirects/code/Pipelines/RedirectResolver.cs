@@ -23,9 +23,11 @@ namespace Helixbase.Feature.Redirects.Pipelines
 
         public override void Process(HttpRequestArgs args)
         {
+            var httpContext = HttpContext.Current;
+
             // TODO: Update this logic as a domain such as https://sitecore.something will not work with redirects
-            if (args.Context.Request.Url.OriginalString.ToLower().Contains("/sitecore") ||
-                args.Context.Request.Url.AbsolutePath.Equals("/"))
+            if (httpContext.Request.Url.OriginalString.ToLower().Contains("/sitecore") ||
+                httpContext.Request.Url.AbsolutePath.Equals("/"))
                 return;
             // We don't want to redirect an item that exists in Sitecore
             if (Context.Item == null)
@@ -52,13 +54,9 @@ namespace Helixbase.Feature.Redirects.Pipelines
                 if (string.IsNullOrEmpty(redirect.RequestedUrl))
                     throw new NullReferenceException(Templates.ErrorMessages.NoUrlOnItem);
 
-                if (!(redirect is I301Redirect)) continue;
-
                 if (string.Equals(redirect.RequestedUrl, path, StringComparison.CurrentCultureIgnoreCase))
                 {
-                    var targetItem = _contentRepository.GetItem<Item>(new GetItemByIdOptions(redirect.RedirectItem.Id));
-
-                    HttpContext.Current.Response.RedirectPermanent(LinkManager.GetItemUrl(targetItem), true);
+                    HttpContext.Current.Response.RedirectPermanent(LinkManager.GetItemUrl(redirect.RedirectItem), true);
                 }
             }
         }

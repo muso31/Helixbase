@@ -2,7 +2,7 @@
 
 namespace Helixbase.Foundation.Content.Tests.Models
 {
-    public interface ITestItem : ISitecoreItem
+    public interface ITestItem : IGlassBase
     {
         string Title { get; set; }
     }
