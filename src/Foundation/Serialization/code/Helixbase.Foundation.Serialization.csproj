@@ -130,7 +130,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Config\Include\Foundation\Foundation.Serialization.Rainbow.config" />
-    <None Include="App_Config\Include\Foundation\Foundation.Serialization.Base.Package.config" />
     <None Include="App_Config\Include\Unicorn\Unicorn.UI.IdentityServer.config">
       <SubType>Designer</SubType>
     </None>
