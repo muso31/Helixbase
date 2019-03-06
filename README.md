@@ -30,7 +30,7 @@ A Sitecore Helix based solution which can be used for Greenfield projects. Tackl
 2. Clone project to 'C:\Projects\Helixbase'
 	1. _If you use another path, update the [z.Common.DevSettings.config](https://github.com/muso31/Helixbase/blob/master/src/Project/Common/code/App_Config/Include/Project/z.Common.DevSettings.config#L3)_
 3. Update the 'publishUrl' property in [Local.pubxml](https://github.com/muso31/Helixbase/blob/master/src/Website/code/Properties/PublishProfiles/Local.pubxml#L12) to the target IIS folder
-4. Build the project from inside Visual Studio (which triggers HPP auto publish)
+4. Build the project from inside Visual Studio (which triggers HPP auto publish), or use the 'Local' publish profile in the Helixbase.Website project
 5. Run Unicorn and sync all configurations
 
 #### Using Helix Base:
