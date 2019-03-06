@@ -45,7 +45,7 @@ function Update-FileContent
 }
 
 try {
-    $startPath = $PSScriptRoot
+    $startPath = Split-Path $PSScriptRoot -Parent
 
     # Set Variables 
     $fileExtensionsToUpdateContentRegex = "(.sln|.config|.csproj|.cs|.cshtml|.feature|.js|.nuspec|.role|.sitecore|.yml|.targets|.pubxml)$"
