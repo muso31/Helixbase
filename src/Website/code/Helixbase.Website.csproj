@@ -43,7 +43,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="RichardSzalay.Helix.Publishing.WebRoot" Version="1.5.0" />
+    <PackageReference Include="RichardSzalay.Helix.Publishing.WebRoot" Version="1.5.1" />
     <PackageReference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform" Version="1.0.5" />
     <PackageReference Include="Sitecore.Kernel">
       <Version>9.1.0</Version>
