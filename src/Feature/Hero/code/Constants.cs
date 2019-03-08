@@ -26,6 +26,7 @@ namespace Helixbase.Feature.Hero
         public static class HeroResponse
         {
             public const string DataSourceError = "HeroMediator.CreateHeroViewModel.DataSourceError";
+            public const string ViewModelError = "HeroMediator.CreateHeroViewModel.ViewModelError";
             public const string Ok = "HeroMediator.CreateHeroViewModel.Ok";
         }
     }

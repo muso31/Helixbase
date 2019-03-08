@@ -37,7 +37,7 @@ namespace Helixbase.Feature.Hero.Tests.Controllers
                 .With(x => x.Code, MediatorCodes.HeroResponse.DataSourceError)
                 .Create();
 
-            _heroMediator.CreateHeroViewModel().Returns(createViewModelResponse);
+            _heroMediator.RequestHeroViewModel().Returns(createViewModelResponse);
 
             var result = _controller.Hero() as ViewResult;
 
@@ -52,7 +52,7 @@ namespace Helixbase.Feature.Hero.Tests.Controllers
                 .With(x => x.Code, "Unknown code")
                 .Create();
 
-            _heroMediator.CreateHeroViewModel().Returns(createViewModelResponse);
+            _heroMediator.RequestHeroViewModel().Returns(createViewModelResponse);
 
             Action act = () => _controller.Hero();
             act.ShouldThrow<InvalidMediatorResponseCodeException>().Where(e =>

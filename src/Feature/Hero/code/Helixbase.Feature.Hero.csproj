@@ -83,6 +83,8 @@
     <Compile Include="Controllers\HeroAPIController.cs" />
     <Compile Include="Controllers\HeroController.cs" />
     <Compile Include="DI\RegisterContainer.cs" />
+    <Compile Include="Factories\HeroViewModelFactory.cs" />
+    <Compile Include="Factories\IHeroViewModelFactory.cs" />
     <Compile Include="Models\IHeroGlassBase.cs" />
     <Compile Include="Models\IHero.cs" />
     <Compile Include="ORM\GlassMappings.cs" />

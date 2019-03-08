@@ -16,11 +16,12 @@ namespace Helixbase.Feature.Hero.Controllers
 
         public ActionResult Hero()
         {
-            var mediatorResponse = _heroMediator.CreateHeroViewModel();
+            var mediatorResponse = _heroMediator.RequestHeroViewModel();
 
             switch (mediatorResponse.Code)
             {
                 case MediatorCodes.HeroResponse.DataSourceError:
+                case MediatorCodes.HeroResponse.ViewModelError:
                     return View("~/views/Hero/Error.cshtml");
                 case MediatorCodes.HeroResponse.Ok:
                     return View(mediatorResponse.ViewModel);

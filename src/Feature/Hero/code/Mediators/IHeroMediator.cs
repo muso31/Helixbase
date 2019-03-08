@@ -5,6 +5,6 @@ namespace Helixbase.Feature.Hero.Mediators
 {
     public interface IHeroMediator
     {
-        MediatorResponse<HeroViewModel> CreateHeroViewModel();
+        MediatorResponse<HeroViewModel> RequestHeroViewModel();
     }
 }
