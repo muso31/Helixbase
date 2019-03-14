@@ -1,0 +1,23 @@
+version: 0.0.{build}
+skip_branch_with_pr: true
+image: Visual Studio 2017
+services:
+- iis
+- mssql2017
+test: off
+build_script:
+- ps: >-
+    .\build\deploy-ci.ps1 -IsAppVeyor `
+                      -DownloadBase $Env:DownloadBase `
+                      -SqlServer . `
+                      -SqlAdminUser sa `
+                      -SqlAdminPassword 'Password12!'
+artifacts:
+- path: output\Helixbase.Website.zip
+  name: wdp
+- path: output\Unicorn.zip
+  name: unicorn
+on_failure:
+- ps: '$blockRdp = $true; iex ((new-object net.webclient).DownloadString(''https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1''))'
+on_success:
+- ps: '#$blockRdp = $true; iex ((new-object net.webclient).DownloadString(''https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1''))'
