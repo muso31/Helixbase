@@ -70,3 +70,8 @@ CI/CD publishing:
 Legacy versions of Helix Base which are no longer updated or maintained can be found below:
 
 [Helix Base 9.0.2](https://github.com/muso31/Helixbase/tree/feature/9.0.2) (updated until 21/12/2018)
+
+## Collaborators
+Special mention to those who collaborate on the project:
+
+[Richard Szalay](https://github.com/richardszalay)
