@@ -66,7 +66,7 @@ CI/CD publishing:
 
 * Unicorn files are automatically included into App_Data\unicorn. The only variable that needs to be set is `$(sourceFolder)` in [z.Common.DevSettings.config](https://github.com/muso31/Helixbase/blob/master/src/Project/Common/code/App_Config/Include/Project/z.Common.DevSettings.config#L3)
 
-### Legacy Versions
+## Legacy Versions
 Legacy versions of Helix Base which are no longer updated or maintained can be found below:
 
 [Helix Base 9.0.2](https://github.com/muso31/Helixbase/tree/feature/9.0.2) (updated until 21/12/2018)
