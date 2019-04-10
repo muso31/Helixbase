@@ -1,0 +1,36 @@
+resources:
+- repo: self
+
+pool:
+  name: Hosted VS2017
+  demands:
+  - msbuild
+  - visualstudio
+
+steps:
+- task: NuGetToolInstaller@0
+  displayName: 'Use NuGet 4.9.x'
+  inputs:
+    versionSpec: 4.9.x
+
+- task: NuGetCommand@2
+  displayName: 'NuGet restore'
+  inputs:
+    restoreSolution: Helixbase.sln
+    feedsToUse: config
+    nugetConfigPath: NuGet.config
+
+- task: VSBuild@1
+  displayName: 'Build solution'
+  inputs:
+    solution: Helixbase.sln
+    msbuildArgs: '/t:Website\Helixbase_Website /p:DeployOnBuild=true;PublishProfile=Package /p:DefaultPackageOutputDir=$(build.artifactstagingdirectory)'
+    platform: 'Any CPU'
+    configuration: 'Release'
+
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish Artifact'
+  inputs:
+    PathtoPublish: '$(build.artifactstagingdirectory)'
+  condition: succeededOrFailed()
+
