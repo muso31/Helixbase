@@ -18,7 +18,7 @@ A Sitecore Helix based solution which can be used for Greenfield projects. Tackl
 * Non admin Item Unlock
 * Auto unlocks items when a user is deleted
 * Integration with [helix-publishing-pipeline](https://github.com/richardszalay/helix-publishing-pipeline)
-* Fast ([see?](https://github.com/richardszalay/Helixbase-HPP#benchmarks)) publish-on-build (when building inside Visual Studio)
+* Fast ([see?](https://github.com/richardszalay/Helixbase-HPP/tree/benchmarks#benchmarks)) publish-on-build (when building inside Visual Studio)
 * [_Show Title When Blank_](https://jammykam.wordpress.com/2017/09/20/show-title-when-blank/) patch, the forgotten Sitecore feature!
 * A module just for fun - currently adds logos to the Unicorn console
 
