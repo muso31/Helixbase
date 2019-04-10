@@ -24,7 +24,7 @@ steps:
   displayName: 'Build solution'
   inputs:
     solution: Helixbase.sln
-    msbuildArgs: '/t:Website\Helixbase_Website /p:DeployOnBuild=true;PublishProfile=Package /p:DefaultPackageOutputDir=$(build.artifactstagingdirectory)'
+    msbuildArgs: '/t:Website\Helixbase_Website:WebPublish /p:PublishProfile=Package /p:DefaultPackageOutputDir=$(build.artifactstagingdirectory)'
     platform: 'Any CPU'
     configuration: 'Release'
 
