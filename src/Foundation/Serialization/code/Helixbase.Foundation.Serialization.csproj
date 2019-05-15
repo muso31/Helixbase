@@ -130,9 +130,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Config\Include\Foundation\Foundation.Serialization.Rainbow.config" />
-    <None Include="App_Config\Include\Unicorn\Unicorn.UI.IdentityServer.config">
+    <Content Include="App_Config\Include\Unicorn\Unicorn.UI.IdentityServer.config">
       <SubType>Designer</SubType>
-    </None>
+    </Content>
     <None Include="Web.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
