@@ -43,7 +43,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Castle.Core" Version="4.2.1" />
     <PackageReference Include="Glass.Mapper.Sc.91.Core" Version="5.3.17" />
     <PackageReference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform" Version="1.0.5" />
     <PackageReference Include="Microsoft.Net.Compilers" Version="2.1.0" />
