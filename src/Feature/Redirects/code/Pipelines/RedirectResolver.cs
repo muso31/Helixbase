@@ -12,13 +12,13 @@ namespace Helixbase.Feature.Redirects.Pipelines
 {
     public class RedirectResolver : HttpRequestProcessor
     {
-        private readonly IContextRepository _contextRepository;
-        private readonly IContentRepository _contentRepository;
+        private readonly Func<IContextRepository> _contextRepositoryThunk;
+        private readonly Func<IContentRepository> _contentRepositoryThunk;
 
-        public RedirectResolver(IContextRepository contextRepository, IContentRepository contentRepository)
+        public RedirectResolver(Func<IContextRepository> contextRepositoryThunk, Func<IContentRepository> contentRepositoryThunk)
         {
-            _contextRepository = contextRepository;
-            _contentRepository = contentRepository;
+            _contextRepositoryThunk = contextRepositoryThunk ?? throw new ArgumentNullException(nameof(contextRepositoryThunk));
+            _contentRepositoryThunk = contentRepositoryThunk ?? throw new ArgumentNullException(nameof(contentRepositoryThunk));
         }
 
         public override void Process(HttpRequestArgs args)
@@ -36,9 +36,9 @@ namespace Helixbase.Feature.Redirects.Pipelines
 
         private void Perform301Redirect()
         {
-            var redirectFolder = _contentRepository.GetItem<IRedirectFolder>(new GetItemByQueryOptions
+            var redirectFolder = _contentRepositoryThunk().GetItem<IRedirectFolder>(new GetItemByQueryOptions
             {
-                Query = new Query($"{_contextRepository.GetContextSiteRoot()}/*[@@templateid='{Templates.GlobalFolder.TemplateId.ToString("B").ToUpper()}']/*[@@templateid='{Templates.RedirectFolder.TemplateId.ToString("B").ToUpper()}']")
+                Query = new Query($"{_contextRepositoryThunk().GetContextSiteRoot()}/*[@@templateid='{Templates.GlobalFolder.TemplateId.ToString("B").ToUpper()}']/*[@@templateid='{Templates.RedirectFolder.TemplateId.ToString("B").ToUpper()}']")
             });
 
             // Could also use a builder:
