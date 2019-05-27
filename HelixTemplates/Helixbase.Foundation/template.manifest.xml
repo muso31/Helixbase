@@ -1,0 +1,30 @@
+<templateManifest typeOfTemplate="Module">
+  <name>Helixbase Foundation</name>
+  <description>Basic module with no views, ideal for Foundation modules</description>
+  <version>1.0.1</version>
+  <author>Richard Szalay</author>
+  <sourceFolder>/src</sourceFolder>
+  <saveOnCreate>true</saveOnCreate>
+  <templateEngine type="LaubPlusCo.Foundation.HelixTemplating.TemplateEngine.DefaultHelixTemplateEngine, LaubPlusCo.Foundation.HelixTemplating" />
+  <replacementTokens>
+    <token key="$layerName$" displayName="Create on Layer" default="Foundation" input="Selection" required="true">
+      <option name="Project" />
+      <option name="Feature" />
+      <option name="Foundation" />
+    </token>
+    <token key="$moduleName$" displayName="Module name" default="$safeprojectname$" input="Text" required="true" 
+           validationType="LaubPlusCo.Foundation.HelixTemplating.Tokens.ValidateModuleNameToken, LaubPlusCo.Foundation.HelixTemplating" />
+    <token key="$moduleNamespace$" displayName="Module namespace" required="true" default="Helixbase.$layerName$.$moduleName$" input="Text"
+           suggestType="LaubPlusCo.Foundation.HelixTemplating.Tokens.SuggestNamespaceToken, LaubPlusCo.Foundation.HelixTemplating"
+           validationType="LaubPlusCo.Foundation.HelixTemplating.Tokens.ValidateNamespaceToken, LaubPlusCo.Foundation.HelixTemplating" />
+    <token key="$sitecoreVersion$" displayName="Sitecore version (for Sitecore nuget packages)" default="9.1.0" required="true" input="Text"
+           validationType="LaubPlusCo.Foundation.HelixTemplating.Tokens.ValidateVersionNumberToken, LaubPlusCo.Foundation.HelixTemplating" />
+  </replacementTokens>
+  <projectsToAttach>
+    <projectFile path="/src/$layerName$/$modulename$/code/$moduleNamespace$.csproj" />
+	<projectFile path="/src/$layerName$/$modulename$/tests/$moduleNamespace$.Tests.csproj" />
+  </projectsToAttach>
+  <ignoreFiles>
+    <file path="/template.manifest.xml" />
+  </ignoreFiles>
+</templateManifest>
