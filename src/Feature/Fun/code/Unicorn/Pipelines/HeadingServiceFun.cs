@@ -5,6 +5,9 @@ using Unicorn.ControlPanel.Headings;
 
 namespace Helixbase.Feature.Fun.Unicorn.Pipelines
 {
+    /// <summary>
+    /// https://github.com/SitecoreUnicorn/Unicorn/blob/master/src/Unicorn/ControlPanel/Headings/HeadingService.cs
+    /// </summary>
     public class HeadingServiceFun : HeadingService
     {
         private static readonly Random Random = new Random();

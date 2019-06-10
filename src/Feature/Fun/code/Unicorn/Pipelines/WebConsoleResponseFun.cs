@@ -8,6 +8,9 @@ using Unicorn.ControlPanel.Responses;
 
 namespace Helixbase.Feature.Fun.Unicorn.Pipelines
 {
+    /// <summary>
+    /// https://github.com/SitecoreUnicorn/Unicorn/blob/master/src/Unicorn/ControlPanel/Responses/WebConsoleResponse.cs
+    /// </summary>
     public class WebConsoleResponseFun : WebConsoleResponse
     {
         private readonly string _title;
