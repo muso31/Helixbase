@@ -15,6 +15,12 @@ namespace Helixbase.Feature.Redirects.Pipelines
         private readonly Func<IContextRepository> _contextRepositoryThunk;
         private readonly Func<IContentRepository> _contentRepositoryThunk;
 
+        /// <summary>
+        /// Constructor taking Higher-order functions to resolve the injected dependencies at run-time. This is needed when the dependencies have a shorter lifetime than the object they're being injected into.
+        /// Source: https://www.coreysmith.co/sitecore-dependency-injection-scoped-services/
+        /// </summary>
+        /// <param name="contextRepositoryThunk">Function to resolve IContextRepository</param>
+        /// <param name="contentRepositoryThunk">Function to resolve IContentRepository</param>
         public RedirectResolver(Func<IContextRepository> contextRepositoryThunk, Func<IContentRepository> contentRepositoryThunk)
         {
             _contextRepositoryThunk = contextRepositoryThunk ?? throw new ArgumentNullException(nameof(contextRepositoryThunk));
