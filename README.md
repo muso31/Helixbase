@@ -25,13 +25,23 @@ A Sitecore Helix based solution which can be used for Greenfield projects. Tackl
 ## Setup Instructions
 *Please Install Visual Studio 2017 Version 15.7 or higher as this project uses PackageReference
 
-1. Install [Sitecore Experience Platform 9.1 Initial Release](https://dev.sitecore.net/Downloads/Sitecore_Experience_Platform/91/Sitecore_Experience_Platform_91_Initial_Release.aspx)
-	1. _Name your instance 'demo.helixbase'_
-2. Clone project to 'C:\Projects\Helixbase'
-	1. _If you use another path, update the [z.Common.DevSettings.config](https://github.com/muso31/Helixbase/blob/master/src/Project/Common/code/App_Config/Include/Project/z.Common.DevSettings.config#L3)_
-3. Update the 'publishUrl' property in [Local.pubxml](https://github.com/muso31/Helixbase/blob/master/src/Website/code/Properties/PublishProfiles/Local.pubxml#L12) to the target IIS folder
-4. Build the project from inside Visual Studio (which triggers HPP auto publish), or use the 'Local' publish profile in the Helixbase.Website project
-5. Run Unicorn and sync all configurations
+1. Clone project to 'C:\Projects\Helixbase' or wherever you like, the link with Unicorn is handled automatically
+2. Adjust `C:\Projects\Helixbase\build\deploy-local.ps1` where necessary (for example: SQL credentials)
+3. Open *Developer Command Prompt for VS 2017* as an administrator
+4. Run `powershell -file C:\Projects\Helixbase\build\deploy-local.ps1`
+
+The script handles the following steps:
+
+* Builds the solution
+* Installs Sitecore and its prerequisites if necessary using [Simple Install Scripts](https://github.com/ParTech/ParTech.SimpleInstallScripts)
+* Adjusts the local.xml publishing profile to point to the correct location
+* Adds Unicorn config to App_Config/Environment/ with the shared secret and a link back to the correct sourceFolder
+* Deploys the solution using [helix-publishing-pipeline](https://github.com/richardszalay/helix-publishing-pipeline)
+* Syncs the Unicorn serialized items to Sitecore
+* Executes a Smart Publish
+* Rebuilds the Link Databases
+* Rebuilds the Search Indexes
+* Deploys the Marketing Definitions
 
 #### Using Helix Base:
 Refer to the [Hero Feature](https://github.com/muso31/Helixbase/tree/master/src/Feature/Hero/code) as an example.
@@ -64,11 +74,15 @@ Local publishing:
 
 CI/CD publishing:
 
-* Unicorn files are automatically included into App_Data\unicorn. The only variable that needs to be set is `$(sourceFolder)` in [z.Common.DevSettings.config](https://github.com/muso31/Helixbase/blob/master/src/Project/Common/code/App_Config/Include/Project/z.Common.DevSettings.config#L3)
+* Using [helix-publishing-pipeline](https://github.com/richardszalay/helix-publishing-pipeline), a single Web Deploy Package is generated of all files in the solution which are configured as *Content*. It also ensures all Unicorn serialization files are collected together in one folder allowing for a single "Items" artifact. Both of these artifacts are placed in the **Output** folder.
 
 Azure DevOps:
 
 * If you push this repository to Azure DevOps, then in Build Pipelines choose [New build pipeline](https://docs.microsoft.com/en-us/azure/devops/pipelines/create-first-pipeline?view=azure-devops&tabs=tfs-2018-2), it will automatically pick up the included [azure-pipelines.yml](https://github.com/muso31/Helixbase/blob/master/azure-pipelines.yml) file and create an example build pipeline that uses the Package publish profile.
+
+AppVeyor:
+
+* If you connect this repository with AppVeyor, then it will automatically pick up the included [appveyor.yml](https://github.com/muso31/Helixbase/blob/master/appveyor.yml) file. The only remaining step is to add the `DownloadBase` [Environment Variable](https://www.appveyor.com/docs/environment-variables/) which links to where your WDPs, Config files and license are stored.
 
 ## Legacy Versions
 Legacy versions of Helix Base which are no longer updated or maintained can be found below:
