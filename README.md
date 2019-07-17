@@ -70,6 +70,10 @@ Azure DevOps:
 
 * If you push this repository to Azure DevOps, then in Build Pipelines choose [New build pipeline](https://docs.microsoft.com/en-us/azure/devops/pipelines/create-first-pipeline?view=azure-devops&tabs=tfs-2018-2), it will automatically pick up the included [azure-pipelines.yml](https://github.com/muso31/Helixbase/blob/master/azure-pipelines.yml) file and create an example build pipeline that uses the Package publish profile.
 
+AppVeyor:
+
+* An example appveyor.xml is included which builds, tests, and packages the solution.
+
 ## Legacy Versions
 Legacy versions of Helix Base which are no longer updated or maintained can be found below:
 
