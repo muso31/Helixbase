@@ -72,7 +72,7 @@ Azure DevOps:
 
 AppVeyor:
 
-* An example [azureappveyor.xml](https://github.com/muso31/Helixbase/blob/master/azureappveyor.xml) is included which builds, tests, and packages the solution.
+* An example [appveyor.xml](https://github.com/muso31/Helixbase/blob/master/appveyor.yml) is included which builds, tests, and packages the solution.
 
 ## Legacy Versions
 Legacy versions of Helix Base which are no longer updated or maintained can be found below:
