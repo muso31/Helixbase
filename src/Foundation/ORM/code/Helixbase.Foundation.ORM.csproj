@@ -41,8 +41,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Sitecore.Kernel" Version="9.1.0" />
-    <PackageReference Include="Glass.Mapper.Sc.91.Mvc" Version="5.3.17" />
+    <PackageReference Include="Glass.Mapper.Sc.92.Mvc">
+      <Version>5.5.28</Version>
+    </PackageReference>
+    <PackageReference Include="Sitecore.Kernel" Version="9.2.0" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />

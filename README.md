@@ -7,7 +7,7 @@ A Sitecore Helix based solution which can be used for Greenfield projects. Tackl
 
 * Glass Mapper v5 - with fluent configuration and automated mapping registration
 * Unicorn - including user and role sync
-* Sitecore 9.1 ready
+* Sitecore 9.2 ready
 * Bootstrap v4
 * Native dependency injection with auto controller registration
 * A sample hero banner feature and sample site project for demonstration
@@ -18,19 +18,18 @@ A Sitecore Helix based solution which can be used for Greenfield projects. Tackl
 * Non admin Item Unlock
 * Auto unlocks items when a user is deleted
 * Integration with [helix-publishing-pipeline](https://github.com/richardszalay/helix-publishing-pipeline)
-* Fast ([see?](https://github.com/richardszalay/Helixbase-HPP/tree/benchmarks#benchmarks)) publish-on-build (when building inside Visual Studio)
+* Fast ([see benchmark](https://github.com/richardszalay/Helixbase-HPP/tree/benchmarks#benchmarks)) publish-on-build (when building inside Visual Studio)
 * [_Show Title When Blank_](https://jammykam.wordpress.com/2017/09/20/show-title-when-blank/) patch, the forgotten Sitecore feature!
 * A module just for fun - currently adds logos to the Unicorn console
 
 ## Setup Instructions
 *Please Install Visual Studio 2017 Version 15.7 or higher as this project uses PackageReference
 
-1. Install [Sitecore Experience Platform 9.1 Initial Release](https://dev.sitecore.net/Downloads/Sitecore_Experience_Platform/91/Sitecore_Experience_Platform_91_Initial_Release.aspx)
-	1. _Name your instance 'demo.helixbase'_
+1. Install [Sitecore Experience Platform 9.2 Initial Release](https://dev.sitecore.net/Downloads/Sitecore_Experience_Platform/92/Sitecore_Experience_Platform_92_Initial_Release.aspx)
 2. Clone project to 'C:\Projects\Helixbase'
 	1. _If you use another path, update the [z.Common.DevSettings.config](https://github.com/muso31/Helixbase/blob/master/src/Project/Common/code/App_Config/Include/Project/z.Common.DevSettings.config#L3)_
 3. Update the 'publishUrl' property in [Local.pubxml](https://github.com/muso31/Helixbase/blob/master/src/Website/code/Properties/PublishProfiles/Local.pubxml#L12) to the target IIS folder
-4. Build the project from inside Visual Studio (which triggers HPP auto publish), or use the 'Local' publish profile in the Helixbase.Website project
+4. Build the project from inside Visual Studio (which triggers HPP [auto publish](https://github.com/muso31/Helixbase/blob/master/src/Website/code/Helixbase.Website.wpp.targets#L17)), or use the 'Local' publish profile in the Helixbase.Website project
 5. Run Unicorn and sync all configurations
 
 #### Using Helix Base:
@@ -77,9 +76,12 @@ AppVeyor:
 ## Legacy Versions
 Legacy versions of Helix Base which are no longer updated or maintained can be found below:
 
+
+[Helix Base 9.1.0](https://github.com/muso31/Helixbase/tree/feature/9.1.0) (updated until 08/08/2019)
 [Helix Base 9.0.2](https://github.com/muso31/Helixbase/tree/feature/9.0.2) (updated until 21/12/2018)
 
 ## Collaborators
 Special mention to those who collaborate on the project:
 
 [Richard Szalay](https://github.com/richardszalay)
+[Steve McGill](https://github.com/steviemcg)
