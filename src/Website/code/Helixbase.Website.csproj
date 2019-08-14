@@ -45,15 +45,13 @@
   <ItemGroup>
     <PackageReference Include="RichardSzalay.Helix.Publishing.WebRoot" Version="1.5.4" />
     <PackageReference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform" Version="1.0.5" />
-    <PackageReference Include="Sitecore.Kernel" Version="9.2.0" />
+    <PackageReference Include="Sitecore.Kernel" Version="9.1.0" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="AssemblyLists\Sitecore.Platform.Assemblies 9.2.0 rev. 002893.csv" />
-    <None Include="AssemblyLists\Sitecore.XConnect.Platform.Assemblies 9.2.0 rev. 002893.csv" />
     <None Include="Web.config">
       <SubType>Designer</SubType>
     </None>
@@ -62,6 +60,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="AssemblyLists\Sitecore.Platform.Assemblies 9.1.0 rev. 001564.csv" />
+    <None Include="AssemblyLists\Sitecore.XConnect.Platform.Assemblies 9.1.0 rev. 001564.csv" />
     <None Include="Directory.build.props">
       <SubType>Designer</SubType>
     </None>

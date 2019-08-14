@@ -38,7 +38,7 @@
   <ItemGroup>
     <PackageReference Include="AutoFixture" Version="3.51.0" />
     <PackageReference Include="FluentAssertions" Version="4.19.4" />
-    <PackageReference Include="Glass.Mapper.Sc.92.Core" Version="5.5.28" />
+    <PackageReference Include="Glass.Mapper.Sc.91.Core" Version="5.3.17" />
     <PackageReference Include="MSTest.TestAdapter" Version="1.2.0" />
     <PackageReference Include="MSTest.TestFramework" Version="1.2.0" />
     <PackageReference Include="NSubstitute" Version="2.0.3" />
