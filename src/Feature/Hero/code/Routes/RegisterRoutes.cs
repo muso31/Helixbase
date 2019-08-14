@@ -9,8 +9,8 @@ namespace Helixbase.Feature.Hero.Routes
     {
         /// <summary>
         ///     This route is NOT required for the Hero feature, it is only here as an example of how to
-        ///     register a custom route. You can access it using http://demo.helixbase/ApiTest/CustomRoute/Hero/SomeParam
-        ///     We can also use Sitecore native rather than a custom route http://demo.helixbase/api/sitecore/HeroAPI/TestAction
+        ///     register a custom route. You can access it using http://{host}/ApiTest/CustomRoute/Hero/SomeParam
+        ///     We can also use Sitecore native rather than a custom route http://{host}/api/sitecore/HeroAPI/TestAction
         /// </summary>
         /// <param name="args"></param>
         public void Process(PipelineArgs args)
