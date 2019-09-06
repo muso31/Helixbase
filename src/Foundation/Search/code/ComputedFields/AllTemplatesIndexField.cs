@@ -1,4 +1,5 @@
 ﻿using Sitecore.ContentSearch;
+using Sitecore.ContentSearch.ComputedFields;
 using Sitecore.ContentSearch.Utilities;
 using Sitecore.Data.Items;
 using System.Collections.Generic;
@@ -6,7 +7,7 @@ using System.Linq;
 
 namespace Helixbase.Foundation.Search.ComputedFields
 {
-    public class AllTemplatesIndexField
+    public class AllTemplatesIndexField : IComputedIndexField
     {
         public string FieldName { get; set; }
 
