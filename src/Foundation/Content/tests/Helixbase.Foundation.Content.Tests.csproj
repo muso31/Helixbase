@@ -56,11 +56,11 @@
     <None Include="app.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\ORM\code\Helixbase.Foundation.ORM.csproj">
+    <ProjectReference Include="..\..\ORM\website\Helixbase.Foundation.ORM.csproj">
       <Project>{5e91a7d9-8e93-44fd-857f-f9ce145b6022}</Project>
       <Name>Helixbase.Foundation.ORM</Name>
     </ProjectReference>
-    <ProjectReference Include="..\code\Helixbase.Foundation.Content.csproj">
+    <ProjectReference Include="..\website\Helixbase.Foundation.Content.csproj">
       <Project>{f8f55034-fa55-4d27-b115-0ab4eeb9a0a8}</Project>
       <Name>Helixbase.Foundation.Content</Name>
     </ProjectReference>

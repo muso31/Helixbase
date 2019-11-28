@@ -55,12 +55,51 @@ Languages:
           p:p="1">
           <d
             id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <p
+              uid="{498BDDC8-091D-4F1C-9895-78F658BCA4FF}"
+              s:md="{B9AE5A80-B0ED-4E40-AA4E-E3FFE1255ED8}" />
             <r
               uid="{7E20CCF1-4111-494F-9F02-9610CCF58DB7}"
               p:after="*[1=2]"
               s:ds="{0A275E4A-98DF-4CB3-8A7E-948F53010AE3}"
               s:id="{51BBBAAD-01F6-4371-9260-9473141506EF}"
-              s:ph="main" />
+              s:ph="main">
+              <rls>
+                <ruleset>
+                  <rule
+                    uid="{7CBFCCC4-6584-49FC-8E99-C95D55F6CFA3}"
+                    s:name="Time">
+                    <conditions>
+                      <condition
+                        uid="372CF48BD8BC4C51826DC6C69E03A4FE"
+                        s:id="{8A9B001F-FB59-4F0F-B3F3-C6C5360ED451}"
+                        s:Now="20191003T122400Z" />
+                    </conditions>
+                    <actions>
+                      <action
+                        uid="40DDA8559E724D15BDE85AC611FF665D"
+                        s:id="{0F3C6BEC-E56B-4875-93D7-2846A75881D2}"
+                        s:DataSource="{231CBD28-5076-4BA1-8212-F56EDEF1AB6C}" />
+                    </actions>
+                  </rule>
+                  <rule
+                    uid="{00000000-0000-0000-0000-000000000000}"
+                    s:name="Default">
+                    <conditions>
+                      <condition
+                        uid="AE09CC32922C41F4B272B6EE0E0EBE31"
+                        s:id="{4888ABBB-F17D-4485-B14B-842413F88732}" />
+                    </conditions>
+                    <actions>
+                      <action
+                        uid="CF2B36D07A10427A84DB86C538B54C21"
+                        s:id="{0F3C6BEC-E56B-4875-93D7-2846A75881D2}"
+                        s:DataSource="{0A275E4A-98DF-4CB3-8A7E-948F53010AE3}" />
+                    </actions>
+                  </rule>
+                </ruleset>
+              </rls>
+            </r>
           </d>
         </r>
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"

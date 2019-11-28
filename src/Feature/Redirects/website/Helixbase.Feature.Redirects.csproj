@@ -81,11 +81,11 @@
     <Compile Include="Templates.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Foundation\Content\code\Helixbase.Foundation.Content.csproj">
+    <ProjectReference Include="..\..\..\Foundation\Content\website\Helixbase.Foundation.Content.csproj">
       <Project>{F8F55034-FA55-4D27-B115-0AB4EEB9A0A8}</Project>
       <Name>Helixbase.Foundation.Content</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\Foundation\ORM\code\Helixbase.Foundation.ORM.csproj">
+    <ProjectReference Include="..\..\..\Foundation\ORM\website\Helixbase.Foundation.ORM.csproj">
       <Project>{5E91A7D9-8E93-44FD-857F-F9CE145B6022}</Project>
       <Name>Helixbase.Foundation.ORM</Name>
     </ProjectReference>

@@ -7,12 +7,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{3466026C-5B9B-4274-8B17-60763BD56C69}</ProjectGuid>
+    <ProjectGuid>{F8F55034-FA55-4D27-B115-0AB4EEB9A0A8}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Helixbase.Feature.Hero</RootNamespace>
-    <AssemblyName>Helixbase.Feature.Hero</AssemblyName>
+    <RootNamespace>Helixbase.Foundation.Content</RootNamespace>
+    <AssemblyName>Helixbase.Foundation.Content</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -27,7 +27,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>bin\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -41,54 +41,39 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Glass.Mapper.Sc.92.Core" Version="5.5.28" />
-    <PackageReference Include="Sitecore.Mvc" Version="9.2.0" />
+    <PackageReference Include="Sitecore.Kernel">
+      <Version>9.2.0</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
-    <Reference Include="System.Web" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controllers\HeroAPIController.cs" />
-    <Compile Include="Controllers\HeroController.cs" />
+    <Compile Include="Repositories\IContextRepository.cs" />
+    <Compile Include="Repositories\RenderingRepository.cs" />
+    <Compile Include="Repositories\IRenderingRepository.cs" />
+    <Compile Include="Repositories\IContentRepository.cs" />
+    <Compile Include="Repositories\ContentRepository.cs" />
     <Compile Include="DI\RegisterContainer.cs" />
-    <Compile Include="Factories\HeroViewModelFactory.cs" />
-    <Compile Include="Factories\IHeroViewModelFactory.cs" />
-    <Compile Include="Models\IHeroGlassBase.cs" />
-    <Compile Include="Models\IHero.cs" />
-    <Compile Include="ORM\GlassMappings.cs" />
-    <Compile Include="ORM\RegisterMappings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Routes\RegisterRoutes.cs" />
-    <Compile Include="Mediators\HeroMediator.cs" />
-    <Compile Include="Mediators\IHeroMediator.cs" />
-    <Compile Include="Services\HeroService.cs" />
-    <Compile Include="Services\IHeroService.cs" />
-    <Compile Include="Constants.cs" />
-    <Compile Include="ViewModels\HeroViewModel.cs" />
+    <Compile Include="Repositories\ContextRepository.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\..\ORM\website\Helixbase.Foundation.ORM.csproj">
+      <Project>{5E91A7D9-8E93-44FD-857F-F9CE145B6022}</Project>
+      <Name>Helixbase.Foundation.ORM</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Search\website\Helixbase.Foundation.Search.csproj">
+      <Project>{22686dc6-4e6c-4d98-84b7-c48042f5b8fc}</Project>
+      <Name>Helixbase.Foundation.Search</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Config\Include\Feature\Feature.Hero.RegisterMappings.config" />
+    <Content Include="App_Config\Include\Foundation\Foundation.Content.RegisterContainer.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Config\Include\Feature\Feature.Hero.Serialization.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Web.config">
-      <SubType>Designer</SubType>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Hero\Hero.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="App_Config\Include\Feature\Feature.Hero.Routes.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="App_Config\Include\Feature\Feature.Hero.RegisterContainer.config" />
-    <Content Include="Views\Hero\Error.cshtml" />
     <None Include="Web.config">
       <SubType>Designer</SubType>
     </None>
@@ -99,29 +84,6 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\Foundation\Logging\code\Helixbase.Foundation.Logging.csproj">
-      <Project>{9B72C426-123C-4782-BEF8-0D52E5F2A396}</Project>
-      <Name>Helixbase.Foundation.Logging</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\Foundation\ORM\code\Helixbase.Foundation.ORM.csproj">
-      <Project>{5E91A7D9-8E93-44FD-857F-F9CE145B6022}</Project>
-      <Name>Helixbase.Foundation.ORM</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\Foundation\Search\code\Helixbase.Foundation.Search.csproj">
-      <Project>{22686DC6-4E6C-4D98-84B7-C48042F5B8FC}</Project>
-      <Name>Helixbase.Foundation.Search</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\Foundation\Content\code\Helixbase.Foundation.Content.csproj">
-      <Project>{F8F55034-FA55-4D27-B115-0AB4EEB9A0A8}</Project>
-      <Name>Helixbase.Foundation.Content</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\Foundation\Core\code\Helixbase.Foundation.Core.csproj">
-      <Project>{0C1E2FEC-AC54-4CF0-905A-890D3BF711D5}</Project>
-      <Name>Helixbase.Foundation.Core</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -133,11 +95,11 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>False</UseIIS>
+          <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>4632</DevelopmentServerPort>
+          <DevelopmentServerPort>4630</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:4632/</IISUrl>
+          <IISUrl>http://localhost:4630/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

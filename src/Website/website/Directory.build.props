@@ -7,13 +7,13 @@
 
   <!-- As long as your modules follow these patterns, their content will automatically be included in the publish -->
   <ItemGroup>
-    <ProjectReference Include="..\..\Foundation\*\code\*.csproj">
+    <ProjectReference Include="..\..\Foundation\*\website\*.csproj">
       <Name>%(Filename)</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Feature\*\code\*.csproj">
+    <ProjectReference Include="..\..\Feature\*\website\*.csproj">
       <Name>%(Filename)</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Project\*\code\*.csproj">
+    <ProjectReference Include="..\..\Project\*\website\*.csproj">
       <Name>%(Filename)</Name>
     </ProjectReference>
   </ItemGroup>

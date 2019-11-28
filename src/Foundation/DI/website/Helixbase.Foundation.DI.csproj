@@ -70,7 +70,7 @@
     <Compile Include="Extensions\ServiceCollectionExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Core\code\Helixbase.Foundation.Core.csproj">
+    <ProjectReference Include="..\..\Core\website\Helixbase.Foundation.Core.csproj">
       <Project>{0c1e2fec-ac54-4cf0-905a-890d3bf711d5}</Project>
       <Name>Helixbase.Foundation.Core</Name>
     </ProjectReference>
