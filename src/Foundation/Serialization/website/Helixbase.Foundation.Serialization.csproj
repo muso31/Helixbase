@@ -41,9 +41,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Unicorn" Version="4.0.8" />
-    <PackageReference Include="Unicorn.Roles" Version="4.0.8" />
-    <PackageReference Include="Unicorn.Users" Version="4.0.8" />
+    <PackageReference Include="Unicorn" Version="4.1.1" />
+    <PackageReference Include="Unicorn.Roles" Version="4.1.1" />
+    <PackageReference Include="Unicorn.Users" Version="4.1.1" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />

@@ -47,7 +47,7 @@
     <PackageReference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform" Version="1.0.5" />
     <PackageReference Include="Microsoft.Net.Compilers" Version="2.1.0" />
     <PackageReference Include="Sitecore.Kernel" Version="9.3.0" />
-    <PackageReference Include="Unicorn.Core" Version="4.0.8" />
+    <PackageReference Include="Unicorn.Core" Version="4.1.1" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
