@@ -7,7 +7,7 @@ A Sitecore Helix based solution which can be used for Greenfield projects. Tackl
 
 * Glass Mapper v5 - with fluent configuration and automated mapping registration
 * Unicorn - including user and role sync
-* Sitecore 9.2 ready
+* Sitecore 9.3 ready
 * Bootstrap v4
 * Native dependency injection with auto controller registration
 * A sample hero banner feature and sample site project for demonstration
@@ -25,7 +25,7 @@ A Sitecore Helix based solution which can be used for Greenfield projects. Tackl
 ## Setup Instructions
 *Please Install Visual Studio 2017 Version 15.7 or higher as this project uses PackageReference
 
-1. Install [Sitecore Experience Platform 9.2 Initial Release](https://dev.sitecore.net/Downloads/Sitecore_Experience_Platform/92/Sitecore_Experience_Platform_92_Initial_Release.aspx)
+1. Install [Sitecore Experience Platform 9.3 Initial Release](https://dev.sitecore.net/Downloads/Sitecore_Experience_Platform/93/Sitecore_Experience_Platform_93_Initial_Release.aspx)
 2. Clone project to 'C:\Projects\Helixbase'
 	1. _If you use another path, update the [z.Common.DevSettings.config](https://github.com/muso31/Helixbase/blob/master/src/Project/Common/code/App_Config/Include/Project/z.Common.DevSettings.config#L3)_
 3. Update the 'publishUrl' property in [Local.pubxml](https://github.com/muso31/Helixbase/blob/master/src/Website/code/Properties/PublishProfiles/Local.pubxml#L12) to the target IIS folder
