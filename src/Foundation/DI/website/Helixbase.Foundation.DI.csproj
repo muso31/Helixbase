@@ -46,7 +46,7 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform" Version="1.0.5" />
     <PackageReference Include="Microsoft.Net.Compilers" Version="2.1.0" />
-    <PackageReference Include="Sitecore.Mvc" Version="9.2.0" />
+    <PackageReference Include="Sitecore.Mvc" Version="9.3.0" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
