@@ -43,7 +43,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Glass.Mapper.Sc.92.Core" Version="5.5.28" />
+    <PackageReference Include="Glass.Mapper.Sc.93.Core" Version="5.6.157-alpha" />
     <PackageReference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform" Version="1.0.5" />
     <PackageReference Include="Microsoft.Net.Compilers" Version="2.1.0" />
   </ItemGroup>
