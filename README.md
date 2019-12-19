@@ -12,7 +12,6 @@ A Sitecore Helix based solution which can be used for Greenfield projects. Tackl
 * Native dependency injection with auto controller registration
 * A sample hero banner feature and sample site project for demonstration
 * Generic content repositories (by Rendering, Item Context, or Glass Content)
-* 301 redirects
 * Version trimming rules engine - Items limited to 10 versions by default
 * Search Templates computed index field - find all items from an index by any templates they implement
 * Non admin Item Unlock
@@ -36,8 +35,6 @@ Refer to the [Hero Feature](https://github.com/muso31/Helixbase/tree/master/src/
 
 * View [HeroService.cs](https://github.com/muso31/Helixbase/blob/master/src/Feature/Hero/code/Services/HeroService.cs) for examples of retrieving Sitecore items using the content API and the search API.
 * View [Register routes](https://github.com/muso31/Helixbase/blob/master/src/Feature/Hero/code/Routes/RegisterRoutes.cs) for an example of how to register a route.
-
-To add a 301 redirect simply add a redirect item to the _Redirect Items_ folder found in your site _Global_ folder.
 
 To change the item version limit edit the rule on the _/sitecore/system/Settings/Rules/Item Saved/Rules/Delete Old Versions_ item. You can also change the rule to recycle or archive old versions. 
 
