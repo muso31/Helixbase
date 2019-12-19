@@ -20,7 +20,6 @@ A Sitecore Helix based solution which can be used for Greenfield projects. Tackl
 * Integration with [helix-publishing-pipeline](https://github.com/richardszalay/helix-publishing-pipeline)
 * Fast ([see benchmark](https://github.com/richardszalay/Helixbase-HPP/tree/benchmarks#benchmarks)) publish-on-build (when building inside Visual Studio)
 * [_Show Title When Blank_](https://jammykam.wordpress.com/2017/09/20/show-title-when-blank/) patch, the forgotten Sitecore feature!
-* A module just for fun - currently adds logos to the Unicorn console
 
 ## Setup Instructions
 *Please Install Visual Studio 2017 Version 15.7 or higher as this project uses PackageReference
@@ -80,6 +79,12 @@ Legacy versions of Helix Base which are no longer updated or maintained can be f
 [Helix Base 9.2.0](https://github.com/muso31/Helixbase/tree/feature/9.2.0) (updated until 29/11/2019)
 [Helix Base 9.1.0](https://github.com/muso31/Helixbase/tree/feature/9.1.0) (updated until 08/08/2019)
 [Helix Base 9.0.2](https://github.com/muso31/Helixbase/tree/feature/9.0.2) (updated until 21/12/2018)
+
+## Extensions
+A repository now exists for Helix Base compatible modules:
+
+[Helix Base modules](https://github.com/muso31/Helixbase-modules)
+
 
 ## Collaborators
 Special mention to those who collaborate on the project:
