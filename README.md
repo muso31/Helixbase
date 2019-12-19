@@ -31,7 +31,7 @@ A Sitecore Helix based solution which can be used for Greenfield projects. Tackl
 5. Run Unicorn and sync all configurations
 
 #### Using Helix Base:
-Refer to the [Hero Feature](https://github.com/muso31/Helixbase/tree/master/src/Feature/Hero/code) as an example.
+Refer to the [Hero Feature](https://github.com/muso31/Helixbase/tree/master/src/Feature/Hero/website) as an example.
 
 * View [HeroService.cs](https://github.com/muso31/Helixbase/blob/master/src/Feature/Hero/website/Services/HeroService.cs) for examples of retrieving Sitecore items using the content API and the search API.
 * View [Register routes](https://github.com/muso31/Helixbase/blob/master/src/Feature/Hero/website/Routes/RegisterRoutes.cs) for an example of how to register a route.
