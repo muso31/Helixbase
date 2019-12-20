@@ -65,23 +65,8 @@ Languages:
               s:id="{51BBBAAD-01F6-4371-9260-9473141506EF}"
               s:ph="main">
               <rls>
-                <ruleset>
-                  <rule
-                    uid="{7CBFCCC4-6584-49FC-8E99-C95D55F6CFA3}"
-                    s:name="Time">
-                    <conditions>
-                      <condition
-                        uid="372CF48BD8BC4C51826DC6C69E03A4FE"
-                        s:id="{8A9B001F-FB59-4F0F-B3F3-C6C5360ED451}"
-                        s:Now="20191003T122400Z" />
-                    </conditions>
-                    <actions>
-                      <action
-                        uid="40DDA8559E724D15BDE85AC611FF665D"
-                        s:id="{0F3C6BEC-E56B-4875-93D7-2846A75881D2}"
-                        s:DataSource="{231CBD28-5076-4BA1-8212-F56EDEF1AB6C}" />
-                    </actions>
-                  </rule>
+                <ruleset
+                  s:pet="true">
                   <rule
                     uid="{00000000-0000-0000-0000-000000000000}"
                     s:name="Default">
