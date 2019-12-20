@@ -1,4 +1,5 @@
 ﻿@using Sitecore.Mvc.Analytics.Extensions
+
 @{
     Layout = null;
 }
@@ -9,7 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>@Html.Sitecore().Field("title", new {DisableWebEdit = true})</title>
+    <title>@Html.Sitecore().Field("title", new { DisableWebEdit = true })</title>
     @Html.Sitecore().VisitorIdentification()
     <!-- Bootstrap -->
     <link href="~/Content/bootstrap.css" rel="stylesheet">
@@ -22,12 +23,12 @@
     <![endif]-->
 </head>
 <body>
-<header>
-    <h1>@Html.Sitecore().Field("title")</h1>
-</header>
-<main>
-    @Html.Sitecore().Placeholder("main")
-</main>
+    <header>
+        <h1>@Html.Sitecore().Field("title")</h1>
+    </header>
+    <main>
+        @Html.Sitecore().Placeholder("main")
+    </main>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
