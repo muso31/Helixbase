@@ -42,9 +42,6 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Glass.Mapper.Sc.93.Core" Version="5.6.157-alpha" />
-    <PackageReference Include="Microsoft.AspNet.Mvc">
-      <Version>5.2.4</Version>
-    </PackageReference>
     <PackageReference Include="Sitecore.Mvc" Version="9.3.0" />
   </ItemGroup>
   <ItemGroup>
