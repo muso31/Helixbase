@@ -37,7 +37,7 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="AutoFixture" Version="3.51.0" />
-    <PackageReference Include="Glass.Mapper.Sc.93.Core" Version="5.6.157-alpha" />
+    <PackageReference Include="Glass.Mapper.Sc.93.Core" Version="5.6.160" />
     <PackageReference Include="MSTest.TestAdapter" Version="1.2.0" />
     <PackageReference Include="MSTest.TestFramework" Version="1.2.0" />
     <PackageReference Include="NSubstitute" Version="2.0.3" />

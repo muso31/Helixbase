@@ -41,7 +41,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Glass.Mapper.Sc.93.Core" Version="5.6.157-alpha" />
+    <PackageReference Include="Glass.Mapper.Sc.93.Core" Version="5.6.160" />
     <PackageReference Include="Sitecore.Mvc" Version="9.3.0" />
   </ItemGroup>
   <ItemGroup>
