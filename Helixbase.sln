@@ -27,7 +27,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Hero", "Hero", "{2884EE1D-1
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helixbase.Feature.Hero", "src\Feature\Hero\website\Helixbase.Feature.Hero.csproj", "{3466026C-5B9B-4274-8B17-60763BD56C69}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helixbase.Feature.Hero.Tests", "src\Feature\Hero\Tests\Helixbase.Feature.Hero.Tests.csproj", "{2845D41D-82F1-4B2F-AF9C-DFFCCF7A3098}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helixbase.Feature.Hero.Tests", "src\Feature\Hero\tests\Helixbase.Feature.Hero.Tests.csproj", "{2845D41D-82F1-4B2F-AF9C-DFFCCF7A3098}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Project", "Project", "{A7FC0385-84B6-4FB4-92DD-7372A45444F7}"
 EndProject
