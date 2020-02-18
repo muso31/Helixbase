@@ -54,7 +54,7 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Config\Include\Project\z.Common.DevSettings.config">
+    <Content Include="App_Config\Include\Project\z.Project.Common.DevSettings.config">
       <SubType>Designer</SubType>
     </Content>
     <None Include="web.config" />
@@ -70,10 +70,10 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Content Include="App_Config\Include\Project\Common.Serialization.config">
+    <Content Include="App_Config\Include\Project\Project.Common.Serialization.config">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="App_Config\Include\Project\Common.config">
+    <Content Include="App_Config\Include\Project\Project.Common.config">
       <SubType>Designer</SubType>
     </Content>
   </ItemGroup>
