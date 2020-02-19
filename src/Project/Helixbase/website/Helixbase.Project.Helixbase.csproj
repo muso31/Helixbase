@@ -13,4 +13,7 @@
     <Content Include="App_Config\Include\Project\Project.Helixbase.Serialization.config" />
     <Content Include="App_Config\Include\Project\z.Project.Helixbase.DevSettings.config" />
   </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Sitecore.Mvc.Analytics" Version="9.3.0" />
+  </ItemGroup>
 </Project>
