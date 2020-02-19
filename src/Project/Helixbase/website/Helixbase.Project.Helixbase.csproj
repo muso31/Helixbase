@@ -3,4 +3,14 @@
     <TargetFramework>net471</TargetFramework>
 	<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
   </PropertyGroup>
+  <ItemGroup>
+    <None Remove="App_Config\Include\Project\Project.Helixbase.config" />
+    <None Remove="App_Config\Include\Project\Project.Helixbase.Serialization.config" />
+    <None Remove="App_Config\Include\Project\z.Project.Helixbase.DevSettings.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Config\Include\Project\Project.Helixbase.config" />
+    <Content Include="App_Config\Include\Project\Project.Helixbase.Serialization.config" />
+    <Content Include="App_Config\Include\Project\z.Project.Helixbase.DevSettings.config" />
+  </ItemGroup>
 </Project>

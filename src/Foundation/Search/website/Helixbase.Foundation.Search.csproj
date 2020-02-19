@@ -4,6 +4,12 @@
 	<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
   </PropertyGroup>
   <ItemGroup>
+    <None Remove="App_Config\Include\Foundation\Foundation.Search.RegisterFields.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Config\Include\Foundation\Foundation.Search.RegisterFields.config" />
+  </ItemGroup>
+  <ItemGroup>
     <PackageReference Include="Sitecore.ContentSearch" Version="9.3.0" />
     <PackageReference Include="Sitecore.Kernel" Version="9.3.0" />
   </ItemGroup>
