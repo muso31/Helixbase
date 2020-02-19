@@ -5,6 +5,8 @@
   </PropertyGroup>
   <ItemGroup>
     <None Remove="App_Config\Include\Foundation\Foundation.Serialization.Base.config" />
+    <None Remove="App_Config\Include\Foundation\Foundation.Serialization.config" />
+    <None Remove="App_Config\Include\Foundation\Foundation.Serialization.Rainbow.config" />
     <None Remove="App_Config\Include\Rainbow.config" />
     <None Remove="App_Config\Include\Unicorn\Unicorn.AutoPublish.config" />
     <None Remove="App_Config\Include\Unicorn\Unicorn.config" />
@@ -30,6 +32,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Config\Include\Foundation\Foundation.Serialization.Base.config" />
+    <Content Include="App_Config\Include\Foundation\Foundation.Serialization.config" />
+    <Content Include="App_Config\Include\Foundation\Foundation.Serialization.Rainbow.config" />
     <Content Include="App_Config\Include\Rainbow.config" />
     <Content Include="App_Config\Include\Unicorn\Unicorn.AutoPublish.config" />
     <Content Include="App_Config\Include\Unicorn\Unicorn.config" />
