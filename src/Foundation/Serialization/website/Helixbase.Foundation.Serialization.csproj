@@ -4,6 +4,7 @@
 	<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
   </PropertyGroup>
   <ItemGroup>
+    <None Remove="App_Config\Include\Foundation\Foundation.Serialization.Base.config" />
     <None Remove="App_Config\Include\Rainbow.config" />
     <None Remove="App_Config\Include\Unicorn\Unicorn.AutoPublish.config" />
     <None Remove="App_Config\Include\Unicorn\Unicorn.config" />
@@ -28,6 +29,7 @@
     <None Remove="App_Config\Include\Unicorn\Unicorn.zSharedSecret.config.example" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Config\Include\Foundation\Foundation.Serialization.Base.config" />
     <Content Include="App_Config\Include\Rainbow.config" />
     <Content Include="App_Config\Include\Unicorn\Unicorn.AutoPublish.config" />
     <Content Include="App_Config\Include\Unicorn\Unicorn.config" />
