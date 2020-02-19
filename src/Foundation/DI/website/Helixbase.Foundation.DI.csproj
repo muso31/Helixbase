@@ -4,9 +4,6 @@
 	<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
   </PropertyGroup>
   <ItemGroup>
-    <None Remove="App_Config\Include\Foundation\Foundation.DI.RegisterControllers.config" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="App_Config\Include\Foundation\Foundation.DI.RegisterControllers.config" />
   </ItemGroup>
   <ItemGroup>

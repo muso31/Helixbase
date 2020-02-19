@@ -4,12 +4,6 @@
 	  <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
   </PropertyGroup>
   <ItemGroup>
-    <None Remove="App_Config\Include\Feature\Feature.Hero.RegisterContainer.config" />
-    <None Remove="App_Config\Include\Feature\Feature.Hero.RegisterMappings.config" />
-    <None Remove="App_Config\Include\Feature\Feature.Hero.Routes.config" />
-    <None Remove="App_Config\Include\Feature\Feature.Hero.Serialization.config" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="App_Config\Include\Feature\Feature.Hero.RegisterContainer.config" />
     <Content Include="App_Config\Include\Feature\Feature.Hero.RegisterMappings.config" />
     <Content Include="App_Config\Include\Feature\Feature.Hero.Routes.config" />

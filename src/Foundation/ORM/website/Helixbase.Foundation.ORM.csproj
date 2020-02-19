@@ -4,12 +4,6 @@
 	<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
   </PropertyGroup>
   <ItemGroup>
-    <None Remove="App_Config\Include\Foundation\Foundation.ORM.RegisterContainer.config" />
-    <None Remove="App_Config\Include\Foundation\Foundation.ORM.RegisterMappings.config" />
-    <None Remove="App_Config\Include\Glass\Glass.Mapper.Sc.config" />
-    <None Remove="App_Config\Include\Glass\Glass.Mapper.Sc.Start.config" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="App_Config\Include\Foundation\Foundation.ORM.RegisterContainer.config" />
     <Content Include="App_Config\Include\Foundation\Foundation.ORM.RegisterMappings.config" />
     <Content Include="App_Config\Include\Glass\Glass.Mapper.Sc.config" />

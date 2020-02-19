@@ -4,33 +4,6 @@
 	<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
   </PropertyGroup>
   <ItemGroup>
-    <None Remove="App_Config\Include\Foundation\Foundation.Serialization.Base.config" />
-    <None Remove="App_Config\Include\Foundation\Foundation.Serialization.config" />
-    <None Remove="App_Config\Include\Foundation\Foundation.Serialization.Rainbow.config" />
-    <None Remove="App_Config\Include\Rainbow.config" />
-    <None Remove="App_Config\Include\Unicorn\Unicorn.AutoPublish.config" />
-    <None Remove="App_Config\Include\Unicorn\Unicorn.config" />
-    <None Remove="App_Config\Include\Unicorn\Unicorn.Configs.Default.example" />
-    <None Remove="App_Config\Include\Unicorn\Unicorn.Configs.Default.Roles.config.example" />
-    <None Remove="App_Config\Include\Unicorn\Unicorn.Configs.Default.Users.config.example" />
-    <None Remove="App_Config\Include\Unicorn\Unicorn.Configs.Dependency.config.example" />
-    <None Remove="App_Config\Include\Unicorn\Unicorn.Configs.NewItemsOnly.example" />
-    <None Remove="App_Config\Include\Unicorn\Unicorn.CustomSerializationFolder.config.example" />
-    <None Remove="App_Config\Include\Unicorn\Unicorn.DataProvider.config" />
-    <None Remove="App_Config\Include\Unicorn\Unicorn.Dilithium.config" />
-    <None Remove="App_Config\Include\Unicorn\Unicorn.Dilithium.config.example" />
-    <None Remove="App_Config\Include\Unicorn\Unicorn.PowerShell.config" />
-    <None Remove="App_Config\Include\Unicorn\Unicorn.Remote.config.disabled" />
-    <None Remove="App_Config\Include\Unicorn\Unicorn.Roles.config" />
-    <None Remove="App_Config\Include\Unicorn\Unicorn.Roles.DataProvider.config" />
-    <None Remove="App_Config\Include\Unicorn\Unicorn.UI.config" />
-    <None Remove="App_Config\Include\Unicorn\Unicorn.UI.DeployedContentEditorWarnings.config.disabled" />
-    <None Remove="App_Config\Include\Unicorn\Unicorn.UI.IdentityServer.config" />
-    <None Remove="App_Config\Include\Unicorn\Unicorn.Users.config" />
-    <None Remove="App_Config\Include\Unicorn\Unicorn.Users.DataProvider.config" />
-    <None Remove="App_Config\Include\Unicorn\Unicorn.zSharedSecret.config.example" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="App_Config\Include\Foundation\Foundation.Serialization.Base.config" />
     <Content Include="App_Config\Include\Foundation\Foundation.Serialization.config" />
     <Content Include="App_Config\Include\Foundation\Foundation.Serialization.Rainbow.config" />
