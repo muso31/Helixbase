@@ -1,6 +1,4 @@
-﻿using System.Web;
-using Glass.Mapper.Sc;
-using Helixbase.Feature.Hero.Factories;
+﻿using Helixbase.Feature.Hero.Factories;
 using Helixbase.Feature.Hero.Services;
 using Helixbase.Feature.Hero.ViewModels;
 using Helixbase.Foundation.Core.Models;
