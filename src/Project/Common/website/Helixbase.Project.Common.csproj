@@ -1,12 +1,20 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk.web">
   <PropertyGroup>
     <TargetFramework>net48</TargetFramework>
 	<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+	<ApplicationIcon />
+	<OutputType>Library</OutputType>
+	<StartupObject />
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="App_Config\Include\Project\Project.Common.config" />
-    <Content Include="App_Config\Include\Project\Project.Common.Serialization.config" />
-    <Content Include="App_Config\Include\Project\z.Project.Common.DevSettings.config" />
+    <Content Remove="web.config" />
+    <Content Remove="web.Debug.config" />
+    <Content Remove="web.Release.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="web.config" />
+    <None Include="web.Debug.config" />
+    <None Include="web.Release.config" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform" Version="2.0.1" />

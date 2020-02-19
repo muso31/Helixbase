@@ -1,12 +1,22 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk.web">
   <PropertyGroup>
     <TargetFramework>net48</TargetFramework>
 	<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+	<ApplicationIcon />
+	<OutputType>Library</OutputType>
+	<StartupObject />
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="App_Config\Include\Project\Project.Helixbase.config" />
-    <Content Include="App_Config\Include\Project\Project.Helixbase.Serialization.config" />
-    <Content Include="App_Config\Include\Project\z.Project.Helixbase.DevSettings.config" />
+    <Content Remove="Views\Web.config" />
+    <Content Remove="Web.config" />
+    <Content Remove="Web.Debug.config" />
+    <Content Remove="Web.Release.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Views\Web.config" />
+    <None Include="Web.config" />
+    <None Include="Web.Debug.config" />
+    <None Include="Web.Release.config" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform" Version="2.0.1" />

@@ -1,13 +1,20 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk.web">
   <PropertyGroup>
     <TargetFramework>net48</TargetFramework>
 	<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+	<ApplicationIcon />
+	<OutputType>Library</OutputType>
+	<StartupObject />
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="App_Config\Include\Foundation\Foundation.ORM.RegisterContainer.config" />
-    <Content Include="App_Config\Include\Foundation\Foundation.ORM.RegisterMappings.config" />
-    <Content Include="App_Config\Include\Glass\Glass.Mapper.Sc.config" />
-    <Content Include="App_Config\Include\Glass\Glass.Mapper.Sc.Start.config" />
+    <Content Remove="Web.config" />
+    <Content Remove="Web.Debug.config" />
+    <Content Remove="Web.Release.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web.config" />
+    <None Include="Web.Debug.config" />
+    <None Include="Web.Release.config" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Glass.Mapper.Sc.93" Version="5.6.160" />
