@@ -59,7 +59,7 @@ Local publishing:
 
 CI/CD publishing:
 
-* Unicorn files are automatically included into App_Data\unicorn. The only variable that needs to be set is `$(sourceFolder)` in [z.Common.DevSettings.config](https://github.com/muso31/Helixbase/blob/master/src/Project/Common/website/App_Config/Include/Project/z.Common.DevSettings.config#L3)
+* Unicorn files are automatically included into App_Data\unicorn. The only variable that needs to be set is `$(sourceFolder)` in [z.Project.Common.DevSettings.config](https://github.com/muso31/Helixbase/blob/master/src/Project/Common/website/App_Config/Include/Project/z.Project.Common.DevSettings.config#L3)
 
 Azure DevOps:
 
