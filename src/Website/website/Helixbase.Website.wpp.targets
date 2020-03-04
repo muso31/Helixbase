@@ -14,7 +14,7 @@
     Set to false if you don't want it to publish after each build
     https://github.com/richardszalay/helix-publishing-pipeline#publishing-on-build
     -->
-    <EnableAutoPublish>true</EnableAutoPublish>
+    <EnableAutoPublish>false</EnableAutoPublish>
     
     <AutoPublish Condition="'$(AutoPublish)' == '' and '$(EnableAutoPublish)' == 'true' and '$(Configuration)' == 'Debug' and '$(BuildingInsideVisualStudio)' == 'true' and '$(PublishProfile)' != ''">true</AutoPublish>
 
