@@ -26,8 +26,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Web.config" />
-    <None Include="Web.Debug.config" />
-    <None Include="Web.Release.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Glass.Mapper.Sc.93" Version="5.6.160" />
