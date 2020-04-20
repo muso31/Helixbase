@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.web">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net48</TargetFramework>
     <LangVersion>8.0</LangVersion>
@@ -12,6 +12,18 @@
     <Content Remove="Web.config" />
     <Content Remove="Web.Debug.config" />
     <Content Remove="Web.Release.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="App_Config\Include\Project\Project.Helixbase.config" />
+    <None Remove="App_Config\Include\Project\Project.Helixbase.Serialization.config" />
+    <None Remove="App_Config\Include\Project\z.Project.Helixbase.DevSettings.config" />
+    <None Remove="Views\Layouts\Helixbase\Default.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Config\Include\Project\Project.Helixbase.config" />
+    <Content Include="App_Config\Include\Project\Project.Helixbase.Serialization.config" />
+    <Content Include="App_Config\Include\Project\z.Project.Helixbase.DevSettings.config" />
+    <Content Include="Views\Layouts\Helixbase\Default.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Views\Web.config" />

@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.web">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net48</TargetFramework>
     <LangVersion>8.0</LangVersion>
@@ -11,6 +11,40 @@
     <Content Remove="Web.config" />
     <Content Remove="Web.Debug.config" />
     <Content Remove="Web.Release.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="App_Config\Include\Foundation\Foundation.Serialization.Base.config" />
+    <None Remove="App_Config\Include\Foundation\Foundation.Serialization.config" />
+    <None Remove="App_Config\Include\Foundation\Foundation.Serialization.Rainbow.config" />
+    <None Remove="App_Config\Include\Rainbow.config" />
+    <None Remove="App_Config\Include\Unicorn\Unicorn.AutoPublish.config" />
+    <None Remove="App_Config\Include\Unicorn\Unicorn.config" />
+    <None Remove="App_Config\Include\Unicorn\Unicorn.DataProvider.config" />
+    <None Remove="App_Config\Include\Unicorn\Unicorn.Dilithium.config" />
+    <None Remove="App_Config\Include\Unicorn\Unicorn.PowerShell.config" />
+    <None Remove="App_Config\Include\Unicorn\Unicorn.Roles.config" />
+    <None Remove="App_Config\Include\Unicorn\Unicorn.Roles.DataProvider.config" />
+    <None Remove="App_Config\Include\Unicorn\Unicorn.UI.config" />
+    <None Remove="App_Config\Include\Unicorn\Unicorn.UI.IdentityServer.config" />
+    <None Remove="App_Config\Include\Unicorn\Unicorn.Users.config" />
+    <None Remove="App_Config\Include\Unicorn\Unicorn.Users.DataProvider.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Config\Include\Foundation\Foundation.Serialization.Base.config" />
+    <Content Include="App_Config\Include\Foundation\Foundation.Serialization.config" />
+    <Content Include="App_Config\Include\Foundation\Foundation.Serialization.Rainbow.config" />
+    <Content Include="App_Config\Include\Rainbow.config" />
+    <Content Include="App_Config\Include\Unicorn\Unicorn.AutoPublish.config" />
+    <Content Include="App_Config\Include\Unicorn\Unicorn.config" />
+    <Content Include="App_Config\Include\Unicorn\Unicorn.DataProvider.config" />
+    <Content Include="App_Config\Include\Unicorn\Unicorn.Dilithium.config" />
+    <Content Include="App_Config\Include\Unicorn\Unicorn.PowerShell.config" />
+    <Content Include="App_Config\Include\Unicorn\Unicorn.Roles.config" />
+    <Content Include="App_Config\Include\Unicorn\Unicorn.Roles.DataProvider.config" />
+    <Content Include="App_Config\Include\Unicorn\Unicorn.UI.config" />
+    <Content Include="App_Config\Include\Unicorn\Unicorn.UI.IdentityServer.config" />
+    <Content Include="App_Config\Include\Unicorn\Unicorn.Users.config" />
+    <Content Include="App_Config\Include\Unicorn\Unicorn.Users.DataProvider.config" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Web.config" />

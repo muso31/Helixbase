@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.web">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net48</TargetFramework>
     <LangVersion>8.0</LangVersion>
@@ -11,6 +11,16 @@
     <Content Remove="web.config" />
     <Content Remove="web.Debug.config" />
     <Content Remove="web.Release.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="App_Config\Include\Project\Project.Common.config" />
+    <None Remove="App_Config\Include\Project\Project.Common.Serialization.config" />
+    <None Remove="App_Config\Include\Project\z.Project.Common.DevSettings.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Config\Include\Project\Project.Common.config" />
+    <Content Include="App_Config\Include\Project\Project.Common.Serialization.config" />
+    <Content Include="App_Config\Include\Project\z.Project.Common.DevSettings.config" />
   </ItemGroup>
   <ItemGroup>
     <None Include="web.config" />
