@@ -6,16 +6,16 @@ jobs:
 
     #NuGet restore
     steps:
-    - uses: actions/checkout@master
+  #  - uses: actions/checkout@master
 
-    - name: Setup Nuget.exe
-      uses: warrenbuckley/Setup-Nuget@v1
+ #   - name: Setup Nuget.exe
+ #     uses: warrenbuckley/Setup-Nuget@v1
     
-    - name: restore package
-      run: dotnet restore Helixbase.sln
+  #  - name: restore package
+  #    run: dotnet restore Helixbase.sln
 
-    - name: Nuget Restore
-      run: nuget restore Helixbase.sln
+#    - name: Nuget Restore
+ #     run: nuget restore Helixbase.sln
       
       #MSBUILD
     - uses: actions/checkout@master
