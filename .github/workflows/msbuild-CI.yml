@@ -12,7 +12,7 @@ jobs:
       uses: warrenbuckley/Setup-Nuget@v1
 
     - name: Nuget Restore
-      run: nuget restore
+      run: nuget restore Helixbase.sln
       
       #MSBUILD
     - uses: actions/checkout@master
