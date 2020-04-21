@@ -10,6 +10,9 @@ jobs:
 
     - name: Setup Nuget.exe
       uses: warrenbuckley/Setup-Nuget@v1
+    
+    - name: restore package
+      run: dotnet restore Helixbase.sln
 
     - name: Nuget Restore
       run: nuget restore Helixbase.sln
