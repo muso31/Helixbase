@@ -4,7 +4,17 @@ jobs:
   build:
     runs-on: windows-latest
 
+    #NuGet restore
     steps:
+    - uses: actions/checkout@master
+
+    - name: Setup Nuget.exe
+      uses: warrenbuckley/Setup-Nuget@v1
+
+    - name: Nuget Restore
+      run: nuget restore Helixbase.sln
+      
+      #MSBUILD
     - uses: actions/checkout@master
 
     - name: Setup MSBuild.exe
