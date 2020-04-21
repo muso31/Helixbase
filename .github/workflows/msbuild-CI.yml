@@ -17,8 +17,8 @@ jobs:
       #MSBUILD
     - uses: actions/checkout@master
 
-    - name: Setup MSBuild.exe
-      uses: warrenbuckley/Setup-MSBuild@v1
+    - name: Add msbuild to PATH
+      uses: microsoft/setup-msbuild@v1.0.0
 
     - name: MSBuild
      #working-directory: src
