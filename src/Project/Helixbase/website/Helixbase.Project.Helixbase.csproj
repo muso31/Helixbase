@@ -1,4 +1,6 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+﻿<!-- https://github.com/RazorGenerator/RazorGenerator/issues/211-->
+<!--System.Web.Mvc this line only exists so that razorgenerator picks this up as an mvc project -->
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net48</TargetFramework>
     <LangVersion>8.0</LangVersion>
