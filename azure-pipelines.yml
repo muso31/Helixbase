@@ -2,7 +2,7 @@ resources:
 - repo: self
 
 pool:
-  name: Azure Pipelines
+  vmImage: 'windows-latest'
   demands:
   - msbuild
   - visualstudio
