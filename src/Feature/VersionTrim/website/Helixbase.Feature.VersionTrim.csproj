@@ -1,10 +1,11 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net48</TargetFramework>
-	<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
 	<ApplicationIcon />
 	<OutputType>Library</OutputType>
 	<StartupObject />
+	<Authors>Neil Shack</Authors>
+	<Company>Ehisys Ltd</Company>
   </PropertyGroup>
   <ItemGroup>
     <Content Remove="Web.config" />
