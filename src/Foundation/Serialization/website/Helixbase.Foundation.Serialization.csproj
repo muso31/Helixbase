@@ -57,10 +57,6 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform" Version="2.0.1" />
-    <PackageReference Include="Microsoft.Net.Compilers" Version="3.3.1">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
     <PackageReference Include="Unicorn" Version="4.1.1" />
     <PackageReference Include="Unicorn.Roles" Version="4.1.1" />
     <PackageReference Include="Unicorn.Users" Version="4.1.1" />
