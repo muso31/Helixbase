@@ -2,14 +2,14 @@ resources:
 - repo: self
 
 pool:
-  name: Hosted VS2017
+  name: Hosted VS2019
   demands:
   - msbuild
   - visualstudio
 
 steps:
 - task: NuGetToolInstaller@0
-  displayName: 'Use NuGet 4.9.x'
+  displayName: 'Install NuGet'
   #inputs:
     #versionSpec: 4.9.x
     #checkLatest: false # Optional
