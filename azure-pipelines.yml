@@ -11,7 +11,8 @@ steps:
 - task: NuGetToolInstaller@0
   displayName: 'Use NuGet 4.9.x'
   inputs:
-    versionSpec: 4.9.x
+    #versionSpec: 4.9.x
+    #checkLatest: false # Optional
 
 - task: NuGetCommand@2
   displayName: 'NuGet restore'
