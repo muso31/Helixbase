@@ -3,7 +3,7 @@
 
   <PropertyGroup>
     <PublishProfile>Local</PublishProfile>
-    <LangVersion>8.0</LangVersion>
+    <LangVersion>latestMajor</LangVersion>
   </PropertyGroup>
 
   <!-- As long as your modules follow these patterns, their content will automatically be included in the publish -->
