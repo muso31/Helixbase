@@ -10,7 +10,7 @@ pool:
 steps:
 - task: NuGetToolInstaller@0
   displayName: 'Use NuGet 4.9.x'
-  inputs:
+  #inputs:
     #versionSpec: 4.9.x
     #checkLatest: false # Optional
 
