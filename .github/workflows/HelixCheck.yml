@@ -1,0 +1,34 @@
+name: Helix Check on 9.2 branch
+
+# Controls when the action will run. HelixCheck workflow will run on push
+# events but only for the feature 9.2 branch 
+on:
+  push:
+    branches: [ feature/9.2.0 ]
+
+# Set up the HelixCheck job
+jobs:
+  check_job:
+    name: Helix check
+    runs-on: ubuntu-latest
+
+# Check out the repo
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+# Configure the Helix Check step
+      - name: Helix Check
+        uses: ethisysltd/helix-check@v1.0
+        id: check
+        with:
+          solution-file: 'Helixbase.sln' # Set the name of your solution file here
+          project-name: 'Helixbase' # Add the project name here. Helix Base naming is Helixbase.Feature.Hero for example so the project name is 'Helixbase'
+          website-folder: 'website' # Older versions of Helix will use 'code' here, newer is 'website'
+      
+      # Output the HelixCheck results
+      - name: Get the check result
+        run: echo "Check result - ${{ steps.check.outputs.result }}"
+      
+      - name: Get the output time
+        run: echo "The time was - ${{ steps.check.outputs.time }}"
