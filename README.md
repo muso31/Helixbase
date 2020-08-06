@@ -1,7 +1,7 @@
 <img src="https://nshackblog.files.wordpress.com/2017/02/helixbase1.png" height="154px" width="200px" /><br />
 A Sitecore Helix based solution which can be used for Greenfield projects. Tackles some common problems when working with the platform.
 
-<img src="https://nshack31.visualstudio.com/Helix Base/_apis/build/status/Helix%20Base%20CI?branchName=master"/>
+<img src="https://nshack31.visualstudio.com/Helix Base/_apis/build/status/Helix%20Base%20CI?branchName=master"/> ![ASP.NET CI](https://github.com/muso31/Helixbase/workflows/ASP.NET%20CI/badge.svg)
 
 #### Features include:
 
@@ -25,7 +25,7 @@ A Sitecore Helix based solution which can be used for Greenfield projects. Tackl
 
 1. Install [Sitecore Experience Platform 9.3 Initial Release](https://dev.sitecore.net/Downloads/Sitecore_Experience_Platform/93/Sitecore_Experience_Platform_93_Initial_Release.aspx)
 2. Clone project to 'C:\Projects\Helixbase'
-	1. _If you use another path, update the [z.Common.DevSettings.config](https://github.com/muso31/Helixbase/blob/master/src/Project/Common/website/App_Config/Include/Project/z.Common.DevSettings.config#L3)_
+	1. _If you use another path, update the [z.Project.Common.DevSettings.config](https://github.com/muso31/Helixbase/blob/master/src/Project/Common/website/App_Config/Include/Project/z.Project.Common.DevSettings.config#L3)_
 3. Update the 'publishUrl' property in [Local.pubxml](https://github.com/muso31/Helixbase/blob/master/src/Website/website/Properties/PublishProfiles/Local.pubxml#L12) to the target IIS folder
 4. Build the project from inside Visual Studio (which triggers HPP [auto publish](https://github.com/muso31/Helixbase/blob/master/src/Website/website/Helixbase.Website.wpp.targets#L17)), or use the 'Local' publish profile in the Helixbase.Website project
 5. Run Unicorn and sync all configurations
@@ -59,7 +59,7 @@ Local publishing:
 
 CI/CD publishing:
 
-* Unicorn files are automatically included into App_Data\unicorn. The only variable that needs to be set is `$(sourceFolder)` in [z.Common.DevSettings.config](https://github.com/muso31/Helixbase/blob/master/src/Project/Common/website/App_Config/Include/Project/z.Common.DevSettings.config#L3)
+* Unicorn files are automatically included into App_Data\unicorn. The only variable that needs to be set is `$(sourceFolder)` in [z.Project.Common.DevSettings.config](https://github.com/muso31/Helixbase/blob/master/src/Project/Common/website/App_Config/Include/Project/z.Project.Common.DevSettings.config#L3)
 
 Azure DevOps:
 
