@@ -22,7 +22,7 @@ A Sitecore Helix based solution which can be used for Greenfield projects. Tackl
 * [_Show Title When Blank_](https://jammykam.wordpress.com/2017/09/20/show-title-when-blank/) patch, the forgotten Sitecore feature!
 
 ## Setup Instructions
-*Helix Base uses the new csproj sdk format which can cause issues with intellisense, if you would like to use the older format please see the [9.3 feature branch](https://github.com/muso31/Helixbase/tree/feature/9.3.0-old-csproj)
+*Helix Base uses the new csproj sdk format which can cause issues with intellisense, if you would like to use the older format please see the [9.3 feature branch](https://github.com/muso31/Helixbase/tree/feature/9.3.0-old-csproj)  
 *Please Install Visual Studio 2017 Version 15.7 or higher as this project uses PackageReference
 
 1. Install [Sitecore Experience Platform 9.3 Initial Release](https://dev.sitecore.net/Downloads/Sitecore_Experience_Platform/93/Sitecore_Experience_Platform_93_Initial_Release.aspx)
