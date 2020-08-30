@@ -1,0 +1,404 @@
+sep=,
+Filename,Version,FileVersion,InfoVersion
+Antlr3.Runtime.dll,3.4.1.9004,3.4.1.9004,3.4.1.9004
+ChilkatDotNet47.dll,9.5.0.73,9.5.0.73,9.5.0.73
+CommonServiceLocator.dll,2.0.3.0,2.0.3.0,2.0.3
+CommonServiceLocator.SolrNet.dll,1.0.19.0,1.0.19.0,1.0.19
+ComponentArt.Web.UI.dll,2010.1.2637.35,2010.1.2637.35,2010.1.2637.35
+DnsClient.dll,1.0.7.0,1.0.7.0,1.0.7
+DocumentFormat.OpenXml.dll,2.7.2.0,2.7.2.0,2.7.2
+EcmaScript.NET.dll,1.0.1.0,1.0.1.0,1.0.1.0
+FiftyOne.Foundation.dll,3.2.17.2,3.2.17.2,3.2.17.2
+HtmlAgilityPack.dll,1.4.9.5,1.4.9.5,1.4.9.5
+ICSharpCode.SharpZipLib.dll,0.86.0.518,0.86.0.518,0.86.0
+IdentityModel.dll,3.7.0.0,3.7.0.0,3.7.0
+Lucene.Net.dll,3.0.3.0,3.0.3.0,3.0.3
+MarkdownSharp.dll,1.14.5.0,1.14.5.0,1.14.5.0
+Microsoft.AspNet.Identity.Core.dll,2.0.0.0,2.2.1.40403.0,2.2.1.40403.0
+Microsoft.AspNet.Identity.Owin.dll,2.0.0.0,2.2.1.40403.0,2.2.1.40403.0
+Microsoft.AspNet.OData.dll,7.0.0.20629,7.0.0.20629,7.0.0.20629
+Microsoft.AspNet.WebApi.Extensions.Compression.Server.dll,2.0.0.0,2.0.3,2.0.3
+Microsoft.AspNetCore.Hosting.Abstractions.dll,2.1.1.0,2.1.1.18157,2.1.1-rtm-30846
+Microsoft.AspNetCore.Hosting.Server.Abstractions.dll,2.1.1.0,2.1.1.18157,2.1.1-rtm-30846
+Microsoft.AspNetCore.Http.Abstractions.dll,2.1.1.0,2.1.1.18157,2.1.1-rtm-30846
+Microsoft.AspNetCore.Http.Features.dll,2.1.1.0,2.1.1.18157,2.1.1-rtm-30846
+Microsoft.Azure.Amqp.dll,2.3.0.0,2.2.0.0,2.3.7
+Microsoft.Azure.ServiceBus.dll,3.2.1.0,3.2.1.0,3.2.1+d70d83ec165142761433e023ab8fa9e06b8fa143
+Microsoft.Azure.Services.AppAuthentication.dll,1.0.1.0,1.0.1.0,1.0.1.0
+Microsoft.Configuration.ConfigurationBuilders.Base.dll,1.0.0.0,1.0.30709.0,1.0.2-30709
+Microsoft.Configuration.ConfigurationBuilders.Environment.dll,1.0.0.0,1.0.30709.0,1.0.2-30709
+Microsoft.DotNet.PlatformAbstractions.dll,2.1.0.0,2.1.0,2.1.0 @BuiltBy: dlab-DDVSOWINAGE024 @Branch: release/2.1 @SrcCode: https://github.com/dotnet/core-setup/tree/caa7b7e2bad98e56a687fb5cbaf60825500800f7
+Microsoft.Extensions.Caching.Abstractions.dll,2.1.2.0,2.1.2.18207,2.1.2-rtm-30932
+Microsoft.Extensions.Caching.Memory.dll,2.1.2.0,2.1.2.18207,2.1.2-rtm-30932
+Microsoft.Extensions.Configuration.Abstractions.dll,2.1.1.0,2.1.1.18157,2.1.1-rtm-30846
+Microsoft.Extensions.Configuration.Binder.dll,2.1.1.0,2.1.1.18157,2.1.1-rtm-30846
+Microsoft.Extensions.Configuration.CommandLine.dll,2.1.1.0,2.1.1.18157,2.1.1-rtm-30846
+Microsoft.Extensions.Configuration.dll,2.1.1.0,2.1.1.18157,2.1.1-rtm-30846
+Microsoft.Extensions.Configuration.EnvironmentVariables.dll,2.1.1.0,2.1.1.18157,2.1.1-rtm-30846
+Microsoft.Extensions.Configuration.FileExtensions.dll,2.1.1.0,2.1.1.18157,2.1.1-rtm-30846
+Microsoft.Extensions.Configuration.Ini.dll,2.1.1.0,2.1.1.18157,2.1.1-rtm-30846
+Microsoft.Extensions.Configuration.Json.dll,2.1.1.0,2.1.1.18157,2.1.1-rtm-30846
+Microsoft.Extensions.Configuration.Xml.dll,2.1.1.0,2.1.1.18157,2.1.1-rtm-30846
+Microsoft.Extensions.DependencyInjection.Abstractions.dll,2.1.1.0,2.1.1.18157,2.1.1-rtm-30846
+Microsoft.Extensions.DependencyInjection.dll,2.1.1.0,2.1.1.18157,2.1.1-rtm-30846
+Microsoft.Extensions.DependencyModel.dll,2.1.0.0,2.1.0,2.1.0 @BuiltBy: dlab-DDVSOWINAGE024 @Branch: release/2.1 @SrcCode: https://github.com/dotnet/core-setup/tree/caa7b7e2bad98e56a687fb5cbaf60825500800f7
+Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions.dll,2.2.0.0,2.2.0.18316,2.2.0-rtm-35687
+Microsoft.Extensions.FileProviders.Abstractions.dll,2.1.1.0,2.1.1.18157,2.1.1-rtm-30846
+Microsoft.Extensions.FileProviders.Physical.dll,2.1.1.0,2.1.1.18157,2.1.1-rtm-30846
+Microsoft.Extensions.FileSystemGlobbing.dll,2.1.1.0,2.1.1.18157,2.1.1-rtm-30846
+Microsoft.Extensions.Hosting.Abstractions.dll,2.1.1.0,2.1.1.18157,2.1.1-rtm-30846
+Microsoft.Extensions.Logging.Abstractions.dll,2.1.1.0,2.1.1.18157,2.1.1-rtm-30846
+Microsoft.Extensions.Logging.dll,2.1.1.0,2.1.1.18157,2.1.1-rtm-30846
+Microsoft.Extensions.Options.dll,2.1.1.0,2.1.1.18157,2.1.1-rtm-30846
+Microsoft.Extensions.Primitives.dll,2.1.1.0,2.1.1.18157,2.1.1-rtm-30846
+Microsoft.IdentityModel.Clients.ActiveDirectory.dll,3.19.3.10102,3.19.50411.1851,c85b06e61e0bc97627b0aea38d79f59be41b69c6
+Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.dll,3.19.3.10102,3.19.50411.1851,c85b06e61e0bc97627b0aea38d79f59be41b69c6
+Microsoft.IdentityModel.JsonWebTokens.dll,5.3.0.0,5.3.0.51005,5.3.0.51005192532.4cbe149003954f9ca8df2cac3845e35d8ee5f386
+Microsoft.IdentityModel.Logging.dll,5.3.0.0,5.3.0.51005,5.3.0.51005192532.4cbe149003954f9ca8df2cac3845e35d8ee5f386
+Microsoft.IdentityModel.Protocols.dll,5.3.0.0,5.3.0.51005,5.3.0.51005192532.4cbe149003954f9ca8df2cac3845e35d8ee5f386
+Microsoft.IdentityModel.Protocols.OpenIdConnect.dll,5.3.0.0,5.3.0.51005,5.3.0.51005192532.4cbe149003954f9ca8df2cac3845e35d8ee5f386
+Microsoft.IdentityModel.Protocols.WsFederation.dll,5.3.0.0,5.3.0.51005,5.3.0.51005192532.4cbe149003954f9ca8df2cac3845e35d8ee5f386
+Microsoft.IdentityModel.Tokens.dll,5.3.0.0,5.3.0.51005,5.3.0.51005192532.4cbe149003954f9ca8df2cac3845e35d8ee5f386
+Microsoft.IdentityModel.Tokens.Saml.dll,5.3.0.0,5.3.0.51005,5.3.0.51005192532.4cbe149003954f9ca8df2cac3845e35d8ee5f386
+Microsoft.IdentityModel.Xml.dll,5.3.0.0,5.3.0.51005,5.3.0.51005192532.4cbe149003954f9ca8df2cac3845e35d8ee5f386
+Microsoft.OData.Core.dll,7.5.0.20627,7.5.0.20627,7.5.0.20627
+Microsoft.OData.Edm.dll,7.5.0.20627,7.5.0.20627,7.5.0.20627
+Microsoft.Owin.dll,4.1.0.0,4.1.81112.127,4.1.0
+Microsoft.Owin.Host.SystemWeb.dll,4.1.0.0,4.1.81112.127,4.1.0
+Microsoft.Owin.Security.ActiveDirectory.dll,4.1.0.0,4.1.81112.127,4.1.0
+Microsoft.Owin.Security.Cookies.dll,4.1.0.0,4.1.81112.127,4.1.0
+Microsoft.Owin.Security.dll,4.1.0.0,4.1.81112.127,4.1.0
+Microsoft.Owin.Security.Jwt.dll,4.1.0.0,4.1.81112.127,4.1.0
+Microsoft.Owin.Security.OAuth.dll,4.1.0.0,4.1.81112.127,4.1.0
+Microsoft.Owin.Security.OpenIdConnect.dll,4.1.0.0,4.1.81112.127,4.1.0
+Microsoft.Practices.EnterpriseLibrary.Common.dll,6.0.0.0,6.0.1304.0,6.0.1304.0
+Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.Caching.dll,6.0.0.0,6.0.1304.0,6.0.1304.0
+Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.Configuration.dll,6.0.0.0,6.0.1304.0,6.0.1304.0
+Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.Data.dll,6.0.0.0,6.0.1304.1,6.0.1304.1
+Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.dll,6.0.0.0,6.0.1304.0,6.0.1304.0
+Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.ServiceBus.dll,6.0.0.0,6.0.1304.0,6.0.1304.0
+Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.WindowsAzure.Storage.dll,6.0.0.0,6.0.1304.0,6.0.1304.0
+Microsoft.Spatial.dll,7.5.0.20627,7.5.0.20627,7.5.0.20627
+Microsoft.Web.Infrastructure.dll,1.0.0.0,1.0.20105.407,1.0.20105.407
+MongoDB.Bson.dll,2.7.3.0,2.7.3.0,2.7.3+Branch.v2.7.x.Sha.2f1f2be13a23b8520cb9c2ee8439c022f9a03efe
+MongoDB.Driver.Core.dll,2.7.3.0,2.7.3.0,2.7.3+Branch.v2.7.x.Sha.2f1f2be13a23b8520cb9c2ee8439c022f9a03efe
+MongoDB.Driver.dll,2.7.3.0,2.7.3.0,2.7.3+Branch.v2.7.x.Sha.2f1f2be13a23b8520cb9c2ee8439c022f9a03efe
+MongoDB.Driver.Legacy.dll,2.7.3.0,2.7.3.0,2.7.3+Branch.v2.7.x.Sha.2f1f2be13a23b8520cb9c2ee8439c022f9a03efe
+Mvp.Xml.dll,2.3.0.0,2.3.0.0,2.3.0.0
+Newtonsoft.Json.dll,11.0.0.0,11.0.2.21924,11.0.2
+Owin.dll,1.0.0.0,1.0,1.0
+PdfSharp.Charting.dll,1.50.4740.0,1.50.4740.0,1.50.4740.0
+PdfSharp.Charting.resources.dll,1.50.4740.0,1.50.4740.0,1.50.4740.0
+PdfSharp.dll,1.50.4740.0,1.50.4740.0,1.50.4740.0
+PdfSharp.resources.dll,1.50.4740.0,1.50.4740.0,1.50.4740.0
+Pipelines.Sockets.Unofficial.dll,1.0.0.0,1.0.7.56431,1.0.7+g6fdcdc49c8
+Polly.dll,6.0.0.0,6.0.1.0,6.0.1.0
+protobuf-net.dll,2.0.0.668,2.0.0.668,2.0.0.668
+RazorGenerator.Mvc.dll,2.0.0.0,2.0.0.0,2.4.9
+Rebus.AzureServiceBus.dll,6.0.7.0,6.0.7.0,6.0.7.0
+Rebus.dll,5.0.1.0,5.0.1.0,5.0.1+5fe080a327e8afc516e569ae087ee8bb261a4e04
+Rebus.SqlServer.dll,5.0.3.0,5.0.3.0,5.0.3.0
+Remotion.Linq.dll,2.2.0.0,2.2.0.30000,2.2.0+Release.Commit-9be8fec0618f02a0e66edb058c390c8fa40d92a7
+Sitecore.Analytics.Aggregation.dll,15.0.0.0,15.0.0.0,15.0.0-r00506.4419
+Sitecore.Analytics.Core.dll,15.0.0.0,15.0.0.0,15.0.0-r00506.4419
+Sitecore.Analytics.DataAccess.dll,15.0.0.0,15.0.0.0,15.0.0-r00312.5525
+Sitecore.Analytics.dll,15.0.0.0,15.0.0.0,15.0.0-r00312.5525
+Sitecore.Analytics.Model.dll,15.0.0.0,15.0.0.0,15.0.0-r00506.4419
+Sitecore.Analytics.OmniChannel.dll,15.0.0.0,15.0.0.0,15.0.0-r00312.5525
+Sitecore.Analytics.Processing.dll,15.0.0.0,15.0.0.0,15.0.0-r00506.4419
+Sitecore.Analytics.RobotDetection.dll,15.0.0.0,15.0.0.0,15.0.0-r00089.1269
+Sitecore.Analytics.Sql.dll,15.0.0.0,15.0.0.0,15.0.0-r00506.4419
+Sitecore.Analytics.XConnect.dll,15.0.0.0,15.0.0.0,15.0.0-r00312.5525
+Sitecore.Annotations.dll,1.0.0.0,1.0.0.0,1.0.0-r00023
+Sitecore.Buckets.Client.dll,7.0.0.0,7.0.0.0,7.0.0-r00149.1726
+Sitecore.Buckets.dll,7.0.0.0,7.0.0.0,7.0.0-r00149.1726
+Sitecore.CES.DeviceDetection.dll,6.0.0.0,6.0.0.0,6.0.0-r00147.1896
+Sitecore.CES.DeviceDetection.Rules.dll,6.0.0.0,6.0.0.0,6.0.0-r00147.1896
+Sitecore.CES.dll,6.0.0.0,6.0.0.0,6.0.0-r00099.1316
+Sitecore.CES.GeoIp.Core.dll,6.0.0.0,6.0.0.0,6.0.0-r00202.1620
+Sitecore.CES.GeoIp.dll,6.0.0.0,6.0.0.0,6.0.0-r00202.1620
+Sitecore.CES.GeoIp.IpFiltering.dll,5.1.0.0,5.1.0.0,5.1.0-r00036.685
+Sitecore.Cintel.Client.dll,7.0.0.0,7.0.0.0,7.0.0-r00269.2399
+Sitecore.Cintel.dll,7.0.0.0,7.0.0.0,7.0.0-r00269.2399
+Sitecore.Client.dll,15.0.0.0,15.0.0.0,15.0.0-r01054.8426
+Sitecore.Client.LicenseOptions.dll,6.0.0.0,6.0.0.0,6.0.0-r00091.975
+Sitecore.Cloud.Nexus.dll,4.0.0.0,4.0.0.00008,4.0.0-r00008
+Sitecore.Content.Services.dll,6.0.0.0,6.0.0.0,6.0.0-r00596.3105
+Sitecore.ContentSearch.Azure.dll,7.0.0.0,7.0.0.0,7.0.0-r00384.3621
+Sitecore.ContentSearch.Client.dll,7.0.0.0,7.0.0.0,7.0.0-r00406.4394
+Sitecore.ContentSearch.ContentExtraction.dll,7.0.0.0,7.0.0.0,7.0.0-r00406.4394
+Sitecore.ContentSearch.Data.dll,7.0.0.0,7.0.0.0,7.0.0-r00406.4394
+Sitecore.ContentSearch.dll,7.0.0.0,7.0.0.0,7.0.0-r00406.4394
+Sitecore.ContentSearch.Linq.dll,7.0.0.0,7.0.0.0,7.0.0-r00406.4394
+Sitecore.ContentSearch.Linq.Solr.dll,7.0.0.0,7.0.0.0,7.0.0-r00406.4394
+Sitecore.ContentSearch.SolrNetExtension.dll,7.0.0.0,7.0.0.0,7.0.0-r00406.4394
+Sitecore.ContentSearch.SolrProvider.dll,7.0.0.0,7.0.0.0,7.0.0-r00406.4394
+Sitecore.ContentTagging.Core.dll,4.0.0.0,4.0.0.0,4.0.0-r00142.1722
+Sitecore.ContentTagging.dll,4.0.0.0,4.0.0.0,4.0.0-r00142.1722
+Sitecore.ContentTagging.OpenCalais.dll,4.0.0.0,4.0.0.0,4.0.0-r00142.1722
+Sitecore.ContentTesting.dll,16.0.0.0,16.0.0.0,16.0.0-r02761.8982
+Sitecore.ContentTesting.Intelligence.dll,16.0.0.0,16.0.0.0,16.0.0-r02761.8982
+Sitecore.ContentTesting.Model.dll,16.0.0.0,16.0.0.0,16.0.0-r02761.8982
+Sitecore.ContentTesting.Model.xConnect.dll,16.0.0.0,16.0.0.0,16.0.0-r02761.8982
+Sitecore.ContentTesting.Mvc.dll,16.0.0.0,16.0.0.0,16.0.0-r02761.8982
+Sitecore.ContentTesting.Reporting.Model.dll,16.0.0.0,16.0.0.0,16.0.0-r02761.8982
+Sitecore.ControlPanel.dll,6.0.0.0,6.0.0.0,6.0.0-r00091.975
+Sitecore.EDS.Client.dll,10.0.0.0,10.0.0.0,10.0.0-r02206.9095
+Sitecore.EDS.Core.dll,10.0.0.0,10.0.0.0,10.0.0-r02206.9095
+Sitecore.EDS.Providers.CustomSMTP.dll,10.0.0.0,10.0.0.0,10.0.0-r02206.9095
+Sitecore.EDS.Providers.SparkPost.dll,10.0.0.0,10.0.0.0,10.0.0-r02206.9095
+Sitecore.EDS.SparkPost.ClientServices.dll,10.0.0.0,10.0.0.0,10.0.0-r02206.9095
+Sitecore.EmailCampaign.Activities.dll,10.0.0.0,10.0.0.0,10.0.0-r02206.9095
+Sitecore.EmailCampaign.Application.dll,10.0.0.0,10.0.0.0,10.0.0-r02206.9095
+Sitecore.EmailCampaign.Cd.dll,10.0.0.0,10.0.0.0,10.0.0-r02206.9095
+Sitecore.EmailCampaign.Cm.dll,10.0.0.0,10.0.0.0,10.0.0-r02206.9095
+Sitecore.EmailCampaign.Cm.UI.dll,10.0.0.0,10.0.0.0,10.0.0-r02206.9095
+Sitecore.EmailCampaign.Core.dll,10.0.0.0,10.0.0.0,10.0.0-r02206.9095
+Sitecore.EmailCampaign.dll,10.0.0.0,10.0.0.0,10.0.0-r02206.9095
+Sitecore.EmailCampaign.ExperienceAnalytics.dll,10.0.0.0,10.0.0.0,10.0.0-r02206.9095
+Sitecore.EmailCampaign.Model.dll,10.0.0.0,10.0.0.0,10.0.0-r02206.9095
+Sitecore.EmailCampaign.Model.Web.dll,10.0.0.0,10.0.0.0,10.0.0-r02206.9095
+Sitecore.EmailCampaign.SampleNewsletter.dll,10.0.0.0,10.0.0.0,10.0.0-r02206.9095
+Sitecore.EmailCampaign.Server.dll,10.0.0.0,10.0.0.0,10.0.0-r02206.9095
+Sitecore.EmailCampaign.Templates.dll,10.0.0.0,10.0.0.0,10.0.0-r02206.9095
+Sitecore.EmailCampaign.XConnect.dll,10.0.0.0,10.0.0.0,10.0.0-r02206.9095
+Sitecore.EmailCampaign.XConnect.Web.dll,10.0.0.0,10.0.0.0,10.0.0-r02206.9095
+Sitecore.ExM.Framework.dll,10.0.0.0,10.0.0.0,10.0.0-r02206.9095
+Sitecore.ExperienceAnalytics.Aggregation.dll,7.0.0.0,7.0.0.0,7.0.0-r01294.5705
+Sitecore.ExperienceAnalytics.Api.dll,7.0.0.0,7.0.0.0,7.0.0-r01294.5705
+Sitecore.ExperienceAnalytics.Client.dll,7.0.0.0,7.0.0.0,7.0.0-r01294.5705
+Sitecore.ExperienceAnalytics.Core.dll,7.0.0.0,7.0.0.0,7.0.0-r01294.5705
+Sitecore.ExperienceAnalytics.ReAggregation.dll,7.0.0.0,7.0.0.0,7.0.0-r01294.5705
+Sitecore.ExperienceAnalytics.Reduce.dll,7.0.0.0,7.0.0.0,7.0.0-r01294.5705
+Sitecore.ExperienceContentManagement.Administration.dll,6.0.0.0,6.0.0.0,6.0.0-r00288.1511
+Sitecore.ExperienceEditor.dll,8.0.0.0,8.0.0.0,8.0.0-r01159.5149
+Sitecore.ExperienceEditor.Speak.dll,8.0.0.0,8.0.0.0,8.0.0-r01159.5149
+Sitecore.ExperienceEditor.Speak.Ribbon.dll,8.0.0.0,8.0.0.0,8.0.0-r01159.5149
+Sitecore.ExperienceExplorer.Analytics.dll,7.0.0.0,7.0.0.0,7.0.0-r00342.2806
+Sitecore.ExperienceExplorer.Core.dll,7.0.0.0,7.0.0.0,7.0.0-r00342.2806
+Sitecore.ExperienceExplorer.dll,7.0.0.0,7.0.0.0,7.0.0-r00342.2806
+Sitecore.ExperienceExplorer.Web.dll,7.0.0.0,7.0.0.0,7.0.0-r00342.2806
+Sitecore.ExperienceForms.Analytics.dll,5.0.0.0,5.0.0.0,5.0.0-r00506.3687
+Sitecore.ExperienceForms.Client.dll,5.0.0.0,5.0.0.0,5.0.0-r00506.3687
+Sitecore.ExperienceForms.Data.SqlServer.dll,5.0.0.0,5.0.0.0,5.0.0-r00506.3687
+Sitecore.ExperienceForms.dll,5.0.0.0,5.0.0.0,5.0.0-r00506.3687
+Sitecore.ExperienceForms.Mvc.dll,5.0.0.0,5.0.0.0,5.0.0-r00506.3687
+Sitecore.ExperienceForms.SubmitActions.dll,5.0.0.0,5.0.0.0,5.0.0-r00506.3687
+Sitecore.Framework.Common.Abstractions.dll,4.0.0.0,4.0.0.0,4.0.0
+Sitecore.Framework.Common.dll,4.0.0.0,4.0.0.0,4.0.0
+Sitecore.Framework.Common.WildcardMatch.dll,4.0.0.0,4.0.0.0,4.0.0
+Sitecore.Framework.Conditions.dll,4.2.0.0,4.2.0.0,4.2.0
+Sitecore.Framework.Configuration.Abstractions.dll,5.4.0.0,5.4.0.0,5.4.0
+Sitecore.Framework.Configuration.Common.dll,5.4.0.0,5.4.0.0,5.4.0
+Sitecore.Framework.Configuration.dll,5.4.0.0,5.4.0.0,5.4.0
+Sitecore.Framework.Configuration.Extensions.dll,5.4.0.0,5.4.0.0,5.4.0
+Sitecore.Framework.Configuration.Xml.dll,5.4.0.0,5.4.0.0,5.4.0
+Sitecore.Framework.Data.Blobs.Abstractions.dll,1.1.0.0,1.1.0.0,1.1.0
+Sitecore.Framework.Data.Blobs.dll,1.1.0.0,1.1.0.0,1.1.0
+Sitecore.Framework.Messaging.Abstractions.dll,4.1.0.0,4.1.0.0,4.1.0
+Sitecore.Framework.Messaging.Configuration.dll,4.1.0.0,4.1.0.0,4.1.0
+Sitecore.Framework.Messaging.Rebus.Azure.dll,4.1.0.0,4.1.0.0,4.1.0
+Sitecore.Framework.Messaging.Rebus.Configuration.dll,4.1.0.0,4.1.0.0,4.1.0
+Sitecore.Framework.Messaging.Rebus.dll,4.1.0.0,4.1.0.0,4.1.0
+Sitecore.Framework.Messaging.Rebus.SqlServer.dll,4.1.0.0,4.1.0.0,4.1.0
+Sitecore.Framework.Rules.Abstractions.dll,4.0.0.0,4.0.0.0,4.0.0
+Sitecore.Framework.Rules.Api.dll,4.0.0.0,4.0.0.0,4.0.0
+Sitecore.Framework.Rules.Core.dll,4.0.0.0,4.0.0.0,4.0.0
+Sitecore.Framework.Rules.dll,4.0.0.0,4.0.0.0,4.0.0
+Sitecore.Framework.Rules.Model.dll,4.0.0.0,4.0.0.0,4.0.0
+Sitecore.Framework.Rules.Registry.dll,4.0.0.0,4.0.0.0,4.0.0
+Sitecore.Framework.Rules.Serialization.dll,4.0.0.0,4.0.0.0,4.0.0
+Sitecore.Framework.TransientFaultHandling.Abstractions.dll,2.3.0.0,2.3.0.0,2.3.0
+Sitecore.Framework.TransientFaultHandling.dll,2.3.0.0,2.3.0.0,2.3.0
+Sitecore.Framework.TransientFaultHandling.EntLib.dll,2.3.0.0,2.3.0.0,2.3.0
+Sitecore.Framework.TransientFaultHandling.Sql.dll,2.3.0.0,2.3.0.0,2.3.0
+Sitecore.FXM.Client.dll,8.0.0.0,8.0.0.0,8.0.0-r02098.5366
+Sitecore.FXM.dll,8.0.0.0,8.0.0.0,8.0.0-r02098.5366
+Sitecore.FXM.Service.dll,8.0.0.0,8.0.0.0,8.0.0-r02098.5366
+Sitecore.FXM.Speak.dll,8.0.0.0,8.0.0.0,8.0.0-r02098.5366
+Sitecore.ItemWebApi.dll,6.0.0.0,6.0.0.0,6.0.0-r00043.1193
+Sitecore.Kernel.dll,15.0.0.0,15.0.0.0,15.0.0-r01054.8426
+Sitecore.LaunchPad.dll,6.0.0.0,6.0.0.0,6.0.0-r00067.851
+Sitecore.ListManagement.Client.dll,6.0.0.0,6.0.0.0,6.0.0-r02017.5991
+Sitecore.ListManagement.dll,6.0.0.0,6.0.0.0,6.0.0-r02017.5991
+Sitecore.ListManagement.Services.dll,6.0.0.0,6.0.0.0,6.0.0-r02017.5991
+Sitecore.ListManagement.XConnect.dll,6.0.0.0,6.0.0.0,6.0.0-r02017.5991
+Sitecore.ListManagement.XConnect.Web.dll,6.0.0.0,6.0.0.0,6.0.0-r02017.5991
+Sitecore.Logging.Client.dll,13.1.0.0,13.1.0.0,13.1.0-r00044.2065
+Sitecore.Logging.dll,13.1.0.0,13.1.0.0,13.1.0-r00044.2065
+Sitecore.Marketing.Automation.Activity.dll,6.0.0.0,6.0.0.0,6.0.0-r00780.893
+Sitecore.Marketing.Automation.ActivityDescriptors.Client.dll,6.0.0.0,6.0.0.0,6.0.0-r00867.9038
+Sitecore.Marketing.Automation.ActivityDescriptors.dll,6.0.0.0,6.0.0.0,6.0.0-r00867.9038
+Sitecore.Marketing.Automation.Client.dll,6.0.0.0,6.0.0.0,6.0.0-r00867.9038
+Sitecore.Marketing.Automation.dll,6.0.0.0,6.0.0.0,6.0.0-r00867.9038
+Sitecore.Marketing.Automation.Models.dll,6.0.0.0,6.0.0.0,6.0.0-r00780.967
+Sitecore.Marketing.Campaigns.Client.dll,6.0.0.0,6.0.0.0,6.0.0-r00261.2784
+Sitecore.Marketing.Campaigns.Services.dll,6.0.0.0,6.0.0.0,6.0.0-r00261.2784
+Sitecore.Marketing.Client.dll,15.0.0.0,15.0.0.0,15.0.0-r00168.1794
+Sitecore.Marketing.Core.dll,16.0.0.0,16.0.0.0,16.0.0-r00282.557
+Sitecore.Marketing.Definitions.MarketingAssets.Repositories.dll,15.0.0.0,15.0.0.0,15.0.0-r00172.1440
+Sitecore.Marketing.dll,16.0.0.0,16.0.0.0,16.0.0-r00282.557
+Sitecore.Marketing.Operations.Xdb.ReferenceData.dll,16.0.0.0,16.0.0.0,16.0.0-r00282.557
+Sitecore.Marketing.Operations.Xdb.ReferenceData.Model.dll,16.0.0.0,16.0.0.0,16.0.0-r00282.557
+Sitecore.Marketing.Operations.Xdb.ReferenceData.Service.dll,16.0.0.0,16.0.0.0,16.0.0-r00282.557
+Sitecore.Marketing.Search.dll,16.0.0.0,16.0.0.0,16.0.0-r00282.557
+Sitecore.Marketing.Segmentation.xMgmt.dll,8.0.0.0,8.0.0.0,8.0.0-r00100.1414
+Sitecore.Marketing.Taxonomy.dll,16.0.0.0,16.0.0.0,16.0.0-r00282.557
+Sitecore.Marketing.Taxonomy.xMgmt.dll,16.0.0.0,16.0.0.0,16.0.0-r00282.557
+Sitecore.Marketing.xMgmt.dll,16.0.0.0,16.0.0.0,16.0.0-r00282.557
+Sitecore.Marketing.xMgmt.ReferenceData.dll,16.0.0.0,16.0.0.0,16.0.0-r00282.557
+Sitecore.Messaging.Azure.dll,6.0.0.0,6.0.0.0,6.0.0-r00140.1905
+Sitecore.Messaging.dll,6.0.0.0,6.0.0.0,6.0.0-r00140.1905
+Sitecore.Messaging.SqlServer.dll,6.0.0.0,6.0.0.0,6.0.0-r00140.1905
+Sitecore.Mvc.Analytics.dll,15.0.0.0,15.0.0.0,15.0.0-r00312.5525
+Sitecore.Mvc.DeviceSimulator.dll,6.0.0.0,6.0.0.0,6.0.0-r00048.754
+Sitecore.Mvc.dll,6.0.0.0,6.0.0.0,6.0.0-r00310.2070
+Sitecore.Mvc.ExperienceEditor.dll,8.0.0.0,8.0.0.0,8.0.0-r01159.5149
+Sitecore.Nexus.Consumption.dll,1.0.0.0,1.2.0.0,1.2.0-r00135
+Sitecore.Nexus.dll,6.0.0.0,6.0.0.0,6.0.0-r00067
+Sitecore.Nexus.Licensing.dll,2.0.0.0,2.0.6.0,2.0.6-r00062
+Sitecore.Owin.Authentication.dll,5.0.0.0,5.0.0.0,5.0.0-r00329.2298
+Sitecore.Owin.Authentication.IdentityServer.dll,4.0.0.0,4.0.0.0,4.0.0-r00134.1197
+Sitecore.Owin.dll,5.0.0.0,5.0.0.0,5.0.0-r00329.2298
+Sitecore.PathAnalyzer.Client.dll,7.0.0.0,7.0.0.0,7.0.0-r00962.3468
+Sitecore.PathAnalyzer.dll,7.0.0.0,7.0.0.0,7.0.0-r00962.3468
+Sitecore.PathAnalyzer.Services.dll,7.0.0.0,7.0.0.0,7.0.0-r00962.3468
+Sitecore.Personalization.dll,1.0.0.0,1.0.0.0,1.0.0-r00014.516
+Sitecore.Personalization.Mvc.dll,1.0.0.0,1.0.0.0,1.0.0-r00014.516
+Sitecore.Processing.Common.dll,4.0.0.0,4.0.0.0,4.0.0-r00241.5710
+Sitecore.Processing.Cursors.Abstractions.dll,4.0.0.0,4.0.0.0,4.0.0-r00241.5710
+Sitecore.Processing.Engine.Abstractions.dll,4.0.0.0,4.0.0.0,4.0.0-r00241.5710
+Sitecore.Processing.Tasks.Abstractions.dll,4.0.0.0,4.0.0.0,4.0.0-r00241.5710
+Sitecore.Processing.Tasks.Messaging.dll,4.0.0.0,4.0.0.0,4.0.0-r00241.5710
+Sitecore.Processing.Tasks.Messaging.Xmgmt.dll,4.0.0.0,4.0.0.0,4.0.0-r00241.5710
+Sitecore.Processing.Tasks.Options.dll,4.0.0.0,4.0.0.0,4.0.0-r00241.5710
+Sitecore.Reporting.Client.dll,3.0.0.0,3.0.0.0,3.0.0-r00139.61
+Sitecore.Reporting.Core.dll,3.0.0.0,3.0.0.0,3.0.0-r00139.61
+Sitecore.Reporting.Service.Abstractions.dll,3.0.0.0,3.0.0.0,3.0.0-r00139.61
+Sitecore.Reporting.Service.Http.Abstractions.dll,3.0.0.0,3.0.0.0,3.0.0-r00139.61
+Sitecore.Reporting.Service.Http.XConnectClient.dll,3.0.0.0,3.0.0.0,3.0.0-r00139.61
+Sitecore.Reporting.xMgmt.dll,3.0.0.0,3.0.0.0,3.0.0-r00139.61
+Sitecore.Security.AntiCsrf.dll,6.0.0.0,6.0.0.0,6.0.0-r00049.1186
+Sitecore.SequenceAnalyzer.dll,7.0.0.0,7.0.0.0,7.0.0-r00962.3468
+Sitecore.Services.Client.dll,6.0.0.0,6.0.0.0,6.0.0-r00596.3105
+Sitecore.Services.Core.dll,6.0.0.0,6.0.0.0,6.0.0-r00596.3105
+Sitecore.Services.Infrastructure.dll,6.0.0.0,6.0.0.0,6.0.0-r00596.3105
+Sitecore.Services.Infrastructure.Sitecore.dll,6.0.0.0,6.0.0.0,6.0.0-r00596.3105
+Sitecore.SessionProvider.dll,15.0.0.0,15.0.0.0,15.0.0-r00117.1828
+Sitecore.SessionProvider.Memory.dll,15.0.0.0,15.0.0.0,15.0.0-r00117.1828
+Sitecore.SessionProvider.MongoDB.dll,15.0.0.0,15.0.0.0,15.0.0-r00117.1828
+Sitecore.SessionProvider.Redis.dll,15.0.0.0,15.0.0.0,15.0.0-r00117.1828
+Sitecore.SessionProvider.Sql.dll,15.0.0.0,15.0.0.0,15.0.0-r00117.1828
+Sitecore.Speak.Applications.dll,6.0.0.0,6.0.0.0,6.0.0-r00091.975
+Sitecore.Speak.Client.dll,7.0.0.0,7.0.0.0,7.0.0-r00459.1390
+Sitecore.Speak.Components.dll,7.0.0.0,7.0.0.0,7.0.0-r01250.1688
+Sitecore.Speak.Components.Guidance.dll,7.0.0.0,7.0.0.0,7.0.0-r01250.1688
+Sitecore.Speak.Components.Web.dll,7.0.0.0,7.0.0.0,7.0.0-r01250.1688
+Sitecore.Speak.Integration.Services.dll,5.0.0.0,5.0.0.0,5.0.0-r00056.823
+Sitecore.Speak.Integration.Spa.dll,5.0.0.0,5.0.0.0,5.0.0-r00056.823
+Sitecore.Speak.ItemWebApi.dll,7.0.0.0,7.0.0.0,7.0.0-r00459.1390
+Sitecore.Speak.Web.dll,7.0.0.0,7.0.0.0,7.0.0-r00459.1390
+Sitecore.TransientFaultHandling.dll,3.0.0.0,3.0.0.0,3.0.0-r00010.943
+Sitecore.Update.dll,7.0.0.0,7.0.0.0,7.0.0-r00197.2135
+Sitecore.UpdateCenter.Core.dll,5.0.0.0,5.0.0.0,5.0.0-r00196.2136
+Sitecore.UpdateCenter.dll,5.0.0.0,5.0.0.0,5.0.0-r00196.2136
+Sitecore.UpdateCenter.ServiceClient.dll,5.0.0.0,5.0.0.0,5.0.0-r00196.2136
+Sitecore.Web.dll,6.0.0.0,6.0.0.0,6.0.0-r00099.1335
+Sitecore.XConnect.Client.Configuration.dll,5.0.0.0,5.0.0.0,5.0.0-r00109.1741
+Sitecore.XConnect.Client.dll,5.0.0.0,5.0.0.0,5.0.0-r00333.2391
+Sitecore.XConnect.Collection.Model.dll,5.0.0.0,5.0.0.0,5.0.0-r00333.2391
+Sitecore.XConnect.Core.dll,3.1.0.0,3.1.0.0,3.1.0-r00256.1465
+Sitecore.XConnect.Diagnostics.dll,3.3.0.0,3.3.0.0,3.3.0-r00114.1164
+Sitecore.XConnect.dll,5.0.0.0,5.0.0.0,5.0.0-r00333.2391
+Sitecore.XConnect.Search.dll,2.3.0.0,2.3.0.0,2.3.0-r00088.825
+Sitecore.XConnect.Segmentation.Conditions.dll,8.0.0.0,8.0.0.0,8.0.0-r00256.1815
+Sitecore.XConnect.Segmentation.Engine.dll,8.0.0.0,8.0.0.0,8.0.0-r00256.1815
+Sitecore.XConnect.Segmentation.ExpressionBuilder.Model.dll,8.0.0.0,8.0.0.0,8.0.0-r00256.1815
+Sitecore.XConnect.Segmentation.Predicates.dll,8.0.0.0,8.0.0.0,8.0.0-r00256.1815
+Sitecore.XConnect.Segmentation.Predicates.Model.dll,8.0.0.0,8.0.0.0,8.0.0-r00256.1815
+Sitecore.XConnect.Service.dll,5.0.0.0,5.0.0.0,5.0.0-r00333.2391
+Sitecore.XConnect.Service.Plugins.dll,5.0.0.0,5.0.0.0,5.0.0-r00333.2391
+Sitecore.Xdb.Client.dll,15.0.0.0,15.0.0.0,15.0.0-r00506.4419
+Sitecore.Xdb.Collection.dll,3.1.0.0,3.1.0.0,3.1.0-r00239.1372
+Sitecore.Xdb.Common.Web.dll,3.3.0.0,3.3.0.0,3.3.0-r00066.972
+Sitecore.Xdb.Common.Web.Xmgmt.dll,3.3.0.0,3.3.0.0,3.3.0-r00066.972
+Sitecore.Xdb.Configuration.dll,15.0.0.0,15.0.0.0,15.0.0-r00506.4419
+Sitecore.Xdb.MarketingAutomation.Core.dll,6.0.0.0,6.0.0.0,6.0.0-r00085.1125
+Sitecore.Xdb.MarketingAutomation.Locators.dll,5.0.0.0,5.0.0.0,5.0.0-r00047.1343
+Sitecore.Xdb.MarketingAutomation.Locators.Xmgmt.dll,5.0.0.0,5.0.0.0,5.0.0-r00047.1343
+Sitecore.Xdb.MarketingAutomation.OperationsClient.Configuration.dll,6.0.0.0,6.0.0.0,6.0.0-r00534.4684
+Sitecore.Xdb.MarketingAutomation.OperationsClient.dll,6.0.0.0,6.0.0.0,6.0.0-r00534.4684
+Sitecore.Xdb.MarketingAutomation.ReportingClient.Configuration.dll,6.0.0.0,6.0.0.0,6.0.0-r00534.4684
+Sitecore.Xdb.MarketingAutomation.ReportingClient.dll,6.0.0.0,6.0.0.0,6.0.0-r00534.4684
+Sitecore.Xdb.MarketingAutomation.Tracking.dll,5.0.0.0,5.0.0.0,5.0.0-r00063.1215
+Sitecore.Xdb.Processing.ContactMerge.dll,15.0.0.0,15.0.0.0,15.0.0-r00506.4419
+Sitecore.Xdb.Processing.ContactMerge.UI.dll,15.0.0.0,15.0.0.0,15.0.0-r00506.4419
+Sitecore.Xdb.Processing.Queue.dll,5.0.0.0,5.0.0.0,5.0.0-r00100.1504
+Sitecore.Xdb.Processing.Queue.SqlServer.dll,5.0.0.0,5.0.0.0,5.0.0-r00100.1504
+Sitecore.Xdb.ReferenceData.Client.dll,5.0.0.0,5.0.0.0,5.0.0-r00162.2070
+Sitecore.Xdb.ReferenceData.Client.Xmgmt.dll,5.0.0.0,5.0.0.0,5.0.0-r00162.2070
+Sitecore.Xdb.ReferenceData.Core.dll,5.0.0.0,5.0.0.0,5.0.0-r00162.2070
+Sitecore.Xdb.ReferenceData.Service.dll,5.0.0.0,5.0.0.0,5.0.0-r00162.2070
+Sitecore.Xdb.ReferenceData.Service.Xmgmt.dll,5.0.0.0,5.0.0.0,5.0.0-r00162.2070
+Sitecore.Xdb.ReferenceData.SqlServer.dll,5.0.0.0,5.0.0.0,5.0.0-r00162.2070
+Sitecore.Xdb.ReferenceData.SqlServer.Xmgmt.dll,5.0.0.0,5.0.0.0,5.0.0-r00162.2070
+Sitecore.Xdb.Reporting.dll,15.0.0.0,15.0.0.0,15.0.0-r00506.4419
+Sitecore.Xdb.Sql.Common.dll,6.0.0.0,6.0.0.0,6.0.0-r00081.1354
+Sitecore.Xdb.Sql.Common.Xmgmt.dll,6.0.0.0,6.0.0.0,6.0.0-r00081.1354
+Sitecore.Xdb.Tracking.Client.dll,15.0.0.0,15.0.0.0,15.0.0-r00312.5525
+Sitecore.Zip.dll,12.2.0.0,12.2.0.0,12.2.0-r00037.515
+SolrNet.dll,1.0.19.0,1.0.19.0,1.0.19
+StackExchange.Redis.dll,2.0.0.0,2.0.519.65453,2.0.519+gadff3d7458
+System.Buffers.dll,4.0.3.0,4.6.26515.06,4.6.26515.06 @BuiltBy: dlab-DDVSOWINAGE059 @Branch: release/2.1 @SrcCode: https://github.com/dotnet/corefx/tree/30ab651fcb4354552bd4891619a0bdd81e0ebdbf
+System.Configuration.ConfigurationManager.dll,4.0.1.0,4.6.26515.06,4.6.26515.06 @BuiltBy: dlab-DDVSOWINAGE059 @Branch: release/2.1 @SrcCode: https://github.com/dotnet/corefx/tree/30ab651fcb4354552bd4891619a0bdd81e0ebdbf
+System.Data.SqlClient.dll,4.4.0.0,4.6.26606.05,4.6.26606.05 @BuiltBy: dlab14-DDVSOWINAGE080 @Branch: release/2.1 @SrcCode: https://github.com/dotnet/corefx/tree/7ee84596d92e178bce54c986df31ccc52479e772
+System.Diagnostics.DiagnosticSource.dll,4.0.2.1,4.6.25519.03,4.6.25519.03 built by: dlab-DDVSOWINAGE013. Commit Hash: 8321c729934c0f8be754953439b88e6e1c120c24
+System.Diagnostics.PerformanceCounter.dll,4.0.0.0,4.6.26515.06,4.6.26515.06 @BuiltBy: dlab-DDVSOWINAGE059 @Branch: release/2.1 @SrcCode: https://github.com/dotnet/corefx/tree/30ab651fcb4354552bd4891619a0bdd81e0ebdbf
+System.IdentityModel.Tokens.Jwt.dll,5.3.0.0,5.3.0.51005,5.3.0.51005192532.4cbe149003954f9ca8df2cac3845e35d8ee5f386
+System.Interactive.Async.dll,3.2.0.0,3.2.0.702,3.2.0+ge6549cefd7
+System.Interactive.Async.Providers.dll,3.2.0.0,3.2.0.702,3.2.0+ge6549cefd7
+System.IO.Compression.dll,4.1.2.0,4.6.24705.01,4.6.24705.01. Commit Hash: 4d1af962ca0fede10beb01d197367c2f90e92c97
+System.IO.dll,4.1.0.0,1.0.24212.01,1.0.24212.01. Commit Hash: 9688ddbb62c04189cac4c4a06e31e93377dccd41
+System.IO.FileSystem.Primitives.dll,4.0.1.0,1.0.24212.01,1.0.24212.01. Commit Hash: 9688ddbb62c04189cac4c4a06e31e93377dccd41
+System.IO.Packaging.dll,4.0.0.0,1.0.24212.01,1.0.24212.01. Commit Hash: 9688ddbb62c04189cac4c4a06e31e93377dccd41
+System.IO.Pipelines.dll,4.0.0.0,4.6.26814.02,4.6.26814.02 @BuiltBy: dlab14-DDVSOWINAGE053 @Branch: release/2.1-MSRC @SrcCode: https://github.com/dotnet/corefx/tree/96925bba1377b6042fc7322564b600a4e651f7fd
+System.Memory.dll,4.0.1.0,4.6.26606.05,4.6.26606.05 @BuiltBy: dlab14-DDVSOWINAGE080 @Branch: release/2.1 @SrcCode: https://github.com/dotnet/corefx/tree/7ee84596d92e178bce54c986df31ccc52479e772
+System.Net.Http.Extensions.Compression.Core.dll,2.0.0.0,2.0.3,2.0.3
+System.Net.Http.Formatting.dll,5.2.6.0,5.2.60510.0,5.2.6-60510 (3155d174ba1d7e281ef0b9bbe78fb10a43aa7450)
+System.Net.WebSockets.Client.dll,4.0.0.1,1.0.25920.05,1.0.25920.05. Commit Hash: 022243d9e63f4f4b0862ba54a5f85758e59d8feb
+System.Net.WebSockets.dll,4.0.0.0,1.0.24212.01,1.0.24212.01. Commit Hash: 9688ddbb62c04189cac4c4a06e31e93377dccd41
+System.Numerics.Vectors.dll,4.1.3.0,4.6.25519.03,4.6.25519.03 built by: dlab-DDVSOWINAGE013. Commit Hash: 8321c729934c0f8be754953439b88e6e1c120c24
+System.Runtime.CompilerServices.Unsafe.dll,4.0.4.0,,
+System.Runtime.dll,4.1.0.0,1.0.24212.01,1.0.24212.01. Commit Hash: 9688ddbb62c04189cac4c4a06e31e93377dccd41
+System.Runtime.InteropServices.RuntimeInformation.dll,4.0.0.0,1.0.24212.01,1.0.24212.01. Commit Hash: 9688ddbb62c04189cac4c4a06e31e93377dccd41
+System.Runtime.Serialization.Primitives.dll,4.1.1.0,1.0.24212.01,1.0.24212.01. Commit Hash: 9688ddbb62c04189cac4c4a06e31e93377dccd41
+System.Security.AccessControl.dll,4.1.1.0,4.6.26515.06,4.6.26515.06 @BuiltBy: dlab-DDVSOWINAGE059 @Branch: release/2.1 @SrcCode: https://github.com/dotnet/corefx/tree/30ab651fcb4354552bd4891619a0bdd81e0ebdbf
+System.Security.Cryptography.Algorithms.dll,4.2.0.0,1.0.24212.01,1.0.24212.01. Commit Hash: 9688ddbb62c04189cac4c4a06e31e93377dccd41
+System.Security.Cryptography.Encoding.dll,4.0.0.0,1.0.24212.01,1.0.24212.01. Commit Hash: 9688ddbb62c04189cac4c4a06e31e93377dccd41
+System.Security.Cryptography.Primitives.dll,4.0.0.0,1.0.24212.01,1.0.24212.01. Commit Hash: 9688ddbb62c04189cac4c4a06e31e93377dccd41
+System.Security.Cryptography.X509Certificates.dll,4.1.0.0,1.0.24212.01,1.0.24212.01. Commit Hash: 9688ddbb62c04189cac4c4a06e31e93377dccd41
+System.Security.Cryptography.Xml.dll,4.0.1.0,4.6.26515.06,4.6.26515.06 @BuiltBy: dlab-DDVSOWINAGE059 @Branch: release/2.1 @SrcCode: https://github.com/dotnet/corefx/tree/30ab651fcb4354552bd4891619a0bdd81e0ebdbf
+System.Security.Permissions.dll,4.0.1.0,4.6.26515.06,4.6.26515.06 @BuiltBy: dlab-DDVSOWINAGE059 @Branch: release/2.1 @SrcCode: https://github.com/dotnet/corefx/tree/30ab651fcb4354552bd4891619a0bdd81e0ebdbf
+System.Security.Principal.Windows.dll,4.1.1.0,4.6.26515.06,4.6.26515.06 @BuiltBy: dlab-DDVSOWINAGE059 @Branch: release/2.1 @SrcCode: https://github.com/dotnet/corefx/tree/30ab651fcb4354552bd4891619a0bdd81e0ebdbf
+System.Text.Encodings.Web.dll,4.0.3.0,4.6.26515.06,4.6.26515.06 @BuiltBy: dlab-DDVSOWINAGE059 @Branch: release/2.1 @SrcCode: https://github.com/dotnet/corefx/tree/30ab651fcb4354552bd4891619a0bdd81e0ebdbf
+System.Threading.Channels.dll,4.0.0.0,4.6.26515.06,4.6.26515.06 @BuiltBy: dlab-DDVSOWINAGE059 @Branch: release/2.1 @SrcCode: https://github.com/dotnet/corefx/tree/30ab651fcb4354552bd4891619a0bdd81e0ebdbf
+System.Threading.Tasks.Extensions.dll,4.2.0.0,4.6.26606.05,4.6.26606.05 @BuiltBy: dlab14-DDVSOWINAGE080 @Branch: release/2.1 @SrcCode: https://github.com/dotnet/corefx/tree/7ee84596d92e178bce54c986df31ccc52479e772
+System.ValueTuple.dll,4.0.2.0,4.6.25519.03,4.6.25519.03 built by: dlab-DDVSOWINAGE013. Commit Hash: 8321c729934c0f8be754953439b88e6e1c120c24
+System.Web.Cors.dll,5.2.6.0,5.2.60510.0,5.2.6-60510 (3155d174ba1d7e281ef0b9bbe78fb10a43aa7450)
+System.Web.Helpers.dll,3.0.0.0,3.0.60201.0,3.0.4-60201 (2b669cace9446e436e1ddae0b0a578abfda35cd1)
+System.Web.Http.Cors.dll,5.2.6.0,5.2.60510.0,5.2.6-60510 (3155d174ba1d7e281ef0b9bbe78fb10a43aa7450)
+System.Web.Http.dll,5.2.6.0,5.2.60510.0,5.2.6-60510 (3155d174ba1d7e281ef0b9bbe78fb10a43aa7450)
+System.Web.Http.WebHost.dll,5.2.6.0,5.2.60510.0,5.2.6-60510 (3155d174ba1d7e281ef0b9bbe78fb10a43aa7450)
+System.Web.Mvc.dll,5.2.4.0,5.2.60201.0,5.2.4-60201 (2b669cace9446e436e1ddae0b0a578abfda35cd1)
+System.Web.Optimization.dll,1.1.0.0,1.1.40211.0,1.1.40211.0
+System.Web.Razor.dll,3.0.0.0,3.0.60201.0,3.0.4-60201 (2b669cace9446e436e1ddae0b0a578abfda35cd1)
+System.Web.WebPages.Deployment.dll,3.0.0.0,3.0.60201.0,3.0.4-60201 (2b669cace9446e436e1ddae0b0a578abfda35cd1)
+System.Web.WebPages.dll,3.0.0.0,3.0.60201.0,3.0.4-60201 (2b669cace9446e436e1ddae0b0a578abfda35cd1)
+System.Web.WebPages.Razor.dll,3.0.0.0,3.0.60201.0,3.0.4-60201 (2b669cace9446e436e1ddae0b0a578abfda35cd1)
+Telerik.Web.Design.dll,2018.3.910.45,2018.3.910.45,2018.3.910.45
+Telerik.Web.Device.Detection.dll,2018.3.910.45,2018.3.910.45,2018.3.910.45
+Telerik.Web.UI.dll,2018.3.910.45,2018.3.910.45,2018.3.910.45
+Telerik.Web.UI.Skins.dll,2018.3.910.45,2018.3.910.45,2018.3.910.45
+WebActivatorEx.dll,2.0.0.0,2.0.3,2.0.3
+WebGrease.dll,1.5.2.14234,1.5.2.14234,1.5.2.14234
+Yahoo.Yui.Compressor.dll,2.7.0.0,2.7.0.0,2.7.0.0

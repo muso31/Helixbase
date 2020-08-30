@@ -7,7 +7,7 @@ A Sitecore Helix based solution which can be used for Greenfield projects. Tackl
 
 * Glass Mapper v5 - with fluent configuration and automated mapping registration
 * Unicorn - including user and role sync
-* Sitecore 9.3 ready
+* Sitecore 10 ready
 * Pre compiled Razor views
 * Bootstrap v4
 * Native dependency injection with auto controller registration
@@ -25,7 +25,7 @@ A Sitecore Helix based solution which can be used for Greenfield projects. Tackl
 *Helix Base uses the new csproj sdk format which can cause issues with intellisense, if you would like to use the older format please see the [9.3 feature branch](https://github.com/muso31/Helixbase/tree/feature/9.3.0-old-csproj)  
 *Please Install Visual Studio 2017 Version 15.7 or higher as this project uses PackageReference
 
-1. Install [Sitecore Experience Platform 9.3 Initial Release](https://dev.sitecore.net/Downloads/Sitecore_Experience_Platform/93/Sitecore_Experience_Platform_93_Initial_Release.aspx)
+1. Install [Sitecore Experience Platform 10 Initial Release](https://dev.sitecore.net/Downloads/Sitecore_Experience_Platform/100/Sitecore_Experience_Platform_100.aspx)
 2. Clone project to 'C:\Projects\Helixbase'
 	1. _If you use another path, update the [z.Project.Common.DevSettings.config](https://github.com/muso31/Helixbase/blob/master/src/Project/Common/website/App_Config/Include/Project/z.Project.Common.DevSettings.config#L3)_
 3. Update the 'publishUrl' property in [Local.pubxml](https://github.com/muso31/Helixbase/blob/master/src/Website/website/Properties/PublishProfiles/Local.pubxml#L12) to the target IIS folder
@@ -74,7 +74,7 @@ AppVeyor:
 ## Legacy Versions
 Legacy versions of Helix Base which are no longer updated or maintained can be found below:
 
-
+[Helix Base 9.3.0](https://github.com/muso31/Helixbase/tree/feature/9.3.0) (updated until 30/08/2020)
 [Helix Base 9.2.0](https://github.com/muso31/Helixbase/tree/feature/9.2.0) (updated until 29/11/2019)  
 [Helix Base 9.1.0](https://github.com/muso31/Helixbase/tree/feature/9.1.0) (updated until 08/08/2019)  
 [Helix Base 9.0.2](https://github.com/muso31/Helixbase/tree/feature/9.0.2) (updated until 21/12/2018)  
