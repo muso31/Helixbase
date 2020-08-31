@@ -52,11 +52,11 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AssemblyLists\Sitecore.Platform.Assemblies 10.0.0 rev. 004346.csv" />
-    <Content Include="AssemblyLists\Sitecore.XConnect.Platform.IndexWorker.Assemblies 10.0.0 rev. 004346.csv" />
-    <Content Include="AssemblyLists\Sitecore.XConnect.Platform.MarketingAutomationEngine.Assemblies 10.0.0 rev. 004346.csv" />
-    <Content Include="AssemblyLists\Sitecore.XConnect.Platform.ProcessingEngine.Assemblies 10.0.0 rev. 004346.csv" />
-    <Content Include="AssemblyLists\Sitecore.XConnect.Platform.Web.Assemblies 10.0.0 rev. 004346.csv" />
+    <None Include="AssemblyLists\Sitecore.Platform.Assemblies 10.0.0 rev. 004346.csv" />
+    <None Include="AssemblyLists\Sitecore.XConnect.Platform.IndexWorker.Assemblies 10.0.0 rev. 004346.csv" />
+    <None Include="AssemblyLists\Sitecore.XConnect.Platform.MarketingAutomationEngine.Assemblies 10.0.0 rev. 004346.csv" />
+    <None Include="AssemblyLists\Sitecore.XConnect.Platform.ProcessingEngine.Assemblies 10.0.0 rev. 004346.csv" />
+    <None Include="AssemblyLists\Sitecore.XConnect.Platform.Web.Assemblies 10.0.0 rev. 004346.csv" />
     <None Include="Web.config">
       <SubType>Designer</SubType>
     </None>
