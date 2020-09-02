@@ -43,9 +43,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Sitecore.Kernel" Version="9.3.0" />
+    <PackageReference Include="Sitecore.Kernel" Version="10.0.0" />
     <PackageReference Include="Sitecore.Mvc.Analytics">
-      <Version>9.3.0</Version>
+      <Version>10.0.0</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
