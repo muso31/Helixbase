@@ -20,6 +20,7 @@ A Sitecore Helix based solution which can be used for Greenfield projects. Tackl
 * Integration with [helix-publishing-pipeline](https://github.com/richardszalay/helix-publishing-pipeline)
 * Fast ([see benchmark](https://github.com/richardszalay/Helixbase-HPP/tree/benchmarks#benchmarks)) publish-on-build (when building inside Visual Studio)
 * [_Show Title When Blank_](https://jammykam.wordpress.com/2017/09/20/show-title-when-blank/) patch, the forgotten Sitecore feature!
+* [Helix Check](https://github.com/marketplace/actions/helix-check) GitHub Action
 
 ## Setup Instructions
 *Helix Base uses the new csproj sdk format which can cause issues with intellisense, if you would like to use the older format please see the [10.0 feature branch](https://github.com/muso31/Helixbase/tree/feature/10.0.0-old-csproj)  
