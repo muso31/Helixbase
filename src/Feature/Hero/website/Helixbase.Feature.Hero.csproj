@@ -44,8 +44,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Glass.Mapper.Sc.100.Core" Version="5.8.166-alpha" />
-    <PackageReference Include="Glass.Mapper.Sc.100.Mvc" Version="5.8.166-alpha" />
+    <PackageReference Include="Glass.Mapper.Sc.100.Core" Version="5.8.167-alpha" />
+    <PackageReference Include="Glass.Mapper.Sc.100.Mvc" Version="5.8.167-alpha" />
     <PackageReference Include="Microsoft.AspNet.Mvc" Version="5.2.4" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.1.3" />
     <PackageReference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform" Version="2.0.1" />

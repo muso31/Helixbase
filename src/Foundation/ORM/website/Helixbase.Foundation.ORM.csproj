@@ -34,7 +34,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Glass.Mapper.Sc.100" Version="5.8.166-alpha" />
+    <PackageReference Include="Glass.Mapper.Sc.100" Version="5.8.167-alpha" />
     <PackageReference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform" Version="2.0.1" />
     <PackageReference Include="Sitecore.Kernel" Version="10.0.0" />
   </ItemGroup>
