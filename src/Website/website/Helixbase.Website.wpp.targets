@@ -6,7 +6,11 @@
     Exclude Sitecore assemblies from publish to reduce data transfer and file size. 
     https://github.com/richardszalay/helix-publishing-pipeline#excluding-sitecore-assemblies
     -->
-    <SitecoreAssemblyListsToExclude Include="AssemblyLists\*.csv" />
+	  <SitecoreAssembliesToExclude Include="@(SitecoreAssemblies)" />
+      
+	<!-- no longer required with Sitecore.Assmblies.Platform NuGet package
+  <SitecoreAssemblyListsToExclude Include="AssemblyLists\*.csv" /> -->  
+  
   </ItemGroup>
 
   <PropertyGroup>
