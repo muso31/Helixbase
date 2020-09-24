@@ -45,6 +45,9 @@
   <ItemGroup>
     <PackageReference Include="RichardSzalay.Helix.Publishing.WebRoot" Version="1.5.6" />
     <PackageReference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform" Version="2.0.1" />
+    <PackageReference Include="Sitecore.Assemblies.Platform">
+      <Version>10.0.0</Version>
+    </PackageReference>
     <PackageReference Include="Sitecore.Kernel" Version="10.0.0" />
   </ItemGroup>
   <ItemGroup>
@@ -52,11 +55,6 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="AssemblyLists\Sitecore.Platform.Assemblies 9.3.0 rev. 003498.csv" />
-    <None Include="AssemblyLists\Sitecore.XConnect.Platform.IndexWorker.Assemblies 9.3.0 rev. 003498.csv" />
-    <None Include="AssemblyLists\Sitecore.XConnect.Platform.MarketingAutomationEngine.Assemblies 9.3.0 rev. 003498.csv" />
-    <None Include="AssemblyLists\Sitecore.XConnect.Platform.ProcessingEngine.Assemblies 9.3.0 rev. 003498.csv" />
-    <None Include="AssemblyLists\Sitecore.XConnect.Platform.Web.Assemblies 9.3.0 rev. 003498.csv" />
     <None Include="Web.config">
       <SubType>Designer</SubType>
     </None>
