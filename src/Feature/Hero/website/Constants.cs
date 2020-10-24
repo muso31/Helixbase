@@ -13,6 +13,14 @@ namespace Helixbase.Feature.Hero
         }
     }
 
+    public static class Messages
+    {
+        public const string Header = "Hero";
+        public const string DataSourceMissing = "Data source missing";
+        public const string ViewModelError = "Could not prepare view model";
+
+    }
+
     public static class Logging
     {
         public static class Error

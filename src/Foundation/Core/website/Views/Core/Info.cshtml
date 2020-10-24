@@ -1,0 +1,9 @@
+﻿@model Helixbase.Foundation.Core.ViewModels.MessageViewModel
+
+@if (Model.IsExperienceEditor)
+{
+    <div class="ee-message info">
+        <h5>@Model.Title</h5>
+        <p>@Model.Message</p>
+    </div>
+}
