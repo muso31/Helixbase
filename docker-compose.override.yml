@@ -1,0 +1,204 @@
+#
+# The docker-compose.yml in this solution is a stock Sitecore XP0 environment, without
+# any changes. This override represents all the additions/changes needed for this solution.
+# Note that some of the overrides point to 'empty' Dockerfiles. This is recommended, even if
+# you are not customizing an image, to enable retagging and later customization. See Sitecore
+# Containers documentation for details.
+#
+
+version: "2.4"
+
+services:
+
+  # A servercore image with both the netcore and netframework SDKs.
+  # See Dockerfile for more details.
+  dotnetsdk:
+    image: ${REGISTRY}${COMPOSE_PROJECT_NAME}-dotnetsdk:${VERSION:-latest}
+    build:
+      context: ./docker/build/dotnetsdk
+    scale: 0
+
+  # The solution build image is added here so it can be referenced as a build dependency
+  # for the images which use its output. Setting "scale: 0" means docker-compose will not
+  # include it in the running environment. See Dockerfile for more details.
+  # solution:
+  #   image: ${REGISTRY}${COMPOSE_PROJECT_NAME}-solution:${VERSION:-latest}
+  #   build:
+  #     context: .
+  #     args:
+  #       BUILD_CONFIGURATION: ${BUILD_CONFIGURATION}
+  #       BUILD_IMAGE: ${REGISTRY}${COMPOSE_PROJECT_NAME}-dotnetsdk:${VERSION:-latest}
+  #   depends_on:
+  #     - dotnetsdk
+  #   scale: 0
+
+  # This is our custom image for an ASP.NET Core Rendering Host.
+  # If target is 'debug', it will use the SDK image as parent and run 'dotnet watch.'
+  # Otherwise, it's a standard ASP.NET Core container. See Dockerfile for details.
+  # rendering:
+  #   image: ${REGISTRY}${COMPOSE_PROJECT_NAME}-rendering:${VERSION:-latest}
+  #   build:
+  #     context: ./docker/build/rendering
+  #     target: ${BUILD_CONFIGURATION}
+  #     args:
+  #       DEBUG_PARENT_IMAGE: ${REGISTRY}${COMPOSE_PROJECT_NAME}-dotnetsdk:${VERSION:-latest}
+  #       SOLUTION_IMAGE: ${REGISTRY}${COMPOSE_PROJECT_NAME}-solution:${VERSION:-latest}
+  #   volumes:
+  #     - .\:C:\solution
+  #   environment:
+  #     ASPNETCORE_ENVIRONMENT: "Development"
+  #     ASPNETCORE_URLS: "http://*:80"
+  #     # These values add to/override ASP.NET Core configuration values.
+  #     # See rendering host Startup for details.
+  #     Sitecore__InstanceUri: "http://cm"
+  #     Sitecore__RenderingHostUri: "https://${RENDERING_HOST}"
+  #     Sitecore__EnableExperienceEditor: "true"
+  #   depends_on:
+  #     - solution
+  #     - cm
+  #   labels:
+  #     - "traefik.enable=true"
+  #     - "traefik.http.routers.rendering-secure.entrypoints=websecure"
+  #     - "traefik.http.routers.rendering-secure.rule=Host(`${RENDERING_HOST}`)"
+  #     - "traefik.http.routers.rendering-secure.tls=true"
+
+  # Mount the Traefik configuration and certs.
+  traefik:
+    volumes:
+      - ./docker/traefik:C:/etc/traefik
+    # depends_on:
+    #   - rendering
+
+  # Mount our SQL data folder and use our custom image with the Headless Services (JSS)
+  # module data added. See Dockerfile for details.
+  mssql:
+    image: ${REGISTRY}${COMPOSE_PROJECT_NAME}-xp-mssql:${VERSION:-latest}
+    build:
+      context: ./docker/build/mssql
+      args: 
+        PARENT_IMAGE: ${REGISTRY}sitecore-xp-sqldev:${SITECORE_VERSION}-windowsservercore-${WINDOWSSERVERCORE_VERSION}
+    volumes:
+      - type: bind
+        source: .\docker\data\sql
+        target: c:\data
+
+  # Mount our Solr data folder and use our retagged Solr image.
+  # Some modules (like SXA) also require additions to the Solr image.
+  solr:
+    image: ${REGISTRY}${COMPOSE_PROJECT_NAME}-xp-solr:${VERSION:-latest}
+    build:
+      context: ./docker/build/solr
+      args:
+        PARENT_IMAGE: ${REGISTRY}sitecore-xp-solr:${SITECORE_VERSION}-nanoserver-${NANOSERVER_VERSION}
+    volumes:
+      - type: bind
+        source: .\docker\data\solr
+        target: c:\data
+
+  # Use our retagged Identity Server image.
+  # Configure for a mounted license file instead of using SITECORE_LICENSE.
+  id:
+    image: ${REGISTRY}${COMPOSE_PROJECT_NAME}-id:${VERSION:-latest}
+    build:
+      context: ./docker/build/id
+      args:
+        PARENT_IMAGE: ${REGISTRY}sitecore-xp-identity:${SITECORE_VERSION}-windowsservercore-${WINDOWSSERVERCORE_VERSION}
+    volumes:
+      - ${HOST_LICENSE_FOLDER}:c:\license
+      - ${LOCAL_DATA_PATH}\id:C:\inetpub\wwwroot\wwwroot\logs
+    environment:
+      SITECORE_LICENSE_LOCATION: c:\license\license.xml
+
+  # Use our custom CD (XP CD) image with added modules and solution code.
+  # Folders are mounted below for code deployment and log output. See Dockerfile for details.
+  # Configure for a mounted license file instead of using SITECORE_LICENSE.
+  cd:
+    image: ${REGISTRY}${COMPOSE_PROJECT_NAME}-xp-cd:${VERSION:-latest}
+    build:
+      context: ./docker/build/cd
+      args:
+        PARENT_IMAGE: ${REGISTRY}sitecore-xp-cd:${SITECORE_VERSION}-windowsservercore-${WINDOWSSERVERCORE_VERSION}
+        TOOLS_IMAGE: ${TOOLS_IMAGE}
+    volumes:
+      - ${LOCAL_DEPLOY_PATH}\platform:C:\src
+      - ${LOCAL_DATA_PATH}\cd:C:\inetpub\wwwroot\App_Data\logs
+      - ${HOST_LICENSE_FOLDER}:c:\license
+    environment:
+      SITECORE_LICENSE_LOCATION: c:\license\license.xml
+    entrypoint: powershell.exe -Command "& C:\\tools\\entrypoints\\iis\\Development.ps1"
+
+  # Use our custom CM (XP0 Standalone) image with added modules and solution code.
+  # Folders are mounted below for code deployment and log output. See Dockerfile for details.
+  # Configure for a mounted license file instead of using SITECORE_LICENSE.
+  cm:
+    image: ${REGISTRY}${COMPOSE_PROJECT_NAME}-xp-cm:${VERSION:-latest}
+    build:
+      context: ./docker/build/cm
+      args:
+        PARENT_IMAGE: ${REGISTRY}sitecore-xp-standalone:${SITECORE_VERSION}-windowsservercore-${WINDOWSSERVERCORE_VERSION}
+        SOLUTION_IMAGE: ${REGISTRY}${COMPOSE_PROJECT_NAME}-solution:${VERSION:-latest}
+        TOOLS_IMAGE: ${TOOLS_IMAGE}
+        MANAGEMENT_SERVICES_IMAGE: ${MANAGEMENT_SERVICES_IMAGE}
+    volumes:
+      - ${LOCAL_DEPLOY_PATH}\platform:C:\src
+      - ${LOCAL_DATA_PATH}\cm:C:\inetpub\wwwroot\App_Data\logs
+      - ${HOST_LICENSE_FOLDER}:c:\license
+    environment:
+      SITECORE_LICENSE_LOCATION: c:\license\license.xml
+    entrypoint: powershell.exe -Command "& C:\\tools\\entrypoints\\iis\\Development.ps1"
+
+  # Use our retagged XConnect image.
+  # Configure for a mounted license folder instead of using SITECORE_LICENSE.
+  # Note: XConnect roles expect a folder with license.xml, not the file itself.
+  xconnect:
+    image: ${REGISTRY}${COMPOSE_PROJECT_NAME}-xp-xconnect:${VERSION:-latest}
+    build:
+      context: ./docker/build/xconnect
+      args:
+        PARENT_IMAGE: ${REGISTRY}sitecore-xp-xconnect:${SITECORE_VERSION}-windowsservercore-${WINDOWSSERVERCORE_VERSION}
+    volumes:
+      - ${HOST_LICENSE_FOLDER}:c:\license
+    environment: 
+      SITECORE_LICENSE_LOCATION: c:\license\
+
+  # Use our retagged XConnect Search Indexer image.
+  # Configure for a mounted license folder instead of using SITECORE_LICENSE.
+  xdbsearchworker:
+    # entrypoint: powershell.exe -Command "& C:\\tools\\entrypoints\\xconnect\\Development.ps1"
+    image: ${REGISTRY}${COMPOSE_PROJECT_NAME}-xp-xdbsearchworker:${VERSION:-latest}
+    build:
+      context: ./docker/build/xdbsearchworker
+      args:
+        PARENT_IMAGE: ${REGISTRY}sitecore-xp-xconnect-indexworker:${SITECORE_VERSION}-windowsservercore-${WINDOWSSERVERCORE_VERSION}
+    volumes:
+      - ${HOST_LICENSE_FOLDER}:c:\license
+    environment: 
+      SITECORE_LICENSE_LOCATION: c:\license\
+
+  # Use our retagged Marketing Automation Engine image. 
+  # Configure for a mounted license folder instead of using SITECORE_LICENSE.
+  xdbautomationworker:
+    entrypoint: powershell.exe -Command "& C:\\tools\\entrypoints\\worker\\Development.ps1"
+    image: ${REGISTRY}${COMPOSE_PROJECT_NAME}-xp-xdbautomationworker:${VERSION:-latest}
+    build:
+      context: ./docker/build/xdbautomationworker
+      args:
+        PARENT_IMAGE: ${REGISTRY}sitecore-xp-xconnect-automationengine:${SITECORE_VERSION}-windowsservercore-${WINDOWSSERVERCORE_VERSION}
+    volumes:
+      - ${HOST_LICENSE_FOLDER}:c:\license
+    environment: 
+      SITECORE_LICENSE_LOCATION: c:\license\
+
+  # Use our retagged Cortex Processing Engine image.
+  # Configure for a mounted license folder instead of using SITECORE_LICENSE.
+  cortexprocessingworker:
+    entrypoint: powershell.exe -Command "& C:\\tools\\entrypoints\\worker\\Development.ps1"
+    image: ${REGISTRY}${COMPOSE_PROJECT_NAME}-xp-cortexprocessingworker:${VERSION:-latest}
+    build:
+      context: ./docker/build/cortexprocessingworker
+      args:
+        PARENT_IMAGE: ${REGISTRY}sitecore-xp-xconnect-processingengine:${SITECORE_VERSION}-windowsservercore-${WINDOWSSERVERCORE_VERSION}
+    volumes:
+      - ${HOST_LICENSE_FOLDER}:c:\license
+    environment: 
+      SITECORE_LICENSE_LOCATION: c:\license\

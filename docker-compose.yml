@@ -1,0 +1,224 @@
+version: '2.4'
+
+services:
+  traefik:
+    isolation: ${TRAEFIK_ISOLATION}
+    image: ${TRAEFIK_IMAGE}
+    command:
+      - "--ping"
+      - "--api.insecure=true"
+      - "--providers.docker.endpoint=npipe:////./pipe/docker_engine"
+      - "--providers.docker.exposedByDefault=false"
+      - "--providers.file.directory=C:/etc/traefik/config/dynamic"
+      - "--entryPoints.websecure.address=:443"
+    ports:
+      - "443:443"
+      - "8079:8080"
+    healthcheck:
+      test: ["CMD", "traefik", "healthcheck", "--ping"]
+    volumes:
+      - source: \\.\pipe\docker_engine
+        target: \\.\pipe\docker_engine
+        type: npipe
+      - ./traefik:C:/etc/traefik
+    depends_on:
+      cm:
+        condition: service_healthy
+      cd:
+        condition: service_healthy
+      id:
+        condition: service_started
+ 
+  mssql:
+    isolation: ${ISOLATION}
+    image: ${REGISTRY}sitecore-xp-sqldev:${SITECORE_VERSION}-windowsservercore-${WINDOWSSERVERCORE_VERSION}
+    environment:
+      SA_PASSWORD: ${SQL_SA_PASSWORD}
+      SITECORE_ADMIN_PASSWORD: ${SITECORE_ADMIN_PASSWORD}
+      ACCEPT_EULA: "Y"
+      SQL_SERVER: mssql
+    ports:
+      - "14330:1433"
+    volumes:
+      - type: bind
+        source: .\mssql-data
+        target: c:\data
+
+  solr:
+    isolation: ${ISOLATION}
+    ports:
+      - "8984:8983"
+    image: ${REGISTRY}sitecore-xp-sxa-solr:${SITECORE_VERSION}-nanoserver-${NANOSERVER_VERSION}
+    volumes:
+      - type: bind
+        source: .\solr-data
+        target: c:\data
+
+  id:
+    isolation: ${ISOLATION}
+    image: ${REGISTRY}sitecore-xp-identity:${SITECORE_VERSION}-windowsservercore-${WINDOWSSERVERCORE_VERSION}
+    environment:
+      Sitecore_Sitecore__IdentityServer__SitecoreMemberShipOptions__ConnectionString: Data Source=mssql;Initial Catalog=Sitecore.Core;User ID=sa;Password=${SQL_SA_PASSWORD}
+      Sitecore_Sitecore__IdentityServer__AccountOptions__PasswordRecoveryUrl: https://${CM_HOST}/sitecore/login?rc=1
+      Sitecore_Sitecore__IdentityServer__Clients__PasswordClient__ClientSecrets__ClientSecret1: ${SITECORE_IDSECRET}
+      Sitecore_Sitecore__IdentityServer__Clients__DefaultClient__AllowedCorsOrigins__AllowedCorsOriginsGroup1: https://${CM_HOST}
+      Sitecore_Sitecore__IdentityServer__CertificateRawData: ${SITECORE_ID_CERTIFICATE}
+      Sitecore_Sitecore__IdentityServer__PublicOrigin: https://${ID_HOST}
+      Sitecore_Sitecore__IdentityServer__CertificateRawDataPassword: ${SITECORE_ID_CERTIFICATE_PASSWORD}
+      Sitecore_License: ${SITECORE_LICENSE}
+    depends_on:
+      mssql:
+        condition: service_healthy
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.id-secure.entrypoints=websecure"
+      - "traefik.http.routers.id-secure.rule=Host(`${ID_HOST}`)"
+      - "traefik.http.routers.id-secure.tls=true"
+
+  xconnect:
+    isolation: ${ISOLATION}
+    image: ${REGISTRY}sitecore-xp-xconnect:${SITECORE_VERSION}-windowsservercore-${WINDOWSSERVERCORE_VERSION}
+    environment:
+      SITECORE_LICENSE: ${SITECORE_LICENSE}
+      SITECORE_SITECORE:XCONNECT:COLLECTIONSEARCH:SERVICES:SOLR.SOLRREADERSETTINGS:OPTIONS:REQUIREHTTPS: 'false'
+      SITECORE_SITECORE:XCONNECT:SEARCHINDEXER:SERVICES:SOLR.SOLRWRITERSETTINGS:OPTIONS:REQUIREHTTPS: 'false'
+      SITECORE_CONNECTIONSTRINGS_MESSAGING: Data Source=mssql;Database=Sitecore.Messaging;User ID=sa;Password=${SQL_SA_PASSWORD}
+      SITECORE_CONNECTIONSTRINGS_PROCESSING.ENGINE.STORAGE: Data Source=mssql;Database=Sitecore.ProcessingEngineStorage;User ID=sa;Password=${SQL_SA_PASSWORD}
+      SITECORE_CONNECTIONSTRINGS_REPORTING: Data Source=mssql;Database=Sitecore.Reporting;User ID=sa;Password=${SQL_SA_PASSWORD}
+      SITECORE_CONNECTIONSTRINGS_XDB.MARKETINGAUTOMATION: Data Source=mssql;Database=Sitecore.MarketingAutomation;User ID=sa;Password=${SQL_SA_PASSWORD}
+      SITECORE_CONNECTIONSTRINGS_XDB.PROCESSING.POOLS: Data Source=mssql;Database=Sitecore.Processing.Pools;User ID=sa;Password=${SQL_SA_PASSWORD}
+      SITECORE_CONNECTIONSTRINGS_XDB.REFERENCEDATA: Data Source=mssql;Database=Sitecore.ReferenceData;User ID=sa;Password=${SQL_SA_PASSWORD}
+      SITECORE_CONNECTIONSTRINGS_COLLECTION: Data Source=mssql;Database=Sitecore.Xdb.Collection.ShardMapManager;User ID=sa;Password=${SQL_SA_PASSWORD}
+      SITECORE_CONNECTIONSTRINGS_SOLRCORE: http://solr:8983/solr/sitecore_xdb
+    depends_on:
+      mssql:
+        condition: service_healthy
+      solr:
+        condition: service_started
+
+  xdbsearchworker:
+    isolation: ${ISOLATION}
+    image: ${REGISTRY}sitecore-xp-xconnect-indexworker:${SITECORE_VERSION}-windowsservercore-${WINDOWSSERVERCORE_VERSION}
+    restart: unless-stopped
+    environment:
+      SITECORE_LICENSE: ${SITECORE_LICENSE}
+      SITECORE_CONNECTIONSTRINGS_COLLECTION: Data Source=mssql;Initial Catalog=Sitecore.Xdb.Collection.ShardMapManager;User ID=sa;Password=${SQL_SA_PASSWORD}
+      SITECORE_CONNECTIONSTRINGS_SOLRCORE: http://solr:8983/solr/sitecore_xdb
+      SITECORE_SITECORE:XCONNECT:SEARCHINDEXER:SERVICES:SOLR.SOLRREADERSETTINGS:OPTIONS:REQUIREHTTPS: 'false'
+      SITECORE_SITECORE:XCONNECT:SEARCHINDEXER:SERVICES:SOLR.SOLRWRITERSETTINGS:OPTIONS:REQUIREHTTPS: 'false'
+    depends_on:
+      mssql:
+        condition: service_healthy
+      solr:
+        condition: service_started
+
+  xdbautomationworker:
+    isolation: ${ISOLATION}
+    image: ${REGISTRY}sitecore-xp-xconnect-automationengine:${SITECORE_VERSION}-windowsservercore-${WINDOWSSERVERCORE_VERSION}
+    restart: unless-stopped
+    environment:
+      SITECORE_LICENSE: ${SITECORE_LICENSE}
+      SITECORE_CONNECTIONSTRINGS_XCONNECT.COLLECTION: http://xconnect
+      SITECORE_CONNECTIONSTRINGS_XDB.MARKETINGAUTOMATION: Data Source=mssql;Database=Sitecore.MarketingAutomation;User ID=sa;Password=${SQL_SA_PASSWORD}
+      SITECORE_CONNECTIONSTRINGS_XDB.REFERENCEDATA: Data Source=mssql;Database=Sitecore.ReferenceData;User ID=sa;Password=${SQL_SA_PASSWORD}
+      SITECORE_CONNECTIONSTRINGS_MESSAGING: Data Source=mssql;Database=Sitecore.Messaging;User ID=sa;Password=${SQL_SA_PASSWORD}
+    depends_on:
+      mssql:
+        condition: service_healthy
+      xconnect:
+        condition: service_started
+
+  cortexprocessingworker:
+    isolation: ${ISOLATION}
+    image: ${REGISTRY}sitecore-xp-xconnect-processingengine:${SITECORE_VERSION}-windowsservercore-${WINDOWSSERVERCORE_VERSION}
+    restart: unless-stopped
+    environment:
+      SITECORE_LICENSE: ${SITECORE_LICENSE}
+      SITECORE_CONNECTIONSTRINGS_PROCESSING.ENGINE.STORAGE: Data Source=mssql;Database=Sitecore.Processing.Engine.Storage;User ID=sa;Password=${SQL_SA_PASSWORD}
+      SITECORE_CONNECTIONSTRINGS_PROCESSING.ENGINE.TASKS: Data Source=mssql;Database=Sitecore.Processing.Engine.Tasks;User ID=sa;Password=${SQL_SA_PASSWORD}
+      SITECORE_CONNECTIONSTRINGS_PROCESSING.WEBAPI.BLOB: http://xconnect
+      SITECORE_CONNECTIONSTRINGS_PROCESSING.WEBAPI.TABLE: http://xconnect
+      SITECORE_CONNECTIONSTRINGS_XCONNECT.COLLECTION: http://xconnect
+      SITECORE_CONNECTIONSTRINGS_XCONNECT.CONFIGURATION: http://xconnect
+      SITECORE_CONNECTIONSTRINGS_XCONNECT.SEARCH: http://xconnect
+      SITECORE_CONNECTIONSTRINGS_MESSAGING: Data Source=mssql;Database=Sitecore.Messaging;User ID=sa;Password=${SQL_SA_PASSWORD}
+      SITECORE_CONNECTIONSTRINGS_REPORTING: Data Source=mssql;Database=Sitecore.Reporting;User ID=sa;Password=${SQL_SA_PASSWORD}
+      SITECORE_SETTINGS:SERILOG:MINIMUMLEVEL:DEFAULT: Information
+    depends_on:
+      mssql:
+        condition: service_healthy
+      xconnect:
+        condition: service_started
+
+  cd:
+    isolation: ${ISOLATION}
+    image: ${REGISTRY}sitecore-xp-cd:${SITECORE_VERSION}-windowsservercore-${WINDOWSSERVERCORE_VERSION}
+    environment:
+      Sitecore_AppSettings_Role:Define: ContentDelivery, Docker
+      Sitecore_ConnectionStrings_Security: Data Source=mssql;Initial Catalog=Sitecore.Core;User ID=sa;Password=${SQL_SA_PASSWORD}
+      Sitecore_ConnectionStrings_Web: Data Source=mssql;Initial Catalog=Sitecore.Web;User ID=sa;Password=${SQL_SA_PASSWORD}
+      Sitecore_ConnectionStrings_Messaging: Data Source=mssql;Initial Catalog=Sitecore.Messaging;User ID=sa;Password=${SQL_SA_PASSWORD}
+      Sitecore_ConnectionStrings_ExperienceForms: Data Source=mssql;Initial Catalog=Sitecore.ExperienceForms;User ID=sa;Password=${SQL_SA_PASSWORD}
+      Sitecore_ConnectionStrings_Exm.Master: Data Source=mssql;Initial Catalog=Sitecore.Exm.master;User ID=sa;Password=${SQL_SA_PASSWORD}
+      Sitecore_ConnectionStrings_Sitecore.Reporting.Client: http://xconnect
+      Sitecore_ConnectionStrings_Solr.Search: http://solr:8983/solr
+      Sitecore_ConnectionStrings_XConnect.Collection: http://xconnect
+      Sitecore_ConnectionStrings_Xdb.MarketingAutomation.Operations.Client: http://xconnect
+      Sitecore_ConnectionStrings_Xdb.ReferenceData.Client: http://xconnect
+      Sitecore_License: ${SITECORE_LICENSE}
+    depends_on:
+      mssql:
+        condition: service_healthy
+      solr:
+        condition: service_started
+      xconnect:
+        condition: service_started
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.rendering-secure.entrypoints=websecure"
+      - "traefik.http.routers.rendering-secure.rule=Host(`${RENDERING_HOST}`)"
+      - "traefik.http.routers.rendering-secure.tls=true"
+
+  cm:
+    isolation: ${ISOLATION}
+    image: ${REGISTRY}sitecore-xp-standalone:${SITECORE_VERSION}-windowsservercore-${WINDOWSSERVERCORE_VERSION}
+    environment:
+      Sitecore_AppSettings_Role:Define: ContentManagement, Docker
+      Sitecore_ConnectionStrings_Core: Data Source=mssql;Initial Catalog=Sitecore.Core;User ID=sa;Password=${SQL_SA_PASSWORD}
+      Sitecore_ConnectionStrings_Security: Data Source=mssql;Initial Catalog=Sitecore.Core;User ID=sa;Password=${SQL_SA_PASSWORD}
+      Sitecore_ConnectionStrings_Master: Data Source=mssql;Initial Catalog=Sitecore.Master;User ID=sa;Password=${SQL_SA_PASSWORD}
+      Sitecore_ConnectionStrings_Web: Data Source=mssql;Initial Catalog=Sitecore.Web;User ID=sa;Password=${SQL_SA_PASSWORD}
+      Sitecore_ConnectionStrings_Messaging: Data Source=mssql;Initial Catalog=Sitecore.Messaging;User ID=sa;Password=${SQL_SA_PASSWORD}
+      Sitecore_ConnectionStrings_Xdb.Processing.Pools: Data Source=mssql;Initial Catalog=Sitecore.Processing.pools;User ID=sa;Password=${SQL_SA_PASSWORD}
+      Sitecore_ConnectionStrings_Xdb.Referencedata: Data Source=mssql;Initial Catalog=Sitecore.Referencedata;User ID=sa;Password=${SQL_SA_PASSWORD}
+      Sitecore_ConnectionStrings_Xdb.Processing.Tasks: Data Source=mssql;Initial Catalog=Sitecore.Processing.tasks;User ID=sa;Password=${SQL_SA_PASSWORD}
+      Sitecore_ConnectionStrings_ExperienceForms: Data Source=mssql;Initial Catalog=Sitecore.ExperienceForms;User ID=sa;Password=${SQL_SA_PASSWORD}
+      Sitecore_ConnectionStrings_Exm.Master: Data Source=mssql;Initial Catalog=Sitecore.Exm.master;User ID=sa;Password=${SQL_SA_PASSWORD}
+      Sitecore_ConnectionStrings_Reporting: Data Source=mssql;Initial Catalog=Sitecore.Reporting;User ID=sa;Password=${SQL_SA_PASSWORD}
+      Sitecore_ConnectionStrings_Sitecore.Reporting.Client: http://xconnect
+      Sitecore_ConnectionStrings_Solr.Search: http://solr:8983/solr
+      Sitecore_ConnectionStrings_SitecoreIdentity.Secret: ${SITECORE_IDSECRET}
+      Sitecore_ConnectionStrings_XConnect.Collection: http://xconnect
+      Sitecore_ConnectionStrings_Xdb.MarketingAutomation.Operations.Client: http://xconnect
+      Sitecore_ConnectionStrings_Xdb.MarketingAutomation.Reporting.Client: http://xconnect
+      Sitecore_ConnectionStrings_Xdb.ReferenceData.Client: http://xconnect
+      Sitecore_License: ${SITECORE_LICENSE}
+      Sitecore_Identity_Server_Authority: https://${ID_HOST}
+      Sitecore_Identity_Server_InternalAuthority: http://id
+      Sitecore_Identity_Server_CallbackAuthority: https://${CM_HOST}
+      Sitecore_Identity_Server_Require_Https: "false"
+    depends_on:
+      mssql:
+        condition: service_healthy
+      solr:
+        condition: service_started
+      xconnect:
+        condition: service_started
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.middlewares.force-STS-Header.headers.forceSTSHeader=true"
+      - "traefik.http.middlewares.force-STS-Header.headers.stsSeconds=31536000"
+      - "traefik.http.routers.cm-secure.entrypoints=websecure"
+      - "traefik.http.routers.cm-secure.rule=Host(`${CM_HOST}`)"
+      - "traefik.http.routers.cm-secure.tls=true"
+      - "traefik.http.routers.cm-secure.middlewares=force-STS-Header"

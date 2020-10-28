@@ -55,6 +55,7 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Properties\PublishProfiles\Docker.pubxml" />
     <None Include="Web.config">
       <SubType>Designer</SubType>
     </None>
