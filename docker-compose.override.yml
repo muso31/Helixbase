@@ -122,7 +122,7 @@ services:
     volumes:
       - ${LOCAL_DEPLOY_PATH}\platform:C:\src
       - ${LOCAL_DATA_PATH}\cd:C:\inetpub\wwwroot\App_Data\logs
-      - ${HOST_LICENSE_FOLDER}:c:\license
+      - ${HOST_LICENSE_FOLDER}:C:\license
     environment:
       SITECORE_LICENSE_LOCATION: c:\license\license.xml
     entrypoint: powershell.exe -Command "& C:\\tools\\entrypoints\\iis\\Development.ps1"
@@ -142,7 +142,8 @@ services:
     volumes:
       - ${LOCAL_DEPLOY_PATH}\platform:C:\src
       - ${LOCAL_DATA_PATH}\cm:C:\inetpub\wwwroot\App_Data\logs
-      - ${HOST_LICENSE_FOLDER}:c:\license
+      - ${HOST_LICENSE_FOLDER}:C:\license
+      - ${LOCAL_MODULES_ROOT_PATH}:C:\unicorn\
     environment:
       SITECORE_LICENSE_LOCATION: c:\license\license.xml
     entrypoint: powershell.exe -Command "& C:\\tools\\entrypoints\\iis\\Development.ps1"
