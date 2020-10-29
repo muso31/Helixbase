@@ -203,3 +203,22 @@ services:
       - ${HOST_LICENSE_FOLDER}:c:\license
     environment: 
       SITECORE_LICENSE_LOCATION: c:\license\
+
+  # Use Portainer to manage your container 
+  portainer:
+    image: portainer/portainer
+    command: --no-auth -p :80
+    restart: always
+    ports:
+       - 80:80
+    volumes:
+      - ${LOCAL_DATA_PATH}\portainer:C:\data portainer/portainer
+      - source: '\\.\pipe\docker_engine'
+        target: '\\.\pipe\docker_engine'
+        type: npipe
+
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.portainer-secure.entrypoints=websecure"
+      - "traefik.http.routers.portainer-secure.rule=Host(`${PORTAINER_HOST}`)"
+      - "traefik.http.routers.portainer-secure.tls=true"

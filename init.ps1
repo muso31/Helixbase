@@ -100,6 +100,7 @@ Add-HostsEntry "cm.$rootHostDomain"
 Add-HostsEntry "cd.$rootHostDomain"
 Add-HostsEntry "id.$rootHostDomain"
 Add-HostsEntry "www.$rootHostDomain"
+Add-HostsEntry "portainer.$rootHostDomain"
 
 
 ###############################
@@ -120,6 +121,9 @@ if ($InitEnv) {
 
     # RENDERING_HOST
     Set-DockerComposeEnvFileVariable "RENDERING_HOST" -Value "www.$rootHostDomain"
+
+    # PORTAINER_HOST
+    Set-DockerComposeEnvFileVariable "PORTAINER_HOST" -Value "portainer.$rootHostDomain"
 
     # REPORTING_API_KEY = random 64-128 chars
     Set-DockerComposeEnvFileVariable "REPORTING_API_KEY" -Value (Get-SitecoreRandomString 128 -DisallowSpecial)

@@ -61,6 +61,7 @@ if (-not $status.status -eq "enabled") {
 
 Write-Host "Opening site..." -ForegroundColor Green
 
+Start-Process https://portainer.$rootHostDomain/
 Start-Process https://cm.$rootHostDomain/sitecore/
 Start-Process https://www.$rootHostDomain/
 
