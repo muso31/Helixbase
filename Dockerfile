@@ -15,6 +15,9 @@ COPY *.sln nuget.config /nuget/
 COPY src/ /temp/
 RUN Invoke-Expression 'robocopy C:/temp C:/nuget/src /s /ndl /njh /njs *.csproj *.scproj packages.config'
 
+RUN powershell -Command tree ./nuget /f 
+
+
 FROM ${BUILD_IMAGE} AS builder
 ARG BUILD_CONFIGURATION
 
@@ -23,6 +26,7 @@ WORKDIR /build
 
 # Copy prepped NuGet artifacts, and restore as distinct layer to take advantage of caching.
 COPY --from=nuget-prep ./nuget ./
+# RUN powershell -Command tree ./ /f 
 
 # Restore NuGet packages
 RUN nuget restore -Verbosity quiet
@@ -30,15 +34,18 @@ RUN nuget restore -Verbosity quiet
 # Copy remaining source code
 COPY src/ ./src/
 
-# Build the Sitecore main platform artifacts
-RUN msbuild .\src\platform\Platform.csproj /p:Configuration=$env:BUILD_CONFIGURATION /m /p:DeployOnBuild=true /p:PublishProfile=Local
+RUN nuget restore -Verbosity quiet
 
-# Build the rendering host
-WORKDIR /build/src/rendering
-RUN dotnet publish -c $env:BUILD_CONFIGURATION -o /build/rendering --no-restore
+
+# Build the Sitecore main platform artifacts
+RUN msbuild .\src\Website\website\Helixbase.Website.csproj /p:Configuration=$env:BUILD_CONFIGURATION /m /p:DeployOnBuild=true /p:PublishProfile=Docker
+
+RUN powershell -Command tree ./build/docker/deploy/platform/ /f
+
 
 # Save the artifacts for copying into other images (see 'cm' and 'rendering' Dockerfiles).
 FROM mcr.microsoft.com/windows/nanoserver:1809
 WORKDIR /artifacts
 COPY --from=builder /build/docker/deploy/platform  ./sitecore/
-COPY --from=builder /build/rendering ./rendering/
+COPY --from=builder /build ./build/
+#COPY --from=builder /build/rendering ./rendering/

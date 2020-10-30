@@ -21,16 +21,16 @@ services:
   # The solution build image is added here so it can be referenced as a build dependency
   # for the images which use its output. Setting "scale: 0" means docker-compose will not
   # include it in the running environment. See Dockerfile for more details.
-  # solution:
-  #   image: ${REGISTRY}${COMPOSE_PROJECT_NAME}-solution:${VERSION:-latest}
-  #   build:
-  #     context: .
-  #     args:
-  #       BUILD_CONFIGURATION: ${BUILD_CONFIGURATION}
-  #       BUILD_IMAGE: ${REGISTRY}${COMPOSE_PROJECT_NAME}-dotnetsdk:${VERSION:-latest}
-  #   depends_on:
-  #     - dotnetsdk
-  #   scale: 0
+  solution:
+    image: ${REGISTRY}${COMPOSE_PROJECT_NAME}-solution:${VERSION:-latest}
+    build:
+      context: .
+      args:
+        BUILD_CONFIGURATION: ${BUILD_CONFIGURATION}
+        BUILD_IMAGE: ${REGISTRY}${COMPOSE_PROJECT_NAME}-dotnetsdk:${VERSION:-latest}
+    depends_on:
+      - dotnetsdk
+    scale: 0
 
   # This is our custom image for an ASP.NET Core Rendering Host.
   # If target is 'debug', it will use the SDK image as parent and run 'dotnet watch.'
@@ -118,6 +118,7 @@ services:
       context: ./docker/build/cd
       args:
         PARENT_IMAGE: ${REGISTRY}sitecore-xp-cd:${SITECORE_VERSION}-windowsservercore-${WINDOWSSERVERCORE_VERSION}
+        SOLUTION_IMAGE: ${REGISTRY}${COMPOSE_PROJECT_NAME}-solution:${VERSION:-latest}
         TOOLS_IMAGE: ${TOOLS_IMAGE}
     volumes:
       - ${LOCAL_DEPLOY_PATH}\platform:C:\src
@@ -126,6 +127,9 @@ services:
     environment:
       SITECORE_LICENSE_LOCATION: c:\license\license.xml
     entrypoint: powershell.exe -Command "& C:\\tools\\entrypoints\\iis\\Development.ps1"
+    depends_on:
+      - solution
+      - cm
 
   # Use our custom CM (XP0 Standalone) image with added modules and solution code.
   # Folders are mounted below for code deployment and log output. See Dockerfile for details.
@@ -147,6 +151,8 @@ services:
     environment:
       SITECORE_LICENSE_LOCATION: c:\license\license.xml
     entrypoint: powershell.exe -Command "& C:\\tools\\entrypoints\\iis\\Development.ps1"
+    depends_on:
+      - solution
 
   # Use our retagged XConnect image.
   # Configure for a mounted license folder instead of using SITECORE_LICENSE.
