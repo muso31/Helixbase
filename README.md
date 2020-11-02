@@ -1,7 +1,7 @@
 <img src="https://nshackblog.files.wordpress.com/2017/02/helixbase1.png" height="154px" width="200px" /><br />
 A Sitecore Helix based solution which can be used for Greenfield projects. Tackles some common problems when working with the platform.
 
-<img src="https://nshack31.visualstudio.com/Helix Base/_apis/build/status/Helix%20Base%20CI?branchName=master"/> ![ASP.NET CI](https://github.com/muso31/Helixbase/workflows/ASP.NET%20CI/badge.svg) [![Helix Check](https://github.com/muso31/Helixbase/workflows/Helix%20Check/badge.svg)](https://github.com/muso31/Helixbase/actions?query=workflow%3A%22Helix+Check%22) [![GitHub Stars](https://img.shields.io/github/stars/muso31/helixbase?label=GitHub%20Stars)](https://github.com/muso31/Helixbase/stargazers)
+![ASP.NET CI](https://github.com/muso31/Helixbase/workflows/ASP.NET%20CI/badge.svg) [![Helix Check](https://github.com/muso31/Helixbase/workflows/Helix%20Check/badge.svg)](https://github.com/muso31/Helixbase/actions?query=workflow%3A%22Helix+Check%22) [![GitHub Stars](https://img.shields.io/github/stars/muso31/helixbase?label=GitHub%20Stars)](https://github.com/muso31/Helixbase/stargazers)
 
 #### Features include:
 
