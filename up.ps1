@@ -34,7 +34,7 @@ do {
             throw
         }
     }
-} while ($status.status -ne "enabled" -and $startTime.AddSeconds(15) -gt (Get-Date))
+} while ($status.status -ne "enabled" -and $startTime.AddSeconds(30) -gt (Get-Date))
 if (-not $status.status -eq "enabled") {
     $status
     Write-Error "Timeout waiting for Sitecore CM to become available via Traefik proxy. Check CM container logs."

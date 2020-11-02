@@ -15,8 +15,7 @@ COPY *.sln nuget.config /nuget/
 COPY src/ /temp/
 RUN Invoke-Expression 'robocopy C:/temp C:/nuget/src /s /ndl /njh /njs *.csproj *.scproj packages.config'
 
-RUN powershell -Command tree ./nuget /f 
-
+#RUN powershell -Command tree ./nuget /f 
 
 FROM ${BUILD_IMAGE} AS builder
 ARG BUILD_CONFIGURATION
@@ -36,12 +35,10 @@ COPY src/ ./src/
 
 RUN nuget restore -Verbosity quiet
 
-
 # Build the Sitecore main platform artifacts
 RUN msbuild .\src\Website\website\Helixbase.Website.csproj /p:Configuration=$env:BUILD_CONFIGURATION /m /p:DeployOnBuild=true /p:PublishProfile=Docker
 
-RUN powershell -Command tree ./build/docker/deploy/platform/ /f
-
+#RUN powershell -Command tree ./build/docker/deploy/platform/ /f
 
 # Save the artifacts for copying into other images (see 'cm' and 'rendering' Dockerfiles).
 FROM mcr.microsoft.com/windows/nanoserver:1809
