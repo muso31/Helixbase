@@ -12,13 +12,15 @@ $testRun = $false
 
 # Variables
 $solutionName = "Helixbase"
-$solutionRootPath = Split-Path -Path $PSScriptRoot -Parent
-$sourceFolder = Join-Path -Path $solutionRootPath -ChildPath "src"
-
 $solutionFileExtension = "sln"
 $projectFileExtension = "csproj"
+$solutionRootPath = Split-Path -Path $PSScriptRoot -Parent
+$sourceFolder = Join-Path -Path $solutionRootPath -ChildPath "src"
+$solutionPath = "$solutionRootPath\$solutionName.$solutionFileExtension"
 
 $renderingModuleTargetFramework = "netcoreapp3.1"
+$platformModuleTargetFramework = "net48"
+
 
 $renderingModuleSuffix = "Rendering"
 $platformModuleSuffix = "Platform"
@@ -85,8 +87,8 @@ Function Invoke-MigrateProject {
         if(-Not (Test-Path $ProjectDirectory)) {
             Write-Warning "Move did not happen: $ProjectDirectory doesn't exist."
         } else {
-            Move-Item -Path "$ProjectDirectory\*" -Destination $NewProjectDirectory
-            Remove-Item -Path $ProjectDirectory -Force
+            Get-ChildItem -Path $ProjectDirectory -Recurse -File | Move-Item -Destination $NewProjectDirectory
+            Get-ChildItem -Path $ProjectDirectory -Recurse -Directory | Remove-Item
         }
        
     }
@@ -106,12 +108,36 @@ Function Invoke-MigrateProject {
 
     # Update Solution References
     Write-Host "Updating solution references from $projectRelativePath to $newProjectRelativePath"
-    $solutionPath = "$solutionRootPath\$solutionName.$solutionFileExtension"
     if(-Not($testRun)) {
         (Get-Content "$solutionPath").replace($projectRelativePath, $newProjectRelativePath) | Set-Content $solutionPath
 
     }
+}
 
+# Creates new Helix Module Project and adds to the solution
+# TargetFramework defaults to net48 but can be overridden 
+Function Invoke-CreateSolutionProject {
+    param(
+        [Parameter(Mandatory=$true)]
+        [string]$ProjectDirectory,
+        [Parameter(Mandatory=$true)]
+        [string]$ProjectName,
+        [Parameter(Mandatory=$true)]
+        [string]$LayerName,
+        [Parameter(Mandatory=$true)]
+        [string]$ModuleName,
+        [Parameter(Mandatory=$true)]
+        [string]$TargetFramework
+    )
+
+    dotnet new classlib `
+        --name $ProjectName `
+        --type project `
+        --target-framework-override $TargetFramework `
+        --output $ProjectName
+
+    dotnet sln $solutionPath `
+        add --solution-folder "$LayerName\$ModuleName" $ProjectDirectory
 }
 
 # Converts a Helix Website (.Net Framework) Module into a NetCore Headless Rendering Module
@@ -144,6 +170,15 @@ Function Invoke-CovertToRenderingModule {
         -NewProjectDirectory (Join-Path -Path $sourceFolder -ChildPath "$LayerName\$ModuleName\rendering") `
         -ProjectName $websiteProjectName `
         -NewProjectName $renderingProjectName
+
+    # Create new Platform Project for Modue
+    Write-Host "Create new new Platform Project $platformProjectName" 
+    Invoke-CreateSolutionProject `
+        -ProjectDirectory (Join-Path -Path $sourceFolder -ChildPath "$LayerName\$ModuleName\platform") `
+        -ProjectName $platformProjectName `
+        -LayerName $LayerName `
+        -ModuleName $ModuleName `
+        -TargetFramework $platformModuleTargetFramework
 }
 
 
