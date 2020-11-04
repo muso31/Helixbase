@@ -82,15 +82,8 @@ Function Invoke-MigrateProject {
     Write-Host "Moving Project from $ProjectDirectory to $NewProjectDirectory"
     if(-Not($testRun)) {
         if(-Not (Test-Path $NewProjectDirectory)) {
-            New-Item -ItemType Directory -Path $NewProjectDirectory
-        }
-        if(-Not (Test-Path $ProjectDirectory)) {
-            Write-Warning "Move did not happen: $ProjectDirectory doesn't exist."
-        } else {
-            Get-ChildItem -Path $ProjectDirectory -Recurse -File | Move-Item -Destination $NewProjectDirectory
-            Get-ChildItem -Path $ProjectDirectory -Recurse -Directory | Remove-Item
-        }
-       
+            Rename-Item -Path $ProjectDirectory -NewName $NewProjectDirectory -Force
+        } 
     }
 
     # Rename Project File
@@ -130,14 +123,18 @@ Function Invoke-CreateSolutionProject {
         [string]$TargetFramework
     )
 
-    dotnet new classlib `
-        --name $ProjectName `
-        --type project `
-        --target-framework-override $TargetFramework `
-        --output $ProjectName
+    if(-Not($testRun)) {
+        Write-Host "Creating new project $ProjectName" 
+        dotnet new classlib `
+            --name $ProjectName `
+            --type project `
+            --target-framework-override $TargetFramework `
+            --output $ProjectDirectory
 
-    dotnet sln $solutionPath `
-        add --solution-folder "$LayerName\$ModuleName" $ProjectDirectory
+        Write-Host "Adding $ProjectName to the solution $solutionName" 
+        dotnet sln $solutionPath `
+            add --solution-folder "$LayerName\$ModuleName" $ProjectDirectory
+    }
 }
 
 # Converts a Helix Website (.Net Framework) Module into a NetCore Headless Rendering Module
@@ -172,7 +169,6 @@ Function Invoke-CovertToRenderingModule {
         -NewProjectName $renderingProjectName
 
     # Create new Platform Project for Modue
-    Write-Host "Create new new Platform Project $platformProjectName" 
     Invoke-CreateSolutionProject `
         -ProjectDirectory (Join-Path -Path $sourceFolder -ChildPath "$LayerName\$ModuleName\platform") `
         -ProjectName $platformProjectName `
