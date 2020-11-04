@@ -6,6 +6,7 @@
 # Pre-Requisites
 # 1. All projects are using the new csproj structure
 # 2. PackageReference format instead of legacy packages.confif (https://docs.microsoft.com/en-us/nuget/consume-packages/migrate-packages-config-to-package-reference)
+# 3. DotNet Framework 4.8 and NetCore 3.1 is installed
 
 # Enable test run to only run report and make no file changes
 $testRun = $false
@@ -44,8 +45,34 @@ $layers = @(
 
 # Steps
 # 1. Iterate Solution Layers (Feature/Foundation/Project)
-# 2. Convert existing Website projects into netcore Renderinng project
-# 3. Create new .Net Framework 4.8 Platform project for each module
+# 2. Convert existing Website projects into netcore Platform (Sitecore) project
+# 3. Create new Rendering Host project for each module
+Function Invoke-UpdatetProjectTargetFramework {
+    param(
+        [Parameter(Mandatory=$true)]
+        [string]$ProjectPath,
+        [Parameter(Mandatory=$true)]
+        [string]$NewTargetFramework    
+    )
+
+    #Update project TargetFramework to use netcore
+    [xml]$xmlDoc = New-Object system.Xml.XmlDocument
+    [xml]$xmlDoc = Get-Content $ProjectPath
+
+    $currentFrameworkNode = $xmlDoc.SelectSingleNode("//Project/PropertyGroup/TargetFramework")
+    
+    if($currentFrameworkNode -eq $NewTargetFramework) {
+        return
+    }
+
+    Write-Host "Updating framework from $($currentFrameworkNode.InnerText) to $NewTargetFramework"
+    # Set new TargetFramework
+    $currentFrameworkNode.InnerText = $NewTargetFramework
+
+    if(-Not $testRun) {
+        $xmlDoc.Save($ProjectPath)
+    }
+}
 
 # Moves Project into new directory
 # Updates Project Name
@@ -162,7 +189,19 @@ Function Invoke-CovertToRenderingModule {
     $websiteProjectName = "$solutionName.$LayerName.$ModuleName"
     $renderingProjectName = "$solutionName.$LayerName.$ModuleName.$renderingModuleSuffix"
     $platformProjectName = "$solutionName.$LayerName.$ModuleName.$platformModuleSuffix"
-   
+
+    #  Get the project file path and check it exists
+    $websiteProjectPath = Join-Path -Path $sourceFolder -ChildPath "$LayerName\$ModuleName\$websiteModuleFolder\$websiteProjectName.$projectFileExtension"
+    if(-Not (Test-Path $websiteProjectPath)) {
+        Write-Warning "Could not find module project file to update TargetFramework: $websiteProjectPath"
+    
+    } else {
+        # Update Project Target Framework to use platformModuleTargetFramework (netcore)
+        Invoke-UpdatetProjectTargetFramework `
+            -ProjectPath $websiteProjectPath `
+            -NewTargetFramework $platformModuleTargetFramework
+    } 
+  
     Invoke-MigrateProject `
         -ProjectDirectory (Join-Path -Path $sourceFolder -ChildPath "$LayerName\$ModuleName\$websiteModuleFolder") `
         -NewProjectDirectory (Join-Path -Path $sourceFolder -ChildPath "$LayerName\$ModuleName\$platformModuleFolder") `
