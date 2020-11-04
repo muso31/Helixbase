@@ -25,6 +25,17 @@ $platformModuleTargetFramework = "net48"
 $renderingModuleSuffix = "Rendering"
 $platformModuleSuffix = "Platform"
 
+# Folder Names
+$websiteModuleFolder = "website"
+$renderingModuleFolder = "rendering"
+$platformModuleFolder = "platform"
+
+# Nuget Packages
+$reneringHostPackages = @(
+    'Sitecore.AspNet.RenderingEngine',
+    'Sitecore.LayoutService.Client'
+)
+
 $layers = @(
     'Feature',
     'Foundation',
@@ -36,29 +47,6 @@ $layers = @(
 # 2. Convert existing Website projects into netcore Renderinng project
 # 3. Create new .Net Framework 4.8 Platform project for each module
 
-Function Invoke-UpdatetProjectTargetFramework {
-    param(
-        [Parameter(Mandatory=$true)]
-        [string]$ProjectPath,
-        [Parameter(Mandatory=$true)]
-        [string]$NewTargetFramework    
-    )
-
-    #Update project TargetFramework to use netcore
-    [xml]$xmlDoc = New-Object system.Xml.XmlDocument
-    [xml]$xmlDoc = Get-Content $ProjectPath
-
-    $currentFrameworkNode = $xmlDoc.SelectSingleNode("//Project/PropertyGroup/TargetFramework")
-    Write-Host "Updating framework from $($currentFrameworkNode.InnerText) to $NewTargetFramework" -ForegroundColor Green
-
-    # Set new TargetFramework
-    $currentFrameworkNode.InnerText = $NewTargetFramework
-
-    if(-Not $testRun) {
-        $xmlDoc.Save($ProjectPath)
-    }
-}
-
 # Moves Project into new directory
 # Updates Project Name
 # Updates Solution References
@@ -69,32 +57,44 @@ Function Invoke-MigrateProject {
         [Parameter(Mandatory=$true)]
         [string]$NewProjectDirectory,
         [Parameter(Mandatory=$true)]
+        [string]$ModuleFolderName,
+        [Parameter(Mandatory=$true)]
+        [string]$NewModuleFolderName,
+        [Parameter(Mandatory=$true)]
         [string]$ProjectName,
         [Parameter(Mandatory=$true)]
-        [string]$NewProjectName
+        [string]$NewProjectName,
+        [Parameter(Mandatory=$true)]
+        [string]$NewProjectSuffix
     )
 
     # Project Relative Paths
-    $projectRelativePath = "$($ProjectDirectory.Replace("$solutionRootPath\", ''))\$ProjectName.$projectFileExtension";
-    $newProjectRelativePath = "$($NewProjectDirectory.Replace("$solutionRootPath\", ''))\$NewProjectName.$projectFileExtension";
+    $projectFileName = "$ProjectName.$projectFileExtension"
+    $newProjectFileName = "$NewProjectName.$projectFileExtension"
+    $projectRelativePath = "$($ProjectDirectory.Replace("$solutionRootPath\", ''))\$projectFileName"
+    $newProjectRelativePath = "$($NewProjectDirectory.Replace("$solutionRootPath\", ''))\$newProjectFileName"
+    $movedProjectPath = "$NewProjectDirectory\$ProjectName.$projectFileExtension"
+    $newProjectPath = "$NewProjectDirectory\$NewProjectName.$projectFileExtension"
 
     # Move Files
     Write-Host "Moving Project from $ProjectDirectory to $NewProjectDirectory"
     if(-Not($testRun)) {
-        if(-Not (Test-Path $NewProjectDirectory)) {
+        if(-Not (Test-Path $movedProjectPath)) {
+            if(Test-Path $NewProjectDirectory) {
+                Remove-Item -Path $NewProjectDirectory -Recurse -Force
+            }
             Rename-Item -Path $ProjectDirectory -NewName $NewProjectDirectory -Force
         } 
     }
 
     # Rename Project File
     Write-Host "Updating Project Name from $ProjectName to $NewProjectName"
-    $newProjectPath = "$NewProjectDirectory\$ProjectName.$projectFileExtension"
     if(-Not($testRun)) {
-        if(-Not (Test-Path $newProjectPath)) {
-            Write-Warning "Can't rename project. $newProjectPath  doesn't exist"
+        if(-Not (Test-Path $movedProjectPath)) {
+            Write-Warning "Can't rename project. $movedProjectPath  doesn't exist"
         } else {
             Rename-Item `
-                -Path $newProjectPath `
+                -Path $movedProjectPath `
                 -NewName "$NewProjectDirectory\$NewProjectName.$projectFileExtension"
         }
     }
@@ -103,12 +103,16 @@ Function Invoke-MigrateProject {
     Write-Host "Updating solution references from $projectRelativePath to $newProjectRelativePath"
     if(-Not($testRun)) {
         (Get-Content "$solutionPath").replace($projectRelativePath, $newProjectRelativePath) | Set-Content $solutionPath
+    }
 
+    # Update Projects References
+    Write-Host "Updating Project references"
+    if(-Not($testRun)) {
+        (Get-Content "$newProjectPath").replace(".csproj", ".$NewProjectSuffix.csproj").replace("\$ModuleFolderName\","\$NewModuleFolderName\") | Set-Content $newProjectPath
     }
 }
 
 # Creates new Helix Module Project and adds to the solution
-# TargetFramework defaults to net48 but can be overridden 
 Function Invoke-CreateSolutionProject {
     param(
         [Parameter(Mandatory=$true)]
@@ -120,7 +124,9 @@ Function Invoke-CreateSolutionProject {
         [Parameter(Mandatory=$true)]
         [string]$ModuleName,
         [Parameter(Mandatory=$true)]
-        [string]$TargetFramework
+        [string]$TargetFramework,
+        [Parameter(Mandatory=$true)]
+        [string[]]$Packages
     )
 
     if(-Not($testRun)) {
@@ -129,11 +135,18 @@ Function Invoke-CreateSolutionProject {
             --name $ProjectName `
             --type project `
             --target-framework-override $TargetFramework `
-            --output $ProjectDirectory
+            --output $ProjectDirectory `
+            | Out-Null
 
+        Write-Host "Installing packges into $ProjectName"
+        $Packages | ForEach-Object {
+            dotnet add $ProjectDirectory package $_  | Out-Null
+        }
+        
         Write-Host "Adding $ProjectName to the solution $solutionName" 
         dotnet sln $solutionPath `
-            add --solution-folder "$LayerName\$ModuleName" $ProjectDirectory
+            add --solution-folder "$LayerName\$ModuleName" $ProjectDirectory `
+            | Out-Null
     }
 }
 
@@ -147,34 +160,26 @@ Function Invoke-CovertToRenderingModule {
     )
 
     $websiteProjectName = "$solutionName.$LayerName.$ModuleName"
-    $renderingProjectName = "$solutionName.$LayerName.$ModuleName.Rendering"
-    $platformProjectName = "$solutionName.$LayerName.$ModuleName.Platform"
-
-    # Get the project file path and check it exists
-    $websiteProjectPath = Join-Path -Path $sourceFolder -ChildPath "$LayerName\$ModuleName\website\$websiteProjectName.$projectFileExtension"
-    if(-Not (Test-Path $websiteProjectPath)) {
-        Write-Warning "Could not find module project file to update TargetFramework: $websiteProjectPath"
-    
-    } else {
-        # Update Project Target Framework to use renderingModuleTargetFramework (netcore)
-        Invoke-UpdatetProjectTargetFramework `
-            -ProjectPath $websiteProjectPath `
-            -NewTargetFramework $renderingModuleTargetFramework
-    } 
+    $renderingProjectName = "$solutionName.$LayerName.$ModuleName.$renderingModuleSuffix"
+    $platformProjectName = "$solutionName.$LayerName.$ModuleName.$platformModuleSuffix"
    
     Invoke-MigrateProject `
-        -ProjectDirectory (Join-Path -Path $sourceFolder -ChildPath "$LayerName\$ModuleName\website") `
-        -NewProjectDirectory (Join-Path -Path $sourceFolder -ChildPath "$LayerName\$ModuleName\rendering") `
+        -ProjectDirectory (Join-Path -Path $sourceFolder -ChildPath "$LayerName\$ModuleName\$websiteModuleFolder") `
+        -NewProjectDirectory (Join-Path -Path $sourceFolder -ChildPath "$LayerName\$ModuleName\$platformModuleFolder") `
+        -ModuleFolderName $websiteModuleFolder `
+        -NewModuleFolderName $platformModuleFolder `
         -ProjectName $websiteProjectName `
-        -NewProjectName $renderingProjectName
+        -NewProjectName $platformProjectName `
+        -NewProjectSuffix $platformModuleSuffix
 
-    # Create new Platform Project for Modue
+    # Create new Rendering Project for Module
     Invoke-CreateSolutionProject `
-        -ProjectDirectory (Join-Path -Path $sourceFolder -ChildPath "$LayerName\$ModuleName\platform") `
-        -ProjectName $platformProjectName `
+        -ProjectDirectory (Join-Path -Path $sourceFolder -ChildPath "$LayerName\$ModuleName\$renderingModuleFolder") `
+        -ProjectName $renderingProjectName `
         -LayerName $LayerName `
         -ModuleName $ModuleName `
-        -TargetFramework $platformModuleTargetFramework
+        -TargetFramework $renderingModuleTargetFramework `
+        -Packages $reneringHostPackages
 }
 
 
