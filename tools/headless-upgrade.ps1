@@ -25,11 +25,17 @@ $platformModuleTargetFramework = "net48"
 
 $renderingModuleSuffix = "Rendering"
 $platformModuleSuffix = "Platform"
+$testProjectSuffix = "Tests"
 
-# Folder Names
+
+# Legacy Folders
 $websiteModuleFolder = "website"
+$testsModuleFolder = "tests"
+
+# New Folders
 $renderingModuleFolder = "rendering"
 $platformModuleFolder = "platform"
+$platformTestsModuleFolder = "platform.tests"
 
 # Nuget Packages
 $reneringHostPackages = @(
@@ -61,7 +67,7 @@ Function Invoke-UpdatetProjectTargetFramework {
 
     $currentFrameworkNode = $xmlDoc.SelectSingleNode("//Project/PropertyGroup/TargetFramework")
     
-    if($currentFrameworkNode -eq $NewTargetFramework) {
+    if($currentFrameworkNode.InnerText -eq $NewTargetFramework) {
         return
     }
 
@@ -102,6 +108,12 @@ Function Invoke-MigrateProject {
     $newProjectRelativePath = "$($NewProjectDirectory.Replace("$solutionRootPath\", ''))\$newProjectFileName"
     $movedProjectPath = "$NewProjectDirectory\$ProjectName.$projectFileExtension"
     $newProjectPath = "$NewProjectDirectory\$NewProjectName.$projectFileExtension"
+
+    # Exit if path doesn't exist
+    if(-Not (Test-Path $ProjectDirectory))
+    {
+        return
+    }
 
     # Move Files
     Write-Host "Moving Project from $ProjectDirectory to $NewProjectDirectory"
@@ -187,8 +199,10 @@ Function Invoke-CovertToRenderingModule {
     )
 
     $websiteProjectName = "$solutionName.$LayerName.$ModuleName"
+    $websiteTestsProjectName = "$solutionName.$LayerName.$ModuleName.$testProjectSuffix"
     $renderingProjectName = "$solutionName.$LayerName.$ModuleName.$renderingModuleSuffix"
     $platformProjectName = "$solutionName.$LayerName.$ModuleName.$platformModuleSuffix"
+    $platformTestsProjectName = "$platformProjectName.$testProjectSuffix"
 
     #  Get the project file path and check it exists
     $websiteProjectPath = Join-Path -Path $sourceFolder -ChildPath "$LayerName\$ModuleName\$websiteModuleFolder\$websiteProjectName.$projectFileExtension"
@@ -201,7 +215,8 @@ Function Invoke-CovertToRenderingModule {
             -ProjectPath $websiteProjectPath `
             -NewTargetFramework $platformModuleTargetFramework
     } 
-  
+    
+    # Migrate Website Project to Platform Project
     Invoke-MigrateProject `
         -ProjectDirectory (Join-Path -Path $sourceFolder -ChildPath "$LayerName\$ModuleName\$websiteModuleFolder") `
         -NewProjectDirectory (Join-Path -Path $sourceFolder -ChildPath "$LayerName\$ModuleName\$platformModuleFolder") `
@@ -209,6 +224,16 @@ Function Invoke-CovertToRenderingModule {
         -NewModuleFolderName $platformModuleFolder `
         -ProjectName $websiteProjectName `
         -NewProjectName $platformProjectName `
+        -NewProjectSuffix $platformModuleSuffix
+
+    # Migrate Test Project to Platform.Tests Project
+    Invoke-MigrateProject `
+        -ProjectDirectory (Join-Path -Path $sourceFolder -ChildPath "$LayerName\$ModuleName\$testsModuleFolder") `
+        -NewProjectDirectory (Join-Path -Path $sourceFolder -ChildPath "$LayerName\$ModuleName\$platformTestsModuleFolder") `
+        -ModuleFolderName $websiteModuleFolder `
+        -NewModuleFolderName $platformModuleFolder `
+        -ProjectName $websiteTestsProjectName `
+        -NewProjectName $platformTestsProjectName `
         -NewProjectSuffix $platformModuleSuffix
 
     # Create new Rendering Project for Module
@@ -238,10 +263,20 @@ Function Invoke-Run {
             Write-Host "`nUpdating $moduleName Module" -ForegroundColor Yellow
             Invoke-CovertToRenderingModule -LayerName $layerName -ModuleName $moduleName
         }
-
     }
-
 }
 
+Function Invoke-DemoRun{
+
+    if($testRun) {
+        Write-Host "Test run only" -ForegroundColor Red
+    }
+
+    $layerName = "Feature"
+    $moduleName = "Hero"
+    Write-Host "`nUpdating $moduleName Module" -ForegroundColor Yellow
+    Invoke-CovertToRenderingModule -LayerName $layerName -ModuleName $moduleName
+     
+}
 
 Invoke-Run
