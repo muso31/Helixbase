@@ -151,6 +151,12 @@ Function Invoke-MigrateProject {
         }
     }
 
+    # Update all Namespace references accross the solution 
+    Write-Verbose "Updating Solution Namespace references from $ProjectName to $NewProjectName"
+    Get-ChildItem -Path $sourceFolder -Include *.cs, *.config -File -Recurse | ForEach-Object {
+        (Get-Content $_.FullName).replace($ProjectName, $NewProjectName) | Set-Content $_.FullName
+    }
+
     # Update Solution References
     Write-Verbose "Updating solution references from $projectRelativePath to $newProjectRelativePath"
     if(-Not($testRun)) {
