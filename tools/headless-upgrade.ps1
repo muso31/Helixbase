@@ -47,7 +47,7 @@ $reneringHostPackages = @(
 )
 
 $hppReneringHostPackages = @(
-    'RichardSzalay.Helix.Publishing.WebRoot'
+   
 )
 
 # Helix Layer Names
@@ -181,7 +181,7 @@ Function Invoke-CreateSolutionProject {
         [string]$ModuleName,
         [Parameter(Mandatory=$true)]
         [string]$TargetFramework,
-        [Parameter(Mandatory=$true)]
+        [Parameter(Mandatory=$false)]
         [string[]]$Packages
     )
 
