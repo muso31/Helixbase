@@ -286,10 +286,11 @@ Function Invoke-UpdateHppBuildProps {
     )
 
     Get-ChildItem -Path $ProjectDirectory -Filter "*.$buildPropsExtension" -File | ForEach-Object {
-        Write-Verbose "Updating Build Property $($_.FullName) value from $websiteModuleFolder to $platformModuleFolder"
-        Write-Verbose "Updating Build Property $($_.FullName) value from $websiteModuleFolder to $renderingModuleFolder"
+        $renderingPropFile = Join-Path -Path $RenderingDirectory -ChildPath $_.Name
+        Write-Verbose "Updating Build Property value from $websiteModuleFolder to $platformModuleFolder to $($_.FullName)"
+        Write-Verbose "Updating Build Property value from $websiteModuleFolder to $renderingModuleFolder to $renderingPropFile" 
         (Get-Content $_.FullName).replace("\$websiteModuleFolder\", "\$platformModuleFolder\") | Set-Content $_.FullName
-        (Get-Content $_.FullName).replace("\$websiteModuleFolder\", "\$renderingModuleFolder\") | Set-Content (Join-Path -Path $RenderingDirectory -ChildPath $_.Name)
+        (Get-Content $_.FullName).replace("\$platformModuleFolder\", "\$renderingModuleFolder\") | Set-Content $renderingPropFile
     }
 }
 
