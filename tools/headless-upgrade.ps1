@@ -2,6 +2,8 @@
 #   A Powershell Library to update your Helixbase solution #
 #   to a Helixbase Headless solution                       #
 ############################################################
+[CmdletBinding()]
+param()
 
 # Pre-Requisites
 # 1. All projects are using the new csproj structure
@@ -11,22 +13,23 @@
 # Enable test run to only run report and make no file changes
 $testRun = $false
 
-# Variables
+# Solution and Project Info
 $solutionName = "Helixbase"
 $solutionFileExtension = "sln"
 $projectFileExtension = "csproj"
+$buildPropsExtension = "props"
 $solutionRootPath = Split-Path -Path $PSScriptRoot -Parent
 $sourceFolder = Join-Path -Path $solutionRootPath -ChildPath "src"
 $solutionPath = "$solutionRootPath\$solutionName.$solutionFileExtension"
 
+# Target Frameworks
 $renderingModuleTargetFramework = "netcoreapp3.1"
 $platformModuleTargetFramework = "net48"
 
-
+# Module Suffixes
 $renderingModuleSuffix = "Rendering"
 $platformModuleSuffix = "Platform"
 $testProjectSuffix = "Tests"
-
 
 # Legacy Folders
 $websiteModuleFolder = "website"
@@ -43,16 +46,25 @@ $reneringHostPackages = @(
     'Sitecore.LayoutService.Client'
 )
 
+$hppReneringHostPackages = @(
+    'RichardSzalay.Helix.Publishing.WebRoot'
+)
+
+# Helix Layer Names
 $layers = @(
     'Feature',
     'Foundation',
     'Project'
 )
 
+# Helix Publishing Pipeline
+$hppLayer = "Website"
+$websiteHppMobulePath = Join-Path -Path $sourceFolder -ChildPath $hppLayer
+
 # Steps
 # 1. Iterate Solution Layers (Feature/Foundation/Project)
-# 2. Convert existing Website projects into netcore Platform (Sitecore) project
-# 3. Create new Rendering Host project for each module
+# 2. Convert existing Website projects into DotNet Framework 4.8 Platform (Sitecore) project
+# 3. Create new DotNetCore Rendering Host project for each module
 Function Invoke-UpdatetProjectTargetFramework {
     param(
         [Parameter(Mandatory=$true)]
@@ -71,7 +83,7 @@ Function Invoke-UpdatetProjectTargetFramework {
         return
     }
 
-    Write-Host "Updating framework from $($currentFrameworkNode.InnerText) to $NewTargetFramework"
+    Write-Verbose "Updating framework from $($currentFrameworkNode.InnerText) to $NewTargetFramework"
     # Set new TargetFramework
     $currentFrameworkNode.InnerText = $NewTargetFramework
 
@@ -112,22 +124,23 @@ Function Invoke-MigrateProject {
     # Exit if path doesn't exist
     if(-Not (Test-Path $ProjectDirectory))
     {
+        Write-Verbose "Project directory doesn't exist $ProjectDirectory"
         return
     }
 
     # Move Files
-    Write-Host "Moving Project from $ProjectDirectory to $NewProjectDirectory"
+    Write-Verbose "Moving Project from $ProjectDirectory to $NewProjectDirectory"
     if(-Not($testRun)) {
         if(-Not (Test-Path $movedProjectPath)) {
             if(Test-Path $NewProjectDirectory) {
-                Remove-Item -Path $NewProjectDirectory -Recurse -Force
+                Remove-Item -Path $NewProjectDirectory -Recurse -Force -ErrorAction SilentlyContinue
             }
             Rename-Item -Path $ProjectDirectory -NewName $NewProjectDirectory -Force
         } 
     }
 
     # Rename Project File
-    Write-Host "Updating Project Name from $ProjectName to $NewProjectName"
+    Write-Verbose "Updating Project Name from $ProjectName to $NewProjectName"
     if(-Not($testRun)) {
         if(-Not (Test-Path $movedProjectPath)) {
             Write-Warning "Can't rename project. $movedProjectPath  doesn't exist"
@@ -139,28 +152,32 @@ Function Invoke-MigrateProject {
     }
 
     # Update Solution References
-    Write-Host "Updating solution references from $projectRelativePath to $newProjectRelativePath"
+    Write-Verbose "Updating solution references from $projectRelativePath to $newProjectRelativePath"
     if(-Not($testRun)) {
         (Get-Content "$solutionPath").replace($projectRelativePath, $newProjectRelativePath) | Set-Content $solutionPath
     }
 
     # Update Projects References
-    Write-Host "Updating Project references"
+    Write-Verbose "Updating Project references"
     if(-Not($testRun)) {
         (Get-Content "$newProjectPath").replace(".csproj", ".$NewProjectSuffix.csproj").replace("\$ModuleFolderName\","\$NewModuleFolderName\") | Set-Content $newProjectPath
     }
 }
 
 # Creates new Helix Module Project and adds to the solution
+# ProjectType defaults to Class Library but could be web (DotNetCore WebApp)
 Function Invoke-CreateSolutionProject {
     param(
+        [Parameter(Mandatory=$false)]
+        [ValidateSet("classlib","web")]
+        [string]$ProjectType = "classlib",
         [Parameter(Mandatory=$true)]
         [string]$ProjectDirectory,
         [Parameter(Mandatory=$true)]
         [string]$ProjectName,
         [Parameter(Mandatory=$true)]
         [string]$LayerName,
-        [Parameter(Mandatory=$true)]
+        [Parameter(Mandatory=$false)]
         [string]$ModuleName,
         [Parameter(Mandatory=$true)]
         [string]$TargetFramework,
@@ -168,23 +185,37 @@ Function Invoke-CreateSolutionProject {
         [string[]]$Packages
     )
 
+    # Exit if path doesn't exist
+    if(Test-Path (Join-Path -Path $ProjectDirectory -ChildPath "$ProjectName.$projectFileExtension"))
+    {
+        Write-Verbose "New project already exists. Will not create $ProjectName"
+        return
+    }
+
     if(-Not($testRun)) {
-        Write-Host "Creating new project $ProjectName" 
-        dotnet new classlib `
+        
+        Write-Verbose "Creating new project $ProjectName" 
+        dotnet new $ProjectType `
             --name $ProjectName `
             --type project `
             --target-framework-override $TargetFramework `
             --output $ProjectDirectory `
             | Out-Null
 
-        Write-Host "Installing packges into $ProjectName"
+        Write-Verbose "Installing packges into $ProjectName"
         $Packages | ForEach-Object {
             dotnet add $ProjectDirectory package $_  | Out-Null
         }
         
-        Write-Host "Adding $ProjectName to the solution $solutionName" 
+        Write-Verbose "Adding $ProjectName to the solution $solutionName" 
+        if($null -eq $ModuleName) {
+            $solutionFolder = $LayerName
+        } else {
+            $solutionFolder = "$LayerName\$ModuleName"
+        }
+       
         dotnet sln $solutionPath `
-            add --solution-folder "$LayerName\$ModuleName" $ProjectDirectory `
+            add --solution-folder $solutionFolder $ProjectDirectory `
             | Out-Null
     }
 }
@@ -207,7 +238,7 @@ Function Invoke-CovertToRenderingModule {
     #  Get the project file path and check it exists
     $websiteProjectPath = Join-Path -Path $sourceFolder -ChildPath "$LayerName\$ModuleName\$websiteModuleFolder\$websiteProjectName.$projectFileExtension"
     if(-Not (Test-Path $websiteProjectPath)) {
-        Write-Warning "Could not find module project file to update TargetFramework: $websiteProjectPath"
+        Write-Verbose "Could not find module project file to update TargetFramework: $websiteProjectPath"
     
     } else {
         # Update Project Target Framework to use platformModuleTargetFramework (netcore)
@@ -246,6 +277,58 @@ Function Invoke-CovertToRenderingModule {
         -Packages $reneringHostPackages
 }
 
+Function Invoke-UpdateHppBuildProps {
+    param(
+        [Parameter(Mandatory=$true)]
+        [string]$ProjectDirectory,
+        [Parameter(Mandatory=$true)]
+        [string]$RenderingDirectory
+    )
+
+    Get-ChildItem -Path $ProjectDirectory -Filter "*.$buildPropsExtension" -Recurse -File | ForEach-Object {
+        Write-Verbose "Updating Build Property $($_.FullName) value from $OriginalFolderName to $NewFolderName"
+        (Get-Content $_.FullName).replace("\$websiteModuleFolder\", "\$platformModuleFolder\") | Set-Content $_.FullName
+        (Get-Content $_.FullName).replace("\$websiteModuleFolder\", "\$renderingModuleFolder\") | Set-Content (Join-Path -Path $RenderingDirectory -ChildPath $_.Name)
+    }
+}
+
+Function Invoke-SetupHppWebsites {
+    param()
+
+    Write-Host "`n-----------------------------------`n Updating Helix Publishing Pipelines `n-----------------------------------" -ForegroundColor Cyan
+
+    $hppWebsiteProjectName = "$solutionName.$hppLayer"
+    $hppPlatformProjectName = "$solutionName.$platformModuleSuffix"
+    $hppRenderingProjectName = "$solutionName.$renderingModuleSuffix"
+
+
+    $hppPlatformNewDirectory = Join-Path -Path $websiteHppMobulePath -ChildPath $platformModuleFolder
+    $hppRenderingNewDirectory = Join-Path -Path $websiteHppMobulePath -ChildPath $renderingModuleFolder
+
+    # Convert Website HPP Site to Platform HPP Site
+    Invoke-MigrateProject `
+        -ProjectDirectory (Join-Path -Path $websiteHppMobulePath -ChildPath $websiteModuleFolder) `
+        -NewProjectDirectory $hppPlatformNewDirectory `
+        -ModuleFolderName $websiteModuleFolder `
+        -NewModuleFolderName $platformModuleFolder `
+        -ProjectName $hppWebsiteProjectName `
+        -NewProjectName $hppPlatformProjectName `
+        -NewProjectSuffix $platformModuleSuffix
+
+    # Create Rendering Host HPP Site
+     Invoke-CreateSolutionProject `
+        -ProjectDirectory $hppRenderingNewDirectory `
+        -ProjectName $hppRenderingProjectName `
+        -LayerName $hppLayer `
+        -ProjectType "web" `
+        -TargetFramework $renderingModuleTargetFramework `
+        -Packages $hppReneringHostPackages
+
+          # Update HPP Platform Build Properties
+    Invoke-UpdateHppBuildProps `
+        -ProjectDirectory $hppPlatformNewDirectory `
+        -RenderingDirectory $hppRenderingNewDirectory
+}
 
 Function Invoke-Run {
 
@@ -264,19 +347,11 @@ Function Invoke-Run {
             Invoke-CovertToRenderingModule -LayerName $layerName -ModuleName $moduleName
         }
     }
+
+    # Update Helix Publishing Pipeline Projects
+    Invoke-SetupHppWebsites
+
 }
 
-Function Invoke-DemoRun{
-
-    if($testRun) {
-        Write-Host "Test run only" -ForegroundColor Red
-    }
-
-    $layerName = "Feature"
-    $moduleName = "Hero"
-    Write-Host "`nUpdating $moduleName Module" -ForegroundColor Yellow
-    Invoke-CovertToRenderingModule -LayerName $layerName -ModuleName $moduleName
-     
-}
-
+#Invoke-SetupHppWebsites
 Invoke-Run
