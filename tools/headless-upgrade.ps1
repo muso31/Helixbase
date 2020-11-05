@@ -285,8 +285,9 @@ Function Invoke-UpdateHppBuildProps {
         [string]$RenderingDirectory
     )
 
-    Get-ChildItem -Path $ProjectDirectory -Filter "*.$buildPropsExtension" -Recurse -File | ForEach-Object {
-        Write-Verbose "Updating Build Property $($_.FullName) value from $OriginalFolderName to $NewFolderName"
+    Get-ChildItem -Path $ProjectDirectory -Filter "*.$buildPropsExtension" -File | ForEach-Object {
+        Write-Verbose "Updating Build Property $($_.FullName) value from $websiteModuleFolder to $platformModuleFolder"
+        Write-Verbose "Updating Build Property $($_.FullName) value from $websiteModuleFolder to $renderingModuleFolder"
         (Get-Content $_.FullName).replace("\$websiteModuleFolder\", "\$platformModuleFolder\") | Set-Content $_.FullName
         (Get-Content $_.FullName).replace("\$websiteModuleFolder\", "\$renderingModuleFolder\") | Set-Content (Join-Path -Path $RenderingDirectory -ChildPath $_.Name)
     }
@@ -324,7 +325,7 @@ Function Invoke-SetupHppWebsites {
         -TargetFramework $renderingModuleTargetFramework `
         -Packages $hppReneringHostPackages
 
-          # Update HPP Platform Build Properties
+    # Update HPP Platform Build Properties
     Invoke-UpdateHppBuildProps `
         -ProjectDirectory $hppPlatformNewDirectory `
         -RenderingDirectory $hppRenderingNewDirectory
