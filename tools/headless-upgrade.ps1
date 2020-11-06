@@ -143,7 +143,7 @@ Function Invoke-MigrateProject {
     Write-Verbose "Updating Project Name from $ProjectName to $NewProjectName"
     if(-Not($testRun)) {
         if(-Not (Test-Path $movedProjectPath)) {
-            Write-Warning "Can't rename project. $movedProjectPath  doesn't exist"
+            Write-Verbose "Can't rename project. $movedProjectPath  doesn't exist"
         } else {
             Rename-Item `
                 -Path $movedProjectPath `
@@ -153,7 +153,7 @@ Function Invoke-MigrateProject {
 
     # Update all Namespace references accross the solution 
     Write-Verbose "Updating Solution Namespace references from $ProjectName to $NewProjectName"
-    Get-ChildItem -Path $sourceFolder -Include *.cs, *.config -File -Recurse | ForEach-Object {
+    Get-ChildItem -Path $sourceFolder -Include *.cs, *.config, *.cshtml -File -Recurse | ForEach-Object {
         (Get-Content $_.FullName).replace($ProjectName, $NewProjectName) | Set-Content $_.FullName
     }
 
@@ -199,6 +199,10 @@ Function Invoke-CreateSolutionProject {
     }
 
     if(-Not($testRun)) {
+
+        if(Test-Path $ProjectDirectory) {
+            Remove-Item $ProjectDirectory -Force -Recurse -ErrorAction SilentlyContinue
+        }
         
         Write-Verbose "Creating new project $ProjectName" 
         dotnet new $ProjectType `
@@ -336,6 +340,15 @@ Function Invoke-SetupHppWebsites {
     Invoke-UpdateHppBuildProps `
         -ProjectDirectory $hppPlatformNewDirectory `
         -RenderingDirectory $hppRenderingNewDirectory
+
+    # Removes all legacy bin and obj files
+    Invoke-SolutionCleanup
+}
+
+Function Invoke-SolutionCleanup {
+    Get-ChildItem $sourceFolder -include bin,obj -Recurse | ForEach-Object ($_) { Remove-Item $_.FullName -Force -Recurse }
+    dotnet clean $solutionPath | Out-Null
+
 }
 
 Function Invoke-Run {
