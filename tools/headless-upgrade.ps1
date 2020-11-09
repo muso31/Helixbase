@@ -47,7 +47,14 @@ $reneringHostPackages = @(
 )
 
 $hppReneringHostPackages = @(
-   
+    'Microsoft.AspNetCore.Mvc.NewtonsoftJson',
+    'Microsoft.Extensions.DependencyInjection.Abstractions',
+    'Microsoft.Extensions.Http',
+    'Sitecore.AspNet.RenderingEngine',
+    'Sitecore.LayoutService.Client',
+    'Sitecore.AspNet.ExperienceEditor',
+    'Sitecore.AspNet.Tracking',
+    'Sitecore.AspNet.Tracking.VisitorIdentification'
 )
 
 # Helix Layer Names
@@ -145,8 +152,7 @@ Function Invoke-MigrateProject {
         if(-Not (Test-Path $movedProjectPath)) {
             Write-Verbose "Can't rename project. $movedProjectPath  doesn't exist"
         } else {
-            Rename-Item `
-                -Path $movedProjectPath `
+            Rename-Item `0-Path $movedProjectPath `
                 -NewName "$NewProjectDirectory\$NewProjectName.$projectFileExtension"
         }
     }

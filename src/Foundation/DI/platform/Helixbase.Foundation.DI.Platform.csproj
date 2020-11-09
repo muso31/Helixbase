@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+	<ApplicationIcon />
+	<OutputType>Library</OutputType>
+	<StartupObject />
+	<Authors>Neil Shack</Authors>
+	<Company>Ethisys Ltd</Company>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Remove="Web.config" />
+    <Content Remove="Web.Debug.config" />
+    <Content Remove="Web.Release.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="App_Config\Include\Foundation\Foundation.DI.RegisterControllers.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Config\Include\Foundation\Foundation.DI.RegisterControllers.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform" Version="2.0.1" />
+    <PackageReference Include="Sitecore.Kernel" Version="10.0.0" />
+    <PackageReference Include="Sitecore.Mvc" Version="10.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\platform\Helixbase.Foundation.Core.Platform.csproj" />
+  </ItemGroup>
+</Project>

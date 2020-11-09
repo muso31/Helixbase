@@ -1,0 +1,16 @@
+﻿@model Helixbase.Rendering.Models.ErrorViewModel
+@{
+    ViewData["Title"] = "Error";
+}
+
+    <div class="column error-page">
+        <h1 class="text-danger">Error.</h1>
+        <h2 class="text-danger">An error occurred while processing your request.</h2>
+
+        @if (Model.IsInvalidRequest)
+        {
+            <div style="font-size: larger">
+                <strong>HINT:</strong> You probably need to publish your API key
+            </div>
+        }
+    </div>

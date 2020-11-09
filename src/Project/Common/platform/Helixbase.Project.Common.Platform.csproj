@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+	<ApplicationIcon />
+	<OutputType>Library</OutputType>
+	<StartupObject />
+	<Authors>Neil Shack</Authors>
+	<Company>Ethisys Ltd</Company>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Remove="web.config" />
+    <Content Remove="web.Debug.config" />
+    <Content Remove="web.Release.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="App_Config\Include\Project\Project.Common.config" />
+    <None Remove="App_Config\Include\Project\Project.Common.Serialization.config" />
+    <None Remove="App_Config\Include\Project\z.Project.Common.DevSettings.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Config\Include\Project\Project.Common.config" />
+    <Content Include="App_Config\Include\Project\Project.Common.Serialization.config" />
+    <Content Include="App_Config\Include\Project\z.Project.Common.DevSettings.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="web.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform" Version="2.0.1" />
+  </ItemGroup>
+</Project>

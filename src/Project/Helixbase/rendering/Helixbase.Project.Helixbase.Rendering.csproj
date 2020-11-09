@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Sitecore.AspNet.RenderingEngine" Version="15.0.0" />
+    <PackageReference Include="Sitecore.LayoutService.Client" Version="15.0.0" />
+  </ItemGroup>
+
+</Project>
