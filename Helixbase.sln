@@ -7,27 +7,27 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Foundation", "Foundation", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Serialization", "Serialization", "{41AC9AD8-3D81-4C55-9330-B9CA9DFD8554}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helixbase.Foundation.Serialization", "src\Foundation\Serialization\platform\Helixbase.Foundation.Serialization.Platform.csproj", "{4238D5C5-AFD2-4DF5-BF3D-ADB9D46ADC08}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Helixbase.Foundation.Serialization.Platform", "src\Foundation\Serialization\platform\Helixbase.Foundation.Serialization.Platform.csproj", "{4238D5C5-AFD2-4DF5-BF3D-ADB9D46ADC08}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ORM", "ORM", "{01ACDA66-22F3-4F9B-BF2A-861D3CE46784}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helixbase.Foundation.ORM", "src\Foundation\ORM\platform\Helixbase.Foundation.ORM.Platform.csproj", "{5E91A7D9-8E93-44FD-857F-F9CE145B6022}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Helixbase.Foundation.ORM.Platform", "src\Foundation\ORM\platform\Helixbase.Foundation.ORM.Platform.csproj", "{5E91A7D9-8E93-44FD-857F-F9CE145B6022}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Content", "Content", "{F2FD5CAD-01CE-40D6-82B5-E243313A4CD3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helixbase.Foundation.Content", "src\Foundation\Content\platform\Helixbase.Foundation.Content.Platform.csproj", "{F8F55034-FA55-4D27-B115-0AB4EEB9A0A8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Helixbase.Foundation.Content.Platform", "src\Foundation\Content\platform\Helixbase.Foundation.Content.Platform.csproj", "{F8F55034-FA55-4D27-B115-0AB4EEB9A0A8}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Search", "Search", "{1065468B-FB5C-4E5F-9050-CBC87D178BB6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helixbase.Foundation.Search", "src\Foundation\Search\platform\Helixbase.Foundation.Search.Platform.csproj", "{22686DC6-4E6C-4D98-84B7-C48042F5B8FC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Helixbase.Foundation.Search.Platform", "src\Foundation\Search\platform\Helixbase.Foundation.Search.Platform.csproj", "{22686DC6-4E6C-4D98-84B7-C48042F5B8FC}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Feature", "Feature", "{60DA3F20-DEED-4580-AE38-A296D76ADE79}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Hero", "Hero", "{2884EE1D-1D5D-4273-80BF-B0AEBFC7A2AE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helixbase.Feature.Hero", "src\Feature\Hero\platform\Helixbase.Feature.Hero.Platform.csproj", "{3466026C-5B9B-4274-8B17-60763BD56C69}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Helixbase.Feature.Hero.Platform", "src\Feature\Hero\platform\Helixbase.Feature.Hero.Platform.csproj", "{3466026C-5B9B-4274-8B17-60763BD56C69}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helixbase.Feature.Hero.Tests", "src\Feature\Hero\platform.tests\Helixbase.Feature.Hero.Platform.Tests.csproj", "{2845D41D-82F1-4B2F-AF9C-DFFCCF7A3098}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Helixbase.Feature.Hero.Platform.Tests", "src\Feature\Hero\platform.tests\Helixbase.Feature.Hero.Platform.Tests.csproj", "{2845D41D-82F1-4B2F-AF9C-DFFCCF7A3098}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Project", "Project", "{A7FC0385-84B6-4FB4-92DD-7372A45444F7}"
 EndProject
@@ -41,75 +41,73 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configuration", "Configurat
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{27F11553-4B8F-4B6D-8B81-37DDE6046F31}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helixbase.Project.Common", "src\Project\Common\platform\Helixbase.Project.Common.Platform.csproj", "{6F8C583B-E667-4DEB-A603-77932C7803B0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Helixbase.Project.Common.Platform", "src\Project\Common\platform\Helixbase.Project.Common.Platform.csproj", "{6F8C583B-E667-4DEB-A603-77932C7803B0}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Helixbase", "Helixbase", "{160DA988-084C-41E4-B714-00E127957ED0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helixbase.Project.Helixbase", "src\Project\Helixbase\platform\Helixbase.Project.Helixbase.Platform.csproj", "{BE27848D-2FF5-42DF-9324-667D66D47E30}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Helixbase.Project.Helixbase.Platform", "src\Project\Helixbase\platform\Helixbase.Project.Helixbase.Platform.csproj", "{BE27848D-2FF5-42DF-9324-667D66D47E30}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bootstrap", "Bootstrap", "{CB31D0CF-43E4-47F3-876D-AAD5BA121FC2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helixbase.Foundation.Bootstrap", "src\Foundation\Bootstrap\platform\Helixbase.Foundation.Bootstrap.Platform.csproj", "{44403DB5-5AF0-4BB8-A227-E9A8416947A4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Helixbase.Foundation.Bootstrap.Platform", "src\Foundation\Bootstrap\platform\Helixbase.Foundation.Bootstrap.Platform.csproj", "{44403DB5-5AF0-4BB8-A227-E9A8416947A4}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DI", "DI", "{0ACE73B5-5F04-4603-BC37-63706BEF40AB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helixbase.Foundation.DI", "src\Foundation\DI\platform\Helixbase.Foundation.DI.Platform.csproj", "{0D3A6F11-B5FF-4D8C-8A74-19501D2E80D4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Helixbase.Foundation.DI.Platform", "src\Foundation\DI\platform\Helixbase.Foundation.DI.Platform.csproj", "{0D3A6F11-B5FF-4D8C-8A74-19501D2E80D4}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "VersionTrim", "VersionTrim", "{4F330EE3-EB9A-4B58-8682-E0815921771F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helixbase.Feature.VersionTrim", "src\Feature\VersionTrim\platform\Helixbase.Feature.VersionTrim.Platform.csproj", "{ED756657-14BA-4313-A51B-A2960BD6F5DA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Helixbase.Feature.VersionTrim.Platform", "src\Feature\VersionTrim\platform\Helixbase.Feature.VersionTrim.Platform.csproj", "{ED756657-14BA-4313-A51B-A2960BD6F5DA}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{3B0CF2FF-3D0D-415C-8453-9C4F8A9BA4B7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helixbase.Foundation.Core", "src\Foundation\Core\platform\Helixbase.Foundation.Core.Platform.csproj", "{0C1E2FEC-AC54-4CF0-905A-890D3BF711D5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Helixbase.Foundation.Core.Platform", "src\Foundation\Core\platform\Helixbase.Foundation.Core.Platform.csproj", "{0C1E2FEC-AC54-4CF0-905A-890D3BF711D5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ItemUnlock", "ItemUnlock", "{26ABEF08-8005-4EEB-B6A0-8BDC87249A4B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helixbase.Feature.ItemUnlock", "src\Feature\ItemUnlock\platform\Helixbase.Feature.ItemUnlock.Platform.csproj", "{58761838-C403-4C4A-843E-6AAE24A63904}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Helixbase.Feature.ItemUnlock.Platform", "src\Feature\ItemUnlock\platform\Helixbase.Feature.ItemUnlock.Platform.csproj", "{58761838-C403-4C4A-843E-6AAE24A63904}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ShowTitles", "ShowTitles", "{72B474FC-03D1-4705-B98E-8A498E9C2FAA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helixbase.Feature.ShowTitles", "src\Feature\ShowTitles\platform\Helixbase.Feature.ShowTitles.Platform.csproj", "{84CA4784-C560-4CE7-BE09-8187DA0B4359}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Helixbase.Feature.ShowTitles.Platform", "src\Feature\ShowTitles\platform\Helixbase.Feature.ShowTitles.Platform.csproj", "{84CA4784-C560-4CE7-BE09-8187DA0B4359}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Logging", "Logging", "{0E67BAB2-5BB6-415A-B719-79B72194584C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helixbase.Foundation.Logging", "src\Foundation\Logging\platform\Helixbase.Foundation.Logging.Platform.csproj", "{9B72C426-123C-4782-BEF8-0D52E5F2A396}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Helixbase.Foundation.Logging.Platform", "src\Foundation\Logging\platform\Helixbase.Foundation.Logging.Platform.csproj", "{9B72C426-123C-4782-BEF8-0D52E5F2A396}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helixbase.Foundation.Content.Tests", "src\Foundation\Content\platform.tests\Helixbase.Foundation.Content.Platform.Tests.csproj", "{709812AB-BB8E-41FA-97C2-9B7D4181B6DA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Helixbase.Foundation.Content.Platform.Tests", "src\Foundation\Content\platform.tests\Helixbase.Foundation.Content.Platform.Tests.csproj", "{709812AB-BB8E-41FA-97C2-9B7D4181B6DA}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Website", "Website", "{0CDDE7FA-204E-4BA1-9478-6EBD43385213}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Helixbase.Feature.Hero.Rendering", "src\Feature\Hero\rendering\Helixbase.Feature.Hero.Rendering.csproj", "{1965FEBD-BBA2-4850-84DB-02C298922E49}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helixbase.Website", "src\Website\platform\Helixbase.Platform.csproj", "{2BECC48F-FAD8-4475-974D-E9C233EF1CDB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Helixbase.Feature.ItemUnlock.Rendering", "src\Feature\ItemUnlock\rendering\Helixbase.Feature.ItemUnlock.Rendering.csproj", "{08BF80C2-7BCA-416E-B4FA-00A939F7099C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helixbase.Feature.Hero.Rendering", "src\Feature\Hero\rendering\Helixbase.Feature.Hero.Rendering.csproj", "{1965FEBD-BBA2-4850-84DB-02C298922E49}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Helixbase.Feature.ShowTitles.Rendering", "src\Feature\ShowTitles\rendering\Helixbase.Feature.ShowTitles.Rendering.csproj", "{86716800-EC6F-42E8-9464-722DA9676CAB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helixbase.Feature.ItemUnlock.Rendering", "src\Feature\ItemUnlock\rendering\Helixbase.Feature.ItemUnlock.Rendering.csproj", "{08BF80C2-7BCA-416E-B4FA-00A939F7099C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Helixbase.Feature.VersionTrim.Rendering", "src\Feature\VersionTrim\rendering\Helixbase.Feature.VersionTrim.Rendering.csproj", "{A5FE8423-B82F-4EB4-A17E-31316985B29E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helixbase.Feature.ShowTitles.Rendering", "src\Feature\ShowTitles\rendering\Helixbase.Feature.ShowTitles.Rendering.csproj", "{86716800-EC6F-42E8-9464-722DA9676CAB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Helixbase.Foundation.Bootstrap.Rendering", "src\Foundation\Bootstrap\rendering\Helixbase.Foundation.Bootstrap.Rendering.csproj", "{D22707AF-65B1-4A40-BA11-5550374F1244}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helixbase.Feature.VersionTrim.Rendering", "src\Feature\VersionTrim\rendering\Helixbase.Feature.VersionTrim.Rendering.csproj", "{A5FE8423-B82F-4EB4-A17E-31316985B29E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Helixbase.Foundation.Content.Rendering", "src\Foundation\Content\rendering\Helixbase.Foundation.Content.Rendering.csproj", "{B1622933-9253-4216-A1B7-66E692949D86}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helixbase.Foundation.Bootstrap.Rendering", "src\Foundation\Bootstrap\rendering\Helixbase.Foundation.Bootstrap.Rendering.csproj", "{D22707AF-65B1-4A40-BA11-5550374F1244}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Helixbase.Foundation.Core.Rendering", "src\Foundation\Core\rendering\Helixbase.Foundation.Core.Rendering.csproj", "{C96B75B1-5FAF-4822-B1D0-A4BD0986644E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helixbase.Foundation.Content.Rendering", "src\Foundation\Content\rendering\Helixbase.Foundation.Content.Rendering.csproj", "{B1622933-9253-4216-A1B7-66E692949D86}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Helixbase.Foundation.DI.Rendering", "src\Foundation\DI\rendering\Helixbase.Foundation.DI.Rendering.csproj", "{10E850B8-DFD3-4D6B-8CDA-65ACFBB0176C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helixbase.Foundation.Core.Rendering", "src\Foundation\Core\rendering\Helixbase.Foundation.Core.Rendering.csproj", "{C96B75B1-5FAF-4822-B1D0-A4BD0986644E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Helixbase.Foundation.Logging.Rendering", "src\Foundation\Logging\rendering\Helixbase.Foundation.Logging.Rendering.csproj", "{A1986D87-4D59-4291-AB6A-B6B3E53F7A48}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helixbase.Foundation.DI.Rendering", "src\Foundation\DI\rendering\Helixbase.Foundation.DI.Rendering.csproj", "{10E850B8-DFD3-4D6B-8CDA-65ACFBB0176C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Helixbase.Foundation.ORM.Rendering", "src\Foundation\ORM\rendering\Helixbase.Foundation.ORM.Rendering.csproj", "{820C100F-06E3-4E82-B88E-5715ACCD197B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helixbase.Foundation.Logging.Rendering", "src\Foundation\Logging\rendering\Helixbase.Foundation.Logging.Rendering.csproj", "{A1986D87-4D59-4291-AB6A-B6B3E53F7A48}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Helixbase.Foundation.Search.Rendering", "src\Foundation\Search\rendering\Helixbase.Foundation.Search.Rendering.csproj", "{F690BF54-16AA-4F90-BA57-C7CE18449AC7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helixbase.Foundation.ORM.Rendering", "src\Foundation\ORM\rendering\Helixbase.Foundation.ORM.Rendering.csproj", "{820C100F-06E3-4E82-B88E-5715ACCD197B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Helixbase.Foundation.Serialization.Rendering", "src\Foundation\Serialization\rendering\Helixbase.Foundation.Serialization.Rendering.csproj", "{B8934E52-504C-49AB-AE81-9EC5DADCDA88}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helixbase.Foundation.Search.Rendering", "src\Foundation\Search\rendering\Helixbase.Foundation.Search.Rendering.csproj", "{F690BF54-16AA-4F90-BA57-C7CE18449AC7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Helixbase.Project.Common.Rendering", "src\Project\Common\rendering\Helixbase.Project.Common.Rendering.csproj", "{E99AF19F-3D55-4F1E-A13D-F58CAF95D98A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helixbase.Foundation.Serialization.Rendering", "src\Foundation\Serialization\rendering\Helixbase.Foundation.Serialization.Rendering.csproj", "{B8934E52-504C-49AB-AE81-9EC5DADCDA88}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Helixbase.Project.Helixbase.Rendering", "src\Project\Helixbase\rendering\Helixbase.Project.Helixbase.Rendering.csproj", "{68135922-7105-42E2-92BD-E979F407E1C4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helixbase.Project.Common.Rendering", "src\Project\Common\rendering\Helixbase.Project.Common.Rendering.csproj", "{E99AF19F-3D55-4F1E-A13D-F58CAF95D98A}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Environment", "Environment", "{56B31908-6E9B-43E5-A90E-4955DC01BC39}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helixbase.Project.Helixbase.Rendering", "src\Project\Helixbase\rendering\Helixbase.Project.Helixbase.Rendering.csproj", "{0EECB457-8899-4ADA-95C0-FFC378DC3626}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helixbase.Rendering", "src\Website\rendering\Helixbase.Rendering.csproj", "{68135922-7105-42E2-92BD-E979F407E1C4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helixbase.Environment.Platform", "src\Environment\platform\Helixbase.Environment.Platform.csproj", "{2becc48f-fad8-4475-974d-e9c233ef1cdb}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -181,10 +179,6 @@ Global
 		{709812AB-BB8E-41FA-97C2-9B7D4181B6DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{709812AB-BB8E-41FA-97C2-9B7D4181B6DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{709812AB-BB8E-41FA-97C2-9B7D4181B6DA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2BECC48F-FAD8-4475-974D-E9C233EF1CDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2BECC48F-FAD8-4475-974D-E9C233EF1CDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2BECC48F-FAD8-4475-974D-E9C233EF1CDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2BECC48F-FAD8-4475-974D-E9C233EF1CDB}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1965FEBD-BBA2-4850-84DB-02C298922E49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1965FEBD-BBA2-4850-84DB-02C298922E49}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1965FEBD-BBA2-4850-84DB-02C298922E49}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -237,14 +231,14 @@ Global
 		{E99AF19F-3D55-4F1E-A13D-F58CAF95D98A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E99AF19F-3D55-4F1E-A13D-F58CAF95D98A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E99AF19F-3D55-4F1E-A13D-F58CAF95D98A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0EECB457-8899-4ADA-95C0-FFC378DC3626}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0EECB457-8899-4ADA-95C0-FFC378DC3626}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0EECB457-8899-4ADA-95C0-FFC378DC3626}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0EECB457-8899-4ADA-95C0-FFC378DC3626}.Release|Any CPU.Build.0 = Release|Any CPU
 		{68135922-7105-42E2-92BD-E979F407E1C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{68135922-7105-42E2-92BD-E979F407E1C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{68135922-7105-42E2-92BD-E979F407E1C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{68135922-7105-42E2-92BD-E979F407E1C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2becc48f-fad8-4475-974d-e9c233ef1cdb}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2becc48f-fad8-4475-974d-e9c233ef1cdb}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2becc48f-fad8-4475-974d-e9c233ef1cdb}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2becc48f-fad8-4475-974d-e9c233ef1cdb}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -280,7 +274,6 @@ Global
 		{0E67BAB2-5BB6-415A-B719-79B72194584C} = {C3F57797-2D54-4626-B842-51F30272E972}
 		{9B72C426-123C-4782-BEF8-0D52E5F2A396} = {0E67BAB2-5BB6-415A-B719-79B72194584C}
 		{709812AB-BB8E-41FA-97C2-9B7D4181B6DA} = {F2FD5CAD-01CE-40D6-82B5-E243313A4CD3}
-		{2BECC48F-FAD8-4475-974D-E9C233EF1CDB} = {0CDDE7FA-204E-4BA1-9478-6EBD43385213}
 		{1965FEBD-BBA2-4850-84DB-02C298922E49} = {2884EE1D-1D5D-4273-80BF-B0AEBFC7A2AE}
 		{08BF80C2-7BCA-416E-B4FA-00A939F7099C} = {26ABEF08-8005-4EEB-B6A0-8BDC87249A4B}
 		{86716800-EC6F-42E8-9464-722DA9676CAB} = {72B474FC-03D1-4705-B98E-8A498E9C2FAA}
@@ -294,8 +287,8 @@ Global
 		{F690BF54-16AA-4F90-BA57-C7CE18449AC7} = {1065468B-FB5C-4E5F-9050-CBC87D178BB6}
 		{B8934E52-504C-49AB-AE81-9EC5DADCDA88} = {41AC9AD8-3D81-4C55-9330-B9CA9DFD8554}
 		{E99AF19F-3D55-4F1E-A13D-F58CAF95D98A} = {27F11553-4B8F-4B6D-8B81-37DDE6046F31}
-		{0EECB457-8899-4ADA-95C0-FFC378DC3626} = {160DA988-084C-41E4-B714-00E127957ED0}
-		{68135922-7105-42E2-92BD-E979F407E1C4} = {0CDDE7FA-204E-4BA1-9478-6EBD43385213}
+		{68135922-7105-42E2-92BD-E979F407E1C4} = {160DA988-084C-41E4-B714-00E127957ED0}
+		{2becc48f-fad8-4475-974d-e9c233ef1cdb} = {56B31908-6E9B-43E5-A90E-4955DC01BC39}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {845F548C-FD53-4C61-AB7F-953C2225A13B}

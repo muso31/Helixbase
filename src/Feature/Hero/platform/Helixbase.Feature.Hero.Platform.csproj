@@ -6,7 +6,7 @@
 	  <ApplicationIcon />
 	  <OutputType>Library</OutputType>
 	  <StartupObject />
-	  <Authors>Neil Shack</Authors>
+	  <Authors>Neil Shack, Joe Price</Authors>
 	  <Company>Ethisys Ltd</Company>
   </PropertyGroup>
   <ItemGroup>
@@ -44,20 +44,20 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Glass.Mapper.Sc.100.Core" Version="5.8.170" />
-    <PackageReference Include="Glass.Mapper.Sc.100.Mvc" Version="5.8.170" />
-    <PackageReference Include="Microsoft.AspNet.Mvc" Version="5.2.4" />
-    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.1.3" />
-    <PackageReference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform" Version="2.0.1" />
-    <PackageReference Include="RazorGenerator.MsBuild" Version="2.5.0">
+    <PackageReference Include="Glass.Mapper.Sc.100.Core" />
+    <PackageReference Include="Glass.Mapper.Sc.100.Mvc" />
+    <PackageReference Include="Microsoft.AspNet.Mvc" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" />
+    <PackageReference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform" />
+    <PackageReference Include="RazorGenerator.MsBuild">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Sitecore.ContentSearch.Linq" Version="10.0.0" />
-    <PackageReference Include="Sitecore.Kernel" Version="10.0.0" />
-    <PackageReference Include="Sitecore.Mvc" Version="10.0.0" />
-    <PackageReference Include="Sitecore.Mvc.Analytics" Version="10.0.0" />
-    <PackageReference Include="System.ComponentModel.Annotations" Version="4.7.0" />
+    <PackageReference Include="Sitecore.ContentSearch.Linq" />
+    <PackageReference Include="Sitecore.Kernel" />
+    <PackageReference Include="Sitecore.Mvc" />
+    <PackageReference Include="Sitecore.Mvc.Analytics" />
+    <PackageReference Include="System.ComponentModel.Annotations" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Foundation\Content\platform\Helixbase.Foundation.Content.Platform.csproj" />

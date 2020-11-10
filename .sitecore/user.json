@@ -1,0 +1,14 @@
+{
+  "endpoints": {
+    "default": {
+      "allowWrite": true,
+      "host": "https://cm.helixbase.localhost/",
+      "authority": "https://id.helixbase.localhost/",
+      "accessToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IkU1NDc3MkJCMDY1OEU4NzQzQzg5QTQ0NkQ1QTJDMzE2QjZENDQ4N0MiLCJ0eXAiOiJKV1QiLCJ4NXQiOiI1VWR5dXdaWTZIUThpYVJHMWFMREZyYlVTSHcifQ.eyJuYmYiOjE2MDUwMjg2NTUsImV4cCI6MTYwNTAzMjI1NSwiaXNzIjoiaHR0cHM6Ly9pZC5oZWxpeGJhc2UubG9jYWxob3N0IiwiYXVkIjpbImh0dHBzOi8vaWQuaGVsaXhiYXNlLmxvY2FsaG9zdC9yZXNvdXJjZXMiLCJzaXRlY29yZS5wcm9maWxlLmFwaSJdLCJjbGllbnRfaWQiOiJEZXZpY2UiLCJzdWIiOiI5MTc0ZmUxNTk4Yjk0OGE0OWU1OTBmYjVkYjQ5YWE5MyIsImF1dGhfdGltZSI6MTYwNTAyODMyNiwiaWRwIjoibG9jYWwiLCJuYW1lIjoic2l0ZWNvcmVcXEFkbWluIiwiZW1haWwiOiIiLCJodHRwOi8vd3d3LnNpdGVjb3JlLm5ldC9pZGVudGl0eS9jbGFpbXMvaXNBZG1pbiI6IlRydWUiLCJzY29wZSI6WyJzaXRlY29yZS5wcm9maWxlLmFwaSIsIm9mZmxpbmVfYWNjZXNzIl0sImFtciI6WyJwd2QiXX0.SB5m2JzsbvBqYTH8V71yrdi07nAgje3es8PVMc4ySz6rbgbK-ZIg7uCWruVlWAo6OAnwnmbvrt8tSeDc5u7irgHQZwh6hVa6yXZjkyOOyIDEny3m6UjXbzhR06ynCNbRiwzHdPHOqnyLEi0aI-OXKmL2HY0ZefGNizB9cRMh_yaoHnP2k7WtQAe8mCGgrHy1Ib12hPA_rR2GELB33eoFyjsPDRB7-zxf7XY1qHtIAOOhHaUd1L3n-EHZaGg4iVLR6BQNDJHucJGgutxeboS-kG_CD4FICLG8Wzrc-Rr5vzn0YUkTL_BuTRVr3JvYUOLSG5ki7AWJjjucHAYC_66uwQ",
+      "refreshToken": "e1a403777839b882788257a13a49fba831a9ec3e7a74addea6c38dc788a6029f",
+      "clientId": "Device",
+      "variables": {}
+    }
+  },
+  "$schema": "./schemas/UserConfiguration.schema.json"
+}

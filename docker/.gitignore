@@ -1,0 +1,14 @@
+/data/cm/*
+!/data/cm/.gitkeep
+/data/cd/*
+!/data/cd/.gitkeep
+/data/mssql/*
+!/data/mssql/.gitkeep
+/data/solr/*
+!/data/solr/.gitkeep
+
+/deploy/platform/*
+!/deploy/platform/.gitkeep
+
+/traefik/certs/*
+!/traefik/certs/.gitkeep

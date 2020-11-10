@@ -1,0 +1,14 @@
+<Project>
+  <Sdk Name="Microsoft.Build.CentralPackageVersions" Version="2.0.46" />
+  <!--
+      Workaround for 'dotnet watch' issue with referenced MVC projects.
+      https://github.com/dotnet/aspnetcore/issues/22219
+  -->
+  <Target Name="FixDotnetWatch" AfterTargets="_CoreCollectWatchItems">
+    <ItemGroup>
+      <_WatchRelativePath Include="@(Watch)" Condition="'%(Identity)' != '%(Watch.FullPath)'" />
+      <Watch Remove="@(_WatchRelativePath)" />
+      <Watch Include="%(_WatchRelativePath.FullPath)" />
+    </ItemGroup>
+  </Target>
+</Project>

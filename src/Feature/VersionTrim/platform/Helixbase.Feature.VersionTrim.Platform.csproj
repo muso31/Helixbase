@@ -4,7 +4,7 @@
 	<ApplicationIcon />
 	<OutputType>Library</OutputType>
 	<StartupObject />
-	<Authors>Neil Shack</Authors>
+	<Authors>Neil Shack, Joe Price</Authors>
 	<Company>Ehisys Ltd</Company>
   </PropertyGroup>
   <ItemGroup>
@@ -28,7 +28,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform" Version="2.0.1" />
-    <PackageReference Include="Sitecore.Kernel" Version="10.0.0" />
+    <PackageReference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform" />
+    <PackageReference Include="Sitecore.Kernel" />
   </ItemGroup>
 </Project>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+    <ItemGroup>
+        <!-- Sitecore builtin assemblies -->
+        <SitecoreAssembliesToExclude Include="@(SitecoreAssemblies)" />
+
+        <!-- Deployment project -->
+        <SitecoreAssembliesToExclude Include="BasicCompany.Environment.dll" />
+        <SitecoreAssembliesToExclude Include="Sitecore.LayoutService.dll" />
+        <SitecoreAssembliesToExclude Include="Sitecore.LayoutService.Mvc.dll" />
+    </ItemGroup>
+
+</Project>
