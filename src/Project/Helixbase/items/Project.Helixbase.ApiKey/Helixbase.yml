@@ -1,0 +1,38 @@
+﻿---
+ID: "a1b7eaf3-05ac-42ca-a249-19ecd8146ece"
+Parent: "59b41b5f-e22e-460b-941e-fb64fe8da8fc"
+Template: "a6868d65-d612-401f-a40a-cd5ba0857b81"
+Path: "/sitecore/system/Settings/Services/API Keys/Helixbase"
+SharedFields:
+- ID: "780c8e48-fe03-4a73-90dc-9bb5296b95d7"
+  Hint: CORS Origins
+  Value: *
+- ID: "99ba91ec-f0d3-4372-b638-67c2402a2484"
+  Hint: AllowedControllers
+  Value: *
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200410T170451Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "081bf70b-a164-4632-a8c3-a2459d6568c2"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20200410T170753Z

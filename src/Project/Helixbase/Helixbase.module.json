@@ -1,0 +1,11 @@
+{
+    "namespace": "Project.Helixbase",
+    "items": {
+        "includes": [
+            {
+                "name": "Project.Helixbase.ApiKey",
+                "path": "/sitecore/system/Settings/Services/API Keys/helixbase"
+            }
+        ]
+    }
+}
