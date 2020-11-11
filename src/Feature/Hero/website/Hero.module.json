@@ -1,0 +1,24 @@
+{
+  "namespace": "Feature.Hero",
+  "items": {
+    "includes": [
+      {
+        "name": "templates",
+        "path": "/sitecore/templates/Feature/Hero"
+      },
+      {
+        "name": "renderings",
+        "path": "/sitecore/layout/Renderings/Feature/Hero"
+      },
+      {
+        "name": "media",
+        "path": "/sitecore/media library/Feature/Hero"
+      },
+      {
+        "name": "experience buttons",
+        "database": "core",
+        "path": "/sitecore/content/Applications/WebEdit/Custom Experience Buttons/Feature/Hero"
+      }
+    ]
+  }
+}       
