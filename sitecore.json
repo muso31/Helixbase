@@ -4,7 +4,7 @@
     "src/*/*/*.module.json"
   ],
   "serialization": {
-    "defaultMaxRelativeItemPathLength": 100,
-    "defaultModuleRelativeSerializationPath": "items"
+    "defaultMaxRelativeItemPathLength": 100
+    //"defaultModuleRelativeSerializationPath": "items"
   }
 }
