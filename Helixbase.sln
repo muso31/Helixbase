@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Foundation", "Foundation", "{C3F57797-2D54-4626-B842-51F30272E972}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Serialization", "Serialization", "{41AC9AD8-3D81-4C55-9330-B9CA9DFD8554}"
+	ProjectSection(SolutionItems) = preProject
+		src\Foundation\Serialization\Serialization.module.json = src\Foundation\Serialization\Serialization.module.json
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Helixbase.Foundation.Serialization.Platform", "src\Foundation\Serialization\platform\Helixbase.Foundation.Serialization.Platform.csproj", "{4238D5C5-AFD2-4DF5-BF3D-ADB9D46ADC08}"
 EndProject
@@ -40,6 +43,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configuration", "Configurat
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{27F11553-4B8F-4B6D-8B81-37DDE6046F31}"
+	ProjectSection(SolutionItems) = preProject
+		src\Project\Common\Common.module.json = src\Project\Common\Common.module.json
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Helixbase.Project.Common.Platform", "src\Project\Common\platform\Helixbase.Project.Common.Platform.csproj", "{6F8C583B-E667-4DEB-A603-77932C7803B0}"
 EndProject
