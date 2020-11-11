@@ -1,10 +1,66 @@
 {
     "namespace": "Project.Helixbase",
+    "references": [
+        "Foundation.*",
+        "Feature.*",
+        "Project.Common"
+    ],
     "items": {
         "includes": [
             {
-                "name": "Project.Helixbase.ApiKey",
-                "path": "/sitecore/system/Settings/Services/API Keys/helixbase"
+                "name": "ApiKey",
+                "path": "/sitecore/system/Settings/Services/API Keys/helixbase",
+                "database": "master"
+            },
+            {
+                "name": "Templates",
+                "path": "/sitecore/templates/Project/Helixbase",
+                "database": "master"
+            },
+            {
+                "name": "Renderings",
+                "path": "/sitecore/layout/renderings/Project/Helixbase",
+                "database": "master"
+            },
+            {
+                "name": "Layouts",
+                "path": "/sitecore/layout/layouts/Project/Helixbase",
+                "database": "master"
+            },
+            {
+                "name": "PlaceholderSettings",
+                "path": "/sitecore/layout/placeholder settings/Project/Helixbase",
+                "database": "master"
+            },
+            {
+                "name": "Models",
+                "path": "/sitecore/layout/models/Project/Helixbase",
+                "database": "master"
+            },
+            {
+                "name": "Content",
+                "path": "/sitecore/content/Helixbase",
+                "database": "master"
+            },
+            {
+                "name": "Media",
+                "path": "/sitecore/media library/Project/Helixbase",
+                "database": "master"
+            },
+            {
+                "name": "Profiling",
+                "path": "/sitecore/system/Marketing Control Panel/Profiles/Helixbase",
+                "database": "master"
+            },
+            {
+                "name": "Outcomes",
+                "path": "/sitecore/system/Marketing Control Panel/Outcomes/Helixbase",
+                "database": "master"
+            },
+            {
+                "name": "Campaigns",
+                "path": "/sitecore/system/Marketing Control Panel/Campaigns/Helixbase",
+                "database": "master"
             }
         ]
     }
