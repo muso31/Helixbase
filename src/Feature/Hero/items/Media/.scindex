@@ -1,0 +1,55 @@
+﻿# Do not commit this file to source control or modify it. It is safe to delete; it will recreate itself.
+---
+File: |
+  C:\Projects\Ethisys\Helixbase\src\Feature\Hero\items\Media\Hero\helixbase1.yml
+ID: "1d37d442-a155-4d8c-8755-d67920eb9f96"
+Parent: "adbc2fc7-3ac8-41c6-87bf-50c9106af433"
+Template: "daf085e8-602e-43a6-8299-038ff171349f"
+Path: /sitecore/media library/Feature/Hero/helixbase1
+Signature: hYC/sIjPUolBoXZBzVRVPofsHf2K9pglsI2vtoOiRss=
+Modified: 637266001109089109
+---
+File: |
+  C:\Projects\Ethisys\Helixbase\src\Feature\Hero\items\Media\Hero\BaseHero.yml
+ID: "f93a8ab1-654d-4a6f-b38b-780cda6de2f7"
+Parent: "adbc2fc7-3ac8-41c6-87bf-50c9106af433"
+Template: "f1828a2c-7e5d-4bbd-98ca-320474871548"
+Path: /sitecore/media library/Feature/Hero/BaseHero
+Signature: v85Zowoq5SnBYRK+1fKIubRmino+EUxxxo3CmHDQ1X0=
+Modified: 637266001109018633
+---
+File: |
+  C:\Projects\Ethisys\Helixbase\src\Feature\Hero\items\Media\Hero\helixbase3.yml
+ID: "191b08e9-9200-4be9-8cf5-f4000cd4e202"
+Parent: "adbc2fc7-3ac8-41c6-87bf-50c9106af433"
+Template: "daf085e8-602e-43a6-8299-038ff171349f"
+Path: /sitecore/media library/Feature/Hero/helixbase3
+Signature: O5cOuo2zFuolKFSCvOi1a6ZBGWZrBTm2zZqgPej3m7I=
+Modified: 637266001109139152
+---
+File: |
+  C:\Projects\Ethisys\Helixbase\src\Feature\Hero\items\Media\Hero\helixbase4.yml
+ID: "86483428-418b-4d98-a8f7-29b92a3d93c5"
+Parent: "adbc2fc7-3ac8-41c6-87bf-50c9106af433"
+Template: "daf085e8-602e-43a6-8299-038ff171349f"
+Path: /sitecore/media library/Feature/Hero/helixbase4
+Signature: ota2nzhXNGJObYcn4qWzagmB0lCmXUNC5qD+GHRPFdE=
+Modified: 637266001109169107
+---
+File: |
+  C:\Projects\Ethisys\Helixbase\src\Feature\Hero\items\Media\Hero\helixbase2.yml
+ID: "70709054-b3e6-4aad-83d0-ed0aa5f12426"
+Parent: "adbc2fc7-3ac8-41c6-87bf-50c9106af433"
+Template: "daf085e8-602e-43a6-8299-038ff171349f"
+Path: /sitecore/media library/Feature/Hero/helixbase2
+Signature: KfF5vNjMZPbLpjj8It72HeFW0CJqH9vtvcZnvBwPCYY=
+Modified: 637266001109109115
+---
+File: |
+  C:\Projects\Ethisys\Helixbase\src\Feature\Hero\items\Media\Hero.yml
+ID: "adbc2fc7-3ac8-41c6-87bf-50c9106af433"
+Parent: "1837a8df-8390-4b30-93d5-34a51c3131db"
+Template: "fe5dd826-48c6-436d-b87a-7c4210c7413b"
+Path: /sitecore/media library/Feature/Hero
+Signature: JtoxxT0RUeq6xNlVa/teNkb5wvHdhagloQZp14hdpFo=
+Modified: 637266001109008286

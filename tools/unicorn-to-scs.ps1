@@ -30,5 +30,5 @@ Function Invoke-RenameSerializationFolder {
 }
 
 Invoke-RenameSerializationFolder `
-    -ItemsDirectory "C:\Projects\Ethisys\Helixbase\src\Foundation\Serialization\items" `
-    -StringToRemove "Foundation."
+    -ItemsDirectory "C:\Projects\Ethisys\Helixbase\src\Feature\VersionTrim\items" `
+    -StringToRemove "Feature.VersionTrim."

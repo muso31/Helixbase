@@ -13,12 +13,6 @@
     <Content Remove="Web.Release.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Remove="App_Config\Include\Feature\Feature.VersionTrim.Serialization.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="App_Config\Include\Feature\Feature.VersionTrim.Serialization.config" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Web.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
@@ -30,5 +24,8 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform" />
     <PackageReference Include="Sitecore.Kernel" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Config\Include\Feature\" />
   </ItemGroup>
 </Project>

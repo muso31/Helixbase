@@ -27,6 +27,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Feature", "Feature", "{60DA3F20-DEED-4580-AE38-A296D76ADE79}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Hero", "Hero", "{2884EE1D-1D5D-4273-80BF-B0AEBFC7A2AE}"
+	ProjectSection(SolutionItems) = preProject
+		src\Feature\Hero\Hero.module.json = src\Feature\Hero\Hero.module.json
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Helixbase.Feature.Hero.Platform", "src\Feature\Hero\platform\Helixbase.Feature.Hero.Platform.csproj", "{3466026C-5B9B-4274-8B17-60763BD56C69}"
 EndProject
@@ -65,6 +68,9 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Helixbase.Foundation.DI.Platform", "src\Foundation\DI\platform\Helixbase.Foundation.DI.Platform.csproj", "{0D3A6F11-B5FF-4D8C-8A74-19501D2E80D4}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "VersionTrim", "VersionTrim", "{4F330EE3-EB9A-4B58-8682-E0815921771F}"
+	ProjectSection(SolutionItems) = preProject
+		src\Feature\VersionTrim\VersionTrim.module.json = src\Feature\VersionTrim\VersionTrim.module.json
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Helixbase.Feature.VersionTrim.Platform", "src\Feature\VersionTrim\platform\Helixbase.Feature.VersionTrim.Platform.csproj", "{ED756657-14BA-4313-A51B-A2960BD6F5DA}"
 EndProject
