@@ -7,6 +7,9 @@ Param(
 # Variables to change
 $originalName = "Helixbase"
 
+# Config
+$excludedFoldersRegex = "\\(obj|bin|.git|.hg)\\?"
+
 function Rename-Files
 {
     Param(
@@ -20,11 +23,19 @@ function Rename-Files
 
     $pattern = "*$OldValue*"
 
-    $folderItems = Get-ChildItem -Directory -Path "$StartPath" -Recurse -Filter $pattern -Force | Where-Object { $_.FullName -notmatch "\\(obj|bin)\\?" } | Sort-Object { $_.FullName.Length } -Descending
+    $folderItems = Get-ChildItem -Directory -Path "$StartPath" -Recurse -Filter $pattern -Force | Where-Object { $_.FullName -notmatch $excludedFoldersRegex } | Sort-Object { $_.FullName.Length } -Descending
     $folderItems | Rename-Item -NewName { $_.Name -replace $OldValue, $NewValue } -Force
 
-    $fileItems = Get-ChildItem -File -Path "$StartPath" -Filter $pattern -Recurse -Force | Where-Object { $_.FullName -notmatch "\\(obj|bin)\\?" } 
-    $fileItems | Rename-Item -NewName { $_.Name -replace $OldValue, $NewValue } -Force
+    $fileItems = Get-ChildItem -File -Path "$StartPath" -Filter $pattern -Recurse -Force | Where-Object { $_.FullName -notmatch $excludedFoldersRegex } 
+    $fileItems | Rename-Item -NewName { 
+		$newItemName = $NewValue
+		
+		# Exception for .yml files - remove dots (.) from new file name
+		if ($NewValue -like "*.*" -and $_.Extension -eq ".yml" ) { 
+			$newItemName = $NewValue -Replace "\.", "" 
+		}
+		$_.Name -replace $OldValue, $newItemName
+	} -Force
 }
 
 function Update-FileContent
@@ -40,8 +51,18 @@ function Update-FileContent
         [string]$FileExtensionsRegex
     )
 
-    $filesToUpdate = Get-ChildItem -File -Path "$StartPath" -Recurse -Force | Where-Object { ( $_.FullName -notmatch "\\(obj|bin)\\?") -and ($_.Name -match $FileExtensionsRegex) } | Select-String -Pattern $OldValue | Group-Object Path | Select-Object -ExpandProperty Name
-    $filesToUpdate | ForEach-Object { (Get-Content $_ ) -ireplace [regex]::Escape($OldValue), $NewValue | Set-Content $_ -Force }
+    $filesToUpdate = Get-ChildItem -File -Path "$StartPath" -Recurse -Force | Where-Object { ( $_.FullName -notmatch $excludedFoldersRegex) -and ($_.Name -match $FileExtensionsRegex) } | Select-String -Pattern $OldValue | Group-Object Path | Select-Object -ExpandProperty Name
+    $filesToUpdate | ForEach-Object { 
+		$currentContent = (Get-Content $_ ) 
+		$newContentValue = $NewValue
+		
+		# Exception for .yml files - remove dots (.) from file content - item name
+		if ($NewValue -like "*.*" -and $_ -like "*.yml" ) { 
+			$newContentValue = $NewValue -Replace "\.", ""
+		}
+		
+		$currentContent -ireplace [regex]::Escape($OldValue), $newContentValue | Set-Content $_ -Force 
+	}
 }
 
 try {
