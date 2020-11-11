@@ -39,12 +39,11 @@ services:
     environment:
       ASPNETCORE_ENVIRONMENT: "Development"
       ASPNETCORE_URLS: "http://*:80"
-      Sitecore__InstanceUri: "http://cd"
+      Sitecore__InstanceUri: "http://cm"
       Sitecore__RenderingHostUri: "https://${SITE_HOST}"
       Sitecore__EnableExperienceEditor: "true"
     depends_on:
       - solution
-      - cd
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.rendering-secure.entrypoints=websecure"
@@ -56,31 +55,24 @@ services:
       - ./docker/traefik:C:/etc/traefik
     depends_on:
       - rendering
-  
-  redis:
-    image: ${REGISTRY}${COMPOSE_PROJECT_NAME}-redis:${VERSION:-latest}
-    build:
-      context: ./docker/build/redis
-      args:
-        BASE_IMAGE: ${SITECORE_DOCKER_REGISTRY}sitecore-redis:${SITECORE_VERSION}
 
   mssql:
-    image: ${REGISTRY}${COMPOSE_PROJECT_NAME}-xm1-mssql:${VERSION:-latest}
+    image: ${REGISTRY}${COMPOSE_PROJECT_NAME}-xp0-mssql:${VERSION:-latest}
     build:
       context: ./docker/build/mssql
       args:
-        BASE_IMAGE: ${SITECORE_DOCKER_REGISTRY}sitecore-xm1-mssql:${SITECORE_VERSION}
-        HEADLESS_SERVICES_IMAGE: ${SITECORE_MODULE_REGISTRY}jss-xm1-assets:${HEADLESS_SERVICES_VERSION}
+        BASE_IMAGE: ${SITECORE_DOCKER_REGISTRY}sitecore-xp0-mssql:${SITECORE_VERSION}
+        HEADLESS_SERVICES_IMAGE: ${SITECORE_MODULE_REGISTRY}${HEADLESS_SERVICES_IMAGE}${HEADLESS_SERVICES_VERSION}
     mem_limit: 2GB
     volumes:
       - ${LOCAL_DATA_PATH}\mssql:c:\data
   
   solr:
-    image: ${REGISTRY}${COMPOSE_PROJECT_NAME}-xm1-solr:${VERSION:-latest}
+    image: ${SITECORE_DOCKER_REGISTRY}sitecore-xp0-solr:${SITECORE_VERSION}
     build:
       context: ./docker/build/solr
       args:
-        BASE_IMAGE: ${SITECORE_DOCKER_REGISTRY}sitecore-xm1-solr:${SITECORE_VERSION}
+        BASE_IMAGE: ${SITECORE_DOCKER_REGISTRY}sitecore-xp0-solr:${SITECORE_VERSION}
     mem_limit: 1GB
     volumes:
       - ${LOCAL_DATA_PATH}\solr:c:\data
@@ -96,39 +88,15 @@ services:
     environment:
       SITECORE_LICENSE_LOCATION: C:\license\license.xml
 
-  cd:
-    image: ${REGISTRY}${COMPOSE_PROJECT_NAME}-xm1-cd:${VERSION:-latest}
-    build:
-      context: ./docker/build/cd
-      args:
-        BASE_IMAGE: ${SITECORE_DOCKER_REGISTRY}sitecore-xm1-cd:${SITECORE_VERSION}
-        HEADLESS_SERVICES_IMAGE: ${SITECORE_MODULE_REGISTRY}jss-xm1-assets:${HEADLESS_SERVICES_VERSION}
-        TOOLING_IMAGE: ${SITECORE_TOOLS_REGISTRY}sitecore-docker-tools-assets:${TOOLS_VERSION}
-        SOLUTION_IMAGE: ${REGISTRY}${COMPOSE_PROJECT_NAME}-solution:${VERSION:-latest}
-    depends_on:
-      - solution
-    volumes:
-      - ${LOCAL_DEPLOY_PATH}\platform:C:\deploy
-      - ${LOCAL_DATA_PATH}\cd:C:\inetpub\wwwroot\App_Data\logs
-      - ${HOST_LICENSE_FOLDER}:C:\license
-    environment:
-      SITECORE_LICENSE_LOCATION: C:\license\license.xml
-    entrypoint: powershell -Command "& C:\tools\entrypoints\iis\Development.ps1"
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.cd.entrypoints=websecure"
-      - "traefik.http.routers.cd.rule=Host(`${CD_HOST}`)"
-      - "traefik.http.routers.cd.tls=true"
-
   cm:
-    image: ${REGISTRY}${COMPOSE_PROJECT_NAME}-xm1-cm:${VERSION:-latest}
+    image: ${REGISTRY}${COMPOSE_PROJECT_NAME}-xp0-cm:${VERSION:-latest}
     build:
       context: ./docker/build/cm
       args:
-        BASE_IMAGE: ${SITECORE_DOCKER_REGISTRY}sitecore-xm1-cm:${SITECORE_VERSION}
-        HEADLESS_SERVICES_IMAGE: ${SITECORE_MODULE_REGISTRY}jss-xm1-assets:${HEADLESS_SERVICES_VERSION}
-        MANAGEMENT_SERVICES_IMAGE: ${SITECORE_MODULE_REGISTRY}sitecore-management-services-xm1-assets:${MANAGEMENT_SERVICES_VERSION}
-        TOOLING_IMAGE: ${SITECORE_TOOLS_REGISTRY}sitecore-docker-tools-assets:${TOOLS_VERSION}
+        BASE_IMAGE: ${SITECORE_DOCKER_REGISTRY}sitecore-xp0-cm:${SITECORE_VERSION}
+        TOOLING_IMAGE: ${SITECORE_TOOLS_REGISTRY}${TOOLS_IMAGE}${TOOLS_VERSION}
+        MANAGEMENT_SERVICES_IMAGE: ${SITECORE_MODULE_REGISTRY}${MANAGEMENT_SERVICES_IMAGE}${MANAGEMENT_SERVICES_VERSION}
+        HEADLESS_SERVICES_IMAGE: ${SITECORE_MODULE_REGISTRY}${HEADLESS_SERVICES_IMAGE}${HEADLESS_SERVICES_VERSION}
         SOLUTION_IMAGE: ${REGISTRY}${COMPOSE_PROJECT_NAME}-solution:${VERSION:-latest}
     depends_on:
       - solution
@@ -139,3 +107,56 @@ services:
     environment:
       SITECORE_LICENSE_LOCATION: C:\license\license.xml
     entrypoint: powershell -Command "& C:\tools\entrypoints\iis\Development.ps1"
+
+  # Use our retagged XConnect image.
+  # Configure for a mounted license folder instead of using SITECORE_LICENSE.
+  # Note: XConnect roles expect a folder with license.xml, not the file itself.
+  xconnect:
+    image: ${REGISTRY}${COMPOSE_PROJECT_NAME}-xp0-xconnect:${VERSION:-latest}
+    build:
+      context: ./docker/build/xconnect
+      args:
+        BASE_IMAGE: ${SITECORE_DOCKER_REGISTRY}sitecore-xp0-xconnect:${SITECORE_VERSION}
+    volumes:
+      - ${HOST_LICENSE_FOLDER}:c:\license
+    environment: 
+      SITECORE_LICENSE_LOCATION: c:\license\
+
+  # Use our retagged XConnect Search Indexer image.
+  # Configure for a mounted license folder instead of using SITECORE_LICENSE.
+  xdbsearchworker:
+    image: ${REGISTRY}${COMPOSE_PROJECT_NAME}-xp0-xdbsearchworker:${VERSION:-latest}
+    build:
+      context: ./docker/build/xdbsearchworker
+      args:
+        BASE_IMAGE: ${SITECORE_DOCKER_REGISTRY}sitecore-xp0-xdbsearchworker:${SITECORE_VERSION}
+    volumes:
+      - ${HOST_LICENSE_FOLDER}:c:\license
+    environment: 
+      SITECORE_LICENSE_LOCATION: c:\license\
+
+  # Use our retagged Marketing Automation Engine image. 
+  # Configure for a mounted license folder instead of using SITECORE_LICENSE.
+  xdbautomationworker:
+    image: ${REGISTRY}${COMPOSE_PROJECT_NAME}-xp0-xdbautomationworker:${VERSION:-latest}
+    build:
+      context: ./docker/build/xdbautomationworker
+      args:
+        BASE_IMAGE: ${SITECORE_DOCKER_REGISTRY}sitecore-xp0-xdbautomationworker:${SITECORE_VERSION}
+    volumes:
+      - ${HOST_LICENSE_FOLDER}:c:\license
+    environment: 
+      SITECORE_LICENSE_LOCATION: c:\license\
+
+  # Use our retagged Cortex Processing Engine image.
+  # Configure for a mounted license folder instead of using SITECORE_LICENSE.
+  cortexprocessingworker:
+    image: ${REGISTRY}${COMPOSE_PROJECT_NAME}-xp0-cortexprocessingworker:${VERSION:-latest}
+    build:
+      context: ./docker/build/cortexprocessingworker
+      args:
+        BASE_IMAGE: ${SITECORE_DOCKER_REGISTRY}sitecore-xp0-cortexprocessingworker:${SITECORE_VERSION}
+    volumes:
+      - ${HOST_LICENSE_FOLDER}:c:\license
+    environment: 
+      SITECORE_LICENSE_LOCATION: c:\license\
