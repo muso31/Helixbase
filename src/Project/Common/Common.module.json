@@ -27,7 +27,7 @@
                 "database": "master"
             },
             {
-                "name": "Core.UserProfiles",
+                "name": "UserProfiles",
                 "path": "/sitecore/system/Settings/Security/Profiles/Common",
                 "database": "core"
             },

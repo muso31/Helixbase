@@ -1,10 +1,10 @@
 ﻿# Do not commit this file to source control or modify it. It is safe to delete; it will recreate itself.
 ---
 File: |
-  C:\Projects\Ethisys\Helixbase\src\Foundation\Serialization\items\Core.Templates.Project\Project.yml
-ID: "21accfbf-65d7-4ef0-8d75-9dbfc11169c1"
+  C:\Projects\Ethisys\Helixbase\src\Foundation\Serialization\items\Templates.Foundation\Foundation.yml
+ID: "4620ec0f-6b40-4da3-8e0d-80cae3e3d5b1"
 Parent: "3c1715fe-6a13-4fcf-845f-de308ba9741d"
 Template: "a87a00b1-e6db-45ab-8b54-636fec3b5523"
-Path: /sitecore/templates/Project
-Signature: rvoNIH3IO0WDdf7sDXyTq3JPo8c+Enbh+pLlRb2xcKo=
+Path: /sitecore/templates/Foundation
+Signature: JBtoZ9fYfmbMptAJ8dpSTPyVFpxi9eWvY7eT1v1kIAQ=
 Modified: 637266001110769645

@@ -1,13 +1,14 @@
 ﻿---
-ID: "825B30B4-B40B-422E-9920-23A1B6BDA89C"
+ID: "21accfbf-65d7-4ef0-8d75-9dbfc11169c1"
 Parent: "3c1715fe-6a13-4fcf-845f-de308ba9741d"
-Template: "0437fee2-44c9-46a6-abe9-28858d9fee8c"
+Template: "a87a00b1-e6db-45ab-8b54-636fec3b5523"
 Path: /sitecore/templates/Project
-DB: master
+DB: core
+BranchID: "30235f43-6242-4107-87ab-5267e34edf0c"
 SharedFields:
 - ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
   Hint: __Icon
-  Value: Applications/32x32/folder_window.png
+  Value: applications/32x32/folder_window.png
 Languages:
 - Language: en
   Versions:
@@ -15,4 +16,8 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20170212T142107Z
+      Value: 20170212T152031Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin

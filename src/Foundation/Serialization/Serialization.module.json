@@ -35,25 +35,25 @@
         "scope": "SingleItem"
       },
       {
-        "name": "Core.Templates.Feature",
+        "name": "Templates.Feature",
         "path": "/sitecore/templates/Feature",
         "database": "core",
         "scope": "SingleItem"
       },
       {
-        "name": "Core.Templates.Foundation",
+        "name": "Templates.Foundation",
         "path": "/sitecore/templates/Foundation",
         "database": "core",
         "scope": "SingleItem"
       },
       {
-        "name": "Core.Templates.Project",
+        "name": "Templates.Project",
         "path": "/sitecore/templates/Project",
         "database": "core",
         "scope": "SingleItem"
       },
       {
-        "name": "Core.ExpButtons.Feature",
+        "name": "ExpButtons.Feature",
         "path": "/sitecore/content/Applications/WebEdit/Custom Experience Buttons/Feature",
         "database": "core",
         "scope": "SingleItem"
