@@ -6,7 +6,7 @@ A Sitecore Helix based solution which can be used for Greenfield projects. Tackl
 #### Features include:
 
 * Glass Mapper v5 - with fluent configuration and automated mapping registration
-* Unicorn - including user and role sync
+* Sitecore Content Serialization (SCS)
 * Sitecore 10 ready
 * Pre compiled Razor views
 * Bootstrap v4
@@ -31,7 +31,7 @@ A Sitecore Helix based solution which can be used for Greenfield projects. Tackl
 	1. _If you use another path, update the [z.Project.Common.DevSettings.config](https://github.com/muso31/Helixbase/blob/master/src/Project/Common/website/App_Config/Include/Project/z.Project.Common.DevSettings.config#L3)_
 3. Update the 'publishUrl' property in [Local.pubxml](https://github.com/muso31/Helixbase/blob/master/src/Website/website/Properties/PublishProfiles/Local.pubxml#L12) to the target IIS folder
 4. Use the 'Local' publish profile in the Helixbase.Website project to publish the solution
-5. Run Unicorn and sync all configurations
+5. Install Sitecore.CLI and push 
 
 #### Using Helix Base:
 Refer to the [Hero Feature](https://github.com/muso31/Helixbase/tree/master/src/Feature/Hero/website) as an example.
