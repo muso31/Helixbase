@@ -5,16 +5,14 @@ DO NOT CHANGE THIS FILE - UPDATE GlassMapperScCustom.cs
 
 **************************************/
 
+using System.Linq;
 using Glass.Mapper;
 using Glass.Mapper.Configuration;
 using Glass.Mapper.Maps;
 using Glass.Mapper.Sc.Configuration.Fluent;
 using Glass.Mapper.Sc.IoC;
-using Glass.Mapper.Sc.Pipelines.GetChromeData;
-using Sitecore.Pipelines;
-using System.Linq;
 
-namespace Helixbase.Foundation.ORM.App_Start
+namespace Helixbase.Foundation.ORM
 {
 	public class GlassMapperSc : Glass.Mapper.Sc.Pipelines.Initialize.GlassMapperSc
 	{

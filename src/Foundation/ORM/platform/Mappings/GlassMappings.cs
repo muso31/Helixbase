@@ -2,7 +2,7 @@ using Glass.Mapper.Sc.Configuration;
 using Glass.Mapper.Sc.Maps;
 using Helixbase.Foundation.ORM.Models;
 
-namespace Helixbase.Foundation.ORM
+namespace Helixbase.Foundation.ORM.Mappings
 {
     public class GlassMappings : SitecoreGlassMap<IGlassBase>
     {

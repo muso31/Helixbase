@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Globalization;
-using Helixbase.Feature.Hero.Rendering.Extensions;
-using Helixbase.Rendering.Configuration;
+using Helixbase.Feature.Hero.Extensions;
+using Helixbase.Project.Helixbase.Configuration;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpOverrides;
@@ -17,7 +17,7 @@ using Sitecore.LayoutService.Client.Extensions;
 using Sitecore.LayoutService.Client.Newtonsoft.Extensions;
 using Sitecore.LayoutService.Client.Request;
 
-namespace Helixbase.Rendering
+namespace Helixbase.Project.Helixbase
 {
     public class Startup
     {

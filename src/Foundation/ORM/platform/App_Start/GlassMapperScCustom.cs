@@ -1,11 +1,12 @@
 #region GlassMapperScCustom generated code
+
 using Glass.Mapper.Configuration;
 using Glass.Mapper.IoC;
 using Glass.Mapper.Maps;
 using Glass.Mapper.Sc.IoC;
 using IDependencyResolver = Glass.Mapper.Sc.IoC.IDependencyResolver;
 
-namespace Helixbase.Foundation.ORM.App_Start
+namespace Helixbase.Foundation.ORM
 {
     public static  class GlassMapperScCustom
     {

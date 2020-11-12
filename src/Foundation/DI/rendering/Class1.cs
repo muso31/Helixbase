@@ -1,6 +1,4 @@
-using System;
-
-namespace Helixbase.Foundation.DI.Rendering
+namespace Helixbase.Foundation.DI
 {
     public class Class1
     {

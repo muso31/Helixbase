@@ -1,8 +1,8 @@
-using Helixbase.Feature.Hero.Rendering.ViewModels;
+using Helixbase.Feature.Hero.ViewModels;
 using Sitecore.AspNet.RenderingEngine.Configuration;
 using Sitecore.AspNet.RenderingEngine.Extensions;
 
-namespace Helixbase.Feature.Hero.Rendering.Extensions
+namespace Helixbase.Feature.Hero.Extensions
 {
     public static class RenderingEngineOptionsExtensions
     {

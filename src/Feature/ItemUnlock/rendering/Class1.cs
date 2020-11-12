@@ -1,6 +1,4 @@
-using System;
-
-namespace Helixbase.Feature.ItemUnlock.Rendering
+namespace Helixbase.Feature.ItemUnlock
 {
     public class Class1
     {

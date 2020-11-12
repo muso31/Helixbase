@@ -1,6 +1,4 @@
-using System;
-
-namespace Helixbase.Foundation.Serialization.Rendering
+namespace Helixbase.Foundation.Serialization
 {
     public class Class1
     {

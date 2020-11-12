@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 
-namespace Helixbase.Rendering
+namespace Helixbase.Project.Helixbase
 {
     public class Program
     {

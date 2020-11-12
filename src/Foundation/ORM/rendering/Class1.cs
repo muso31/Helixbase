@@ -1,6 +1,4 @@
-using System;
-
-namespace Helixbase.Foundation.ORM.Rendering
+namespace Helixbase.Foundation.ORM
 {
     public class Class1
     {

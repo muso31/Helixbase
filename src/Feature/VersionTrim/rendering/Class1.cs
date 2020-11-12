@@ -1,6 +1,4 @@
-using System;
-
-namespace Helixbase.Feature.VersionTrim.Rendering
+namespace Helixbase.Feature.VersionTrim
 {
     public class Class1
     {

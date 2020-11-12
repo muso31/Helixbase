@@ -1,4 +1,4 @@
-namespace Helixbase.Feature.Hero.Rendering.ViewModels
+namespace Helixbase.Feature.Hero.ViewModels
 {
     public class HeroViewModel
     {

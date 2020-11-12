@@ -1,6 +1,4 @@
-using System;
-
-namespace Helixbase.Foundation.Search.Rendering
+namespace Helixbase.Foundation.Search
 {
     public class Class1
     {

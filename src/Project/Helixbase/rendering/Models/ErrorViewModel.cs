@@ -1,4 +1,4 @@
-namespace Helixbase.Rendering.Models
+namespace Helixbase.Project.Helixbase.Models
 {
     public class ErrorViewModel
     {

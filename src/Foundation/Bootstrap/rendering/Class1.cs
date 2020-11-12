@@ -1,6 +1,4 @@
-using System;
-
-namespace Helixbase.Foundation.Bootstrap.Rendering
+namespace Helixbase.Foundation.Bootstrap
 {
     public class Class1
     {

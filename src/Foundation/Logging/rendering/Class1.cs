@@ -1,6 +1,4 @@
-using System;
-
-namespace Helixbase.Foundation.Logging.Rendering
+namespace Helixbase.Foundation.Logging
 {
     public class Class1
     {

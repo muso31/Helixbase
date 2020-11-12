@@ -1,6 +1,6 @@
 using System;
 
-namespace Helixbase.Rendering.Configuration
+namespace Helixbase.Project.Helixbase.Configuration
 {
     /// <summary>
     /// Example of a custom bound configuration object. Used in the Startup class to bind configuration options
