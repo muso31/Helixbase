@@ -1,24 +1,6 @@
 ﻿# Do not commit this file to source control or modify it. It is safe to delete; it will recreate itself.
 ---
 File: |
-  C:\Projects\Ethisys\Helixbase\src\Project\Helixbase\items\Content\Helixbase\Global.yml
-ID: "a764f8d7-e505-4c60-acee-7f4416095d5f"
-Parent: "5ac6cf7a-26b8-47a1-a326-8cd790317be0"
-Template: "b2076f9f-e735-4f31-91cf-597524b76a1e"
-Path: /sitecore/content/Helixbase/Global
-Signature: vnyUFCVE/y6S1b6X1NSEbMynVwOwmmkRKEYJG0+x0IU=
-Modified: 637266001111209708
----
-File: |
-  C:\Projects\Ethisys\Helixbase\src\Project\Helixbase\items\Content\Helixbase\Home.yml
-ID: "1d5c266a-112f-4ea2-a69e-e4865ace2200"
-Parent: "5ac6cf7a-26b8-47a1-a326-8cd790317be0"
-Template: "76036f5e-cbce-46d1-af0a-4143f9b557aa"
-Path: /sitecore/content/Helixbase/Home
-Signature: ezYQILBI3m70HojQFhQnP+rhJqhnizAgXb06QP0OqxY=
-Modified: 637266001111240129
----
-File: |
   C:\Projects\Ethisys\Helixbase\src\Project\Helixbase\items\Content\Helixbase.yml
 ID: "5ac6cf7a-26b8-47a1-a326-8cd790317be0"
 Parent: "0de95ae4-41ab-4d01-9eb0-67441b7c2450"
@@ -28,13 +10,13 @@ Signature: es7PnSmzJBgWEwK+3TNsXMot7YVjOtOUBh9+hmT5W+w=
 Modified: 637266001111199629
 ---
 File: |
-  C:\Projects\Ethisys\Helixbase\src\Project\Helixbase\items\Content\Helixbase\Global\Dictionary Items.yml
-ID: "8ac9d0c5-f969-4cfd-b0b3-4554638069a7"
-Parent: "a764f8d7-e505-4c60-acee-7f4416095d5f"
-Template: "7aa0e340-c796-4c03-b84f-e04162058b86"
-Path: /sitecore/content/Helixbase/Global/Dictionary Items
-Signature: rCD21RJ83GJa31EnU1YUYBnMOEx+/ZKmgzy3bbvbVBQ=
-Modified: 637266001111220156
+  C:\Projects\Ethisys\Helixbase\src\Project\Helixbase\items\Content\Helixbase\Global.yml
+ID: "a764f8d7-e505-4c60-acee-7f4416095d5f"
+Parent: "5ac6cf7a-26b8-47a1-a326-8cd790317be0"
+Template: "b2076f9f-e735-4f31-91cf-597524b76a1e"
+Path: /sitecore/content/Helixbase/Global
+Signature: vnyUFCVE/y6S1b6X1NSEbMynVwOwmmkRKEYJG0+x0IU=
+Modified: 637266001111209708
 ---
 File: |
   C:\Projects\Ethisys\Helixbase\src\Project\Helixbase\items\Content\Helixbase\Global\Hero Items\Hero 2.yml
@@ -42,8 +24,17 @@ ID: "231cbd28-5076-4ba1-8212-f56edef1ab6c"
 Parent: "6e5697fc-4f5e-45f0-9e6a-1c81aa64a00f"
 Template: "462bb765-f578-4d46-a47b-20d16a1bfd94"
 Path: /sitecore/content/Helixbase/Global/Hero Items/Hero 2
-Signature: qKHwC5i0l+O9WE/WtOd8Q8m8n7lMjTiUyEF8MtK+v8Q=
-Modified: 637407681419433342
+Signature: 6oX7qDhX38HB9hDotlNAmq1xiqy3lZOGEoB6AThLioM=
+Modified: 637407823198402849
+---
+File: |
+  C:\Projects\Ethisys\Helixbase\src\Project\Helixbase\items\Content\Helixbase\Global\Dictionary Items.yml
+ID: "8ac9d0c5-f969-4cfd-b0b3-4554638069a7"
+Parent: "a764f8d7-e505-4c60-acee-7f4416095d5f"
+Template: "7aa0e340-c796-4c03-b84f-e04162058b86"
+Path: /sitecore/content/Helixbase/Global/Dictionary Items
+Signature: rCD21RJ83GJa31EnU1YUYBnMOEx+/ZKmgzy3bbvbVBQ=
+Modified: 637266001111220156
 ---
 File: |
   C:\Projects\Ethisys\Helixbase\src\Project\Helixbase\items\Content\Helixbase\Global\Hero Items.yml
@@ -60,5 +51,14 @@ ID: "0a275e4a-98df-4cb3-8a7e-948f53010ae3"
 Parent: "6e5697fc-4f5e-45f0-9e6a-1c81aa64a00f"
 Template: "462bb765-f578-4d46-a47b-20d16a1bfd94"
 Path: /sitecore/content/Helixbase/Global/Hero Items/Hero 1
-Signature: p1SKLE/kVKhLqKMT5gZiibVOKvhOMIYIFwGCZx/0Fs4=
-Modified: 637407681419433342
+Signature: jtkFT28oAApd+DDE8TQt+rslmfO0z0YCmtsuiF7bmIQ=
+Modified: 637407823198402849
+---
+File: |
+  C:\Projects\Ethisys\Helixbase\src\Project\Helixbase\items\Content\Helixbase\Home.yml
+ID: "1d5c266a-112f-4ea2-a69e-e4865ace2200"
+Parent: "5ac6cf7a-26b8-47a1-a326-8cd790317be0"
+Template: "76036f5e-cbce-46d1-af0a-4143f9b557aa"
+Path: /sitecore/content/Helixbase/Home
+Signature: PQnH53AxKEusAx7b0t1keVeBN3S3f7VG+bukXq17X9U=
+Modified: 637407823198392838
