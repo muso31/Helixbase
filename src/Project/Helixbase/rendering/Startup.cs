@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Globalization;
+using Helixbase.Feature.Hero.Rendering.Extensions;
 using Helixbase.Rendering.Configuration;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -61,7 +62,7 @@ namespace Helixbase.Rendering
             {
                 //Register your components here
                 options
-                 
+                    .AddFeatureHeroContent()
                     .AddDefaultPartialView("_ComponentNotFound");
             })
                 // Includes forwarding of Scheme as X-Forwarded-Proto to the Layout Service, so that

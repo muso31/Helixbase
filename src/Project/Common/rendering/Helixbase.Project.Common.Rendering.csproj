@@ -1,12 +1,15 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>netcoreapp3.1</TargetFramework>
+		<AddRazorSupportForMvc>true</AddRazorSupportForMvc>
+		<RootNamespace>Helixbase.Project.Common</RootNamespace>
+		<AssemblyName>Helixbase.Project.Common</AssemblyName>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Sitecore.AspNet.RenderingEngine" />
-    <PackageReference Include="Sitecore.LayoutService.Client" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Sitecore.AspNet.RenderingEngine" />
+		<PackageReference Include="Sitecore.LayoutService.Client" />
+	</ItemGroup>
 
 </Project>

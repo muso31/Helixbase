@@ -3,15 +3,13 @@ ID: "b9ae5a80-b0ed-4e40-aa4e-e3ffe1255ed8"
 Parent: "6cf55936-0b82-4ef5-9dc2-81d8ae0a8ddb"
 Template: "5c547d4e-7111-4995-95b0-6b561751bf2e"
 Path: /sitecore/layout/Placeholder Settings/Project/Helixbase/Main
-DB: master
 SharedFields:
 - ID: "7256bdab-1fd2-49dd-b205-cb4873d2917c"
   Hint: Placeholder Key
   Value: main
 - ID: "e391b526-d0c5-439d-803e-17512eae6222"
   Hint: Allowed Controls
-  Type: TreelistEx
-  Value: "{51BBBAAD-01F6-4371-9260-9473141506EF}"
+  Value: "{20F5C683-CCFC-4501-9383-5BEFFCD48C84}"
 Languages:
 - Language: en
   Versions:
@@ -24,3 +22,13 @@ Languages:
       Hint: __Created by
       Value: |
         sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "45013871-6f28-4604-a63e-ae64e06e0758"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20201112T101701Z

@@ -3,7 +3,6 @@ ID: "0a275e4a-98df-4cb3-8a7e-948f53010ae3"
 Parent: "6e5697fc-4f5e-45f0-9e6a-1c81aa64a00f"
 Template: "462bb765-f578-4d46-a47b-20d16a1bfd94"
 Path: /sitecore/content/Helixbase/Global/Hero Items/Hero 1
-DB: master
 Languages:
 - Language: en
   Versions:
@@ -12,11 +11,23 @@ Languages:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20170212T173031Z
+    - ID: "522dfb98-05de-44b8-821d-2e392cffd875"
+      Hint: Hero Title
+      Value: Hero 1
     - ID: "6968b632-46df-4de2-a129-d9637cca094f"
       Hint: Hero Images
-      Type: Treelist
       Value: |
         {86483428-418B-4D98-A8F7-29B92A3D93C5}
         {70709054-B3E6-4AAD-83D0-ED0AA5F12426}
         {1D37D442-A155-4D8C-8755-D67920EB9F96}
         {191B08E9-9200-4BE9-8CF5-F4000CD4E202}
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "09f74e88-73a7-453e-9345-2d2659186d2f"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20201112T101842Z
