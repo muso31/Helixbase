@@ -62,8 +62,6 @@ if ($LASTEXITCODE -ne 0) {
     Write-Error "Item publish failed, see errors above."
 }
 
-# Watch for changes
-dotnet sitecore ser watch
 
 
 Write-Host "Opening site..." -ForegroundColor Green
@@ -75,3 +73,6 @@ Write-Host ""
 Write-Host "Use the following command to monitor your Rendering Host:" -ForegroundColor Green
 Write-Host "docker-compose logs -f rendering"
 Write-Host ""
+
+# Watch for changes
+dotnet sitecore ser watch
