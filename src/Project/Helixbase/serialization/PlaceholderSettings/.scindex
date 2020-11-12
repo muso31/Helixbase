@@ -1,0 +1,19 @@
+﻿# Do not commit this file to source control or modify it. It is safe to delete; it will recreate itself.
+---
+File: |
+  C:\projects\helixbase\src\Project\Helixbase\serialization\PlaceholderSettings\Helixbase\Main.yml
+ID: "b9ae5a80-b0ed-4e40-aa4e-e3ffe1255ed8"
+Parent: "6cf55936-0b82-4ef5-9dc2-81d8ae0a8ddb"
+Template: "5c547d4e-7111-4995-95b0-6b561751bf2e"
+Path: /sitecore/layout/Placeholder Settings/Project/Helixbase/Main
+Signature: GFoabxUtmc3y7kKnVIwWlCytgteuI00TQrJC5nwsXtw=
+Modified: 637407822158633829
+---
+File: |
+  C:\projects\helixbase\src\Project\Helixbase\serialization\PlaceholderSettings\Helixbase.yml
+ID: "6cf55936-0b82-4ef5-9dc2-81d8ae0a8ddb"
+Parent: "f5f0fbe3-61ad-4967-a5d8-8d760331d6a1"
+Template: "c3b037a0-46e5-4b67-ac7a-a144b962a56f"
+Path: /sitecore/layout/Placeholder Settings/Project/Helixbase
+Signature: hIubkecK2xWDfczwgQGcYIq0fbophytgdwsvcmWjirI=
+Modified: 637407822158623816

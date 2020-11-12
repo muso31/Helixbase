@@ -1,0 +1,64 @@
+﻿# Do not commit this file to source control or modify it. It is safe to delete; it will recreate itself.
+---
+File: |
+  C:\projects\helixbase\src\Feature\VersionTrim\serialization\VersionTrimmingRules\Item Version Trim\Delete Old Versions.yml
+ID: "5d09acb6-8df9-452e-8465-8e48b0499ed8"
+Parent: "9d053eb2-9f12-41e9-ab23-fa6fff1f778e"
+Template: "f90052a5-b4e6-4e6d-9812-1e1b88a6fcea"
+Path: /sitecore/system/Settings/Rules/Definitions/Elements/Item Version Trim/Delete Old Versions
+Signature: cVvVm3dEXipPS9bBDs7jsiWsA7J7CjHZ7KzoVbu7RYg=
+Modified: 637407822158265967
+---
+File: |
+  C:\projects\helixbase\src\Feature\VersionTrim\serialization\VersionTrimmingRules\Item Version Trim.yml
+ID: "9d053eb2-9f12-41e9-ab23-fa6fff1f778e"
+Parent: "e7cbefe8-9112-4b95-a978-4e470d94c54a"
+Template: "54dae7cd-bfd8-4e69-9679-75f2ae9f9034"
+Path: /sitecore/system/Settings/Rules/Definitions/Elements/Item Version Trim
+Signature: XdzP/H6AP2WPpDO3Ilg3uwNXietMPcO04VVQE5lTNnM=
+Modified: 637407822158243840
+---
+File: |
+  C:\projects\helixbase\src\Feature\VersionTrim\serialization\VersionTrimmingRules\Item Version Trim\Visibility.yml
+ID: "8892911f-1516-4805-a3ea-b3223f54008c"
+Parent: "9d053eb2-9f12-41e9-ab23-fa6fff1f778e"
+Template: "aa91a868-02f2-41d3-8b78-1cad91b4dcae"
+Path: /sitecore/system/Settings/Rules/Definitions/Elements/Item Version Trim/Visibility
+Signature: /Q8rrxH1oOol5pye5OSvoWDtP2c73BRb/L3Z5kip5ik=
+Modified: 637407822158303871
+---
+File: |
+  C:\projects\helixbase\src\Feature\VersionTrim\serialization\VersionTrimmingRules\Item Version Trim\Recycle Old Versions.yml
+ID: "a41b12bd-fcaf-442e-8baf-486c470cd061"
+Parent: "9d053eb2-9f12-41e9-ab23-fa6fff1f778e"
+Template: "f90052a5-b4e6-4e6d-9812-1e1b88a6fcea"
+Path: /sitecore/system/Settings/Rules/Definitions/Elements/Item Version Trim/Recycle Old Versions
+Signature: wiXgKLP7wntKTNuJLbQjfQ7vCN0qJZiM8f3QMCajehQ=
+Modified: 637407822158283812
+---
+File: |
+  C:\projects\helixbase\src\Feature\VersionTrim\serialization\VersionTrimmingRules\Item Version Trim\Tags.yml
+ID: "58e439b5-3282-4d8e-aefc-83351b3cd542"
+Parent: "9d053eb2-9f12-41e9-ab23-fa6fff1f778e"
+Template: "96c8e5dd-63c3-496b-a97c-a3e37e1dacba"
+Path: /sitecore/system/Settings/Rules/Definitions/Elements/Item Version Trim/Tags
+Signature: F9FXrmc89tcuau9xmksdiz8hQd7cTWXJdsqUsbS+upc=
+Modified: 637407822158293992
+---
+File: |
+  C:\projects\helixbase\src\Feature\VersionTrim\serialization\VersionTrimmingRules\Item Version Trim\Archive Old Versions.yml
+ID: "09f5a1ff-4fbf-4013-b92f-96f8d1a2ae3b"
+Parent: "9d053eb2-9f12-41e9-ab23-fa6fff1f778e"
+Template: "f90052a5-b4e6-4e6d-9812-1e1b88a6fcea"
+Path: /sitecore/system/Settings/Rules/Definitions/Elements/Item Version Trim/Archive Old Versions
+Signature: xqAha6DM4eLZtlKq175tZsqKw6/AVMkioVd6JFEcJOQ=
+Modified: 637407822158253823
+---
+File: |
+  C:\projects\helixbase\src\Feature\VersionTrim\serialization\VersionTrimmingRules\Item Version Trim\Tags\Default.yml
+ID: "da340e88-3709-4a05-a5a2-9fb695bd640b"
+Parent: "58e439b5-3282-4d8e-aefc-83351b3cd542"
+Template: "854ba861-63ea-4a0c-8c7b-541e9a7ec4c1"
+Path: /sitecore/system/Settings/Rules/Definitions/Elements/Item Version Trim/Tags/Default
+Signature: Mhx3SlHzgM19byBZVj3K9wgk8h9+FyjUBX5oOmcMA+Q=
+Modified: 637407822158313828

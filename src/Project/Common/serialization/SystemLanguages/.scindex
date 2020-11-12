@@ -1,0 +1,19 @@
+﻿# Do not commit this file to source control or modify it. It is safe to delete; it will recreate itself.
+---
+File: |
+  C:\projects\helixbase\src\Project\Common\serialization\SystemLanguages\Languages\en.yml
+ID: "af584191-45c9-4201-8740-5409f4cf8bdd"
+Parent: "64c4f646-a3fa-4205-b98e-4de2c609b60f"
+Template: "f68f13a6-3395-426a-b9a1-fa2dc60d94eb"
+Path: /sitecore/system/Languages/en
+Signature: TVJFF2jF0X8QvPDlJmzX37w0dCxP5gHCy5rcBoBojBY=
+Modified: 637407822158563841
+---
+File: |
+  C:\projects\helixbase\src\Project\Common\serialization\SystemLanguages\Languages.yml
+ID: "64c4f646-a3fa-4205-b98e-4de2c609b60f"
+Parent: "13d6d6c6-c50b-4bbd-b331-2b04f1a58f21"
+Template: "239f9cf4-e5a0-44e0-b342-0f32cd4c6d8b"
+Path: /sitecore/system/Languages
+Signature: niU18DB792VmVFSinSgIZFCdfra+NG3190JD3G4fCIM=
+Modified: 637407822158553942

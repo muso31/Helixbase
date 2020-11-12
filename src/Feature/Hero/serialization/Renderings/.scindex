@@ -1,0 +1,19 @@
+﻿# Do not commit this file to source control or modify it. It is safe to delete; it will recreate itself.
+---
+File: |
+  C:\projects\helixbase\src\Feature\Hero\serialization\Renderings\Hero\Hero.yml
+ID: "51bbbaad-01f6-4371-9260-9473141506ef"
+Parent: "6c7b649b-d615-4def-a0b7-188cc3a9b244"
+Template: "2a3e91a0-7987-44b5-ab34-35c2d9de83b9"
+Path: /sitecore/layout/Renderings/Feature/Hero/Hero
+Signature: eBRttNyQhe0OChM/zu9YQ7yK2qBcmg40ntLlqlol2vo=
+Modified: 637407822157923818
+---
+File: |
+  C:\projects\helixbase\src\Feature\Hero\serialization\Renderings\Hero.yml
+ID: "6c7b649b-d615-4def-a0b7-188cc3a9b244"
+Parent: "da61ad50-8fdb-4252-a68f-b4470b1c9fe8"
+Template: "7ee0975b-0698-493e-b3a2-0b2ef33d0522"
+Path: /sitecore/layout/Renderings/Feature/Hero
+Signature: 40sp93Wb3HClgLZaIvsJCljOCflhC69SaFM4q+BRIvA=
+Modified: 637407822157913829

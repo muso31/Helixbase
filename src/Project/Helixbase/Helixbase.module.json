@@ -8,11 +8,6 @@
     "items": {
         "includes": [
             {
-                "name": "ApiKey",
-                "path": "/sitecore/system/Settings/Services/API Keys/helixbase",
-                "database": "master"
-            },
-            {
                 "name": "Templates",
                 "path": "/sitecore/templates/Project/Helixbase",
                 "database": "master"

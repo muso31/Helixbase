@@ -1,0 +1,109 @@
+﻿# Do not commit this file to source control or modify it. It is safe to delete; it will recreate itself.
+---
+File: |
+  C:\projects\helixbase\src\Project\Common\serialization\Templates\Common\Content Types\Hero Folder\__Standard Values.yml
+ID: "7ef1b144-d67b-4e00-8b38-5074dc032fde"
+Parent: "ac1d1f97-de23-4e57-8a8e-ad83ec538513"
+Template: "ac1d1f97-de23-4e57-8a8e-ad83ec538513"
+Path: /sitecore/templates/Project/Common/Content Types/Hero Folder/__Standard Values
+Signature: kT+EZXlw50Ijf37GKfW7Vh6M7e/Cbg5Ee9N74pRa5+k=
+Modified: 637407822158524011
+---
+File: |
+  C:\projects\helixbase\src\Project\Common\serialization\Templates\Common\Content Types.yml
+ID: "3ab26534-592c-450e-929d-b7dc884b49a0"
+Parent: "0dd5d022-56b8-4a6b-9260-c26c4a4466c0"
+Template: "0437fee2-44c9-46a6-abe9-28858d9fee8c"
+Path: /sitecore/templates/Project/Common/Content Types
+Signature: lpivUJo7eEz03yL09yu8H3O4nsAtXpcGeWU1mwnjSEo=
+Modified: 637407822158433821
+---
+File: |
+  C:\projects\helixbase\src\Project\Common\serialization\Templates\Common\Content Types\Dictionary Folder.yml
+ID: "7aa0e340-c796-4c03-b84f-e04162058b86"
+Parent: "3ab26534-592c-450e-929d-b7dc884b49a0"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Project/Common/Content Types/Dictionary Folder
+Signature: Wp1ZCXFYq30Z8iLQ+um3LNLVmpmT7pRJEhzNr4HQLNw=
+Modified: 637407822158443822
+---
+File: |
+  C:\projects\helixbase\src\Project\Common\serialization\Templates\Common.yml
+ID: "0dd5d022-56b8-4a6b-9260-c26c4a4466c0"
+Parent: "825b30b4-b40b-422e-9920-23a1b6bda89c"
+Template: "0437fee2-44c9-46a6-abe9-28858d9fee8c"
+Path: /sitecore/templates/Project/Common
+Signature: 7Wc0tYcqp4Pjjp9LjxSHO6HmTjx/tb0grDZKlm5FkRg=
+Modified: 637407822158423820
+---
+File: |
+  C:\projects\helixbase\src\Project\Common\serialization\Templates\Common\Page Types.yml
+ID: "c762b526-b008-467e-aba7-e49fd2ba208b"
+Parent: "0dd5d022-56b8-4a6b-9260-c26c4a4466c0"
+Template: "0437fee2-44c9-46a6-abe9-28858d9fee8c"
+Path: /sitecore/templates/Project/Common/Page Types
+Signature: vFfvhbXw/nWQ/YD1dKnZ0fQXE0VfatANCpWRYAlCtAk=
+Modified: 637407822158433821
+---
+File: |
+  C:\projects\helixbase\src\Project\Common\serialization\Templates\Common\Content Types\Hero.yml
+ID: "462bb765-f578-4d46-a47b-20d16a1bfd94"
+Parent: "3ab26534-592c-450e-929d-b7dc884b49a0"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Project/Common/Content Types/Hero
+Signature: HT/4z01PV+fff9Bw/VWZWOlvD9uQbuuubkqHp2V3pw4=
+Modified: 637407822158463837
+---
+File: |
+  C:\projects\helixbase\src\Project\Common\serialization\Templates\Common\Content Types\Global Folder.yml
+ID: "b2076f9f-e735-4f31-91cf-597524b76a1e"
+Parent: "3ab26534-592c-450e-929d-b7dc884b49a0"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Project/Common/Content Types/Global Folder
+Signature: S0sXRrMeqSXr2/M7BeJAQt3wQte134oNujLip5Y0A+k=
+Modified: 637407822158453900
+---
+File: |
+  C:\projects\helixbase\src\Project\Common\serialization\Templates\Common\Content Types\Hero Folder.yml
+ID: "ac1d1f97-de23-4e57-8a8e-ad83ec538513"
+Parent: "3ab26534-592c-450e-929d-b7dc884b49a0"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Project/Common/Content Types/Hero Folder
+Signature: K2nqBHo6r/Apn/cbhHzplcLoZUnrQlUTDcT5x79mhmI=
+Modified: 637407822158473811
+---
+File: |
+  C:\projects\helixbase\src\Project\Common\serialization\Templates\Common\Content Types\Site Root.yml
+ID: "98a3d034-92e4-4ecb-9632-119cabd08e15"
+Parent: "3ab26534-592c-450e-929d-b7dc884b49a0"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Project/Common/Content Types/Site Root
+Signature: uKVvX4OZwcIEXlr/DoVWV5GPsIR8/pFZPE69fYcJ0Us=
+Modified: 637407822158483824
+---
+File: |
+  C:\projects\helixbase\src\Project\Common\serialization\Templates\Common\Content Types\Dictionary Folder\__Standard Values.yml
+ID: "f41025c4-668f-4d54-817e-b4de3a060d93"
+Parent: "7aa0e340-c796-4c03-b84f-e04162058b86"
+Template: "7aa0e340-c796-4c03-b84f-e04162058b86"
+Path: /sitecore/templates/Project/Common/Content Types/Dictionary Folder/__Standard Values
+Signature: K5atosSE9h/BQ6PhNIgIcY1WYrzfcare0oUHrro+ryk=
+Modified: 637407822158493816
+---
+File: |
+  C:\projects\helixbase\src\Project\Common\serialization\Templates\Common\Content Types\Global Folder\__Standard Values.yml
+ID: "a22cce4b-3c6e-44e3-853a-9c0b80ae4423"
+Parent: "b2076f9f-e735-4f31-91cf-597524b76a1e"
+Template: "b2076f9f-e735-4f31-91cf-597524b76a1e"
+Path: /sitecore/templates/Project/Common/Content Types/Global Folder/__Standard Values
+Signature: ymQlQvRt+pslsnzKWJ4Du3NKSenQkzTyxJ0Fs93+vCA=
+Modified: 637407822158504186
+---
+File: |
+  C:\projects\helixbase\src\Project\Common\serialization\Templates\Common\Content Types\Hero\__Standard Values.yml
+ID: "deded6aa-3541-4ebe-89c1-85fea627acb4"
+Parent: "462bb765-f578-4d46-a47b-20d16a1bfd94"
+Template: "462bb765-f578-4d46-a47b-20d16a1bfd94"
+Path: /sitecore/templates/Project/Common/Content Types/Hero/__Standard Values
+Signature: +LSI0Pz1R1ESRM7Dm4abOyexH9RNvMpe4P5PFK88vSg=
+Modified: 637407822158513840
