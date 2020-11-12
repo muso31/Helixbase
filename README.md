@@ -26,6 +26,16 @@ A Sitecore Helix based solution which can be used for Greenfield projects. Tackl
 *Helix Base uses the new csproj sdk format which can cause issues with intellisense, if you would like to use the older format please see the [10.0 feature branch](https://github.com/muso31/Helixbase/tree/feature/10.0.0-old-csproj)  
 *Please Install Visual Studio 2017 Version 15.7 or higher as this project uses PackageReference
 
+### Docker
+1. Run .\init.ps1 -LicenseXmlPath C:\License\license.xml (Replace the `-LicenseXmlPath` with the location of your Sitecore license file.)
+	1. You can also set the Sitecore admin password using the `-SitecoreAdminPassword` parameter (default is "b").
+2. Run up.ps1
+
+Docker Compose will run, pulling down any necessary docker images and build all containers. 
+You will be prompted to authenticate to perform a serialization push
+The Rendering Host and Content Management instance will load in your browser once complete.
+
+### IIS
 1. Install [Sitecore Experience Platform 10 Initial Release](https://dev.sitecore.net/Downloads/Sitecore_Experience_Platform/100/Sitecore_Experience_Platform_100.aspx)
 2. Clone project to 'C:\Projects\Helixbase'
 	1. _If you use another path, update the [z.Project.Common.DevSettings.config](https://github.com/muso31/Helixbase/blob/master/src/Project/Common/website/App_Config/Include/Project/z.Project.Common.DevSettings.config#L3)_
@@ -62,7 +72,7 @@ Local publishing:
 
 CI/CD publishing:
 
-* Unicorn files are automatically included into App_Data\unicorn. The only variable that needs to be set is `$(sourceFolder)` in [z.Project.Common.DevSettings.config](https://github.com/muso31/Helixbase/blob/master/src/Project/Common/website/App_Config/Include/Project/z.Project.Common.DevSettings.config#L3)
+* Serialization files are automatically included into App_Data\serialization using the 'package' publish profile.
 
 Azure DevOps:
 
