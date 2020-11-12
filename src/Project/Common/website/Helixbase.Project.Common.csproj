@@ -14,11 +14,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Remove="App_Config\Include\Project\Project.Common.config" />
-    <None Remove="App_Config\Include\Project\z.Project.Common.DevSettings.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Config\Include\Project\Project.Common.config" />
-    <Content Include="App_Config\Include\Project\z.Project.Common.DevSettings.config" />
   </ItemGroup>
   <ItemGroup>
     <None Include="web.config" />

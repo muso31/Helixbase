@@ -5,16 +5,14 @@ VisualStudioVersion = 16.0.29503.13
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Foundation", "Foundation", "{C3F57797-2D54-4626-B842-51F30272E972}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Serialization", "Serialization", "{41AC9AD8-3D81-4C55-9330-B9CA9DFD8554}"
-	ProjectSection(SolutionItems) = preProject
-		src\Foundation\Serialization\Serialization.module.json = src\Foundation\Serialization\Serialization.module.json
-	EndProjectSection
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ORM", "ORM", "{01ACDA66-22F3-4F9B-BF2A-861D3CE46784}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Helixbase.Foundation.ORM", "src\Foundation\ORM\website\Helixbase.Foundation.ORM.csproj", "{5E91A7D9-8E93-44FD-857F-F9CE145B6022}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Content", "Content", "{F2FD5CAD-01CE-40D6-82B5-E243313A4CD3}"
+	ProjectSection(SolutionItems) = preProject
+		src\Foundation\Content\Content.module.json = src\Foundation\Content\Content.module.json
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Helixbase.Foundation.Content", "src\Foundation\Content\website\Helixbase.Foundation.Content.csproj", "{F8F55034-FA55-4D27-B115-0AB4EEB9A0A8}"
 EndProject
@@ -170,7 +168,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{41AC9AD8-3D81-4C55-9330-B9CA9DFD8554} = {C3F57797-2D54-4626-B842-51F30272E972}
 		{01ACDA66-22F3-4F9B-BF2A-861D3CE46784} = {C3F57797-2D54-4626-B842-51F30272E972}
 		{5E91A7D9-8E93-44FD-857F-F9CE145B6022} = {01ACDA66-22F3-4F9B-BF2A-861D3CE46784}
 		{F2FD5CAD-01CE-40D6-82B5-E243313A4CD3} = {C3F57797-2D54-4626-B842-51F30272E972}

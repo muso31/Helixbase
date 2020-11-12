@@ -26,11 +26,9 @@ A Sitecore Helix based solution which can be used for Greenfield projects. Tackl
 *Please Install Visual Studio 2017 Version 15.7 or higher as this project uses PackageReference
 
 1. Install [Sitecore Experience Platform 10 Initial Release](https://dev.sitecore.net/Downloads/Sitecore_Experience_Platform/100/Sitecore_Experience_Platform_100.aspx)
-2. Clone project to 'C:\Projects\Helixbase'
-	1. _If you use another path, update the [z.Project.Common.DevSettings.config](https://github.com/muso31/Helixbase/blob/master/src/Project/Common/website/App_Config/Include/Project/z.Project.Common.DevSettings.config#L3)_
-3. Update the 'publishUrl' property in [Local.pubxml](https://github.com/muso31/Helixbase/blob/master/src/Website/website/Properties/PublishProfiles/Local.pubxml#L12) to the target IIS folder
-4. Use the 'Local' publish profile in the Helixbase.Website project to publish the solution
-5. Install [Sitecore CLI](https://doc.sitecore.com/developers/100/developer-tools/en/install-sitecore-command-line-interface.html) and push Sitecore items `dotnet sitecore ser push`
+2. Update the 'publishUrl' property in [Local.pubxml](https://github.com/muso31/Helixbase/blob/master/src/Website/website/Properties/PublishProfiles/Local.pubxml#L12) to the target IIS folder
+3. Use the 'Local' publish profile in the Helixbase.Website project to publish the solution
+4. Install [Sitecore CLI](https://doc.sitecore.com/developers/100/developer-tools/en/install-sitecore-command-line-interface.html) and push Sitecore items `dotnet sitecore ser push`
 
 #### Using Helix Base:
 Refer to the [Hero Feature](https://github.com/muso31/Helixbase/tree/master/src/Feature/Hero/website) as an example.
