@@ -1,5 +1,5 @@
 {
-  "namespace": "Project.Hero",
+  "namespace": "Feature.Hero",
   "references": [
     "Foundation.*"
   ],
