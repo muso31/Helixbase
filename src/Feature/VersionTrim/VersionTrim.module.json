@@ -1,0 +1,30 @@
+{
+  "namespace": "Project.VersionTrim",
+  "references": [
+    "Foundation.*"
+  ],
+  "items": {
+    "includes": [
+      {
+        "name": "VersionTrimmingRules",
+        "path": "/sitecore/system/Settings/Rules/Definitions/Elements/Item Version Trim",
+        "database": "master"
+      },
+      {
+        "name": "VersionTrimmingTags",
+        "path": "/sitecore/system/Settings/Rules/Definitions/Tags/Item Version Trim",
+        "database": "master"
+      },
+      {
+        "name": "ItemSavedRules",
+        "path": "/sitecore/system/Settings/Rules/Item Saved/Rules",
+        "database": "master"
+      },
+      {
+        "name": "ItemSavedTags",
+        "path": "/sitecore/system/Settings/Rules/Item Saved/Tags/Versioning",
+        "database": "master"
+      }
+    ]
+  }
+}

@@ -1,24 +1,30 @@
 {
-  "namespace": "Feature.Hero",
+  "namespace": "Project.Hero",
+  "references": [
+    "Foundation.*"
+  ],
   "items": {
     "includes": [
       {
-        "name": "templates",
-        "path": "/sitecore/templates/Feature/Hero"
+        "name": "Templates",
+        "path": "/sitecore/templates/Feature/Hero",
+        "database": "master"
       },
       {
-        "name": "renderings",
-        "path": "/sitecore/layout/Renderings/Feature/Hero"
+        "name": "Renderings",
+        "path": "/sitecore/layout/renderings/Feature/Hero",
+        "database": "master"
       },
       {
-        "name": "media",
-        "path": "/sitecore/media library/Feature/Hero"
+        "name": "Media",
+        "path": "/sitecore/media library/Feature/Hero",
+        "database": "master"
       },
       {
-        "name": "experience buttons",
-        "database": "core",
-        "path": "/sitecore/content/Applications/WebEdit/Custom Experience Buttons/Feature/Hero"
+        "name": "CustomExperienceButtons",
+        "path": "/sitecore/content/Applications/WebEdit/Custom Experience Buttons/Feature/Hero",
+        "database": "core"
       }
     ]
   }
-}       
+}

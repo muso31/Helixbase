@@ -6,8 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Foundation", "Foundation", "{C3F57797-2D54-4626-B842-51F30272E972}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Serialization", "Serialization", "{41AC9AD8-3D81-4C55-9330-B9CA9DFD8554}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Helixbase.Foundation.Serialization", "src\Foundation\Serialization\website\Helixbase.Foundation.Serialization.csproj", "{4238D5C5-AFD2-4DF5-BF3D-ADB9D46ADC08}"
+	ProjectSection(SolutionItems) = preProject
+		src\Foundation\Serialization\Serialization.module.json = src\Foundation\Serialization\Serialization.module.json
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ORM", "ORM", "{01ACDA66-22F3-4F9B-BF2A-861D3CE46784}"
 EndProject
@@ -44,10 +45,16 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configuration", "Configurat
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{27F11553-4B8F-4B6D-8B81-37DDE6046F31}"
+	ProjectSection(SolutionItems) = preProject
+		src\Project\Common\Common.module.json = src\Project\Common\Common.module.json
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Helixbase.Project.Common", "src\Project\Common\website\Helixbase.Project.Common.csproj", "{6F8C583B-E667-4DEB-A603-77932C7803B0}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Helixbase", "Helixbase", "{160DA988-084C-41E4-B714-00E127957ED0}"
+	ProjectSection(SolutionItems) = preProject
+		src\Project\Helixbase\Helixbase.module.json = src\Project\Helixbase\Helixbase.module.json
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Helixbase.Project.Helixbase", "src\Project\Helixbase\website\Helixbase.Project.Helixbase.csproj", "{BE27848D-2FF5-42DF-9324-667D66D47E30}"
 EndProject
@@ -60,6 +67,9 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Helixbase.Foundation.DI", "src\Foundation\DI\website\Helixbase.Foundation.DI.csproj", "{0D3A6F11-B5FF-4D8C-8A74-19501D2E80D4}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "VersionTrim", "VersionTrim", "{4F330EE3-EB9A-4B58-8682-E0815921771F}"
+	ProjectSection(SolutionItems) = preProject
+		src\Feature\VersionTrim\VersionTrim.module.json = src\Feature\VersionTrim\VersionTrim.module.json
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Helixbase.Feature.VersionTrim", "src\Feature\VersionTrim\website\Helixbase.Feature.VersionTrim.csproj", "{ED756657-14BA-4313-A51B-A2960BD6F5DA}"
 EndProject
@@ -91,10 +101,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{4238D5C5-AFD2-4DF5-BF3D-ADB9D46ADC08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4238D5C5-AFD2-4DF5-BF3D-ADB9D46ADC08}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4238D5C5-AFD2-4DF5-BF3D-ADB9D46ADC08}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4238D5C5-AFD2-4DF5-BF3D-ADB9D46ADC08}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5E91A7D9-8E93-44FD-857F-F9CE145B6022}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5E91A7D9-8E93-44FD-857F-F9CE145B6022}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5E91A7D9-8E93-44FD-857F-F9CE145B6022}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -165,7 +171,6 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{41AC9AD8-3D81-4C55-9330-B9CA9DFD8554} = {C3F57797-2D54-4626-B842-51F30272E972}
-		{4238D5C5-AFD2-4DF5-BF3D-ADB9D46ADC08} = {41AC9AD8-3D81-4C55-9330-B9CA9DFD8554}
 		{01ACDA66-22F3-4F9B-BF2A-861D3CE46784} = {C3F57797-2D54-4626-B842-51F30272E972}
 		{5E91A7D9-8E93-44FD-857F-F9CE145B6022} = {01ACDA66-22F3-4F9B-BF2A-861D3CE46784}
 		{F2FD5CAD-01CE-40D6-82B5-E243313A4CD3} = {C3F57797-2D54-4626-B842-51F30272E972}
