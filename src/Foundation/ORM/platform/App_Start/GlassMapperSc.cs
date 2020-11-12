@@ -5,32 +5,34 @@ DO NOT CHANGE THIS FILE - UPDATE GlassMapperScCustom.cs
 
 **************************************/
 
-using System.Linq;
 using Glass.Mapper;
 using Glass.Mapper.Configuration;
 using Glass.Mapper.Maps;
 using Glass.Mapper.Sc.Configuration.Fluent;
 using Glass.Mapper.Sc.IoC;
+using Glass.Mapper.Sc.Pipelines.GetChromeData;
+using Sitecore.Pipelines;
+using System.Linq;
 
-namespace Helixbase.Foundation.ORM
+namespace Helixbase.Foundation.ORM.App_Start
 {
-	public class GlassMapperSc : Glass.Mapper.Sc.Pipelines.Initialize.GlassMapperSc
-	{
+    public class GlassMapperSc : Glass.Mapper.Sc.Pipelines.Initialize.GlassMapperSc
+    {
         public override IDependencyResolver CreateResolver()
         {
             var resolver = GlassMapperScCustom.CreateResolver();
             base.CreateResolver(resolver);
             return resolver;
         }
-        
+
         public override IConfigurationLoader[] GetGlassLoaders(Context context)
-        { 
+        {
 
 
-          var loaders1 = GlassMapperScCustom.GlassLoaders();        				
-          var loaders2 = base.GetGlassLoaders(context);
+            var loaders1 = GlassMapperScCustom.GlassLoaders();
+            var loaders2 = base.GetGlassLoaders(context);
 
-          return loaders1.Concat(loaders2).ToArray();
+            return loaders1.Concat(loaders2).ToArray();
         }
 
         public override void LoadConfigurationMaps(IDependencyResolver resolver, Glass.Mapper.Context context)
@@ -53,12 +55,12 @@ namespace Helixbase.Foundation.ORM
             base.LoadConfigurationMaps(resolver, context);
         }
 
-	    public override void PostLoad(IDependencyResolver dependencyResolver)
-	    {
-			GlassMapperScCustom.PostLoad();
-		    base.PostLoad(dependencyResolver);
-	    }
+        public override void PostLoad(IDependencyResolver dependencyResolver)
+        {
+            GlassMapperScCustom.PostLoad();
+            base.PostLoad(dependencyResolver);
+        }
 
-	}
+    }
 }
 #endregion
