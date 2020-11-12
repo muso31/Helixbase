@@ -59,7 +59,7 @@ Local publishing:
 
 CI/CD publishing:
 
-* Serialization files are automatically included into App_Data\serialization. The only variable that needs to be set is `$(sourceFolder)` in [z.Project.Common.DevSettings.config](https://github.com/muso31/Helixbase/blob/master/src/Project/Common/website/App_Config/Include/Project/z.Project.Common.DevSettings.config#L3)
+* Serialization files are automatically included into App_Data\serialization using the 'package' publish profile.
 
 Azure DevOps:
 
