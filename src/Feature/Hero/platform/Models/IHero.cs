@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using Glass.Mapper.Sc.Fields;
 
-namespace Helixbase.Feature.Hero.Platform.Models
+namespace Helixbase.Feature.Hero.Models
 {
     public interface IHero : IHeroGlassBase
     {

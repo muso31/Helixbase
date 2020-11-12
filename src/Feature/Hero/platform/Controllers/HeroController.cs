@@ -1,9 +1,9 @@
 using Sitecore.Mvc.Controllers;
 using System.Web.Mvc;
-using Helixbase.Feature.Hero.Platform.Mediators;
-using Helixbase.Foundation.Core.Platform.Exceptions;
+using Helixbase.Feature.Hero.Mediators;
+using Helixbase.Foundation.Core.Exceptions;
 
-namespace Helixbase.Feature.Hero.Platform.Controllers
+namespace Helixbase.Feature.Hero.Controllers
 {
     public class HeroController : SitecoreController
     {

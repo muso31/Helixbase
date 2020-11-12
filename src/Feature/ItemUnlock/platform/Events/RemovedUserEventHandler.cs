@@ -10,7 +10,7 @@ using Sitecore.Globalization;
 using Sitecore.Shell.Applications.Dialogs.ProgressBoxes;
 using Sitecore.Web.UI.Sheer;
 
-namespace Helixbase.Feature.ItemUnlock.Platform.Events
+namespace Helixbase.Feature.ItemUnlock.Events
 {
     public class RemovedUserEventHandler
     {

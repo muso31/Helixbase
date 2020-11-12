@@ -1,12 +1,11 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AssemblyName>Helixbase.Foundation.Core</AssemblyName>
+    <RootNamespace>Helixbase.Foundation.Core</RootNamespace>
   </PropertyGroup>
-
   <ItemGroup>
     <PackageReference Include="Sitecore.AspNet.RenderingEngine" />
     <PackageReference Include="Sitecore.LayoutService.Client" />
   </ItemGroup>
-
 </Project>

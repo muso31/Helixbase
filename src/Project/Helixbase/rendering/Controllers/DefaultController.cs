@@ -1,4 +1,4 @@
-﻿using System.Net;
+using System.Net;
 using Helixbase.Rendering.Models;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Mvc;

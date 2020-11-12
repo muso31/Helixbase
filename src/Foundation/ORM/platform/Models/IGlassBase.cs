@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using Sitecore.Globalization;
 
-namespace Helixbase.Foundation.ORM.Platform.Models
+namespace Helixbase.Foundation.ORM.Models
 {
     public interface IGlassBase
     {

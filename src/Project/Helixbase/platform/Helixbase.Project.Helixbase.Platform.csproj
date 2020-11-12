@@ -3,11 +3,13 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net48</TargetFramework>
-	<ApplicationIcon />
-	<OutputType>Library</OutputType>
-	<StartupObject />
-	<Authors>Neil Shack, Joe Price</Authors>
-	<Company>Ethisys Ltd</Company>
+    <ApplicationIcon />
+    <OutputType>Library</OutputType>
+    <StartupObject />
+    <Authors>Neil Shack, Joe Price</Authors>
+    <Company>Ethisys Ltd</Company>
+    <AssemblyName>Helixbase.Project.Helixbase</AssemblyName>
+    <RootNamespace>Helixbase.Project.Helixbase</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
     <Content Remove="Views\Web.config" />

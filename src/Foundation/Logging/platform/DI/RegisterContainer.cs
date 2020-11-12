@@ -1,8 +1,8 @@
-using Helixbase.Foundation.Logging.Platform.Repositories;
+using Helixbase.Foundation.Logging.Repositories;
 using Microsoft.Extensions.DependencyInjection;
 using Sitecore.DependencyInjection;
 
-namespace Helixbase.Foundation.Logging.Platform.DI
+namespace Helixbase.Foundation.Logging.DI
 {
     public class RegisterContainer : IServicesConfigurator
     {

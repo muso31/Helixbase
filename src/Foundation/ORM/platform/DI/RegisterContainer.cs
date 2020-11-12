@@ -4,7 +4,7 @@ using Glass.Mapper.Sc.Web.Mvc;
 using Microsoft.Extensions.DependencyInjection;
 using Sitecore.DependencyInjection;
 
-namespace Helixbase.Foundation.ORM.Platform.DI
+namespace Helixbase.Foundation.ORM.DI
 {
     public class RegisterContainer : IServicesConfigurator
     {

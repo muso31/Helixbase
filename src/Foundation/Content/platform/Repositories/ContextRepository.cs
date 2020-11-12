@@ -4,7 +4,7 @@ using Sitecore;
 using Sitecore.ContentSearch;
 using Sitecore.Data.Items;
 
-namespace Helixbase.Foundation.Content.Platform.Repositories
+namespace Helixbase.Foundation.Content.Repositories
 {
     /// <summary>
     ///     Retrieve CMS information, wrapper for Sitecore API calls

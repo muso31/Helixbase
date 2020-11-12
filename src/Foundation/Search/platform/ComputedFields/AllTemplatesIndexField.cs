@@ -5,7 +5,7 @@ using Sitecore.Data.Items;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Helixbase.Foundation.Search.Platform.ComputedFields
+namespace Helixbase.Foundation.Search.ComputedFields
 {
     public class AllTemplatesIndexField : IComputedIndexField
     {

@@ -3,7 +3,7 @@ using Sitecore.ContentSearch.SearchTypes;
 using System;
 using System.Collections.Generic;
 
-namespace Helixbase.Foundation.Search.Platform.Models
+namespace Helixbase.Foundation.Search.Models
 {
     public class BaseSearchResultItem : SearchResultItem
     {

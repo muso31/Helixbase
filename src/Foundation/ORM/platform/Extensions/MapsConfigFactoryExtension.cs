@@ -2,9 +2,9 @@ using Glass.Mapper.IoC;
 using Glass.Mapper.Maps;
 using System;
 using System.Reflection;
-using Helixbase.Foundation.Core.Platform.Methods;
+using Helixbase.Foundation.Core.Methods;
 
-namespace Helixbase.Foundation.ORM.Platform.Extensions
+namespace Helixbase.Foundation.ORM.Extensions
 {
     public static class MapsConfigFactoryExtension
     {

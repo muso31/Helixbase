@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations;
-using Helixbase.Foundation.Core.Platform.Models;
+using Helixbase.Foundation.Core.Models;
 
-namespace Helixbase.Foundation.Core.Platform.Services
+namespace Helixbase.Foundation.Core.Services
 {
     public class MediatorService : IMediatorService
     {

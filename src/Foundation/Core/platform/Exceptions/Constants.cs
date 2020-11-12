@@ -1,4 +1,4 @@
-namespace Helixbase.Foundation.Core.Platform.Exceptions
+namespace Helixbase.Foundation.Core.Exceptions
 {
     /// <summary>
     /// https://staticreadonly.com/2019/02/06/structures-vs-static-classes-for-sitecore-template-references/

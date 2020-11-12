@@ -1,7 +1,7 @@
 using Glass.Mapper.Sc.Maps;
-using Helixbase.Feature.Hero.Platform.Models;
+using Helixbase.Feature.Hero.Models;
 
-namespace Helixbase.Feature.Hero.Platform.ORM
+namespace Helixbase.Feature.Hero.ORM
 {
     public class GlassMappings : SitecoreGlassMap<IHero>
     {

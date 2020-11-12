@@ -62,6 +62,10 @@ if ($LASTEXITCODE -ne 0) {
     Write-Error "Item publish failed, see errors above."
 }
 
+# Watch for changes
+dotnet sitecore ser watch
+
+
 Write-Host "Opening site..." -ForegroundColor Green
 
 Start-Process https://cm.$HostName.localhost/sitecore/

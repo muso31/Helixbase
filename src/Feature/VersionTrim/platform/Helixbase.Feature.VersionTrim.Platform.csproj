@@ -1,11 +1,13 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net48</TargetFramework>
-	<ApplicationIcon />
-	<OutputType>Library</OutputType>
-	<StartupObject />
-	<Authors>Neil Shack, Joe Price</Authors>
-	<Company>Ehisys Ltd</Company>
+    <ApplicationIcon />
+    <OutputType>Library</OutputType>
+    <StartupObject />
+    <Authors>Neil Shack, Joe Price</Authors>
+    <Company>Ehisys Ltd</Company>
+    <AssemblyName>Helixbase.Feature.VersionTrim</AssemblyName>
+    <RootNamespace>Helixbase.Feature.VersionTrim</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
     <Content Remove="Web.config" />

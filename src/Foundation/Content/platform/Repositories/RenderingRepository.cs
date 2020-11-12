@@ -2,7 +2,7 @@ using Glass.Mapper.Sc;
 using Glass.Mapper.Sc.Web.Mvc;
 using Sitecore.Data.Items;
 
-namespace Helixbase.Foundation.Content.Platform.Repositories
+namespace Helixbase.Foundation.Content.Repositories
 {
     /// <summary>
     ///     Retrieve Rendering item data using Glass

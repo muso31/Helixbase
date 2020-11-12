@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.Web;
 using Glass.Mapper.Sc.Fields;
 
-namespace Helixbase.Feature.Hero.Platform.ViewModels
+namespace Helixbase.Feature.Hero.ViewModels
 {
     public class HeroViewModel
     {

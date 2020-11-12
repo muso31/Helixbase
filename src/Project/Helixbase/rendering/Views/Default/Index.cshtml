@@ -1,7 +1,0 @@
-﻿@model Route
-
-@{
-    ViewData["Title"] = Model.ReadField<TextField>("NavigationTitle")?.Value ?? Model.ReadField<TextField>("Title")?.Value ?? "Untitled";
-}
-
-<sc-placeholder name="main"></sc-placeholder>

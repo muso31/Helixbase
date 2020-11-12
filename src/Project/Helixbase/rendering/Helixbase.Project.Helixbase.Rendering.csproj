@@ -1,31 +1,26 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.Web">
-
-	<PropertyGroup>
-		<TargetFramework>netcoreapp3.1</TargetFramework>
-		<AssemblyName>Helixbase.Project.Helixbase</AssemblyName>
-		<RootNamespace>Helixbase.Project.Helixbase</RootNamespace>
-	</PropertyGroup>
-
-	<ItemGroup>
-		<PackageReference Include="Microsoft.AspNetCore" />
-		<PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" />
-		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" />
-		<PackageReference Include="Microsoft.Extensions.Http" />
-		<PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" />
-		<PackageReference Include="Sitecore.AspNet.ExperienceEditor" />
-		<PackageReference Include="Sitecore.AspNet.RenderingEngine" />
-		<PackageReference Include="Sitecore.AspNet.Tracking" />
-		<PackageReference Include="Sitecore.AspNet.Tracking.VisitorIdentification" />
-		<PackageReference Include="Sitecore.LayoutService.Client" />
-	</ItemGroup>
-
-	<ItemGroup>
-		<ProjectReference Include="..\..\..\Feature\*\rendering\*.csproj" />
-		<ProjectReference Include="..\..\..\Foundation\*\rendering\*.csproj" />
-	</ItemGroup>
-
-	<ItemGroup>
-		<ProjectReference Include="..\..\Common\rendering\Helixbase.Project.Common.Rendering.csproj" />
-	</ItemGroup>
-
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AssemblyName>Helixbase.Project.Helixbase</AssemblyName>
+    <RootNamespace>Helixbase.Project.Helixbase</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" />
+    <PackageReference Include="Microsoft.Extensions.Http" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" />
+    <PackageReference Include="Sitecore.AspNet.ExperienceEditor" />
+    <PackageReference Include="Sitecore.AspNet.RenderingEngine" />
+    <PackageReference Include="Sitecore.AspNet.Tracking" />
+    <PackageReference Include="Sitecore.AspNet.Tracking.VisitorIdentification" />
+    <PackageReference Include="Sitecore.LayoutService.Client" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Feature\*\rendering\*.csproj" />
+    <ProjectReference Include="..\..\..\Foundation\*\rendering\*.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Common\rendering\Helixbase.Project.Common.Rendering.csproj" />
+  </ItemGroup>
 </Project>

@@ -3,9 +3,9 @@ using Sitecore.Mvc.Controllers;
 using System;
 using System.Linq;
 using System.Reflection;
-using Helixbase.Foundation.Core.Platform.Methods;
+using Helixbase.Foundation.Core.Methods;
 
-namespace Helixbase.Foundation.DI.Platform.Extensions
+namespace Helixbase.Foundation.DI.Extensions
 {
     public static class ServiceCollectionExtensions
     {

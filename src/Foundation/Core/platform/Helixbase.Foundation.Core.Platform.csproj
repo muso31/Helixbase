@@ -6,6 +6,8 @@
     <StartupObject />
     <Authors>Neil Shack, Joe Price</Authors>
     <Company>Ethisys Ltd</Company>
+    <AssemblyName>Helixbase.Foundation.Core</AssemblyName>
+    <RootNamespace>Helixbase.Foundation.Core</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
     <Content Remove="Web.config" />

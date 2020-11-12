@@ -1,8 +1,8 @@
-using Helixbase.Foundation.DI.Platform.Extensions;
+using Helixbase.Foundation.DI.Extensions;
 using Microsoft.Extensions.DependencyInjection;
 using Sitecore.DependencyInjection;
 
-namespace Helixbase.Foundation.DI.Platform
+namespace Helixbase.Foundation.DI
 {
     public class RegisterControllers : IServicesConfigurator
     {

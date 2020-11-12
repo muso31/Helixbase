@@ -1,7 +1,7 @@
-using Helixbase.Feature.Hero.Platform.Models;
-using Helixbase.Foundation.Search.Platform.Models;
+using Helixbase.Feature.Hero.Models;
+using Helixbase.Foundation.Search.Models;
 
-namespace Helixbase.Feature.Hero.Platform.Services
+namespace Helixbase.Feature.Hero.Services
 {
     public interface IHeroService
     {

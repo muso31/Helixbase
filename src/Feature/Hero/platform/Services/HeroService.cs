@@ -1,12 +1,12 @@
 using System.Linq;
-using Helixbase.Feature.Hero.Platform.Models;
-using Helixbase.Foundation.Content.Platform.Repositories;
-using Helixbase.Foundation.Logging.Platform.Repositories;
-using Helixbase.Foundation.Search.Platform.Models;
+using Helixbase.Feature.Hero.Models;
+using Helixbase.Foundation.Content.Repositories;
+using Helixbase.Foundation.Logging.Repositories;
+using Helixbase.Foundation.Search.Models;
 using Sitecore.ContentSearch.Linq.Utilities;
 using Sitecore.Data.Items;
 
-namespace Helixbase.Feature.Hero.Platform.Services
+namespace Helixbase.Feature.Hero.Services
 {
     public class HeroService : IHeroService
     {

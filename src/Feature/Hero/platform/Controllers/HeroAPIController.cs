@@ -1,7 +1,7 @@
 using System.Web.Mvc;
 using Sitecore.Mvc.Controllers;
 
-namespace Helixbase.Feature.Hero.Platform.Controllers
+namespace Helixbase.Feature.Hero.Controllers
 {
     public class HeroAPIController : SitecoreController
     {

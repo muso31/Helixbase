@@ -1,6 +1,6 @@
 using System;
 
-namespace Helixbase.Foundation.Core.Platform.Exceptions
+namespace Helixbase.Foundation.Core.Exceptions
 {
     public class InvalidMediatorResponseCodeException : Exception
     {

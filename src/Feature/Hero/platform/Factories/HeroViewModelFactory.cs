@@ -1,9 +1,9 @@
 using System.Web;
 using Glass.Mapper.Sc;
-using Helixbase.Feature.Hero.Platform.Models;
-using Helixbase.Feature.Hero.Platform.ViewModels;
+using Helixbase.Feature.Hero.Models;
+using Helixbase.Feature.Hero.ViewModels;
 
-namespace Helixbase.Feature.Hero.Platform.Factories
+namespace Helixbase.Feature.Hero.Factories
 {
     public class HeroViewModelFactory : IHeroViewModelFactory
     {

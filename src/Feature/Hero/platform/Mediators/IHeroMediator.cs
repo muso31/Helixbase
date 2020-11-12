@@ -1,7 +1,7 @@
-using Helixbase.Feature.Hero.Platform.ViewModels;
-using Helixbase.Foundation.Core.Platform.Models;
+using Helixbase.Feature.Hero.ViewModels;
+using Helixbase.Foundation.Core.Models;
 
-namespace Helixbase.Feature.Hero.Platform.Mediators
+namespace Helixbase.Feature.Hero.Mediators
 {
     public interface IHeroMediator
     {

@@ -2,7 +2,7 @@ using System;
 using Assert = Sitecore.Diagnostics.Assert;
 using SC = Sitecore;
 
-namespace Helixbase.Feature.VersionTrim.Platform
+namespace Helixbase.Feature.VersionTrim
 {
     /// <summary>
     ///     https://community.sitecore.net/technical_blogs/b/sitecorejohn_blog/posts/rules-engine-actions-to-remove-old-versions-in-the-sitecore-asp-net-cms

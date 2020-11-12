@@ -3,6 +3,8 @@
     <TargetFramework>net48</TargetFramework>
     <Authors>Neil Shack, Joe Price</Authors>
     <Company>Ethisys Ltd</Company>
+    <AssemblyName>Helixbase.Feature.Hero.Tests</AssemblyName>
+    <RootNamespace>Helixbase.Feature.Hero.Tests</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="AutoFixture" />

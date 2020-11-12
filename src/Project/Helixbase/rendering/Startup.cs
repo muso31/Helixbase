@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Globalization;
 using Helixbase.Feature.Hero.Rendering.Extensions;
 using Helixbase.Rendering.Configuration;

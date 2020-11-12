@@ -1,6 +1,6 @@
-using Helixbase.Foundation.ORM.Platform.Models;
+using Helixbase.Foundation.ORM.Models;
 
-namespace Helixbase.Foundation.Content.Platform.Tests.Models
+namespace Helixbase.Foundation.Content.Tests.Models
 {
     public interface ITestItem : IGlassBase
     {

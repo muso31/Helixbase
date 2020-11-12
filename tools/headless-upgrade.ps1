@@ -99,6 +99,47 @@ Function Invoke-UpdatetProjectTargetFramework {
     }
 }
 
+Function Invoke-UpdatetAssemblyNameAndNamespace {
+    param(
+        [Parameter(Mandatory=$true)]
+        [string]$ProjectPath,
+        [Parameter(Mandatory=$true)]
+        [string]$AssemblyName    
+    )
+
+    #Update project TargetFramework to use netcore
+    [xml]$xmlDoc = New-Object system.Xml.XmlDocument
+    [xml]$xmlDoc = Get-Content $ProjectPath
+
+    $currentAssemblyName = $xmlDoc.SelectSingleNode("//Project/PropertyGroup/AssemblyName")
+    # If the AssemblyName node exists - Update it
+    if($null -ne $currentAssemblyName) {
+        Write-Verbose "Updating framework from $($currentAssemblyName.InnerText) to $AssemblyName"
+        # Set new AssemblyName
+        $currentAssemblyName.InnerText = $AssemblyName
+    } else {
+        $assemblyNameNode = $xmlDoc.CreateNode("element","AssemblyName","")
+        $assemblyNameNode.InnerText = $AssemblyName
+        $xmlDoc.Project.PropertyGroup.AppendChild($assemblyNameNode)
+    }
+
+    $currentNamespace = $xmlDoc.SelectSingleNode("//Project/PropertyGroup/RootNamespace")
+    # If the AssemblyName node exists - Update it
+    if($null -ne $currentNamespace) {
+        Write-Verbose "Updating framework from $($currentNamespace.InnerText) to $AssemblyName"
+        # Set new AssemblyName
+        $currentNamespace.InnerText = $AssemblyName
+    } else {
+        $namespaceNode = $xmlDoc.CreateNode("element","RootNamespace","")
+        $namespaceNode.InnerText = $AssemblyName
+        $xmlDoc.Project.PropertyGroup.AppendChild($namespaceNode)
+    }
+    
+    if(-Not $testRun) {
+        $xmlDoc.Save($ProjectPath)
+    }
+}
+
 # Moves Project into new directory
 # Updates Project Name
 # Updates Solution References
@@ -157,11 +198,11 @@ Function Invoke-MigrateProject {
         }
     }
 
-    # Update all Namespace references accross the solution 
-    Write-Verbose "Updating Solution Namespace references from $ProjectName to $NewProjectName"
-    Get-ChildItem -Path $sourceFolder -Include *.cs, *.config, *.cshtml -File -Recurse | ForEach-Object {
-        (Get-Content $_.FullName).replace($ProjectName, $NewProjectName) | Set-Content $_.FullName
-    }
+    # # Update all Namespace references accross the solution 
+    # Write-Verbose "Updating Solution Namespace references from $ProjectName to $NewProjectName"
+    # Get-ChildItem -Path $sourceFolder -Include *.cs, *.config, *.cshtml -File -Recurse | ForEach-Object {
+    #     (Get-Content $_.FullName).replace($ProjectName, $NewProjectName) | Set-Content $_.FullName
+    # }
 
     # Update Solution References
     Write-Verbose "Updating solution references from $projectRelativePath to $newProjectRelativePath"
@@ -301,13 +342,12 @@ Function Invoke-UpdateHppBuildProps {
         [string]$RenderingDirectory
     )
 
-    Get-ChildItem -Path $ProjectDirectory -Filter "*.$buildPropsExtension" -File | ForEach-Object {
-        $renderingPropFile = Join-Path -Path $RenderingDirectory -ChildPath $_.Name
-        Write-Verbose "Updating Build Property value from $websiteModuleFolder to $platformModuleFolder to $($_.FullName)"
-        Write-Verbose "Updating Build Property value from $websiteModuleFolder to $renderingModuleFolder to $renderingPropFile" 
-        (Get-Content $_.FullName).replace("\$websiteModuleFolder\", "\$platformModuleFolder\") | Set-Content $_.FullName
-        (Get-Content $_.FullName).replace("\$platformModuleFolder\", "\$renderingModuleFolder\") | Set-Content $renderingPropFile
-    }
+    if(Test-Path -Path $ProjectDirectory) {
+        Get-ChildItem -Path $ProjectDirectory -Filter "*.$buildPropsExtension" -File | ForEach-Object {
+            Write-Verbose "Updating Build Property value from $websiteModuleFolder to $platformModuleFolder to $($_.FullName)"
+            (Get-Content $_.FullName).replace("\$websiteModuleFolder\", "\$platformModuleFolder\") | Set-Content $_.FullName
+        }
+    } 
 }
 
 Function Invoke-SetupHppWebsites {
@@ -317,7 +357,7 @@ Function Invoke-SetupHppWebsites {
 
     $hppWebsiteProjectName = "$solutionName.$hppLayer"
     $hppPlatformProjectName = "$solutionName.$platformModuleSuffix"
-    $hppRenderingProjectName = "$solutionName.$renderingModuleSuffix"
+    # $hppRenderingProjectName = "$solutionName.$renderingModuleSuffix"
 
 
     $hppPlatformNewDirectory = Join-Path -Path $websiteHppMobulePath -ChildPath $platformModuleFolder
@@ -334,13 +374,13 @@ Function Invoke-SetupHppWebsites {
         -NewProjectSuffix $platformModuleSuffix
 
     # Create Rendering Host HPP Site
-     Invoke-CreateSolutionProject `
-        -ProjectDirectory $hppRenderingNewDirectory `
-        -ProjectName $hppRenderingProjectName `
-        -LayerName $hppLayer `
-        -ProjectType "web" `
-        -TargetFramework $renderingModuleTargetFramework `
-        -Packages $hppReneringHostPackages
+    #  Invoke-CreateSolutionProject `
+    #     -ProjectDirectory $hppRenderingNewDirectory `
+    #     -ProjectName $hppRenderingProjectName `
+    #     -LayerName $hppLayer `
+    #     -ProjectType "web" `
+    #     -TargetFramework $renderingModuleTargetFramework `
+    #     -Packages $hppReneringHostPackages
 
     # Update HPP Platform Build Properties
     Invoke-UpdateHppBuildProps `
@@ -372,6 +412,30 @@ Function Invoke-Run {
             $moduleName = $_
             Write-Host "`nUpdating $moduleName Module" -ForegroundColor Yellow
             Invoke-CovertToRenderingModule -LayerName $layerName -ModuleName $moduleName
+
+            Write-Verbose "Upading Projects Namespace and AssemblyName"
+            Get-ChildItem -Path $_.FullName -filter "*.csproj" -File -Recurse | ForEach-Object {
+                if($_.FullName.Contains("Tests.csproj")) {
+                    $assemblyName = "$solutionName.$layerName.$moduleName.Tests"
+                } else {
+                    $assemblyName = "$solutionName.$layerName.$moduleName"
+                }
+                # Update All Module Projects 
+                Invoke-UpdatetAssemblyNameAndNamespace `
+                    -ProjectPath $_.FullName `
+                    -AssemblyName $assemblyName
+
+                # Update all Namespace references accross the solution 
+                $ProjectName = "$solutionName.$layerName.$moduleName.Platform"
+                Write-Verbose "Updating Solution Namespace references from $ProjectName to $assemblyName"
+                Get-ChildItem -Path $sourceFolder -Include *.cs, *.config, *.cshtml -File -Recurse | ForEach-Object {
+                    (Get-Content $_.FullName).replace($ProjectName, $assemblyName) | Set-Content $_.FullName
+                }
+
+
+            }
+
+          
         }
     }
 
@@ -382,3 +446,4 @@ Function Invoke-Run {
 
 #Invoke-SetupHppWebsites
 Invoke-Run
+

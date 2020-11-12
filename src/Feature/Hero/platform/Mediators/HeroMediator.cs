@@ -1,10 +1,10 @@
-using Helixbase.Feature.Hero.Platform.Factories;
-using Helixbase.Feature.Hero.Platform.Services;
-using Helixbase.Feature.Hero.Platform.ViewModels;
-using Helixbase.Foundation.Core.Platform.Models;
-using Helixbase.Foundation.Core.Platform.Services;
+using Helixbase.Feature.Hero.Factories;
+using Helixbase.Feature.Hero.Services;
+using Helixbase.Feature.Hero.ViewModels;
+using Helixbase.Foundation.Core.Models;
+using Helixbase.Foundation.Core.Services;
 
-namespace Helixbase.Feature.Hero.Platform.Mediators
+namespace Helixbase.Feature.Hero.Mediators
 {
     public class HeroMediator : IHeroMediator
     {

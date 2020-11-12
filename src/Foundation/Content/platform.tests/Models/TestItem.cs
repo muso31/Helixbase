@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using Sitecore.Globalization;
 
-namespace Helixbase.Foundation.Content.Platform.Tests.Models
+namespace Helixbase.Foundation.Content.Tests.Models
 {
     public class TestItem : ITestItem
     {

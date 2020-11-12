@@ -5,7 +5,7 @@ using Glass.Mapper.Maps;
 using Glass.Mapper.Sc.IoC;
 using IDependencyResolver = Glass.Mapper.Sc.IoC.IDependencyResolver;
 
-namespace Helixbase.Foundation.ORM.Platform.App_Start
+namespace Helixbase.Foundation.ORM.App_Start
 {
     public static  class GlassMapperScCustom
     {

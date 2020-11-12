@@ -1,11 +1,13 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net48</TargetFramework>
-	<ApplicationIcon />
-	<OutputType>Library</OutputType>
-	<StartupObject />
-	<Authors>Neil Shack, Joe Price</Authors>
-	<Company>Ethisys Ltd</Company>
+    <ApplicationIcon />
+    <OutputType>Library</OutputType>
+    <StartupObject />
+    <Authors>Neil Shack, Joe Price</Authors>
+    <Company>Ethisys Ltd</Company>
+    <AssemblyName>Helixbase.Foundation.Serialization</AssemblyName>
+    <RootNamespace>Helixbase.Foundation.Serialization</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
     <Content Remove="Web.config" />

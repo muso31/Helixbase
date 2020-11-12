@@ -1,4 +1,4 @@
-﻿using Helixbase.Feature.Hero.Rendering.ViewModels;
+using Helixbase.Feature.Hero.Rendering.ViewModels;
 using Sitecore.AspNet.RenderingEngine.Configuration;
 using Sitecore.AspNet.RenderingEngine.Extensions;
 
