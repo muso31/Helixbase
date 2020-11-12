@@ -1,0 +1,51 @@
+﻿---
+ID: "bc7103ea-7e29-403b-9743-7d7aa828b7ab"
+Parent: "86e2276a-437f-492f-b1b9-cedbb3b9da88"
+Template: "d9bdf22f-6e17-47f3-ab64-49c717ba92da"
+Path: /sitecore/system/Settings/Rules/Item Saved/Rules/Delete Old Versions
+SharedFields:
+- ID: "908ef45d-4940-4b6a-857d-3739ba4acf8f"
+  Hint: Rule
+  Value: |
+    <ruleset>
+      <rule
+        uid="{4625B9AC-4B14-4554-B768-270767E2F848}">
+        <conditions>
+          <condition
+            id="{4888ABBB-F17D-4485-B14B-842413F88732}"
+            uid="CB80582C73614ACE9D7B657F08B4D885" />
+        </conditions>
+        <actions>
+          <action
+            id="{5D09ACB6-8DF9-452E-8465-8E48B0499ED8}"
+            uid="B26F3128C64E488DAD53E6CC850E6599"
+            MinVersions="10"
+            MinUpdatedDays="14" />
+        </actions>
+      </rule>
+    </ruleset>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20170318T180900Z
+    - ID: "45cf9130-802a-41be-b3eb-c02f657dcc2e"
+      Hint: Name
+      Value: Delete Old Versions
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "715c260b-22e1-4ce5-b274-f72c6b2a4e35"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\unicorn
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20200831T172615Z

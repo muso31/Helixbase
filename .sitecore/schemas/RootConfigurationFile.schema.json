@@ -1,0 +1,50 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "RootConfigurationFile",
+  "type": "object",
+  "description": "Defines the root Sitecore Developer Configuration file",
+  "additionalProperties": false,
+  "required": [
+    "modules"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "modules": {
+      "type": "array",
+      "description": "Sitecore module file resolution globs",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "serialization": {
+      "description": "Global item serialization default settings",
+      "oneOf": [
+        {
+          "$ref": "#/definitions/SerializationRootConfiguration"
+        }
+      ]
+    }
+  },
+  "definitions": {
+    "SerializationRootConfiguration": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "defaultMaxRelativeItemPathLength": {
+          "type": "integer",
+          "description": "Max relative item path length to serialize before considering path too long (and requiring aliasing to shorten).\nOverridable on a per-module basis; this is the default when it is unspecified.",
+          "format": "int32",
+          "default": 120
+        },
+        "defaultModuleRelativeSerializationPath": {
+          "type": "string",
+          "description": "The default relative physical path from a module file where serialized items for that module will be stored.\nFor example given module /c/foo/bar.module.json, and default '/serialization/items' path,\nthe serialized items for bar would be stored at /c/foo/bar/serialization/items.\nPrefix the path with ~/ for a root configuration relative path instead of a module-relative path.\nUse '$(module)' to insert the module name when using a root relative path.\nOverridable on a per-module basis; this is the default when it is unspecified.",
+          "default": "serialization"
+        }
+      }
+    }
+  }
+}

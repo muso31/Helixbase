@@ -1,0 +1,34 @@
+﻿---
+ID: "5d09acb6-8df9-452e-8465-8e48b0499ed8"
+Parent: "9d053eb2-9f12-41e9-ab23-fa6fff1f778e"
+Template: "f90052a5-b4e6-4e6d-9812-1e1b88a6fcea"
+Path: /sitecore/system/Settings/Rules/Definitions/Elements/Item Version Trim/Delete Old Versions
+SharedFields:
+- ID: "ff55d5a7-6d4b-4cd1-83e0-bac268073f66"
+  Hint: Type
+  Value: Helixbase.Feature.VersionTrim.DeleteOldVersions,Helixbase.Feature.VersionTrim
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20170318T154000Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "218474e1-9cd9-44d7-9c49-a1a4f941f5f4"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\unicorn
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20200831T172615Z
+    - ID: "eeb36a3b-40d9-4af5-862a-de257b84dca3"
+      Hint: Text
+      Value: "delete versions beyond [MinVersions,positiveinteger,,number] older than [MinUpdatedDays,positiveinteger,,number] days"
