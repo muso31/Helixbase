@@ -11,6 +11,13 @@
 *.userprefs
 .sitecore/user.json
 
+# Ephemeral index caches used by serialization, do not commit
+.scindex
+
+# Don't commit packages
+*.itempackage
+*.sicpackage
+
 # Build results
 [Dd]ebug/
 [Dd]ebugPublic/
