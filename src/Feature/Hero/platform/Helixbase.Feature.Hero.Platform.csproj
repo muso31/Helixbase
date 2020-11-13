@@ -55,6 +55,7 @@
     </PackageReference>
     <PackageReference Include="Sitecore.ContentSearch.Linq" />
     <PackageReference Include="Sitecore.Kernel" />
+    <PackageReference Include="Sitecore.LayoutService" />
     <PackageReference Include="Sitecore.Mvc" />
     <PackageReference Include="Sitecore.Mvc.Analytics" />
     <PackageReference Include="System.ComponentModel.Annotations" />

@@ -13,6 +13,9 @@ namespace Helixbase.Feature.Hero.DI
             serviceCollection.AddTransient<IHeroMediator, HeroMediator>();
             serviceCollection.AddTransient<IHeroService, HeroService>();
             serviceCollection.AddTransient<IHeroViewModelFactory, HeroViewModelFactory>();
+
+
+            serviceCollection.AddTransient<IHeroBuilder, HeroBuilder>();
         }
     }
 }

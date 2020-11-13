@@ -26,6 +26,9 @@
     <PackageReference Update="Microsoft.Extensions.DependencyInjection.Abstractions" Version="3.1.1" />
     <PackageReference Update="Microsoft.Extensions.Http" Version="3.1.1" />
     <PackageReference Update="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.1" />
+    <PackageReference Update="Microsoft.AspNetCore.Components" Version="3.1.1" />
+    <PackageReference Update="Microsoft.AspNetCore.Components.Web" Version="3.1.1" />
+
     <PackageReference Update="System.ComponentModel.Annotations" Version="4.7.0" />
 
     <PackageReference Update="RichardSzalay.Helix.Publishing.WebRoot" Version="1.5.6" />

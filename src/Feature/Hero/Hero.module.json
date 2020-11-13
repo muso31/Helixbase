@@ -16,6 +16,11 @@
         "database": "master"
       },
       {
+        "name": "ContentResolvers",
+        "path": "/sitecore/system/Modules/Layout Service/Rendering Contents Resolvers/Hero",
+        "database": "master"
+      },
+      {
         "name": "Media",
         "path": "/sitecore/media library/Feature/Hero",
         "database": "master"
