@@ -20,7 +20,5 @@
 		<ProjectReference Include="..\..\..\Foundation\*\rendering\*.csproj" />
 		<ProjectReference Include="..\..\..\Feature\*\rendering\*.csproj" />
 	</ItemGroup>
-	<ItemGroup>
-		<ProjectReference Include="..\..\Common\rendering\Helixbase.Project.Common.Rendering.csproj" />
-	</ItemGroup>
+
 </Project>
