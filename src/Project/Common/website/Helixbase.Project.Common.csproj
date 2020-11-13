@@ -50,9 +50,6 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Config\Include\Project\z.Project.Common.DevSettings.config">
-      <SubType>Designer</SubType>
-    </Content>
     <None Include="web.config" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>

@@ -1,0 +1,27 @@
+﻿---
+ID: "f41025c4-668f-4d54-817e-b4de3a060d93"
+Parent: "7aa0e340-c796-4c03-b84f-e04162058b86"
+Template: "7aa0e340-c796-4c03-b84f-e04162058b86"
+Path: /sitecore/templates/Project/Common/Content Types/Dictionary Folder/__Standard Values
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20170401T182909Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "0c7c226c-50b1-4ad6-a981-0d5deba8992a"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\unicorn
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20200831T172620Z
