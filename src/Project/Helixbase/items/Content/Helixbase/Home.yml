@@ -84,14 +84,14 @@ Languages:
       Value: "{FCA998C5-0CC3-4F91-94D8-0A4E6CAECE88}"
     - ID: "75577384-3c97-45da-a847-81b00500e250"
       Hint: Title
-      Value: "Helixbase - Home"
+      Value: Home
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "6f933918-9e59-4dbc-ae4f-0582d703f0ff"
+      Value: "69a755b8-ca78-4eb0-bb1d-02e1555491aa"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\Admin
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20201112T101701Z
+      Value: 20201113T083931Z
