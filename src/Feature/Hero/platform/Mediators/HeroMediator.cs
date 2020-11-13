@@ -1,6 +1,6 @@
 using Helixbase.Feature.Hero.Factories;
+using Helixbase.Feature.Hero.ResolverModels;
 using Helixbase.Feature.Hero.Services;
-using Helixbase.Feature.Hero.ViewModels;
 using Helixbase.Foundation.Core.Models;
 using Helixbase.Foundation.Core.Services;
 
@@ -25,18 +25,18 @@ namespace Helixbase.Feature.Hero.Mediators
         ///     keep the controller dumb as a result
         /// </summary>
         /// <returns>A mediator response with the result of the view model instantiation</returns>
-        public MediatorResponse<HeroViewModel> RequestHeroViewModel()
+        public MediatorResponse<HeroResolverModel> RequestHeroViewModel()
         {
             var heroItemDataSource = _heroService.GetHeroItems();
 
             if (heroItemDataSource == null)
-                return _mediatorService.GetMediatorResponse<HeroViewModel>(MediatorCodes.HeroResponse.DataSourceError);
+                return _mediatorService.GetMediatorResponse<HeroResolverModel>(MediatorCodes.HeroResponse.DataSourceError);
 
             var viewModel =
-                _heroViewModelFactory.CreateHeroViewModel(heroItemDataSource, _heroService.IsExperienceEditor);
+                _heroViewModelFactory.CreateHeroViewModel(heroItemDataSource);
 
             if (viewModel == null)
-                return _mediatorService.GetMediatorResponse<HeroViewModel>(MediatorCodes.HeroResponse.ViewModelError);
+                return _mediatorService.GetMediatorResponse<HeroResolverModel>(MediatorCodes.HeroResponse.ViewModelError);
 
             return _mediatorService.GetMediatorResponse(MediatorCodes.HeroResponse.Ok, viewModel);
         }

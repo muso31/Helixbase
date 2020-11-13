@@ -3,7 +3,6 @@ ID: "86483428-418b-4d98-a8f7-29b92a3d93c5"
 Parent: "adbc2fc7-3ac8-41c6-87bf-50c9106af433"
 Template: "daf085e8-602e-43a6-8299-038ff171349f"
 Path: /sitecore/media library/Feature/Hero/helixbase4
-DB: master
 SharedFields:
 - ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
   Hint: __Icon
@@ -51,3 +50,16 @@ Languages:
       Hint: __Created by
       Value: |
         sitecore\Admin
+    - ID: "65885c44-8fcd-4a7f-94f1-ee63703fe193"
+      Hint: Alt
+      Value: Helixbase
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "0db51822-2ecb-4283-a527-43579cf947c5"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20201113T165652Z

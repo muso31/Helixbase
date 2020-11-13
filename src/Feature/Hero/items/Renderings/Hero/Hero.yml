@@ -18,7 +18,7 @@ SharedFields:
   Value: 1
 - ID: "b0b15510-b138-470e-8f33-8da2e228aafe"
   Hint: Rendering Contents Resolver
-  Value: 
+  Value: "{B4B683D4-0EB2-41DF-A95C-8F98FBBC9F51}"
 - ID: "b5b27af1-25ef-405c-87ce-369b3a004016"
   Hint: Datasource Location
   Value: "query:./ancestor-or-self::*[@@templateid='{98A3D034-92E4-4ECB-9632-119CABD08E15}']/*[@@templateid='{B2076F9F-E735-4F31-91CF-597524B76A1E}']/*[@@templateid='{AC1D1F97-DE23-4E57-8A8E-AD83EC538513}']"
@@ -32,11 +32,11 @@ Languages:
       Value: 20201112T095410Z
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "c5d8066f-c848-455a-a958-27ad04cdd5e5"
+      Value: "ab58118e-339f-4077-9894-031b5bd4aaeb"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\Admin
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20201112T102110Z
+      Value: 20201113T152313Z

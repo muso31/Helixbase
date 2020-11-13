@@ -64,7 +64,5 @@ namespace Helixbase.Feature.Hero.Services
                 // injectedSitecoreService.Populate(result);
             }
         }
-
-        public bool IsExperienceEditor => _contextRepository.IsExperienceEditor;
     }
 }

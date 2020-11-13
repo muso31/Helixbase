@@ -23,7 +23,6 @@ namespace Helixbase.Feature.Hero.LayoutService
         public override object ResolveContents(Rendering rendering, IRenderingConfiguration renderingConfig)
         {
             var mediatorResponse = _heroMediator.RequestHeroViewModel();
-
             switch (mediatorResponse.Code)
             {
                 case MediatorCodes.HeroResponse.DataSourceError:

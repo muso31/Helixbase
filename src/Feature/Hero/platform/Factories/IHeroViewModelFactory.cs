@@ -1,10 +1,10 @@
 using Helixbase.Feature.Hero.Models;
-using Helixbase.Feature.Hero.ViewModels;
+using Helixbase.Feature.Hero.ResolverModels;
 
 namespace Helixbase.Feature.Hero.Factories
 {
     public interface IHeroViewModelFactory
     {
-        HeroViewModel CreateHeroViewModel(IHero heroItemDataSource, bool isExperienceEditor);
+        HeroResolverModel CreateHeroViewModel(IHero heroItemDataSource);
     }
 }

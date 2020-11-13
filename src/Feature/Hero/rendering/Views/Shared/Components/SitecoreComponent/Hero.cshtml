@@ -3,53 +3,8 @@
 
 @if (Model != null)
 {
-    @Model.HeroTitle
+    <h1 asp-for="@Model.HeroTitle"></h1>
+    <p>test</p>
 
-    if (Model.IsExperienceEditor)
-    {
-        foreach (var heroImage in Model.HeroImages)
-        {
-            <div>
-                <img src="@heroImage.Src" />
-            </div>
-        }
-    }
-    else
-    {
-        <div id="heroCarousel" class="carousel slide" data-ride="carousel">
-            @if (Model.HeroImages != null)
-            {
-                <ol class="carousel-indicators">
-                    @{
-                        var i = 0;
-                        foreach (var heroImage in Model.HeroImages)
-                        {
-                            <li data-target="#heroCarousel" data-slide-to="@i" @Html.Raw(i == 0 ? "class=\"active\"" : "")></li>
-                            i++;
-                        }
-                    }
-                </ol>
-                <div class="carousel-inner" role="listbox">
-                    @{
-                        var j = 1;
-                        foreach (var heroImage in Model.HeroImages)
-                        {
-                            <div class="carousel-item@(j == 1 ? " active" : "")">
-                                <img class="d-block img-fluid" src="@heroImage.Src" />
-                            </div>
-                            j++;
-                        }
-                    }
-                </div>
-                <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#heroCarousel" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-            }
-        </div>
-    }
+   
 }

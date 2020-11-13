@@ -1,7 +1,7 @@
 using System.Web;
 using Glass.Mapper.Sc;
 using Helixbase.Feature.Hero.Models;
-using Helixbase.Feature.Hero.ViewModels;
+using Helixbase.Feature.Hero.ResolverModels;
 
 namespace Helixbase.Feature.Hero.Factories
 {
@@ -14,14 +14,12 @@ namespace Helixbase.Feature.Hero.Factories
             _glassHtml = glassHtml;
         }
 
-        public HeroViewModel CreateHeroViewModel(IHero heroItemDataSource, bool isExperienceEditor)
+        public HeroResolverModel CreateHeroViewModel(IHero heroItemDataSource)
         {
-            return new HeroViewModel
+            return new HeroResolverModel
             {
                 HeroImages = heroItemDataSource.HeroImages,
-                HeroTitle = new HtmlString(_glassHtml.Editable(heroItemDataSource, i => i.HeroTitle,
-                    new { EnclosingTag = "h2" })),
-                IsExperienceEditor = isExperienceEditor
+                HeroTitle = heroItemDataSource.HeroTitle
             };
         }
     }
