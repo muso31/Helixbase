@@ -6,7 +6,6 @@ namespace Helixbase.Feature.Hero.ViewModels
     public class HeroViewModel
     {
         [SitecoreComponentField]
-
         public TextField HeroTitle { get; set; }
 
         public ContentListField<ImageField> HeroImages { get; set; }

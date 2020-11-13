@@ -1,0 +1,38 @@
+﻿---
+ID: "b4b683d4-0eb2-41df-a95c-8f98fbbc9f51"
+Parent: "cbc8dac4-90ed-40f9-aa55-09c19efbb0c9"
+Template: "814c1dbb-b118-4511-ba2b-7288ed3d490b"
+Path: /sitecore/system/Modules/Layout Service/Rendering Contents Resolvers/Hero/Hero
+SharedFields:
+- ID: "de218ede-a9ad-4b04-86c5-9ff593ccf39d"
+  Hint: Type
+  Value: Helixbase.Feature.Hero.LayoutService.HeroContentResolver, Helixbase.Feature.Hero
+- ID: "fb43a64d-060f-4fa9-b1c3-1511442175e1"
+  Hint: IncludeServerUrlInMediaUrls
+  Value: 1
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20201113T152041Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "27f466f9-656e-4397-83c0-d596df2e5a42"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20201113T165317Z

@@ -29,7 +29,7 @@ namespace Helixbase.Feature.Hero.LayoutService
                 case MediatorCodes.HeroResponse.ViewModelError:
                     return null;
                 case MediatorCodes.HeroResponse.Ok:
-                    return mediatorResponse.ViewModel;
+                    return mediatorResponse.ResolverModel;
                 default:
                     throw new InvalidMediatorResponseCodeException(mediatorResponse.Code);
             }

@@ -11,7 +11,7 @@ namespace Helixbase.Foundation.Core.Services
             var response = new Models.MediatorResponse<T>
             {
                 Code = code,
-                ViewModel = viewModel,
+                ResolverModel = viewModel,
                 ValidationResult = validationResult,
                 Parameters = parameters,
                 Message = message

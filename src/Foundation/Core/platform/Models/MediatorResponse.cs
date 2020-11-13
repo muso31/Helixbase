@@ -15,6 +15,6 @@ namespace Helixbase.Foundation.Core.Models
 
     public class MediatorResponse<T> : MediatorResponse
     {
-        public T ViewModel { get; set; }
+        public T ResolverModel { get; set; }
     }
 }
