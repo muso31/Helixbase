@@ -23,6 +23,7 @@ A Sitecore Helix based solution which can be used for Greenfield projects. Tackl
 * [Helix Check](https://github.com/marketplace/actions/helix-check) GitHub Action
 
 ## Setup Instructions
+*Helix Base uses the new csproj sdk format, if you would like to use the older format please see the [10.0 feature branch](https://github.com/muso31/Helixbase/tree/feature/10.0.0-old-csproj)  
 *Please Install Visual Studio 2017 Version 15.7 or higher as this project uses PackageReference
 
 1. Install [Sitecore Experience Platform 10 Initial Release](https://dev.sitecore.net/Downloads/Sitecore_Experience_Platform/100/Sitecore_Experience_Platform_100.aspx)
