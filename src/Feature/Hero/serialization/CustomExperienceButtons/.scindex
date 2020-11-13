@@ -1,0 +1,19 @@
+﻿# Do not commit this file to source control or modify it. It is safe to delete; it will recreate itself.
+---
+File: |
+  C:\projects\helixbase\src\Feature\Hero\serialization\CustomExperienceButtons\Hero\Select Hero Images.yml
+ID: "df5494bd-ef6c-41ad-8d42-365705700a99"
+Parent: "16abb40e-57ed-4d60-be72-211d4e211d41"
+Template: "1ab4f9ad-b004-413c-8924-3e07143a614b"
+Path: /sitecore/content/Applications/WebEdit/Custom Experience Buttons/Feature/Hero/Select Hero Images
+Signature: UrPaSkbxkD1ICDto6tT/wc/uRsml6zNdab59jABu+bo=
+Modified: 637407892967429418
+---
+File: |
+  C:\projects\helixbase\src\Feature\Hero\serialization\CustomExperienceButtons\Hero.yml
+ID: "16abb40e-57ed-4d60-be72-211d4e211d41"
+Parent: "8eb429b7-79a7-44ea-986c-9c65a053fd4c"
+Template: "a87a00b1-e6db-45ab-8b54-636fec3b5523"
+Path: /sitecore/content/Applications/WebEdit/Custom Experience Buttons/Feature/Hero
+Signature: +R8dJVVZGzM9BG751lHKcA56zEwWJUfd3IBKxXVl8QA=
+Modified: 637407892967429418

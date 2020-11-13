@@ -1,0 +1,19 @@
+﻿# Do not commit this file to source control or modify it. It is safe to delete; it will recreate itself.
+---
+File: |
+  C:\projects\helixbase\src\Feature\VersionTrim\serialization\VersionTrimmingTags\Item Version Trim\Visibility.yml
+ID: "46f9e7be-bf12-4849-8803-42f4752f6621"
+Parent: "22f34dad-86a8-41fe-b0bb-2de8aeb0f776"
+Template: "aa91a868-02f2-41d3-8b78-1cad91b4dcae"
+Path: /sitecore/system/Settings/Rules/Definitions/Tags/Item Version Trim/Visibility
+Signature: R7dtn6LzNf7t0x3olX4EhvN8eZ3UyYOHke3slah1huQ=
+Modified: 637407892968069375
+---
+File: |
+  C:\projects\helixbase\src\Feature\VersionTrim\serialization\VersionTrimmingTags\Item Version Trim.yml
+ID: "22f34dad-86a8-41fe-b0bb-2de8aeb0f776"
+Parent: "dadb4f93-477f-491f-a905-c4005c452e67"
+Template: "1a9b6300-4652-477c-a4b5-b2a64e86b29f"
+Path: /sitecore/system/Settings/Rules/Definitions/Tags/Item Version Trim
+Signature: CQ5K1mldg1Yxl578g9Q9QCs5axbDl1shM7BIJrYw2Nw=
+Modified: 637407892968059377

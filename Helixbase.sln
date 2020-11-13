@@ -5,10 +5,6 @@ VisualStudioVersion = 16.0.29503.13
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Foundation", "Foundation", "{C3F57797-2D54-4626-B842-51F30272E972}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Serialization", "Serialization", "{41AC9AD8-3D81-4C55-9330-B9CA9DFD8554}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helixbase.Foundation.Serialization", "src\Foundation\Serialization\website\Helixbase.Foundation.Serialization.csproj", "{4238D5C5-AFD2-4DF5-BF3D-ADB9D46ADC08}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ORM", "ORM", "{01ACDA66-22F3-4F9B-BF2A-861D3CE46784}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helixbase.Foundation.ORM", "src\Foundation\ORM\website\Helixbase.Foundation.ORM.csproj", "{5E91A7D9-8E93-44FD-857F-F9CE145B6022}"
@@ -87,10 +83,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{4238D5C5-AFD2-4DF5-BF3D-ADB9D46ADC08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4238D5C5-AFD2-4DF5-BF3D-ADB9D46ADC08}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4238D5C5-AFD2-4DF5-BF3D-ADB9D46ADC08}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4238D5C5-AFD2-4DF5-BF3D-ADB9D46ADC08}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5E91A7D9-8E93-44FD-857F-F9CE145B6022}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5E91A7D9-8E93-44FD-857F-F9CE145B6022}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5E91A7D9-8E93-44FD-857F-F9CE145B6022}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -160,8 +152,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{41AC9AD8-3D81-4C55-9330-B9CA9DFD8554} = {C3F57797-2D54-4626-B842-51F30272E972}
-		{4238D5C5-AFD2-4DF5-BF3D-ADB9D46ADC08} = {41AC9AD8-3D81-4C55-9330-B9CA9DFD8554}
 		{01ACDA66-22F3-4F9B-BF2A-861D3CE46784} = {C3F57797-2D54-4626-B842-51F30272E972}
 		{5E91A7D9-8E93-44FD-857F-F9CE145B6022} = {01ACDA66-22F3-4F9B-BF2A-861D3CE46784}
 		{F2FD5CAD-01CE-40D6-82B5-E243313A4CD3} = {C3F57797-2D54-4626-B842-51F30272E972}

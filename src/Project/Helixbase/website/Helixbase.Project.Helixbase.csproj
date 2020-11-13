@@ -59,7 +59,6 @@
     <Content Include="sitecore\login\Helixbase_Wallpaper.jpg" />
     <Content Include="Views\Layouts\Helixbase\Default.cshtml" />
     <Content Include="App_Config\Include\Project\z.Project.Helixbase.DevSettings.config" />
-    <Content Include="App_Config\Include\Project\Project.Helixbase.Serialization.config" />
     <Content Include="App_Config\Include\Project\Project.Helixbase.config">
       <SubType>Designer</SubType>
     </Content>

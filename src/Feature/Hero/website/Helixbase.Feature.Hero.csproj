@@ -76,9 +76,6 @@
     <Content Include="App_Config\Include\Feature\Feature.Hero.RegisterMappings.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Config\Include\Feature\Feature.Hero.Serialization.config" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Views\Web.config">
       <SubType>Designer</SubType>
     </Content>
