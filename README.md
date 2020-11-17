@@ -1,12 +1,12 @@
 <img src="https://nshackblog.files.wordpress.com/2017/02/helixbase1.png" height="154px" width="200px" /><br />
 A Sitecore Helix based solution which can be used for Greenfield projects. Tackles some common problems when working with the platform.
 
-<img src="https://nshack31.visualstudio.com/Helix Base/_apis/build/status/Helix%20Base%20CI?branchName=master"/> ![ASP.NET CI](https://github.com/muso31/Helixbase/workflows/ASP.NET%20CI/badge.svg) [![Helix Check](https://github.com/muso31/Helixbase/workflows/Helix%20Check/badge.svg)](https://github.com/muso31/Helixbase/actions?query=workflow%3A%22Helix+Check%22) [![GitHub Stars](https://img.shields.io/github/stars/muso31/helixbase?label=GitHub%20Stars)](https://github.com/muso31/Helixbase/stargazers)
+![ASP.NET CI](https://github.com/muso31/Helixbase/workflows/ASP.NET%20CI/badge.svg) [![Helix Check](https://github.com/muso31/Helixbase/workflows/Helix%20Check/badge.svg)](https://github.com/muso31/Helixbase/actions?query=workflow%3A%22Helix+Check%22) [![GitHub Stars](https://img.shields.io/github/stars/muso31/helixbase?label=GitHub%20Stars)](https://github.com/muso31/Helixbase/stargazers)
 
 #### Features include:
 
 * Glass Mapper v5 - with fluent configuration and automated mapping registration
-* Unicorn - including user and role sync
+* Sitecore Content Serialization (SCS)
 * Sitecore 10 ready
 * Pre compiled Razor views
 * Bootstrap v4
@@ -23,25 +23,24 @@ A Sitecore Helix based solution which can be used for Greenfield projects. Tackl
 * [Helix Check](https://github.com/marketplace/actions/helix-check) GitHub Action
 
 ## Setup Instructions
-*Helix Base uses the new csproj sdk format which can cause issues with intellisense, if you would like to use the older format please see the [10.0 feature branch](https://github.com/muso31/Helixbase/tree/feature/10.0.0-old-csproj)  
+*Helix Base uses the new csproj sdk format, if you would like to use the older format please see the [10.0 feature branch](https://github.com/muso31/Helixbase/tree/feature/10.0.0-old-csproj)  
 *Please Install Visual Studio 2017 Version 15.7 or higher as this project uses PackageReference
-
+  
 ### Docker
 1. Run .\init.ps1 -LicenseXmlPath C:\License\license.xml (Replace the `-LicenseXmlPath` with the location of your Sitecore license file.)
 	1. You can also set the Sitecore admin password using the `-SitecoreAdminPassword` parameter (default is "b").
 2. Run up.ps1
-
+  
 Docker Compose will run, pulling down any necessary docker images and build all containers. 
 You will be prompted to authenticate to perform a serialization push
 The Rendering Host and Content Management instance will load in your browser once complete.
-
+  
 ### IIS
 1. Install [Sitecore Experience Platform 10 Initial Release](https://dev.sitecore.net/Downloads/Sitecore_Experience_Platform/100/Sitecore_Experience_Platform_100.aspx)
-2. Clone project to 'C:\Projects\Helixbase'
-	1. _If you use another path, update the [z.Project.Common.DevSettings.config](https://github.com/muso31/Helixbase/blob/master/src/Project/Common/website/App_Config/Include/Project/z.Project.Common.DevSettings.config#L3)_
-3. Update the 'publishUrl' property in [Local.pubxml](https://github.com/muso31/Helixbase/blob/master/src/Website/website/Properties/PublishProfiles/Local.pubxml#L12) to the target IIS folder
+2. Install [Sitecore Management Services](https://doc.sitecore.com/developers/100/developer-tools/en/sitecore-management-services.html)
+3. Clone the repo and update the 'publishUrl' property in [Local.pubxml](https://github.com/muso31/Helixbase/blob/master/src/Website/website/Properties/PublishProfiles/Local.pubxml#L12) to the target IIS folder
 4. Use the 'Local' publish profile in the Helixbase.Website project to publish the solution
-5. Run Unicorn and sync all configurations
+5. Install [Sitecore CLI](https://doc.sitecore.com/developers/100/developer-tools/en/install-sitecore-command-line-interface.html) and push Sitecore items `dotnet sitecore ser push`
 
 #### Using Helix Base:
 Refer to the [Hero Feature](https://github.com/muso31/Helixbase/tree/master/src/Feature/Hero/website) as an example.
