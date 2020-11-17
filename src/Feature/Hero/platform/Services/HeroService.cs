@@ -1,4 +1,5 @@
 using System.Linq;
+using Glass.Mapper.Sc;
 using Helixbase.Feature.Hero.Models;
 using Helixbase.Foundation.Content.Repositories;
 using Helixbase.Foundation.Logging.Repositories;
@@ -11,13 +12,16 @@ namespace Helixbase.Feature.Hero.Services
     public class HeroService : IHeroService
     {
         private readonly IContextRepository _contextRepository;
+        private readonly IContentRepository _contentRepository;
+
         private readonly ILogRepository _logRepository;
         private readonly IRenderingRepository _renderingRepository;
 
-        public HeroService(IContextRepository contextRepository,
+        public HeroService(IContextRepository contextRepository, IContentRepository contentRepository,
             ILogRepository logRepository, IRenderingRepository renderingRepository)
         {
             _contextRepository = contextRepository;
+            _contentRepository = contentRepository;
             _logRepository = logRepository;
             _renderingRepository = renderingRepository;
         }
@@ -26,9 +30,11 @@ namespace Helixbase.Feature.Hero.Services
         ///     Get an item using the rendering repository
         /// </summary>
         /// <returns>The Hero datasource item from the Content API</returns>
-        public IHero GetHeroItems()
+        public IHero GetHeroItems(Item contextItem)
         {
-            var dataSource = _renderingRepository.GetDataSourceItem<IHero>();
+            var dataSource = _contentRepository.GetItem<IHero>(new GetItemByIdOptions(contextItem.ID.Guid));
+
+            //var dataSource = _renderingRepository.GetDataSourceItem<IHero>();
 
             // Basic example of using the wrapped logger
             if (dataSource == null)

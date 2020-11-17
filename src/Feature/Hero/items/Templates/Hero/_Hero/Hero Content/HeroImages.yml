@@ -2,8 +2,7 @@
 ID: "6968b632-46df-4de2-a129-d9637cca094f"
 Parent: "3783e43f-f563-4a56-8732-fb310abecb46"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Feature/Hero/_Hero/Hero Content/Hero Images
-DB: master
+Path: /sitecore/templates/Feature/Hero/_Hero/Hero Content/HeroImages
 SharedFields:
 - ID: "1eb8ae32-e190-44a6-968d-ed904c794ebf"
   Hint: Source
@@ -16,6 +15,10 @@ SharedFields:
   Value: 100
 Languages:
 - Language: en
+  Fields:
+  - ID: "19a69332-a23e-4e70-8d16-b2640cb24cc8"
+    Hint: Title
+    Value: Hero Images
   Versions:
   - Version: 1
     Fields:
@@ -26,3 +29,13 @@ Languages:
       Hint: __Created by
       Value: |
         sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "d15fbdad-4717-4531-bfa0-a1419002e507"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20201113T173748Z

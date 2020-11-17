@@ -104,6 +104,7 @@ services:
       - ${LOCAL_DEPLOY_PATH}\platform:C:\deploy
       - ${LOCAL_DATA_PATH}\cm:C:\inetpub\wwwroot\App_Data\logs
       - ${HOST_LICENSE_FOLDER}:C:\license
+      - C:\Program Files\Microsoft Visual Studio 16.0\Common7\IDE\Remote Debugger:C:\remote_debugger
     environment:
       SITECORE_LICENSE_LOCATION: C:\license\license.xml
     entrypoint: powershell -Command "& C:\tools\entrypoints\iis\Development.ps1"

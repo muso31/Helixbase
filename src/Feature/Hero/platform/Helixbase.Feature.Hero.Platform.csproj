@@ -11,6 +11,11 @@
     <AssemblyName>Helixbase.Feature.Hero</AssemblyName>
     <RootNamespace>Helixbase.Feature.Hero</RootNamespace>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
   <ItemGroup>
     <Content Remove="Web.config" />
     <Content Remove="Web.Debug.config" />

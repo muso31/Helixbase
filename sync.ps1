@@ -19,7 +19,8 @@ if($LoginToSitecore) {
 
 $push = New-Object System.Management.Automation.Host.ChoiceDescription '&1.Push', 'Push latest items to Sitecore...'
 $pull = New-Object System.Management.Automation.Host.ChoiceDescription '&2.Pull', 'Pull latest items from Sitecore...'
-$options = [System.Management.Automation.Host.ChoiceDescription[]]($push, $pull)
+$watch = New-Object System.Management.Automation.Host.ChoiceDescription '&3.Watch', 'Watch for changes. Syncing up and down'
+$options = [System.Management.Automation.Host.ChoiceDescription[]]($push, $pull, $watch)
 $result = $host.ui.PromptForChoice('Sitecore Serialization?', 'How would you like to sync?', $options, 0)
 
 switch ($result)
@@ -42,6 +43,13 @@ switch ($result)
             dotnet sitecore ser pull
             if ($LASTEXITCODE -ne 0) {
                 Write-Error "Serialization pull failed, see errors above."
+            }
+        }
+        2 {
+            Write-Host "Watching for item changes" -ForegroundColor Green
+            dotnet sitecore ser watch
+            if ($LASTEXITCODE -ne 0) {
+                Write-Error "Serialization watch failed, see errors above."
             }
         }
     }

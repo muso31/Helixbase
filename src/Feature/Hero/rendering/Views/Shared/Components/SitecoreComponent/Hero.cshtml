@@ -1,10 +1,72 @@
+@using Newtonsoft.Json
 @model Helixbase.Feature.Hero.ViewModels.HeroViewModel
 
 
 @if (Model != null)
 {
     <h1 asp-for="@Model.HeroTitle"></h1>
-    <p>test</p>
+    <p>test images</p>
 
-   
+    if (Model.IsEditing)
+    {
+        var i = 0;
+        foreach (var heroImage in Model.HeroImages)
+        {
+            <div>
+                <img asp-for="@heroImage" image-params="new { mw = 480, @as = 0 }" />
+            </div>
+            i++;
+        }
+    }
+    else
+    {
+        <div id="heroCarousel" class="carousel slide" data-ride="carousel">
+            @if (Model.HeroImages != null)
+            {
+                <ol class="carousel-indicators">
+                    @{
+                        var i = 0;
+                        foreach (var heroImage in Model.HeroImages)
+                        {
+                            <li data-target="#heroCarousel" data-slide-to="@i" @Html.Raw(i == 0 ? "class=\"active\"" : "")></li>
+                            i++;
+                        }
+                    }
+                </ol>
+                <div class="carousel-inner" role="listbox">
+                    @{
+                        var j = 1;
+                        var img = 0;
+                        foreach (var heroImage in Model.HeroImages)
+                        {
+                            <div class="carousel-item@(j == 1 ? " active" : "")">
+                                @{
+                                    var sz = JsonConvert.SerializeObject(heroImage);
+                                    @sz
+
+                                }   
+                                <img asp-for="@heroImage" image-params="new { mw = 480, @as = 0 }" />
+                                <sc-img asp-for="@Model.HeroImages[img]"  />
+
+                            </div>
+                            j++;
+                            img++;
+                        }
+                    }
+                </div>
+                <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#heroCarousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            }
+            else
+            {
+                <p>No images</p>
+            }
+        </div>
+    }
 }

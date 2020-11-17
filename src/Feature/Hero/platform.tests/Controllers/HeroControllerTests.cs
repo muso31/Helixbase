@@ -2,7 +2,6 @@ using System;
 using System.Diagnostics.CodeAnalysis;
 using FluentAssertions;
 using Helixbase.Feature.Hero.LayoutService;
-using Helixbase.Feature.Hero.Mediators;
 using Helixbase.Feature.Hero.ResolverModels;
 using Helixbase.Feature.Hero.Services;
 using Helixbase.Foundation.Core.Exceptions;
@@ -21,15 +20,13 @@ namespace Helixbase.Feature.Hero.Tests.Controllers
     public class HeroControllerTests
     {
         private HeroContentResolver _contentResolver;
-        private IHeroMediator _heroMediator;
         private IHeroBuilder _heroBuilder;
 
         [TestInitialize]
         public void Setup()
         {
-            _heroMediator = Substitute.For<IHeroMediator>();
             _heroBuilder = Substitute.For<IHeroBuilder>();
-            _contentResolver = new HeroContentResolver(_heroBuilder, _heroMediator);
+            _contentResolver = new HeroContentResolver(_heroBuilder);
         }
 
         [TestMethod]
@@ -39,8 +36,6 @@ namespace Helixbase.Feature.Hero.Tests.Controllers
             var createViewModelResponse = fixture.Build<MediatorResponse<HeroResolverModel>>()
                 .With(x => x.Code, MediatorCodes.HeroResponse.DataSourceError)
                 .Create();
-
-            _heroMediator.RequestHeroViewModel().Returns(createViewModelResponse);
 
             var result = _contentResolver.ResolveContents(new Rendering(), new DefaultRenderingConfiguration()) as HeroResolverModel;
 
@@ -54,8 +49,6 @@ namespace Helixbase.Feature.Hero.Tests.Controllers
             var createViewModelResponse = fixture.Build<MediatorResponse<HeroResolverModel>>()
                 .With(x => x.Code, "Unknown code")
                 .Create();
-
-            _heroMediator.RequestHeroViewModel().Returns(createViewModelResponse);
 
             Action act = () => _contentResolver.ResolveContents(new Rendering(), new DefaultRenderingConfiguration());
             act.ShouldThrow<InvalidMediatorResponseCodeException>().Where(e =>
