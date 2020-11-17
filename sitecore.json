@@ -5,6 +5,6 @@
   ],
   "serialization": {
     "defaultMaxRelativeItemPathLength": 100,
-    "defaultModuleRelativeSerializationPath": "items"
+    "defaultModuleRelativeSerializationPath": "serialization"
   }
 }

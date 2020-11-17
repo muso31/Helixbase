@@ -39,8 +39,9 @@ The Rendering Host and Content Management instance will load in your browser onc
 1. Install [Sitecore Experience Platform 10 Initial Release](https://dev.sitecore.net/Downloads/Sitecore_Experience_Platform/100/Sitecore_Experience_Platform_100.aspx)
 2. Install [Sitecore Management Services](https://doc.sitecore.com/developers/100/developer-tools/en/sitecore-management-services.html)
 3. Clone the repo and update the 'publishUrl' property in [Local.pubxml](https://github.com/muso31/Helixbase/blob/master/src/Website/website/Properties/PublishProfiles/Local.pubxml#L12) to the target IIS folder
-4. Use the 'Local' publish profile in the Helixbase.Website project to publish the solution
-5. Install [Sitecore CLI](https://doc.sitecore.com/developers/100/developer-tools/en/install-sitecore-command-line-interface.html) and push Sitecore items `dotnet sitecore ser push`
+4. Update the 'InstanceUri' in appsettings.Development.json 
+5. Use the 'Local' publish profile in the Helixbase.Environment.Platform project to publish the solution
+6. Install [Sitecore CLI](https://doc.sitecore.com/developers/100/developer-tools/en/install-sitecore-command-line-interface.html) and push Sitecore items `dotnet sitecore ser push`
 
 #### Using Helix Base:
 Refer to the [Hero Feature](https://github.com/muso31/Helixbase/tree/master/src/Feature/Hero/website) as an example.
