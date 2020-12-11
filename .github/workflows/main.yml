@@ -37,7 +37,7 @@ jobs:
           # Project Base Directory
           #baseDir: # optional
           # Sonar Login Token
-          token: 6d8251e548fd554dea1d6057ebd771ab4afbe470
+          token: ${{ secrets.SONAR_LOGIN_TOKEN }}
           # Sonar Server url
           url: https://ethisys-sonarq.azurewebsites.net/
           # SCM provider
