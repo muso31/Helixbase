@@ -21,7 +21,7 @@ jobs:
     - uses: actions/checkout@master
 
     - name: Add msbuild to PATH
-      uses: microsoft/setup-msbuild@v1.0.0
+      uses: microsoft/setup-msbuild@v1.0.2
 
     - name: MSBuild
      #working-directory: src
