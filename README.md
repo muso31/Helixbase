@@ -7,7 +7,7 @@ A Sitecore Helix based solution which can be used for Greenfield projects. Tackl
 
 * Glass Mapper v5 - with fluent configuration and automated mapping registration
 * Sitecore Content Serialization (SCS)
-* Sitecore 10 ready
+* Sitecore 10.0 Update-1 ready
 * Pre compiled Razor views
 * Bootstrap v4
 * Native dependency injection with auto controller registration
@@ -23,14 +23,13 @@ A Sitecore Helix based solution which can be used for Greenfield projects. Tackl
 * [Helix Check](https://github.com/marketplace/actions/helix-check) GitHub Action
 
 ## Setup Instructions
-*Helix Base uses the new csproj sdk format, if you would like to use the older format please see the [10.0 feature branch](https://github.com/muso31/Helixbase/tree/feature/10.0.0-old-csproj)  
 *Please Install Visual Studio 2017 Version 15.7 or higher as this project uses PackageReference
 
-1. Install [Sitecore Experience Platform 10 Initial Release](https://dev.sitecore.net/Downloads/Sitecore_Experience_Platform/100/Sitecore_Experience_Platform_100.aspx)
-2. Install [Sitecore Management Services](https://doc.sitecore.com/developers/100/developer-tools/en/sitecore-management-services.html)
+1. Install [Sitecore Experience Platform 10.0 Update-1](https://dev.sitecore.net/en/Downloads/Sitecore_Experience_Platform/100/Sitecore_Experience_Platform_100_Update1.aspx)
+2. Install [Sitecore Management Services](https://dev.sitecore.net/en/Downloads/Package_Management_Service/5x/Package_Management_Service_500.aspx)
 3. Clone the repo and update the 'publishUrl' property in [Local.pubxml](https://github.com/muso31/Helixbase/blob/master/src/Website/website/Properties/PublishProfiles/Local.pubxml#L12) to the target IIS folder
 4. Use the 'Local' publish profile in the Helixbase.Website project to publish the solution
-5. Install [Sitecore CLI](https://doc.sitecore.com/developers/100/developer-tools/en/install-sitecore-command-line-interface.html) and push Sitecore items `dotnet sitecore ser push`
+5. Install [Sitecore CLI](https://dev.sitecore.net/en/Downloads/Sitecore_CLI/2x/Sitecore_CLI_200.aspx) and push Sitecore items `dotnet sitecore ser push`
 
 #### Using Helix Base:
 Refer to the [Hero Feature](https://github.com/muso31/Helixbase/tree/master/src/Feature/Hero/website) as an example.
@@ -74,6 +73,8 @@ AppVeyor:
 ## Legacy Versions
 Legacy versions of Helix Base which are no longer updated or maintained can be found below:
 
+[Helix Base 10.0.0](https://github.com/muso31/Helixbase/tree/feature/10.0.0) (updated until 11/01/2021)  
+[Helix Base 10.0.0 None SDK project format](https://github.com/muso31/Helixbase/tree/feature/10.0.0-old-csproj) (updated until 11/01/2021)  
 [Helix Base 9.3.0](https://github.com/muso31/Helixbase/tree/feature/9.3.0) (updated until 30/08/2020)  
 [Helix Base 9.3.0 None SDK project format](https://github.com/muso31/Helixbase/tree/feature/9.3.0-old-csproj) (updated until 30/08/2020)  
 [Helix Base 9.2.0](https://github.com/muso31/Helixbase/tree/feature/9.2.0) (updated until 29/11/2019)  

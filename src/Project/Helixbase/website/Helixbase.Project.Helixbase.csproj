@@ -48,8 +48,8 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Sitecore.Kernel" Version="10.0.0" />
-    <PackageReference Include="Sitecore.Mvc" Version="10.0.0" />
-    <PackageReference Include="Sitecore.Mvc.Analytics" Version="10.0.0" />
+    <PackageReference Include="Sitecore.Kernel" Version="10.0.1" />
+    <PackageReference Include="Sitecore.Mvc" Version="10.0.1" />
+    <PackageReference Include="Sitecore.Mvc.Analytics" Version="10.0.1" />
   </ItemGroup>
 </Project>
