@@ -26,7 +26,7 @@ A Sitecore Helix based solution which can be used for Greenfield projects. Tackl
 *Please Install Visual Studio 2017 Version 15.7 or higher as this project uses PackageReference
 
 1. Install [Sitecore Experience Platform 10.0 Update-1](https://dev.sitecore.net/en/Downloads/Sitecore_Experience_Platform/100/Sitecore_Experience_Platform_100_Update1.aspx)
-2. Install [Sitecore Management Services](https://dev.sitecore.net/en/Downloads/Package_Management_Service/5x/Package_Management_Service_500.aspx)
+2. Install [Sitecore Management Services](https://doc.sitecore.com/developers/100/developer-tools/en/sitecore-management-services.html)
 3. Clone the repo and update the 'publishUrl' property in [Local.pubxml](https://github.com/muso31/Helixbase/blob/master/src/Website/website/Properties/PublishProfiles/Local.pubxml#L12) to the target IIS folder
 4. Use the 'Local' publish profile in the Helixbase.Website project to publish the solution
 5. Install [Sitecore CLI](https://dev.sitecore.net/en/Downloads/Sitecore_CLI/2x/Sitecore_CLI_200.aspx) and push Sitecore items `dotnet sitecore ser push`
