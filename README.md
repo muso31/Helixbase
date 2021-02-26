@@ -7,7 +7,7 @@ A Sitecore Helix based solution which can be used for Greenfield projects. Tackl
 
 * Glass Mapper v5 - with fluent configuration and automated mapping registration
 * Sitecore Content Serialization (SCS)
-* Sitecore 10.0 Update-1 ready
+* Sitecore 10.1 ready
 * Pre compiled Razor views
 * Bootstrap v4
 * Native dependency injection with auto controller registration
