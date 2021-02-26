@@ -36,7 +36,7 @@
   <ItemGroup>
     <PackageReference Include="Glass.Mapper.Sc.100" Version="5.8.172" />
     <PackageReference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform" Version="2.0.1" />
-    <PackageReference Include="Sitecore.Kernel" Version="10.0.1" />
+    <PackageReference Include="Sitecore.Kernel" Version="10.1.0" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Core\website\Helixbase.Foundation.Core.csproj" />
