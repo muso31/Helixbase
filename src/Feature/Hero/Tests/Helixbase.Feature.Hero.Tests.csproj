@@ -5,6 +5,9 @@
     <Company>Ethisys Ltd</Company>
   </PropertyGroup>
   <ItemGroup>
+    <AdditionalFiles Include="$(SolutionDir)\rules\.refrules" />
+  </ItemGroup>
+  <ItemGroup>
     <PackageReference Include="AutoFixture" Version="3.51.0" />
     <PackageReference Include="FluentAssertions" Version="4.19.4" />
     <PackageReference Include="Glass.Mapper.Sc.101.Core" Version="5.8.177" />
@@ -12,6 +15,7 @@
     <PackageReference Include="MSTest.TestAdapter" Version="1.2.0" />
     <PackageReference Include="MSTest.TestFramework" Version="1.2.0" />
     <PackageReference Include="NSubstitute" Version="2.0.3" />
+    <PackageReference Include="ReferenceCopAnalyzer" Version="0.2.0" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Foundation\Core\website\Helixbase.Foundation.Core.csproj" />

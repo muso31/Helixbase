@@ -13,6 +13,9 @@
     <ProjectCapability Include="SupportsSystemWeb" />
   </ItemGroup>
   <ItemGroup>
+    <AdditionalFiles Include="$(SolutionDir)\rules\.refrules" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Remove="Views\web.config" />
     <Content Remove="Web.config" />
     <Content Remove="Web.Debug.config" />
@@ -52,6 +55,7 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="ReferenceCopAnalyzer" Version="0.2.0" />
     <PackageReference Include="Sitecore.ContentSearch.Linq" Version="10.1.0" />
     <PackageReference Include="Sitecore.Kernel" Version="10.1.0" />
     <PackageReference Include="Sitecore.Mvc" Version="10.1.0" />

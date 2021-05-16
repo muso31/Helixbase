@@ -8,6 +8,9 @@
 	<Company>Ethisys Ltd</Company>
   </PropertyGroup>
   <ItemGroup>
+    <AdditionalFiles Include="$(SolutionDir)\rules\.refrules" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Remove="Web.config" />
     <Content Remove="Web.Debug.config" />
     <Content Remove="Web.Release.config" />
@@ -29,6 +32,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform" Version="2.0.1" />
+    <PackageReference Include="ReferenceCopAnalyzer" Version="0.2.0" />
     <PackageReference Include="Sitecore.ContentSearch" Version="10.1.0" />
     <PackageReference Include="Sitecore.Kernel" Version="10.1.0" />
   </ItemGroup>

@@ -1,0 +1,58 @@
+# This file describes the references that are allowed between different modules (in the context of Helix: https://helix.sitecore.com/principles/architecture-principles/modules.html)
+# More info about the intended use: https://github.com/hermanussen/ReferenceCopAnalyzer
+# Every Visual Studio project should have the following for this to work properly:
+# 1. A package reference to ReferenceCopAnalyzer
+# 2. A reference to this file: <AdditionalFiles Include="$(SolutionDir)\rules\.refrules" />
+
+# Dependencies flow from project to feature to foundation
+[ca].Project.* [ca].Feature.*
+[ca].Feature.* [ca].Foundation.*
+
+# Foundation projects are allowed to reference each other
+[ca].Foundation.* [ca].Foundation.*
+
+# Controllers are allowed to reference various things within the same module
+[ca].Feature.[f].Controllers [ca].Feature.[f].Models
+[ca].Feature.[f].Controllers [ca].Feature.[f].Mediators
+[ca].Feature.[f].Controllers [ca].Feature.[f].Factories
+[ca].Feature.[f].Controllers [ca].Feature.[f].Services
+
+# DI is allowed to reference everything within the same module
+[ca].Feature.[f].DI [ca].Feature.[f].*
+
+# Factories are allowed to deal with models and viewmodels within the same module
+[ca].Feature.[f].Factories [ca].Feature.[f].Models
+[ca].Feature.[f].Factories [ca].Feature.[f].ViewModels
+
+# Mediators deal with factories, services and viewmodels
+[ca].Feature.[f].Mediators [ca].Feature.[f].Factories
+[ca].Feature.[f].Mediators [ca].Feature.[f].Services
+[ca].Feature.[f].Mediators [ca].Feature.[f].ViewModels
+
+# ORM and services are allowed to deal with models, but should perhaps get more freedom to call into other things
+[ca].Feature.[f].Services [ca].Feature.[f].Models
+[ca].Feature.[f].ORM [ca].Feature.[f].Models
+
+# Commands and pipelines can reference anything deeper than their own namespace
+[ca].Feature.[f].Commands.* [ca].Feature.[f].Commands.*
+[ca].Feature.[f].Pipelines.* [ca].Feature.[f].Commands.*
+
+# These things are so widely used and not relevant for checking that we can allow references to them from everywhere
+* Microsoft.Extensions.DependencyInjection
+* System
+* System.*
+* Sitecore
+* Sitecore.*
+* Glass.Mapper
+* Glass.Mapper.*
+
+# Unit tests should only reference modules that their name implies they refer to
+[ca].Foundation.[f].Tests.* [ca].Foundation.[f].*
+[ca].Feature.[f].Tests.* [ca].Feature.[f].*
+[ca].Project.[f].Tests.* [ca].Project.[f].*
+
+# Tests can make use of some test related libraries
+*.Tests.* FluentAssertions
+*.Tests.* Ploeh.AutoFixture
+*.Tests.* NSubstitute
+*.Tests.* Microsoft.VisualStudio.TestTools.UnitTesting

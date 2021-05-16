@@ -10,6 +10,9 @@
 	<Company>Ethisys Ltd</Company>
   </PropertyGroup>
   <ItemGroup>
+    <AdditionalFiles Include="$(SolutionDir)\rules\.refrules" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectCapability Include="SupportsSystemWeb" />
   </ItemGroup>
   <ItemGroup>
@@ -48,6 +51,7 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="ReferenceCopAnalyzer" Version="0.2.0" />
     <PackageReference Include="Sitecore.Kernel" Version="10.1.0" />
     <PackageReference Include="Sitecore.Mvc" Version="10.1.0" />
     <PackageReference Include="Sitecore.Mvc.Analytics" Version="10.1.0" />
