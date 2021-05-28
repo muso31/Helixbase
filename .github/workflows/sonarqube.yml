@@ -1,0 +1,57 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Code Analysis
+
+# Controls when the action will run. 
+on:
+  # Triggers the workflow on push or pull request events but only for the master branch
+  push:
+    branches: [ master, main, develop ]
+  pull_request:
+    branches: [ master, main, develop ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+
+      - name: SonarQube Scanner Action
+        # You may pin to the exact commit or the version.
+        # uses: philips-software/sonar-scanner-action@ef83739514c95cc6f80ecf5bf34f6bef4db557e4
+        uses: philips-software/sonar-scanner-action@v1.2.0
+        with:
+          # Sonar Project name
+          projectName: helixbase
+          # Sonar Project Key
+          projectKey: helixbase
+          # Project Base Directory
+          #baseDir: # optional
+          # Sonar Login Token
+          token: ${{ secrets.SONAR_LOGIN_TOKEN }}
+          # Sonar Server url
+          url: https://ethisys-sonarq.azurewebsites.net/
+          # SCM provider
+          #scmProvider: # optional, default is git
+          # Encoding of the source files
+          #sourceEncoding: # optional, default is UTF-8
+          # Decorate a pull request. PR, branch and base are extracted from the pull request event
+          #enablePullRequestDecoration: # optional
+          # Generate sonar configuration, scanner will not be invoked. Sonar parameters are available as output
+          #onlyConfig: # optional
+          # Flags if your SonarQube instance is Community edition. Skips setting PRs/branches and defaults to master
+          #isCommunityEdition: # optional
+          # Run the quality gate associated to this repo in SonarQube
+         # runQualityGate: # optional
+          # Number of seconds until build is failed for not passing quailty gate. Defaulted to 300 by SonarQube
+          #qualityGateTimeout: # optional
+      

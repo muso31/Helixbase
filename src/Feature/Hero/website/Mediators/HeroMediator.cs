@@ -22,8 +22,8 @@ namespace Helixbase.Feature.Hero.Mediators
         }
 
         /// <summary>
-        ///     Mediator pattern is overkill in this instance, but here as an example to return response codes to a controller, and
-        ///     keep the controller dumb as a result
+        ///     Mediator pattern could be overkill in this instance, but here as an example to return response codes to a controller, and
+        ///     keep the controller dumb as a result. Also enables little/none error handling in views.
         /// </summary>
         /// <returns>A mediator response with the result of the view model instantiation</returns>
         public MediatorResponse<HeroViewModel> RequestHeroViewModel()

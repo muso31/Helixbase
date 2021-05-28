@@ -1,0 +1,136 @@
+﻿---
+ID: "c60965d4-c0a0-41e5-9b8f-b70d3e0840b7"
+Parent: "86e2276a-437f-492f-b1b9-cedbb3b9da88"
+Template: "d9bdf22f-6e17-47f3-ab64-49c717ba92da"
+Path: /sitecore/system/Settings/Rules/Item Saved/Rules/Clear Script Cache
+SharedFields:
+- ID: "908ef45d-4940-4b6a-857d-3739ba4acf8f"
+  Hint: Rule
+  Value: |
+    <ruleset>
+      <rule
+        uid="{FD2750F4-0946-4E7E-95BF-D7C9887F276E}">
+        <conditions>
+          <condition
+            id="{C186B6C0-C702-4A05-93E4-982F1FCF16AE}"
+            uid="C6148C514836445DA7EB231BEA19BC32"
+            FieldTypeName="Rules"
+            operatorid="{10537C58-1684-4CAB-B4C0-40C10907CE31}" />
+        </conditions>
+        <actions>
+          <action
+            id="{94C5C335-0902-4B45-B528-11B220005DD7}"
+            uid="{40EB6906-5525-4128-8C74-F358A65DB3E6}"
+            scriptid="{6826A276-06EA-4046-826E-E30FD2E89327}" />
+        </actions>
+      </rule>
+    </ruleset>
+Languages:
+- Language: da
+  Fields:
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: Ryd scriptcache
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20161221T104351Z
+    - ID: "45cf9130-802a-41be-b3eb-c02f657dcc2e"
+      Hint: Name
+      Value: Ryd regelcache
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "33119496-c8bf-4389-a867-4be015c1b908"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\unicorn
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20200831T172615Z
+- Language: "de-DE"
+  Fields:
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: Script Cache leeren
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20161221T104827Z
+    - ID: "45cf9130-802a-41be-b3eb-c02f657dcc2e"
+      Hint: Name
+      Value: Regel Cache löschen
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "354226ec-0a38-46ff-bebd-331cd21f094f"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\unicorn
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20200831T172615Z
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20081209T114500
+    - ID: "45cf9130-802a-41be-b3eb-c02f657dcc2e"
+      Hint: Name
+      Value: Clear Rules Cache
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "93d0d26c-02cc-4a86-9b70-b4f6906aedb4"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\unicorn
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20200831T172615Z
+- Language: "ja-JP"
+  Fields:
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: スクリプト キャッシュのクリア
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20161221T105233Z
+    - ID: "45cf9130-802a-41be-b3eb-c02f657dcc2e"
+      Hint: Name
+      Value: ルール キャッシュのクリア
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "d1aa86cc-b43f-428f-88e0-3c2dd9957cbd"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\unicorn
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20200831T172615Z
