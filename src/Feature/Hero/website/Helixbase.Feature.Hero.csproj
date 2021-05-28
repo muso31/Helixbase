@@ -23,15 +23,12 @@
     <None Remove="App_Config\Include\Feature\Feature.Hero.RegisterContainer.config" />
     <None Remove="App_Config\Include\Feature\Feature.Hero.RegisterMappings.config" />
     <None Remove="App_Config\Include\Feature\Feature.Hero.Routes.config" />
-    <None Remove="Views\Hero\Error.cshtml" />
-    <None Remove="Views\Hero\Hero.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Config\Include\Feature\Feature.Hero.Mvc.config" />
     <Content Include="App_Config\Include\Feature\Feature.Hero.RegisterContainer.config" />
     <Content Include="App_Config\Include\Feature\Feature.Hero.RegisterMappings.config" />
     <Content Include="App_Config\Include\Feature\Feature.Hero.Routes.config" />
-    <Content Include="Views\Hero\Error.cshtml" />
     <Content Include="Views\Hero\Hero.cshtml" />
   </ItemGroup>
   <ItemGroup>

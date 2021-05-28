@@ -1,7 +1,7 @@
-﻿using Sitecore.Mvc.Controllers;
-using System.Web.Mvc;
-using Helixbase.Feature.Hero.Mediators;
+﻿using Helixbase.Feature.Hero.Mediators;
 using Helixbase.Foundation.Core.Exceptions;
+using Sitecore.Mvc.Controllers;
+using System.Web.Mvc;
 
 namespace Helixbase.Feature.Hero.Controllers
 {
@@ -21,8 +21,9 @@ namespace Helixbase.Feature.Hero.Controllers
             switch (mediatorResponse.Code)
             {
                 case MediatorCodes.HeroResponse.DataSourceError:
+                    return View("~/views/Core/Warning.cshtml", mediatorResponse.MessageViewModel);
                 case MediatorCodes.HeroResponse.ViewModelError:
-                    return View("~/views/Hero/Error.cshtml");
+                    return View("~/views/Core/Error.cshtml", mediatorResponse.MessageViewModel);
                 case MediatorCodes.HeroResponse.Ok:
                     return View(mediatorResponse.ViewModel);
                 default:

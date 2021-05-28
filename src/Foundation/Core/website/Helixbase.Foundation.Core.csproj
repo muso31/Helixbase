@@ -14,9 +14,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Remove="App_Config\Include\Foundation\Foundation.Core.RegisterContainer.config" />
+    <None Remove="Views\Core\Error.cshtml" />
+    <None Remove="Views\Core\Info.cshtml" />
+    <None Remove="Views\Core\Warning.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Config\Include\Foundation\Foundation.Core.RegisterContainer.config" />
+    <Content Include="Views\Core\Error.cshtml" />
+    <Content Include="Views\Core\Info.cshtml" />
+    <Content Include="Views\Core\Warning.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Web.config" />
