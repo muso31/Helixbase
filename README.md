@@ -7,7 +7,7 @@ A Sitecore Helix based solution which can be used for Greenfield projects. Tackl
 
 * Glass Mapper v5 - with fluent configuration and automated mapping registration
 * Sitecore Content Serialization (SCS)
-* Sitecore 10.1 ready
+* Sitecore 10.1.1 ready
 * Pre compiled Razor views
 * Bootstrap v4
 * Native dependency injection with auto controller registration
@@ -25,7 +25,7 @@ A Sitecore Helix based solution which can be used for Greenfield projects. Tackl
 ## Setup Instructions
 *Please Install Visual Studio 2017 Version 15.7 or higher as this project uses PackageReference
 
-1. Install [Sitecore Experience Platform 10.1](https://dev.sitecore.net/Downloads/Sitecore_Experience_Platform/101/Sitecore_Experience_Platform_101.aspx)
+1. Install [Sitecore Experience Platform 10.1.1](https://dev.sitecore.net/Downloads/Sitecore_Experience_Platform/101/Sitecore_Experience_Platform_101_Update1.aspx)
 2. Install [Sitecore Management Services](https://doc.sitecore.com/developers/101/developer-tools/en/sitecore-management-services.html), documentation [here](https://doc.sitecore.com/developers/101/developer-tools/en/sitecore-command-line-interface.html)
 3. Clone the repo and update the 'publishUrl' property in [Local.pubxml](https://github.com/muso31/Helixbase/blob/master/src/Website/website/Properties/PublishProfiles/Local.pubxml#L12) to the target IIS folder
 4. Use the 'Local' publish profile in the Helixbase.Website project to publish the solution

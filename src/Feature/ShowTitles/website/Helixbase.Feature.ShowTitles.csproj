@@ -29,6 +29,6 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform" Version="2.0.1" />
-    <PackageReference Include="Sitecore.Kernel" Version="10.1.0" />
+    <PackageReference Include="Sitecore.Kernel" Version="10.1.1" />
   </ItemGroup>
 </Project>
