@@ -87,10 +87,3 @@ Legacy versions of Helix Base which are no longer updated or maintained can be f
 A repository now exists for Helix Base compatible modules:
 
 [Helix Base modules](https://github.com/muso31/Helixbase-modules)
-
-
-## Collaborators
-Special mention to those who collaborate on the project:
-
-[Richard Szalay](https://github.com/richardszalay)  
-[Steve McGill](https://github.com/steviemcg)
