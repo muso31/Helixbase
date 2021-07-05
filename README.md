@@ -72,7 +72,8 @@ AppVeyor:
 
 ## Legacy Versions
 Legacy versions of Helix Base which are no longer updated or maintained can be found below:
-
+  
+[Helix Base 10.1.0](https://github.com/muso31/Helixbase/tree/feature/10.1.0) (updated until 05/07/2021)  
 [Helix Base 10.0.1](https://github.com/muso31/Helixbase/tree/feature/10.0.1) (updated until 26/02/2021)  
 [Helix Base 10.0.0](https://github.com/muso31/Helixbase/tree/feature/10.0.0) (updated until 11/01/2021)  
 [Helix Base 10.0.0 None SDK project format](https://github.com/muso31/Helixbase/tree/feature/10.0.0-old-csproj) (updated until 11/01/2021)  
