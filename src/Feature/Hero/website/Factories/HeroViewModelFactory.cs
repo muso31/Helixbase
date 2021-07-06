@@ -14,7 +14,7 @@ namespace Helixbase.Feature.Hero.Factories
             _glassHtml = glassHtml;
         }
 
-        public HeroViewModel CreateHeroViewModel(IHero heroItemDataSource, bool isExperienceEditor)
+        public HeroViewModel CreateHeroViewModel(IHeroContentType heroItemDataSource, bool isExperienceEditor)
         {
             return new HeroViewModel
             {

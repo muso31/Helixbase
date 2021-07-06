@@ -17,6 +17,20 @@ namespace Helixbase.Feature.Hero.ORM
         }
     }
 
+    public class ContentTypeGlassMappings : SitecoreGlassMap<IHeroContentType>
+    {
+        public override void Configure()
+        {
+            Map(config =>
+            {
+                ImportMap<IHero>();
+                config.AutoMap();
+                config.TemplateId(Constants.HeroContentType.TemplateId);
+            });
+        }
+    }
+
+
     public class GlassBaseMappings : SitecoreGlassMap<IHeroGlassBase>
     {
         public override void Configure()

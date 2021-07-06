@@ -26,9 +26,9 @@ namespace Helixbase.Feature.Hero.Services
         ///     Get an item using the rendering repository
         /// </summary>
         /// <returns>The Hero datasource item from the Content API</returns>
-        public IHero GetHeroItems()
+        public IHeroContentType GetHeroItems()
         {
-            var dataSource = _renderingRepository.GetDataSourceItem<IHero>();
+            var dataSource = _renderingRepository.GetDataSourceItem<IHeroContentType>();
 
             // Basic example of using the wrapped logger
             if (dataSource == null)

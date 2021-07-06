@@ -5,6 +5,6 @@ namespace Helixbase.Feature.Hero.Factories
 {
     public interface IHeroViewModelFactory
     {
-        HeroViewModel CreateHeroViewModel(IHero heroItemDataSource, bool isExperienceEditor);
+        HeroViewModel CreateHeroViewModel(IHeroContentType heroItemDataSource, bool isExperienceEditor);
     }
 }
