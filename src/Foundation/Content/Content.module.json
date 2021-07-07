@@ -57,7 +57,27 @@
         "path": "/sitecore/content/Applications/WebEdit/Custom Experience Buttons/Feature",
         "database": "core",
         "scope": "SingleItem"
+      },
+      {
+        "name": "SPE.Module",
+        "path": "/sitecore/system/Modules/PowerShell",
+        "database": "master",
+        "rules": [
+          {
+            "path": "/Script Library/SPE",
+            "scope": "ignored"
+          },
+          {
+            "path": "/Script Library",
+            "scope": "ItemAndDescendants"
+          },
+          {
+            "path": "*",
+            "scope": "ignored"
+          }
+        ]
       }
+
     ]
   }
 }

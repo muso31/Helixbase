@@ -1,0 +1,45 @@
+﻿---
+ID: "1dbc7e7f-49cb-4cb2-a5a1-bbb3ffa52900"
+Parent: "1db93acc-68dc-4b40-acbc-60ebfccc6d9d"
+Template: "dd22f1b3-bd87-4db2-9e7d-f7a496888d43"
+Path: "/sitecore/system/Modules/PowerShell/Script Library/Source Generator/Functions/Configure-FieldMappings"
+SharedFields:
+- ID: "b1a94ff0-6897-47c0-9c51-aa6acb80b1f0"
+  Hint: Script
+  Value: |
+    	#add mappings here
+    	$fieldMappings = @{}
+    	$fieldMappings.Add('Integer','int')
+    	$fieldMappings.Add('Checkbox','bool')
+    	$fieldMappings.Add('Single-Line Text','string')
+    	$fieldMappings.Add('Number','int')
+    	$fieldMappings.Add('General Link','Link')
+    	$fieldMappings.Add('Multi-Line Text','string')
+    	$fieldMappings.Add('Rich Text','string')
+    	$fieldMappings.Add('Date','DateTime')
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210706T171415Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "ac51810c-2b09-482d-81e1-3c36394c4129"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20210706T173142Z

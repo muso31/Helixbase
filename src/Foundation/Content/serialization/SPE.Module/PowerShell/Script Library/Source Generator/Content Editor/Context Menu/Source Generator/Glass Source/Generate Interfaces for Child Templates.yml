@@ -1,0 +1,94 @@
+﻿---
+ID: "e88a0b0b-146d-4f70-a8a4-64ed8a25b75c"
+Parent: "ec6e7a80-011c-4471-96ce-714e9227b191"
+Template: "dd22f1b3-bd87-4db2-9e7d-f7a496888d43"
+Path: /sitecore/system/Modules/PowerShell/Script Library/Source Generator/Content Editor/Context Menu/Source Generator/Glass Source/Generate Interfaces for Child Templates
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: Business/32x32/note_edit.png
+- ID: "1c76313e-3c8c-4807-a826-135d10c39299"
+  Hint: ShowRule
+  Value: |
+    <ruleset>
+      <rule
+        uid="{DDCF1B30-222A-4D9E-9A37-19AF49507033}">
+        <conditions>
+          <condition
+            id="{5DE6D53E-EA62-4D17-8BDD-FEBCD80AC07B}"
+            uid="F9B20F4D24574E9D829AD5E911DC42CA"
+            templateid="{0437FEE2-44C9-46A6-ABE9-28858D9FEE8C}" />
+        </conditions>
+      </rule>
+    </ruleset>
+- ID: "b1a94ff0-6897-47c0-9c51-aa6acb80b1f0"
+  Hint: Script
+  Value: |
+    Import-Function "Append-ContentOrPageType"
+    Import-Function "Clean-ItemName"
+    Import-Function "Configure-FieldMappings"
+    
+    function Build-Properties {
+    	param(
+    		[string]$ItemName,
+    		[string]$FieldType
+    	)
+    
+    	if ($fieldMappings.ContainsKey($fieldType)) {
+    		$fieldType = $fieldMappings.$fieldType
+    	}
+    
+    	$cSharpProperty = Clean-ItemName -StringToClean $ItemName
+    
+    	Write-Host "`t`t$fieldType $cSharpProperty { get; set; }`n"
+    }
+    
+    Get-ChildItem -Path $SitecoreContextItem.FullPath | Where-Object { $_.TemplateName -eq 'Template' } | ForEach-Object {
+    
+    	$className = Append-ContentOrPageType -StringToClean $_.Name -ItemPath $_.FullPath
+    
+    	Write-Host ("`tpublic interface I{0}" -f $className)
+    	Write-Host "`t{"
+    
+    	#find template fields to create properties 
+    	Get-ChildItem -Path $_.FullPath -Recurse | Where-Object { $_.TemplateName -eq 'Template Field' } | ForEach-Object {
+    
+    			Build-Properties -Item $_.Name -FieldType $_.Type
+    
+    	}
+    
+    	Write-Host "`t}"
+    }
+    
+    Show-Result -Text
+    
+    Close-Window 
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 900
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210629T155953Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "cfeca707-5456-4796-82e1-5ed20a2fd5ed"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20210706T171609Z

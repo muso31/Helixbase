@@ -1,0 +1,98 @@
+﻿---
+ID: "0d6f5bb0-cbe2-4203-9077-fad3791de037"
+Parent: "ec6e7a80-011c-4471-96ce-714e9227b191"
+Template: "dd22f1b3-bd87-4db2-9e7d-f7a496888d43"
+Path: /sitecore/system/Modules/PowerShell/Script Library/Source Generator/Content Editor/Context Menu/Source Generator/Glass Source/Generate Fluent Mappings for Child Templates
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: Business/32x32/index_edit.png
+- ID: "1c76313e-3c8c-4807-a826-135d10c39299"
+  Hint: ShowRule
+  Value: |
+    <ruleset>
+      <rule
+        uid="{DDCF1B30-222A-4D9E-9A37-19AF49507033}">
+        <conditions>
+          <condition
+            id="{5DE6D53E-EA62-4D17-8BDD-FEBCD80AC07B}"
+            uid="5973EAA084CE4964A1311360F1C78E7E"
+            templateid="{0437FEE2-44C9-46A6-ABE9-28858D9FEE8C}" />
+        </conditions>
+      </rule>
+    </ruleset>
+- ID: "b1a94ff0-6897-47c0-9c51-aa6acb80b1f0"
+  Hint: Script
+  Value: |
+    Import-Function "Append-ContentOrPageType"
+    
+    function Get-Fields {
+    	param(
+    		[string]$FullPath
+    	)
+    
+    
+    	#template fields on this item with a space 
+    	Get-ChildItem -Path $_.FullPath -Recurse | Where-Object { ($_.TemplateName -eq 'Template Field') -and ($_.Name -like "* *") } | ForEach-Object {
+    
+    		$propName = $_.Name.Replace(' ','')
+    	Write-Host ("`t`t`t config.Field(f => f.{0}).FieldName(""{1}"");" -f $propName,$_.Name)
+    
+    	}
+    
+    }
+    
+    Get-ChildItem -Path $SitecoreContextItem.FullPath | Where-Object { $_.TemplateName -eq 'Template' } | ForEach-Object {
+    
+    	$itemName = Append-ContentOrPageType -StringToClean $_.Name -ItemPath $_.FullPath
+    
+    
+    	Write-Host ("`tpublic class {0}Mappings : SitecoreGlassMap<I{1}>" -f $itemName,$itemName)
+    	Write-Host ("`t{")
+    	Write-Host ("`t`tpublic override void Configure()")
+    	Write-Host ("`t`t{")
+    	Write-Host ("`t`t`tMap(config =>")
+    	Write-Host ("`t`t`t{")
+    	Write-Host ("`t`t`t config.AutoMap();")
+    	Write-Host ("`t`t`t config.TemplateId(Constants.Templates.{0});" -f $itemName,$itemName)
+    
+    
+    	Get-Fields -FullPath $_.FullPath
+    
+    	Write-Host ("`t`t`t});")
+    	Write-Host ("`t`t}")
+    	Write-Host ("`t}")
+    	Write-Host
+    }
+    Show-Result -Text
+    
+    Close-Window 
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 500
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210629T155953Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "948904c3-488f-45bb-979d-2cf0f574b62d"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20210707T065946Z
