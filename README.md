@@ -46,6 +46,9 @@ If you do not require a feature you can easily delete it.
 ### Renaming Solution / Projects
 To rename the Visual Studio Solution, Helix Module Projects and Project references from 'Helixbase' to a new project name, run [rename.ps1](https://github.com/muso31/Helixbase/blob/master/tools/rename.ps1) -ProjectName [NewProjectName]'. 
 
+### OPTIONAL: Automatic C# generation
+[SPE scripts](https://github.com/muso31/Helixbase/tree/master/src/Foundation/Content/serialization/SPE.Module)  exist to automatically generate C#, read more about [source generation](https://nshackblog.wordpress.com/2021/07/07/spe-auto-generating-c-for-sitecore-with-a-right-click/). 
+
 ## Build
 
 Helix Base uses [helix-publishing-pipeline](https://github.com/richardszalay/helix-publishing-pipeline) and pre-configures a number of features.
