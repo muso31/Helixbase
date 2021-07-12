@@ -48,11 +48,10 @@ SharedFields:
     	Write-Host ("`t`t`t`treturn _mediatorService.GetMediatorResponse<{0}ViewModel>(" -f $ItemName)
     	Write-Host ("`t`t`t`t`tMediatorCodes.{0}Response.ViewModelError," -f $ItemName)
     	Write-Host ("`t`t`t`t`tmessageViewModel: new MessageViewModel(_{0}Service.IsExperienceEditor, Messages.ViewModelError, Messages.Header));" -f $itemNameLowerCaseFirst)
+    	Write-Host ("`t`t`t}")
     
     	Write-Host ("`n`n`t`t`treturn _mediatorService.GetMediatorResponse(MediatorCodes.{0}Response.Ok, viewModel);" -f $ItemName)
     
-    
-    	Write-Host ("`t`t`t}")
     	Write-Host "`t`t}"
     	Write-Host "`t}"
     
@@ -81,11 +80,11 @@ Languages:
         sitecore\Admin
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "3cb8eb66-2b29-4f0a-b5f2-25872bf18a6f"
+      Value: "0f11dc7a-ab2a-427f-8c5b-711adf459e59"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\Admin
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20210712T105104Z
+      Value: 20210712T122924Z
