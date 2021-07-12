@@ -22,7 +22,7 @@ SharedFields:
     	Write-Host ("`t`tprivate readonly IMediatorService _mediatorService;")
     	Write-Host ("`t`tprivate readonly I{0}ViewModelFactory _{1}ViewModelFactory;" -f $ItemName,$itemNameLowerCaseFirst)
     
-    	Write-Host ("`n`t`tpublic {0}Mediator(I{1}Service {2}Service, IMediatorService mediatorService, I{3}ViewModelFactory {4}ViewModelFactory" -f $ItemName,$ItemName,$itemNameLowerCaseFirst,$ItemName,$itemNameLowerCaseFirst)
+    	Write-Host ("`n`t`tpublic {0}Mediator(I{1}Service {2}Service, IMediatorService mediatorService, I{3}ViewModelFactory {4}ViewModelFactory)" -f $ItemName,$ItemName,$itemNameLowerCaseFirst,$ItemName,$itemNameLowerCaseFirst)
     	Write-Host ("`t`t{")
     	Write-Host ("`t`t`t_{0}Service = {1}Service;" -f $itemNameLowerCaseFirst,$itemNameLowerCaseFirst)
     	Write-Host ("`t`t`t_mediatorService = mediatorService;" -f $itemNameLowerCaseFirst,$itemNameLowerCaseFirst)
@@ -81,11 +81,11 @@ Languages:
         sitecore\Admin
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "a345c749-5b7c-4d8e-ba28-32d2e814cd1e"
+      Value: "96a111e7-8631-4b2f-811e-bde6111421af"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\Admin
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20210706T185822Z
+      Value: 20210712T103717Z
