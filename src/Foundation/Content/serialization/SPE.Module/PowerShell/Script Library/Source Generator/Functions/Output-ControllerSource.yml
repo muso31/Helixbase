@@ -37,7 +37,7 @@ SharedFields:
     	Write-Host ("`t`t`t`tcase MediatorCodes.{0}Response.ViewModelError:" -f $itemName)
     	Write-Host ("`t`t`t`t`treturn View(`"~/views/Core/Error.cshtml`", mediatorResponse.MessageViewModel);" -f $ItemName)
     	Write-Host ("`t`t`t`tcase MediatorCodes.{0}Response.Ok:" -f $ItemName)
-    	Write-Host ("`t`t`t`t`treturn View(mediatorResponse.MessageViewModel);")
+    	Write-Host ("`t`t`t`t`treturn View(mediatorResponse.ViewModel);")
     	Write-Host ("`t`t`t`tdefault:")
     	Write-Host ("`t`t`t`t`tthrow new InvalidMediatorResponseCodeException(mediatorResponse.Code);")
     	Write-Host ("`t`t`t}")
@@ -63,11 +63,11 @@ Languages:
         sitecore\Admin
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "79972547-8163-4d75-8f4e-54abce9f387c"
+      Value: "ffe3b029-8603-4846-9662-f8a0fad78013"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\Admin
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20210712T124246Z
+      Value: 20210714T090623Z
