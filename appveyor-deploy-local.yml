@@ -1,0 +1,49 @@
+version: 0.0.{build}
+skip_branch_with_pr: true
+image: Visual Studio 2017
+services:
+- iis
+- mssql2017
+install:
+- ps: >-
+     Install-Module ParTech.SimpleInstallScripts -RequiredVersion "0.0.89" -Force -SkipPublisherCheck -AllowClobber
+before_build:
+- ps: >-
+     Start-FileDownload 'https://ci.appveyor.com/api/projects/steviemcg/helixbase/artifacts/artifacts%2fHelixbase.Website.zip' wdp.zip
+build_script :
+- ps: >-
+    Install-Sitecore92 -Prefix "helixbase" `
+            -Parameters @{SitecoreSiteName="helixbase.sc.dev.local"} `
+            -DownloadBase $Env:DownloadBase `
+            -SitecoreVersion "920XP0" `
+            -DoInstallPrerequisites `
+            -DoRebuildLinkDatabases:$false `
+            -DoRebuildSearchIndexes:$false `
+            -DoDeployMarketingDefinitions:$false `
+            -SQLServer . `
+            -SqlAdminUser sa `
+            -SqlAdminPassword 'Password12!'
+after_build:
+- ps: >-
+    & "C:\Program Files\IIS\Microsoft Web Deploy V3\msdeploy.exe" `
+            -verb:sync -source:package=wdp.zip `
+            -dest:auto,includeAcls=`"False`" `
+            -enableRule:DoNotDeleteRule `
+            -disableLink:AppPoolExtension `
+            -disableLink:ContentExtension `
+            -disableLink:CertificateExtension `
+            -setParam:name=`"IIS Web Application Name`",value=`"helixbase.sc.dev.local`"
+
+    Import-Module .\build\functions.psm1
+
+    $UnicornSecret = -join ((48..57) + (97..122) | Get-Random -Count 64 | ForEach-Object {[char]$_})
+    
+    $WebRootPath = "c:\inetpub\wwwroot\helixbase.sc.dev.local"
+    
+    Set-SourceFolder ".\build\SourceFolder.config" $WebRootPath "$WebRootPath\App_Data\unicorn"
+    
+    Set-Unicorn-Shared-Secret ".\build\Unicorn.SharedSecret.config" $WebRootPath $UnicornSecret
+    
+    Sync-Unicorn -ControlPanelUrl "http://helixbase.sc.dev.local/unicorn.aspx" -SharedSecret $UnicornSecret
+test_script:
+- ps: 'Test-Site "http://helixbase.sc.dev.local"'
