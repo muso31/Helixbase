@@ -20,7 +20,7 @@ SharedFields:
     Write-Host "`t{"
     Write-Host ("`t`tprivate readonly IGlassHtml glassHtml;")
     
-    Write-Host ("`n`t`tpublic {0}ViewModelFactory(IGlassHtml _glassHtml)" -f $ItemName)
+    Write-Host ("`n`t`tpublic {0}ViewModelFactory(IGlassHtml glassHtml)" -f $ItemName)
     Write-Host ("`t`t{")
     Write-Host ("`t`t`t_glassHtml = glassHtml;")
     Write-Host ("`t`t}")
