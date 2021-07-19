@@ -1,0 +1,89 @@
+﻿---
+ID: "cba15993-6290-4079-82ce-adfd24484104"
+Parent: "0ff79fad-bb66-411d-b472-3e361d2fc708"
+Template: "dd22f1b3-bd87-4db2-9e7d-f7a496888d43"
+Path: /sitecore/system/Modules/PowerShell/Script Library/Source Generator/Content Editor/Context Menu/Source Generator/Generic Source/Create Controller Rendering from Sublayout
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: Software/32x32/element_selection.png
+- ID: "1c76313e-3c8c-4807-a826-135d10c39299"
+  Hint: ShowRule
+  Value: |
+    <ruleset>
+      <rule
+        uid="{4AB78121-13BB-4052-8A86-0D4F72339F08}">
+        <conditions>
+          <condition
+            id="{5DE6D53E-EA62-4D17-8BDD-FEBCD80AC07B}"
+            uid="DE01951D6D514F5896DD1CECC3871501"
+            templateid="{0A98E368-CDB9-4E1E-927C-8E0C24A003FB}" />
+        </conditions>
+      </rule>
+    </ruleset>
+- ID: "b1a94ff0-6897-47c0-9c51-aa6acb80b1f0"
+  Hint: Script
+  Value: |
+    Import-Function "Clean-ItemName"
+    
+    #add mappings here
+    $fieldsToCopy = @( 'Datasource Location','Datasource Template','Placeholder','Parameters Template','Open Properties after Add','Data source','Cacheable','ClearOnIndexUpdate','VaryByData','VaryByDevice','VaryByLogin','VaryByParm','VaryByQueryString','VaryByUser')
+    
+    #user prompt
+    $props = @{
+    	Parameters = @(
+    		@{ Name = "controllerRenderingPath"; Title = "Item Path"; Editor = "droptree"; Source = "/sitecore/layout/Renderings"; Tooltip = "New contoller rendering path" }
+    	)
+    	Title = "Select a Path"
+    	Description = "Select a path for the new controller rendering."
+    	Width = 300
+    	Height = 300
+    	ShowHints = $true
+    }
+    
+    Read-Variable @props
+    
+    $itemName = Clean-ItemName -StringToClean $SitecoreContextItem.Name
+    
+    $controllerRendering = New-Item -Path $controllerRenderingPath.Paths.FullPath -Name $itemName -ItemType "/sitecore/templates/System/Layout/Renderings/Controller rendering"
+    
+    
+    $controllerRendering.Editing.BeginEdit()
+    
+    
+    foreach ($field in $fieldsToCopy) {
+    	$controllerRendering.Fields[$field].Value = $SitecoreContextItem.Fields[$field].Value
+    }
+    
+    $controllerRendering.Editing.EndEdit()
+    
+    Write-Host ("Controller rendering ""{0}"" created at {1}" -f $itemName, $controllerRenderingPath.FullPath)
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 50
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20210629T092445Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "b6bea6b1-bb72-4e3e-a761-4432ac20f0bd"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20210719T110721Z
