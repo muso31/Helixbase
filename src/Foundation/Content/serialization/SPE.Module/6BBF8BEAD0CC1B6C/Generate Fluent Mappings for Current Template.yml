@@ -34,7 +34,6 @@ SharedFields:
     	#template fields on this item with a space 
     	Get-ChildItem -Path $_.FullPath -Recurse | Where-Object { ($_.TemplateName -eq 'Template Field') -and ($_.Name -like "* *") } | ForEach-Object {
     
-    		Output-MappedFields -Item $_.Name
     			$propName = $_.Name.Replace(' ','')
     	Write-Host ("`t`t`t config.Field(f => f.{0}).FieldName(""{1}"");" -f $propName,$_.Name)
     
@@ -84,11 +83,11 @@ Languages:
         sitecore\Admin
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "053445f8-a0cf-4d55-a414-1b38e0d050b8"
+      Value: "a59ce6df-3172-4d97-a390-449ddaa60eaf"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\Admin
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20210707T070111Z
+      Value: 20210721T102254Z
