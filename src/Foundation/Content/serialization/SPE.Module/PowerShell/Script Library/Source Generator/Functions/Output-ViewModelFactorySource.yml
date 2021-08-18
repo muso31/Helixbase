@@ -18,7 +18,7 @@ SharedFields:
     
     Write-Host ("`tpublic class {0}ViewModelFactory : I{1}ViewModelFactory" -f $ItemName,$ItemName)
     Write-Host "`t{"
-    Write-Host ("`t`tprivate readonly IGlassHtml glassHtml;")
+    Write-Host ("`t`tprivate readonly IGlassHtml _glassHtml;")
     
     Write-Host ("`n`t`tpublic {0}ViewModelFactory(IGlassHtml glassHtml)" -f $ItemName)
     Write-Host ("`t`t{")
@@ -62,11 +62,11 @@ Languages:
         sitecore\Admin
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "f7be5e4a-b3c5-487d-b882-82a5dd997c92"
+      Value: "193f1f4e-294a-4098-8b18-0248d7594c02"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\Admin
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20210707T103232Z
+      Value: 20210818T103100Z
