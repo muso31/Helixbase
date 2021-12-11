@@ -12,7 +12,7 @@
     <PackageReference Include="MSTest.TestAdapter" Version="1.2.0" />
     <PackageReference Include="MSTest.TestFramework" Version="1.2.0" />
     <PackageReference Include="NSubstitute" Version="2.0.3" />
-    <PackageReference Include="Sitecore.Kernel" Version="10.1.1" />
+    <PackageReference Include="Sitecore.Kernel" Version="10.2.0" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\ORM\website\Helixbase.Foundation.ORM.csproj" />
