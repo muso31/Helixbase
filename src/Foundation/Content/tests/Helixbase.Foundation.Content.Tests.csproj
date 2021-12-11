@@ -7,7 +7,7 @@
   <ItemGroup>
     <PackageReference Include="AutoFixture" Version="3.51.0" />
     <PackageReference Include="FluentAssertions" Version="4.19.4" />
-    <PackageReference Include="Glass.Mapper.Sc.101.Core" Version="5.8.177" />
+    <PackageReference Include="Glass.Mapper.Sc.102.Core" Version="5.8.180" />
     <PackageReference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform" Version="2.0.1" />
     <PackageReference Include="MSTest.TestAdapter" Version="1.2.0" />
     <PackageReference Include="MSTest.TestFramework" Version="1.2.0" />
