@@ -71,12 +71,13 @@
           "description": "Generic identifier as to where the module came from. Used internally for error messaging. Do not set in a module file; it will be ignored."
         },
         "items": {
-          "description": "Configures content item serialization in this module",
-          "oneOf": [
-            {
-              "$ref": "#/allOf/1/definitions/SerializationModuleConfigurationItems"
-            }
-          ]
+          "$ref": "#/allOf/1/definitions/SerializationModuleConfigurationItems"
+        },
+        "roles": {
+          "type": "array",
+          "items": {
+            "$ref": "#/allOf/1/definitions/RolePredicateItem"
+          }
         }
       },
       "definitions": {
@@ -88,15 +89,19 @@
           ],
           "properties": {
             "path": {
-              "type": "string",
-              "description": "The relative physical path to store serialized item files at. Serialized items will be stored at this path using sub-directories named the same as the name attribute on their include.\nPrefix the path with ~/ for a root configuration relative path instead of a module-relative path. Use '$(module)' to insert the module name when using a root relative path.\nSet DefaultModuleRelativeSerializationPath on the root configuration to configure the default."
+              "type": "string"
             },
             "includes": {
               "type": "array",
-              "description": "Configure item paths to serialize in this module",
               "minItems": 1,
               "items": {
                 "$ref": "#/allOf/1/definitions/FilesystemTreeSpec"
+              }
+            },
+            "excludedFields": {
+              "type": "array",
+              "items": {
+                "$ref": "#/allOf/1/definitions/FieldFilter"
               }
             }
           }
@@ -111,28 +116,16 @@
           "properties": {
             "path": {
               "type": "string",
-              "description": "The Sitecore item path that forms the root of this include.",
               "minLength": 1
             },
             "scope": {
-              "description": "The scope of items to be serialized (how deep to traverse the tree)",
-              "oneOf": [
-                {
-                  "$ref": "#/allOf/1/definitions/TreeScope"
-                }
-              ]
+              "$ref": "#/allOf/1/definitions/TreeScope"
             },
             "allowedPushOperations": {
-              "description": "When pushing into Sitecore, what is allowed to happen when we detect changes?",
-              "oneOf": [
-                {
-                  "$ref": "#/allOf/1/definitions/AllowedPushOperations"
-                }
-              ]
+              "$ref": "#/allOf/1/definitions/AllowedPushOperations"
             },
             "rules": {
               "type": "array",
-              "description": "Additional rules to apply to children of the root path, i.e. exclusions, path aliases. Rules are executed in order; execution stops after the first matching rule is executed. Place the MOST SPECIFIC rules first.",
               "items": {
                 "$ref": "#/allOf/1/definitions/FilesystemTreeSpecRule"
               }
@@ -142,23 +135,20 @@
                 "integer",
                 "null"
               ],
-              "description": "Max item path length relative to the root before requiring use of path aliases to shorten paths. In most cases, this should be set globally in sitecore.json.",
               "format": "int32"
             },
             "name": {
               "type": "string",
-              "description": "Name of the subtree. Must be unique within the module. Serialized items will be stored in a folder by this name. Favor terse names.",
               "minLength": 1
             },
             "database": {
-              "type": "string",
-              "description": "The Sitecore database that this path is sourced from. Unless you really know what you're doing, do not change this."
+              "type": "string"
             }
           }
         },
         "TreeScope": {
           "type": "string",
-          "description": "The allowed scopes for a serialized tree root.\nNote that tree rules can modify what is included under a root,\nbut prefetched data ignores rules.",
+          "description": "",
           "x-enumNames": [
             "SingleItem",
             "ItemAndChildren",
@@ -174,7 +164,7 @@
         },
         "AllowedPushOperations": {
           "type": "string",
-          "description": "The allowed operations when pushing changed items to Sitecore.",
+          "description": "",
           "x-enumNames": [
             "CreateUpdateAndDelete",
             "CreateAndUpdate",
@@ -195,12 +185,10 @@
           "properties": {
             "path": {
               "type": "string",
-              "description": "Child path to apply the rule to. Should be relative to the TreeSpec path.",
               "minLength": 1,
               "pattern": "^(/.+|\\*)$"
             },
             "scope": {
-              "description": "Sets the scope of items that are included by this rule. Items that are not part of this scope are excluded by this rule.",
               "oneOf": [
                 {
                   "type": "null"
@@ -211,7 +199,6 @@
               ]
             },
             "allowedPushOperations": {
-              "description": "Overrides the allowed operations for this path and descendants (other paths will follow the TreeSpec allowed operations)",
               "oneOf": [
                 {
                   "type": "null"
@@ -222,14 +209,13 @@
               ]
             },
             "alias": {
-              "type": "string",
-              "description": "Defines a 'path alias' that allows subtrees within the subtree to be stored higher up the filesystem.\nFor example if the TreeSpec path was /sitecore/foo, and a rule was created /bar/baz -&gt; alias 'a',\nthen the /sitecore/foo/bar/baz/hello item would be stored on the filesystem as if its path were\n/a/hello instead of its full path.\n            \nUsed to circumvent long path length restrictions imposed by the OS."
+              "type": "string"
             }
           }
         },
         "TreeRuleScope": {
           "type": "string",
-          "description": "The included scope for a TreeSpecRule",
+          "description": "",
           "x-enumNames": [
             "Ignored",
             "SingleItem",
@@ -242,6 +228,247 @@
             "itemAndChildren",
             "itemAndDescendants"
           ]
+        },
+        "FieldFilter": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "fieldId": {
+              "type": "string"
+            },
+            "description": {
+              "type": "string"
+            }
+          }
+        },
+        "RolePredicateItem": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "domain": {
+              "type": "string"
+            },
+            "pattern": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    {
+      "title": "SerializationModuleConfiguration",
+      "type": "object",
+      "additionalProperties": {},
+      "required": [
+        "namespace"
+      ],
+      "properties": {
+        "$schema": {
+          "type": "string"
+        },
+        "namespace": {
+          "type": "string",
+          "description": "The namespace of the module. All resources in the module inherit this namespace.\nNamespaces can contain letters, numbers, dots (.), and hyphens (-).",
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9\\.\\-\\$\\{\\}\\(\\)]+$"
+        },
+        "description": {
+          "type": "string",
+          "description": "Description of the module, for reference/docs purposes only"
+        },
+        "references": {
+          "type": "array",
+          "description": "Names of other modules that are referenced by resources in this module. Wildcards are allowed, i.e. Foundation.*.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "source": {
+          "type": "string",
+          "description": "Generic identifier as to where the module came from. Used internally for error messaging. Do not set in a module file; it will be ignored."
+        },
+        "items": {
+          "$ref": "#/allOf/2/definitions/SerializationModuleConfigurationItems"
+        },
+        "roles": {
+          "type": "array",
+          "items": {
+            "$ref": "#/allOf/2/definitions/RolePredicateItem"
+          }
+        }
+      },
+      "definitions": {
+        "SerializationModuleConfigurationItems": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "includes"
+          ],
+          "properties": {
+            "path": {
+              "type": "string"
+            },
+            "includes": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "$ref": "#/allOf/2/definitions/FilesystemTreeSpec"
+              }
+            },
+            "excludedFields": {
+              "type": "array",
+              "items": {
+                "$ref": "#/allOf/2/definitions/FieldFilter"
+              }
+            }
+          }
+        },
+        "FilesystemTreeSpec": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "path",
+            "name"
+          ],
+          "properties": {
+            "path": {
+              "type": "string",
+              "minLength": 1
+            },
+            "scope": {
+              "$ref": "#/allOf/2/definitions/TreeScope"
+            },
+            "allowedPushOperations": {
+              "$ref": "#/allOf/2/definitions/AllowedPushOperations"
+            },
+            "rules": {
+              "type": "array",
+              "items": {
+                "$ref": "#/allOf/2/definitions/FilesystemTreeSpecRule"
+              }
+            },
+            "maxRelativePathLength": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "format": "int32"
+            },
+            "name": {
+              "type": "string",
+              "minLength": 1
+            },
+            "database": {
+              "type": "string"
+            }
+          }
+        },
+        "TreeScope": {
+          "type": "string",
+          "description": "",
+          "x-enumNames": [
+            "SingleItem",
+            "ItemAndChildren",
+            "ItemAndDescendants",
+            "DescendantsOnly"
+          ],
+          "enum": [
+            "singleItem",
+            "itemAndChildren",
+            "itemAndDescendants",
+            "descendantsOnly"
+          ]
+        },
+        "AllowedPushOperations": {
+          "type": "string",
+          "description": "",
+          "x-enumNames": [
+            "CreateUpdateAndDelete",
+            "CreateAndUpdate",
+            "CreateOnly"
+          ],
+          "enum": [
+            "createUpdateAndDelete",
+            "createAndUpdate",
+            "createOnly"
+          ]
+        },
+        "FilesystemTreeSpecRule": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "path"
+          ],
+          "properties": {
+            "path": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "^(/.+|\\*)$"
+            },
+            "scope": {
+              "oneOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "$ref": "#/allOf/2/definitions/TreeRuleScope"
+                }
+              ]
+            },
+            "allowedPushOperations": {
+              "oneOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "$ref": "#/allOf/2/definitions/AllowedPushOperations"
+                }
+              ]
+            },
+            "alias": {
+              "type": "string"
+            }
+          }
+        },
+        "TreeRuleScope": {
+          "type": "string",
+          "description": "",
+          "x-enumNames": [
+            "Ignored",
+            "SingleItem",
+            "ItemAndChildren",
+            "ItemAndDescendants"
+          ],
+          "enum": [
+            "ignored",
+            "singleItem",
+            "itemAndChildren",
+            "itemAndDescendants"
+          ]
+        },
+        "FieldFilter": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "fieldId": {
+              "type": "string"
+            },
+            "description": {
+              "type": "string"
+            }
+          }
+        },
+        "RolePredicateItem": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "domain": {
+              "type": "string"
+            },
+            "pattern": {
+              "type": "string"
+            }
+          }
         }
       }
     }

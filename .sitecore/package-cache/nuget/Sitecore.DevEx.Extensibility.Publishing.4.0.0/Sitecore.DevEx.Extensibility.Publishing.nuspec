@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
+  <metadata>
+    <id>Sitecore.DevEx.Extensibility.Publishing</id>
+    <version>4.0.0</version>
+    <authors>Sitecore Corporation A/S.</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="file">sitecore.myget.licence.md</license>
+    <licenseUrl>https://aka.ms/deprecateLicenseUrl</licenseUrl>
+    <icon>icon.png</icon>
+    <description>Package Description</description>
+    <releaseNotes>Build: 4.0.0-r00411 GitSHA: cafd7347de7f0791e6186920a7ce3d3468053a9b</releaseNotes>
+    <copyright>© 2021 Sitecore Corporation A/S. All rights reserved. Sitecore® is a registered trademark of Sitecore Corporation A/S.</copyright>
+    <tags>Sitecore</tags>
+  </metadata>
+</package>
