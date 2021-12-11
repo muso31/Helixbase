@@ -7,7 +7,7 @@ A Sitecore Helix based solution which can be used for Greenfield projects. Tackl
 
 * Glass Mapper v5 - with fluent configuration and automated mapping registration
 * Sitecore Content Serialization (SCS)
-* Sitecore 10.1.1 ready
+* Sitecore 10.2.0 ready
 * Pre compiled Razor views
 * Bootstrap v4
 * Native dependency injection with auto controller registration
@@ -25,11 +25,11 @@ A Sitecore Helix based solution which can be used for Greenfield projects. Tackl
 ## Setup Instructions
 *Please Install Visual Studio 2017 Version 15.7 or higher as this project uses PackageReference
 
-1. Install [Sitecore Experience Platform 10.1.1](https://dev.sitecore.net/Downloads/Sitecore_Experience_Platform/101/Sitecore_Experience_Platform_101_Update1.aspx)
-2. Install [Sitecore Management Services](https://doc.sitecore.com/developers/101/developer-tools/en/sitecore-management-services.html), documentation [here](https://doc.sitecore.com/developers/101/developer-tools/en/sitecore-command-line-interface.html)
+1. Install [Sitecore Experience Platform 10.1.1](https://dev.sitecore.net/Downloads/Sitecore_Experience_Platform/102/Sitecore_Experience_Platform_102.aspx)
+2. Install [Sitecore Management Services](https://doc.sitecore.com/xp/en/developers/102/developer-tools/sitecore-management-services.html), documentation [here](https://doc.sitecore.com/xp/en/developers/102/developer-tools/sitecore-command-line-interface.html)
 3. Clone the repo and update the 'publishUrl' property in [Local.pubxml](https://github.com/muso31/Helixbase/blob/master/src/Website/website/Properties/PublishProfiles/Local.pubxml#L12) to the target IIS folder
 4. Use the 'Local' publish profile in the Helixbase.Website project to publish the solution
-5. Install [Sitecore CLI](https://dev.sitecore.net/Downloads/Sitecore_CLI/3x/Sitecore_CLI_300.aspx) and push Sitecore items `dotnet sitecore ser push`
+5. Install [Sitecore CLI](https://dev.sitecore.net/Downloads/Sitecore_CLI.aspx) and push Sitecore items `dotnet sitecore ser push`
 
 #### Using Helix Base:
 Refer to the [Hero Feature](https://github.com/muso31/Helixbase/tree/master/src/Feature/Hero/website) as an example.
@@ -76,6 +76,7 @@ AppVeyor:
 ## Legacy Versions
 Legacy versions of Helix Base which are no longer updated or maintained can be found below:
   
+[Helix Base 10.1.1](https://github.com/muso31/Helixbase/tree/feature/10.1.1) (updated until 11/12/2021)  
 [Helix Base 10.1.0](https://github.com/muso31/Helixbase/tree/feature/10.1.0) (updated until 05/07/2021)  
 [Helix Base 10.0.1](https://github.com/muso31/Helixbase/tree/feature/10.0.1) (updated until 26/02/2021)  
 [Helix Base 10.0.0](https://github.com/muso31/Helixbase/tree/feature/10.0.0) (updated until 11/01/2021)  
