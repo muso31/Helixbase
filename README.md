@@ -7,7 +7,7 @@ A Sitecore Helix based solution which can be used for Greenfield projects. Tackl
 
 * Glass Mapper v5 - with fluent configuration and automated mapping registration
 * Sitecore Content Serialization (SCS)
-* Automatic C# generation scripts
+* Automatic C# generation [scripts](https://github.com/muso31/Helixbase/blob/master/README.md#automatic-c-generation)
 * Sitecore 10.2.0 ready
 * Pre compiled Razor views
 * Bootstrap v4
