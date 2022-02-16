@@ -1,6 +1,6 @@
-﻿using Sitecore.Pipelines.RenderField;
+using Sitecore.Pipelines.RenderField;
 
-namespace Helixbase.Feature.ShowTitles.Pipelines.RenderField
+namespace Headlixbase.Feature.ShowTitles.Pipelines.RenderField
 {
     public class ShowTitleWhenBlank
     {

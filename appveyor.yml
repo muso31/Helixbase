@@ -5,7 +5,7 @@ configuration: Release
 before_build:
   - nuget restore
 build:
-  project: Helixbase.sln
+  project: Headlixbase.sln
   parallel: true
   verbosity: minimal
 test:
@@ -13,7 +13,7 @@ test:
     only:
     - '**\*Tests.dll'
 after_test:
-- ps: msbuild.exe Helixbase.sln /m /verbosity:minimal /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll" /t:Website\Helixbase_Website:WebPublish /p:PublishProfile=Package /p:Configuration=Release /p:DefaultPackageOutputDir="$($Env:APPVEYOR_BUILD_FOLDER)/artifacts"
+- ps: msbuild.exe Headlixbase.sln /m /verbosity:minimal /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll" /t:Website\Headlixbase_Website:WebPublish /p:PublishProfile=Package /p:Configuration=Release /p:DefaultPackageOutputDir="$($Env:APPVEYOR_BUILD_FOLDER)/artifacts"
 artifacts:
-- path: artifacts\Helixbase.Website.zip
+- path: artifacts\Headlixbase.Website.zip
   name: wdp

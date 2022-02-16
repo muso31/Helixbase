@@ -1,7 +1,7 @@
-﻿using Assert = Sitecore.Diagnostics.Assert;
+using Assert = Sitecore.Diagnostics.Assert;
 using SC = Sitecore;
 
-namespace Helixbase.Feature.ItemUnlock.Commands.Item
+namespace Headlixbase.Feature.ItemUnlock.Commands.Item
 {
     /// <summary>
     ///     https://community.sitecore.net/technical_blogs/b/sitecorejohn_blog/posts/allow-users-to-unlock-items-locked-to-others-in-the-sitecore-asp-net-cms

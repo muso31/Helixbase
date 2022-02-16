@@ -1,11 +1,11 @@
-# Modify Helixbase Solution and Helix Modules to match project specific requirements
+# Modify Headlixbase Solution and Helix Modules to match project specific requirements
 Param(
         [Parameter(Position=0, Mandatory=$true)]
         [string]$ProjectName      
     )
 
 # Variables to change
-$originalName = "Helixbase"
+$originalName = "Headlixbase"
 
 # Config
 $excludedFoldersRegex = "\\(obj|bin|.git|.hg)\\?"

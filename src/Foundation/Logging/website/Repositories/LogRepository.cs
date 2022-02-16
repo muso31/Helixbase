@@ -1,6 +1,6 @@
-﻿using Sitecore.Diagnostics;
+using Sitecore.Diagnostics;
 
-namespace Helixbase.Foundation.Logging.Repositories
+namespace Headlixbase.Foundation.Logging.Repositories
 {
     public class LogRepository: ILogRepository
     {

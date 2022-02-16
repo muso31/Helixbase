@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+	<ApplicationIcon />
+	<OutputType>Library</OutputType>
+	<StartupObject />
+	<Authors>Neil Shack</Authors>
+	<Company>Ehisys Ltd</Company>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="App_Config\**" />
+    <EmbeddedResource Remove="App_Config\**" />
+    <None Remove="App_Config\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="Web.config" />
+    <Content Remove="Web.Debug.config" />
+    <Content Remove="Web.Release.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform" Version="2.0.1" />
+    <PackageReference Include="Sitecore.Kernel" Version="10.2.0" />
+  </ItemGroup>
+</Project>

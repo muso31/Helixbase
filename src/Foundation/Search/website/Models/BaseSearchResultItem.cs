@@ -1,9 +1,9 @@
-﻿using Sitecore.ContentSearch;
+using Sitecore.ContentSearch;
 using Sitecore.ContentSearch.SearchTypes;
 using System;
 using System.Collections.Generic;
 
-namespace Helixbase.Foundation.Search.Models
+namespace Headlixbase.Foundation.Search.Models
 {
     public class BaseSearchResultItem : SearchResultItem
     {

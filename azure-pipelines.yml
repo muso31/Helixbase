@@ -17,7 +17,7 @@ steps:
 - task: NuGetCommand@2
   displayName: 'NuGet restore'
   inputs:
-    restoreSolution: Helixbase.sln
+    restoreSolution: Headlixbase.sln
     feedsToUse: config
     nugetConfigPath: NuGet.config
 
@@ -25,7 +25,7 @@ steps:
 - task: VSBuild@1
   displayName: 'Build solution'
   inputs:
-    solution: Helixbase.sln
+    solution: Headlixbase.sln
     platform: 'Any CPU'
     configuration: 'Release'
 
@@ -39,8 +39,8 @@ steps:
 - task: VSBuild@1
   displayName: 'Publish Website WDP'
   inputs:
-    solution: Helixbase.sln
-    msbuildArgs: '/t:Website\Helixbase_Website:WebPublish /p:PublishProfile=Package /p:DefaultPackageOutputDir=$(build.artifactstagingdirectory)'
+    solution: Headlixbase.sln
+    msbuildArgs: '/t:Website\Headlixbase_Website:WebPublish /p:PublishProfile=Package /p:DefaultPackageOutputDir=$(build.artifactstagingdirectory)'
     platform: 'Any CPU'
     configuration: 'Release'
 

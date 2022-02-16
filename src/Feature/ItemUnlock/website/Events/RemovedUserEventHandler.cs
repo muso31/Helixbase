@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Sitecore;
@@ -10,7 +10,7 @@ using Sitecore.Globalization;
 using Sitecore.Shell.Applications.Dialogs.ProgressBoxes;
 using Sitecore.Web.UI.Sheer;
 
-namespace Helixbase.Feature.ItemUnlock.Events
+namespace Headlixbase.Feature.ItemUnlock.Events
 {
     public class RemovedUserEventHandler
     {
