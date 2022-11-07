@@ -25,15 +25,13 @@ A Headless Sitecore Helix solution (Headlix) forked from [Helixbase](https://git
 5. Use the 'Local' publish profile in the `Headlixbase.Website` project to publish the solution
 6. Install [Sitecore CLI](https://dev.sitecore.net/Downloads/Sitecore_CLI.aspx) and push Sitecore items `dotnet sitecore ser push` - [installation documentation](https://doc.sitecore.com/xp/en/developers/102/developer-tools/install-sitecore-command-line-interface.html)
 
-#### Using Headlix Base:
+#### Using Headlixbase:
 To change the item version limit edit the rule on the _/sitecore/system/Settings/Rules/Item Saved/Rules/Delete Old Versions_ item. You can also change the rule to recycle or archive old versions. 
 
 In the security editor you can assign non admin Item Unlock permissions.
 
 If you do not require a feature you can easily delete it.
 
-### Renaming Solution / Projects
-To rename the Visual Studio Solution, Helix Module Projects and Project references from 'Headlixbase' to a new project name, run [rename.ps1](https://github.com/muso31/Helixbase/blob/master/tools/rename.ps1) -ProjectName [NewProjectName]'. 
 
 ## Build
 
