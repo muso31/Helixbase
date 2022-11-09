@@ -28,6 +28,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform" Version="2.0.1" />
+    <PackageReference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform" />
   </ItemGroup>
 </Project>

@@ -42,18 +42,18 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Glass.Mapper.Sc.102.Core" Version="5.8.180" />
-    <PackageReference Include="Glass.Mapper.Sc.102.Mvc" Version="5.8.180" />
-    <PackageReference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform" Version="2.0.1" />
-    <PackageReference Include="RazorGenerator.MsBuild" Version="2.5.0">
+    <PackageReference Include="Glass.Mapper.Sc.102.Core" />
+    <PackageReference Include="Glass.Mapper.Sc.102.Mvc" />
+    <PackageReference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform" />
+    <PackageReference Include="RazorGenerator.MsBuild" >
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Sitecore.ContentSearch.Linq" Version="10.2.0" />
-    <PackageReference Include="Sitecore.Kernel" Version="10.2.0" />
-    <PackageReference Include="Sitecore.Mvc" Version="10.2.0" />
-    <PackageReference Include="Sitecore.Mvc.Analytics" Version="10.2.0" />
-    <PackageReference Include="System.ComponentModel.Annotations" Version="4.7.0" />
+    <PackageReference Include="Sitecore.ContentSearch.Linq" />
+    <PackageReference Include="Sitecore.Kernel" />
+    <PackageReference Include="Sitecore.Mvc" />
+    <PackageReference Include="Sitecore.Mvc.Analytics" />
+    <PackageReference Include="System.ComponentModel.Annotations" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Foundation\Content\website\Helixbase.Foundation.Content.csproj" />
