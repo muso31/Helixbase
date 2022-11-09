@@ -5,7 +5,7 @@ Headless Version - A Sitecore Helix based solution which can be used for Greenfi
 
 #### Features include:
 
-
+* [Headless version](https://github.com/muso31/Helixbase/tree/feature/10.2.0-headless) available
 * Sitecore Content Serialization (SCS)
 * Automatic C# generation [scripts](https://github.com/muso31/Helixbase/blob/master/README.md#automatic-c-generation)
 * Sitecore 10.2.0 ready
