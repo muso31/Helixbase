@@ -5,6 +5,7 @@ A Sitecore Helix based solution which can be used for Greenfield projects. Tackl
 
 #### Features include:
 
+* [Headless version](https://github.com/muso31/Helixbase/tree/feature/10.2.0-headless) available
 * Glass Mapper v5 - with fluent configuration and automated mapping registration
 * Sitecore Content Serialization (SCS)
 * Automatic C# generation [scripts](https://github.com/muso31/Helixbase/blob/master/README.md#automatic-c-generation)
