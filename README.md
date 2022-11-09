@@ -25,6 +25,7 @@ A Sitecore Helix based solution which can be used for Greenfield projects. Tackl
 
 ## Setup Instructions
 *Please Install Visual Studio 2017 Version 15.7 or higher as this project uses PackageReference
+*Please Install Visual Studio 2022 17.2 and later as this project uses [Central Package Management](https://devblogs.microsoft.com/nuget/introducing-central-package-management/)
 
 1. Install [Sitecore Experience Platform 10.2.0](https://dev.sitecore.net/Downloads/Sitecore_Experience_Platform/102/Sitecore_Experience_Platform_102.aspx)
 2. Install Sitecore PowerShell Extensions found in the [SXA download](https://dev.sitecore.net/Downloads/Sitecore_Experience_Accelerator/10x/Sitecore_Experience_Accelerator_1020.aspx) page (SXA not required)
