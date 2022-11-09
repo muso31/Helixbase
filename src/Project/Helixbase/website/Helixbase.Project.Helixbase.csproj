@@ -13,27 +13,21 @@
     <ProjectCapability Include="SupportsSystemWeb" />
   </ItemGroup>
   <ItemGroup>
-    <Content Remove="Views\Web.config" />
     <Content Remove="Web.config" />
     <Content Remove="Web.Debug.config" />
     <Content Remove="Web.Release.config" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="App_Config\Include\Project\Project.Helixbase.config" />
-    <None Remove="App_Config\Include\Project\Project.Helixbase.Mvc.config" />
     <None Remove="App_Config\Include\Project\z.Project.Helixbase.DevSettings.config" />
     <None Remove="sitecore\login\Helixbase_Wallpaper.jpg" />
-    <None Remove="Views\Layouts\Helixbase\Default.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Config\Include\Project\Project.Helixbase.config" />
-    <Content Include="App_Config\Include\Project\Project.Helixbase.Mvc.config" />
     <Content Include="App_Config\Include\Project\z.Project.Helixbase.DevSettings.config" />
     <Content Include="sitecore\login\Helixbase_Wallpaper.jpg" />
-    <Content Include="Views\Layouts\Helixbase\Default.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Views\Web.config" />
     <None Include="Web.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>web.config</DependentUpon>

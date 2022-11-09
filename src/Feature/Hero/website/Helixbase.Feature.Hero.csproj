@@ -56,11 +56,7 @@
     <PackageReference Include="System.ComponentModel.Annotations" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Foundation\Content\website\Helixbase.Foundation.Content.csproj" />
-    <ProjectReference Include="..\..\..\Foundation\Core\website\Helixbase.Foundation.Core.csproj" />
-    <ProjectReference Include="..\..\..\Foundation\DI\website\Helixbase.Foundation.DI.csproj" />
     <ProjectReference Include="..\..\..\Foundation\Logging\website\Helixbase.Foundation.Logging.csproj" />
-    <ProjectReference Include="..\..\..\Foundation\ORM\website\Helixbase.Foundation.ORM.csproj" />
     <ProjectReference Include="..\..\..\Foundation\Search\website\Helixbase.Foundation.Search.csproj" />
   </ItemGroup>
 </Project>

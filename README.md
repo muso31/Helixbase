@@ -1,19 +1,14 @@
 <img src="https://nshackblog.files.wordpress.com/2017/02/helixbase1.png" height="154px" width="200px" /><br />
-A Sitecore Helix based solution which can be used for Greenfield projects. Tackles some common problems when working with the platform.
+Headless Version - A Sitecore Helix based solution which can be used for Greenfield projects. Tackles some common problems when working with the platform.
 
 ![ASP.NET CI](https://github.com/muso31/Helixbase/workflows/ASP.NET%20CI/badge.svg) [![Helix Check](https://github.com/muso31/Helixbase/workflows/Helix%20Check/badge.svg)](https://github.com/muso31/Helixbase/actions?query=workflow%3A%22Helix+Check%22) [![GitHub Stars](https://img.shields.io/github/stars/muso31/helixbase?label=GitHub%20Stars)](https://github.com/muso31/Helixbase/stargazers)
 
 #### Features include:
 
-* Glass Mapper v5 - with fluent configuration and automated mapping registration
+
 * Sitecore Content Serialization (SCS)
 * Automatic C# generation [scripts](https://github.com/muso31/Helixbase/blob/master/README.md#automatic-c-generation)
 * Sitecore 10.2.0 ready
-* Pre compiled Razor views
-* Bootstrap v4
-* Native dependency injection with auto controller registration
-* A sample hero banner feature and sample site project for demonstration
-* Generic content repositories (by Rendering, Item Context, or Glass Content)
 * Version trimming rules engine - Items limited to 10 versions by default
 * Search Templates computed index field - find all items from an index by any templates they implement
 * Non admin Item Unlock
@@ -36,10 +31,7 @@ A Sitecore Helix based solution which can be used for Greenfield projects. Tackl
 6. Install [Sitecore CLI](https://dev.sitecore.net/Downloads/Sitecore_CLI.aspx) and push Sitecore items `dotnet sitecore ser push` - [installation documentation](https://doc.sitecore.com/xp/en/developers/102/developer-tools/install-sitecore-command-line-interface.html)
 
 #### Using Helix Base:
-Refer to the [Hero Feature](https://github.com/muso31/Helixbase/tree/master/src/Feature/Hero/website) as an example.
-
-* View [HeroService.cs](https://github.com/muso31/Helixbase/blob/master/src/Feature/Hero/website/Services/HeroService.cs) for examples of retrieving Sitecore items using the content API and the search API.
-* View [Register routes](https://github.com/muso31/Helixbase/blob/master/src/Feature/Hero/website/Routes/RegisterRoutes.cs) for an example of how to register a route.
+Sample Headless features will appear at [Helix Base modules](https://github.com/muso31/Helixbase-modules)
 
 To change the item version limit edit the rule on the _/sitecore/system/Settings/Rules/Item Saved/Rules/Delete Old Versions_ item. You can also change the rule to recycle or archive old versions. 
 
