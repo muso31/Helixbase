@@ -8,7 +8,7 @@
 	  <PackageVersion Include="Glass.Mapper.Sc.102" Version="5.8.180" />
 	  <PackageVersion Include="Glass.Mapper.Sc.102.Mvc" Version="5.8.180" />
 	  <PackageVersion Include="Sitecore.ContentSearch.Linq" Version="10.2.0" />
-      <PackageVersion Include="Sitecore.ContentSearch" Version="10.2.0" />
+	  <PackageVersion Include="Sitecore.ContentSearch" Version="10.2.0" />
 	  <PackageVersion Include="Sitecore.Kernel" Version="10.2.0" />
 	  <PackageVersion Include="Sitecore.Mvc" Version="10.2.0" />
 	  <PackageVersion Include="Sitecore.Mvc.Analytics" Version="10.2.0" />

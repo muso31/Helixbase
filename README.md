@@ -22,6 +22,7 @@ A Sitecore Helix based solution which can be used for Greenfield projects. Tackl
 * Fast ([see benchmark](https://github.com/richardszalay/Helixbase-HPP/tree/benchmarks#benchmarks)) publish-on-build (when building inside Visual Studio)
 * [_Show Title When Blank_](https://jammykam.wordpress.com/2017/09/20/show-title-when-blank/) patch, the forgotten Sitecore feature!
 * [Helix Check](https://github.com/marketplace/actions/helix-check) GitHub Action
+* [Central Package Management](https://github.com/muso31/Helixbase/blob/master/Directory.Packages.props)
 
 ## Setup Instructions
 *Please Install Visual Studio 2017 Version 15.7 or higher as this project uses PackageReference
