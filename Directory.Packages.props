@@ -4,15 +4,12 @@
 	  <EnablePackageVersionOverride>true</EnablePackageVersionOverride>
   </PropertyGroup>
   <ItemGroup>
-	  <PackageVersion Include="Glass.Mapper.Sc.102.Core" Version="5.8.180" />
-	  <PackageVersion Include="Glass.Mapper.Sc.102" Version="5.8.180" />
-	  <PackageVersion Include="Glass.Mapper.Sc.102.Mvc" Version="5.8.180" />
-	  <PackageVersion Include="Sitecore.ContentSearch.Linq" Version="10.2.0" />
-	  <PackageVersion Include="Sitecore.ContentSearch" Version="10.2.0" />
-	  <PackageVersion Include="Sitecore.Kernel" Version="10.2.0" />
-	  <PackageVersion Include="Sitecore.Mvc" Version="10.2.0" />
-	  <PackageVersion Include="Sitecore.Mvc.Analytics" Version="10.2.0" />
-	  <PackageVersion Include="Sitecore.Assemblies.Platform" Version="10.2.0" />
+	  <PackageVersion Include="Sitecore.ContentSearch.Linq" Version="10.3.0" />
+	  <PackageVersion Include="Sitecore.ContentSearch" Version="10.3.0" />
+	  <PackageVersion Include="Sitecore.Kernel" Version="10.3.0" />
+	  <PackageVersion Include="Sitecore.Mvc" Version="10.3.0" />
+	  <PackageVersion Include="Sitecore.Mvc.Analytics" Version="10.3.0" />
+	  <PackageVersion Include="Sitecore.Assemblies.Platform" Version="10.3.0" />
 
 	  <PackageVersion Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform" Version="2.0.1" />
 	  <PackageVersion Include="AutoFixture" Version="3.51.0" />
