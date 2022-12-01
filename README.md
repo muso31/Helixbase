@@ -5,11 +5,11 @@ A Sitecore Helix based solution which can be used for Greenfield projects. Tackl
 
 #### Features include:
 
-* [Headless version](https://github.com/muso31/Helixbase/tree/feature/10.2.0-headless) available
+* [Headless version](https://github.com/muso31/Helixbase/tree/feature/10.3.0-headless) available
 * Glass Mapper v5 - with fluent configuration and automated mapping registration
 * Sitecore Content Serialization (SCS)
 * Automatic C# generation [scripts](https://github.com/muso31/Helixbase/blob/master/README.md#automatic-c-generation)
-* Sitecore 10.2.0 ready
+* Sitecore 10.3.0 ready
 * Pre compiled Razor views
 * Bootstrap v4
 * Native dependency injection with auto controller registration
@@ -29,7 +29,7 @@ A Sitecore Helix based solution which can be used for Greenfield projects. Tackl
 *Please Install Visual Studio 2017 Version 15.7 or higher as this project uses PackageReference
 *Please Install Visual Studio 2022 17.2 and later as this project uses [Central Package Management](https://devblogs.microsoft.com/nuget/introducing-central-package-management/)
 
-1. Install [Sitecore Experience Platform 10.2.0](https://dev.sitecore.net/Downloads/Sitecore_Experience_Platform/102/Sitecore_Experience_Platform_102.aspx)
+1. Install [Sitecore Experience Platform 10.3.0](https://dev.sitecore.net/Downloads/Sitecore_Experience_Platform/102/Sitecore_Experience_Platform_102.aspx)
 2. Install Sitecore PowerShell Extensions found in the [SXA download](https://dev.sitecore.net/Downloads/Sitecore_Experience_Accelerator/10x/Sitecore_Experience_Accelerator_1020.aspx) page (SXA not required)
 3. Install [Sitecore Management Services](https://doc.sitecore.com/xp/en/developers/102/developer-tools/sitecore-management-services.html) Sitecore package
 4. Clone the repo and update the 'publishUrl' property in [Local.pubxml](https://github.com/muso31/Helixbase/blob/master/src/Website/website/Properties/PublishProfiles/Local.pubxml#L12) to the target IIS folder
@@ -80,7 +80,8 @@ AppVeyor:
 
 ## Legacy Versions
 Legacy versions of Helix Base which are no longer updated or maintained can be found below:
-  
+
+[Helix Base 10.2.0](https://github.com/muso31/Helixbase/tree/feature/10.2.0) (updated until 01/12/2022)  
 [Helix Base 10.1.1](https://github.com/muso31/Helixbase/tree/feature/10.1.1) (updated until 11/12/2021)  
 [Helix Base 10.1.0](https://github.com/muso31/Helixbase/tree/feature/10.1.0) (updated until 05/07/2021)  
 [Helix Base 10.0.1](https://github.com/muso31/Helixbase/tree/feature/10.0.1) (updated until 26/02/2021)  

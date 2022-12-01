@@ -34,7 +34,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Glass.Mapper.Sc.102" />
+    <PackageReference Include="Glass.Mapper.Sc.103" />
     <PackageReference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform" />
     <PackageReference Include="Sitecore.Kernel" />
   </ItemGroup>

@@ -28,8 +28,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Glass.Mapper.Sc.102.Core" />
-    <PackageReference Include="Glass.Mapper.Sc.102.Mvc" />
+    <PackageReference Include="Glass.Mapper.Sc.103.Core" />
+    <PackageReference Include="Glass.Mapper.Sc.103.Mvc" />
     <PackageReference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform" />
     <PackageReference Include="Sitecore.ContentSearch" />
     <PackageReference Include="Sitecore.Kernel" />
