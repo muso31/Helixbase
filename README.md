@@ -29,12 +29,12 @@ A Sitecore Helix based solution which can be used for Greenfield projects. Tackl
 *Please Install Visual Studio 2017 Version 15.7 or higher as this project uses PackageReference
 *Please Install Visual Studio 2022 17.2 and later as this project uses [Central Package Management](https://devblogs.microsoft.com/nuget/introducing-central-package-management/)
 
-1. Install [Sitecore Experience Platform 10.3.0](https://dev.sitecore.net/Downloads/Sitecore_Experience_Platform/102/Sitecore_Experience_Platform_102.aspx)
+1. Install [Sitecore Experience Platform 10.3.0](https://dev.sitecore.net/Downloads/Sitecore_Experience_Platform/103/Sitecore_Experience_Platform_103.aspx)
 2. Install Sitecore PowerShell Extensions found in the [SXA download](https://dev.sitecore.net/Downloads/Sitecore_Experience_Accelerator/10x/Sitecore_Experience_Accelerator_1020.aspx) page (SXA not required)
-3. Install [Sitecore Management Services](https://doc.sitecore.com/xp/en/developers/102/developer-tools/sitecore-management-services.html) Sitecore package
+3. Install [Sitecore Management Services](https://doc.sitecore.com/xp/en/developers/103/developer-tools/sitecore-management-services.html) Sitecore package
 4. Clone the repo and update the 'publishUrl' property in [Local.pubxml](https://github.com/muso31/Helixbase/blob/master/src/Website/website/Properties/PublishProfiles/Local.pubxml#L12) to the target IIS folder
 5. Use the 'Local' publish profile in the Helixbase.Website project to publish the solution
-6. Install [Sitecore CLI](https://dev.sitecore.net/Downloads/Sitecore_CLI.aspx) and push Sitecore items `dotnet sitecore ser push` - [installation documentation](https://doc.sitecore.com/xp/en/developers/102/developer-tools/install-sitecore-command-line-interface.html)
+6. Install [Sitecore CLI](https://dev.sitecore.net/Downloads/Sitecore_CLI.aspx) and push Sitecore items `dotnet sitecore ser push` - [installation documentation](https://doc.sitecore.com/xp/en/developers/103/developer-tools/install-sitecore-command-line-interface.html)
 
 #### Using Helix Base:
 Refer to the [Hero Feature](https://github.com/muso31/Helixbase/tree/master/src/Feature/Hero/website) as an example.
