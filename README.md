@@ -26,7 +26,6 @@ A Sitecore Helix based solution which can be used for Greenfield projects. Tackl
 * [Central Package Management](https://github.com/muso31/Helixbase/blob/master/Directory.Packages.props)
 
 ## Setup Instructions
-*Please Install Visual Studio 2017 Version 15.7 or higher as this project uses PackageReference
 *Please Install Visual Studio 2022 17.2 and later as this project uses [Central Package Management](https://devblogs.microsoft.com/nuget/introducing-central-package-management/)
 
 1. Install [Sitecore Experience Platform 10.3.0](https://dev.sitecore.net/Downloads/Sitecore_Experience_Platform/103/Sitecore_Experience_Platform_103.aspx)
