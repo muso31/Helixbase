@@ -76,6 +76,7 @@ Azure DevOps:
 AppVeyor:
 
 * An example [appveyor.xml](https://github.com/muso31/Helixbase/blob/master/appveyor.yml) is included which builds, tests, and packages the solution.
+* An example [appveyor-deploy-local.xml](https://github.com/muso31/Helixbase/blob/master/appveyor-deploy-local.yml) is included which installs Sitecore, deploys the WDP package and executes a Unicorn sync.
 
 ## Legacy Versions
 Legacy versions of Helix Base which are no longer updated or maintained can be found below:
